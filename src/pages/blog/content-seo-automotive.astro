@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InternalLinkCard from '../../components/InternalLinkCard.astro';
+const title = "Content SEO Playbook for Automotive — Clusters, Calendars & Briefs [2026]";
+const description = "The automotive content SEO playbook. Content clusters, editorial calendars, content briefs, and hub-and-spoke architecture for topical authority building.";
+const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Knowledge Hub', href: '/blog/automotive-seo-strategy/' }, { label: 'Content SEO', href: '/blog/content-seo-automotive/' }];
+const relatedLinks = [
+  { title: 'SEO Strategy', href: '/blog/automotive-seo-strategy/', description: 'Content within overall strategy.', icon: '📋' },
+  { title: 'Semantic SEO', href: '/blog/semantic-seo-entities/', description: 'Entity-based content optimization.', icon: '🧬' },
+  { title: 'E-E-A-T Guide', href: '/blog/eeat-automotive-seo/', description: 'Content quality standards.', icon: '🏆' },
+  { title: 'SEO Marketing', href: '/automotive-seo-marketing/', description: 'Content marketing services.', icon: '📢', volume: '2,420/mo' },
+];
+---
+<BaseLayout title={title} description={description} canonicalPath="/blog/content-seo-automotive/" breadcrumbs={breadcrumbs}>
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4"><span class="px-2.5 py-0.5 text-[10px] font-bold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 rounded-full uppercase">Knowledge Hub</span></div>
+    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">Content SEO <span class="text-gradient-amber">Playbook</span></h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl">Build topical authority through strategic content clusters, editorial calendars, and <a href="/blog/semantic-seo-entities/" class="text-amber-400 hover:underline">entity-optimized content</a> briefs. Targets "seo content for automotive" (40/mo).</p>
+  </div>
+  <div class="prose-content">
+    <h2>Hub-and-Spoke Content Architecture</h2>
+    <p>This very site demonstrates the gold standard of content architecture for SEO. Our hub-and-spoke model connects <strong>8 pillar hubs</strong> to <strong>6 vertical clusters</strong> and <strong>11 knowledge pages</strong>, creating a dense internal link network that maximizes authority flow.</p>
+    <h3>How to Build Content Clusters</h3>
+    <ul>
+      <li><strong>Identify cluster themes</strong> — use keyword research (we mapped 18 groups)</li>
+      <li><strong>Create pillar pages</strong> — comprehensive guides targeting head terms</li>
+      <li><strong>Build spoke content</strong> — supporting articles targeting long-tail queries</li>
+      <li><strong>Interlink strategically</strong> — spokes link to hub; hub links to spokes; hubs cross-link</li>
+      <li><strong>Update regularly</strong> — refresh content annually with new data</li>
+    </ul>
+    <h2>Content Types for Automotive</h2>
+    <ul>
+      <li><strong>Service pages</strong> — target commercial intent keywords (each <a href="/automotive-seo-services/">service</a> gets its own page)</li>
+      <li><strong>Comparison content</strong> — "X vs Y" (see <a href="/best-automotive-seo-agencies/">best agencies listicle</a>)</li>
+      <li><strong>How-to guides</strong> — target <a href="/blog/aeo-answer-engine-optimization/">AEO/featured snippets</a></li>
+      <li><strong>Data-driven research</strong> — original data for <a href="/blog/geo-generative-engine-optimization/">GEO citation</a></li>
+      <li><strong>Case studies</strong> — <a href="/blog/eeat-automotive-seo/">E-E-A-T Experience</a> signals</li>
+    </ul>
+    <h2>Editorial Calendar Framework</h2>
+    <p>Plan 3-6 months ahead with a mix of seasonal content (spring car care, winter tire guides), evergreen guides (this site's blog section), and trending topics (<a href="/blog/llm-seo-automotive/">AI in automotive</a>, <a href="/blog/automotive-seo-strategy/">annual trend reports</a>).</p>
+  </div>
+  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Related Pages</h2><InternalLinkCard links={relatedLinks} columns={2} /></div>
+</BaseLayout>

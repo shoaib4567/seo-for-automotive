@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InternalLinkCard from '../../components/InternalLinkCard.astro';
+const title = "Local SEO for Automotive — Complete Methodology Guide [2026]";
+const description = "Deep-dive local SEO methodology for automotive businesses. GBP optimization, citation building, review strategies, and Maps 3-Pack domination.";
+const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Knowledge Hub', href: '/blog/automotive-seo-strategy/' }, { label: 'Local SEO Guide', href: '/blog/local-seo-for-automotive/' }];
+const relatedLinks = [
+  { title: 'Local SEO Service Hub', href: '/local-seo-for-car-dealerships/', description: 'Our local SEO service page.', icon: '📍', volume: '3,180/mo' },
+  { title: 'Reputation Management', href: '/automotive-reputation-management-services/', description: 'Reviews drive local rankings.', icon: '⭐', volume: '2,720/mo' },
+  { title: 'E-E-A-T Guide', href: '/blog/eeat-automotive-seo/', description: 'Trust signals for local search.', icon: '🏆' },
+  { title: 'Car Dealership SEO', href: '/seo-for-car-dealerships/', description: 'Local SEO for dealers.', icon: '🚗', volume: '18,500/mo' },
+];
+---
+<BaseLayout title={title} description={description} canonicalPath="/blog/local-seo-for-automotive/" breadcrumbs={breadcrumbs}>
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4"><span class="px-2.5 py-0.5 text-[10px] font-bold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 rounded-full uppercase">Knowledge Hub</span></div>
+    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">Local SEO for <span class="text-gradient-amber">Automotive</span> — Deep Dive</h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl">Advanced local SEO methodology beyond the basics. For our service-focused guide, see <a href="/local-seo-for-car-dealerships/" class="text-amber-400 hover:underline">Local SEO for Car Dealerships</a>.</p>
+  </div>
+  <div class="prose-content">
+    <h2>Local SEO Framework for Automotive</h2>
+    <p>This guide extends our <a href="/local-seo-for-car-dealerships/">local SEO service hub</a> with advanced methodology. Local SEO for automotive businesses involves three core pillars: <strong>proximity</strong>, <strong>relevance</strong>, and <strong>prominence</strong>.</p>
+    <h3>Google Business Profile Advanced Optimization</h3>
+    <ul>
+      <li>Category stacking — primary + secondary categories for maximum visibility</li>
+      <li>Service and product catalogs within GBP</li>
+      <li>GBP posts strategy — weekly updates, offers, events</li>
+      <li>Q&A seeding — proactively answer common questions</li>
+      <li>Photo optimization — geo-tagged, high-quality, regular uploads</li>
+    </ul>
+    <h3>Citation Ecosystem</h3>
+    <p>Build citations on 50+ platforms including automotive-specific directories (DealerRater, CarGurus, RepairPal, AutoMD), general directories (Yelp, BBB, YP), and data aggregators (Neustar, Foursquare, Data Axle). NAP consistency across all is critical.</p>
+    <h3>Local Link Building</h3>
+    <ul>
+      <li>Sponsor local events, charities, and sports teams</li>
+      <li>Join Chamber of Commerce and local business associations</li>
+      <li>Partner with complementary businesses (insurance agents, car rental companies)</li>
+      <li>Create location-specific <a href="/blog/content-seo-automotive/">content</a> ("Best driving routes in [city]")</li>
+    </ul>
+    <h3>Geo-Modified Content Strategy</h3>
+    <p>Create city and state-specific landing pages per our <a href="/locations/california/">geo pages template</a>. Each page should have unique content about the local market, not just city-name substitutions.</p>
+  </div>
+  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Related Pages</h2><InternalLinkCard links={relatedLinks} columns={2} /></div>
+</BaseLayout>

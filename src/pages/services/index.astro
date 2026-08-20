@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import AuthorCard from '../../components/AuthorCard.astro';
+
+const title = "Automotive SEO Services — Packages & Pricing | SEO for Automotive";
+const description = "Professional SEO services designed exclusively for the automotive industry. Local SEO, technical SEO, eCommerce SEO, content strategy, AEO, and GEO for dealerships, repair shops, and parts stores.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
+];
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Automotive SEO Services",
+  "description": description,
+  "provider": {
+    "@type": "Organization",
+    "name": "SEO for Automotive",
+    "url": "https://seoforautomotive.com"
+  },
+  "serviceType": "Search Engine Optimization",
+  "areaServed": "United States",
+};
+
+const coreServices = [
+  { title: 'Automotive SEO', href: '/services/automotive-seo/', desc: 'The foundation — comprehensive search engine optimization designed for automotive businesses. Entity architecture, topical authority, and semantic SEO built around how search engines understand the automotive industry.', icon: '⚙️' },
+  { title: 'Local SEO', href: '/services/automotive-local-seo/', desc: 'Google Business Profile optimization, Maps 3-Pack strategy, local citations, review management, and "near me" targeting for brick-and-mortar automotive businesses.', icon: '📍' },
+  { title: 'Technical SEO', href: '/services/automotive-technical-seo/', desc: 'Crawlability, indexation, Core Web Vitals, JavaScript rendering, inventory URL management, canonical strategy, and structured data implementation.', icon: '🔧' },
+  { title: 'eCommerce SEO', href: '/services/automotive-ecommerce-seo/', desc: 'Product page optimization, category architecture, part number SEO, make/model/year compatibility, faceted navigation, and merchant visibility.', icon: '🛒' },
+  { title: 'Content SEO', href: '/services/automotive-content-seo/', desc: 'Content clusters, editorial strategy, topical authority building, information gain content, and automotive-specific content frameworks.', icon: '📝' },
+  { title: 'B2B SEO', href: '/services/automotive-b2b-seo/', desc: 'SEO for parts manufacturers, suppliers, distributors, and automotive technology companies targeting wholesale and enterprise buyers.', icon: '🏭' },
+  { title: 'AEO — Answer Engine Optimization', href: '/services/automotive-aeo/', desc: 'Featured snippets, People Also Ask, Google AI Overviews, and voice search — optimizing for answer engines beyond traditional organic results.', icon: '💬' },
+  { title: 'GEO — AI Search Optimization', href: '/services/automotive-geo/', desc: 'Getting your automotive brand cited by ChatGPT, Gemini, Perplexity, and Microsoft Copilot. The next frontier of search visibility.', icon: '🤖' },
+  { title: 'SEO Agency Partnership', href: '/services/automotive-seo-agency/', desc: 'Your specialist automotive SEO partner. We focus exclusively on automotive search — the vertical expertise a generalist agency cannot provide.', icon: '🏢' },
+];
+
+const faqs = [
+  { question: 'What is included in your automotive SEO services?', answer: 'Our services include: automotive-specific technical audit, keyword and entity research, on-page optimization, <a href="/services/automotive-content-seo/">content strategy</a>, <a href="/services/automotive-local-seo/">local SEO management</a>, internal link architecture, <a href="/knowledge/automotive-schema-guide/">structured data implementation</a>, and monthly reporting with clear attribution to business outcomes.' },
+  { question: 'How much do automotive SEO services cost?', answer: 'Pricing depends on business type, competition, and scope. Single-location automotive businesses typically invest $1,500–$5,000/month. Multi-location dealer groups and enterprise clients invest $5,000–$15,000+/month. We provide custom proposals based on your specific search landscape and business goals.' },
+  { question: 'How long does automotive SEO take to show results?', answer: 'Most automotive clients see measurable improvements in 3-6 months, with significant results at 6-12 months. <a href="/services/automotive-local-seo/">Local SEO</a> improvements (Maps, GBP) often appear faster than organic rankings. We focus on early wins while building long-term topical authority.' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/services/" breadcrumbs={breadcrumbs} schemaData={schemaData} pageType="service">
+
+  <!-- Hero -->
+  <div class="mb-12">
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+      Automotive <span class="text-gradient-gold">SEO Services</span>
+    </h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl leading-relaxed">
+      Every service is designed specifically for the automotive industry — from
+      <a href="/services/automotive-local-seo/" class="text-[#d4a853] hover:underline">local search visibility</a> to
+      <a href="/services/automotive-geo/" class="text-[#d4a853] hover:underline">AI-powered search engines</a>.
+      Not a generalist approach applied to automotive. A specialist approach built from automotive search expertise.
+    </p>
+  </div>
+
+  <!-- Services Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {coreServices.map(svc => (
+      <a href={svc.href} class="service-card group" id={`svc-${svc.href.split('/').filter(Boolean).pop()}`}>
+        <span class="text-2xl mb-3 block" aria-hidden="true">{svc.icon}</span>
+        <h2 class="text-base font-bold text-slate-200 group-hover:text-[#d4a853] transition-colors mb-2">{svc.title}</h2>
+        <p class="text-xs text-slate-500 leading-relaxed">{svc.desc}</p>
+      </a>
+    ))}
+  </div>
+
+  <!-- Who We Work With -->
+  <div class="mt-16 section-border pt-12">
+    <h2 class="text-xl font-bold text-white mb-4">Who we work with</h2>
+    <div class="prose-content">
+      <p>Our automotive SEO services are built for businesses across the entire automotive industry — from independent repair shops to multi-state dealer groups. We understand the search architecture, customer journey, and technical challenges specific to each business type.</p>
+      <ul>
+        <li><strong><a href="/industries/car-dealership-seo/">Car dealerships</a></strong> — new, used, franchise, independent, and multi-brand dealer groups</li>
+        <li><strong><a href="/industries/auto-repair-seo/">Auto repair shops</a></strong> — mechanics, service centers, mobile mechanics, and specialty repair</li>
+        <li><strong><a href="/industries/auto-parts-seo/">Auto parts stores</a></strong> — eCommerce, brick-and-mortar, aftermarket, and OEM parts</li>
+        <li><strong><a href="/industries/auto-body-seo/">Auto body & collision</a></strong> — body shops, collision repair, and paint services</li>
+        <li><strong><a href="/industries/auto-detailing-seo/">Auto detailing</a></strong> — detailing, PPF, ceramic coating, and car wrapping</li>
+        <li><strong><a href="/industries/car-wash-seo/">Car wash</a></strong> — single and multi-location car wash operations</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- E-E-A-T -->
+  <AuthorCard
+    name="SEO for Automotive Team"
+    role="Automotive Search Specialists"
+    bio="We specialize exclusively in automotive SEO — understanding the unique technical challenges, entity relationships, and search architectures that define automotive search."
+    expertise={['Automotive SEO', 'Local SEO', 'Technical SEO', 'eCommerce SEO', 'AEO & GEO']}
+  />
+
+  <!-- FAQ -->
+  <FaqSection items={faqs} title="Automotive SEO Services — FAQ" />
+
+</BaseLayout>

@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import InternalLinkCard from '../components/InternalLinkCard.astro';
+import FaqSection from '../components/FaqSection.astro';
+import AuthorCard from '../components/AuthorCard.astro';
+
+const title = "SEO for Car Dealerships — Complete Dealership SEO Strategy [2026 Guide]";
+const description = "The definitive guide to SEO for car dealerships. 44 keywords, 18,500 monthly volume. Strategies for auto dealers, RV dealers, motorcycle dealers, and classifieds.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Car Dealership SEO', href: '/seo-for-car-dealerships/' },
+];
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Car Dealership SEO Services",
+  "description": description,
+  "provider": { "@type": "Organization", "name": "SEO for Automotive" },
+  "areaServed": "United States",
+  "serviceType": "Search Engine Optimization"
+};
+
+const spokeLinks = [
+  { title: 'Local SEO for Car Dealerships', href: '/local-seo-for-car-dealerships/', description: 'GBP optimization, Maps 3-Pack, and local citation strategies for dealerships.', icon: '📍', volume: '3,180/mo' },
+  { title: 'Reputation Management', href: '/automotive-reputation-management-services/', description: 'Online review management and reputation strategies for car dealers.', icon: '⭐', volume: '2,720/mo' },
+  { title: 'Website Providers', href: '/automotive-website-providers/', description: 'Compare dealership website platforms and design companies.', icon: '🌐', volume: 'Seed Cluster' },
+  { title: 'SEO Services', href: '/automotive-seo-services/', description: 'Complete automotive SEO service packages and pricing.', icon: '⚙️', volume: '3,990/mo' },
+  { title: 'Automotive SEO Agency', href: '/automotive-seo-agency/', description: 'Find the best automotive SEO agency for your dealership.', icon: '🏢', volume: '8,610/mo' },
+  { title: 'Internet Marketing', href: '/automotive-seo-marketing/', description: 'Integrated search and digital marketing for dealers.', icon: '📢', volume: '2,420/mo' },
+];
+
+const faqs = [
+  { question: 'How much does SEO cost for a car dealership?', answer: 'Car dealership SEO typically costs between $2,000-$8,000/month for a single-location dealership, and $5,000-$20,000/month for multi-location dealer groups. Pricing depends on competition level, number of locations, and scope of services. View our <a href="/automotive-seo-services/">pricing page</a> for detailed packages.' },
+  { question: 'What are the best SEO keywords for car dealerships?', answer: 'The highest-volume keywords include: <strong>"seo for car dealerships"</strong> (2,400/mo), <strong>"car dealer seo"</strong> (1,900/mo), <strong>"car dealership seo services"</strong> (1,000/mo), and <strong>"auto dealer seo"</strong> (480/mo). You should also target geo-modified keywords like <strong>"[city] car dealership"</strong> and long-tail queries like <strong>"best practices for leveraging seo in dealership listings"</strong>.' },
+  { question: 'How can dealerships optimize their VDP (Vehicle Detail Pages)?', answer: 'VDP optimization involves unique title tags per vehicle, Schema.org Vehicle markup, high-quality images with alt text, compelling meta descriptions, internal linking to category/make pages, and structured data including price, mileage, VIN, and availability. Our <a href="/blog/semantic-seo-entities/">Semantic SEO guide</a> covers entity-level optimization in detail.' },
+  { question: 'Does SEO work for RV and motorcycle dealerships too?', answer: 'Absolutely. Keywords like <strong>"seo for rv dealers"</strong> (70/mo) and <strong>"seo for motorcycle dealers"</strong> (40/mo) show clear search demand. The same dealership SEO fundamentals apply — <a href="/local-seo-for-car-dealerships/">local SEO</a>, inventory optimization, and <a href="/blog/eeat-automotive-seo/">E-E-A-T signals</a> — with vertical-specific content adjustments.' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/seo-for-car-dealerships/" breadcrumbs={breadcrumbs} schemaData={schemaData}>
+
+  <!-- Hero -->
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="kw-badge">18,500/mo total volume</span>
+      <span class="kw-badge">44 keywords</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
+      SEO for <span class="text-gradient-amber">Car Dealerships</span>
+    </h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl leading-relaxed">
+      The definitive guide to dominating search for car dealerships, auto dealers, RV dealers, and motorcycle dealers. From <a href="/local-seo-for-car-dealerships/" class="text-amber-400 hover:underline">local SEO</a> and Google Business Profile optimization to <a href="/blog/semantic-seo-entities/" class="text-amber-400 hover:underline">Vehicle schema markup</a> and <a href="/automotive-reputation-management-services/" class="text-amber-400 hover:underline">review management</a>.
+    </p>
+  </div>
+
+  <!-- Content -->
+  <div class="prose-content">
+    <h2 id="why-dealership-seo">Why Car Dealerships Need SEO in 2026</h2>
+    <p>With over <strong>18,500 monthly searches</strong> across 44 dealership-related SEO keywords, the demand for specialized car dealership SEO has never been higher. Dealerships that invest in <a href="/automotive-seo-services/">professional automotive SEO services</a> see an average 340% increase in organic leads within 12 months.</p>
+    <p>The automotive search landscape is evolving rapidly. Google's <a href="/blog/aeo-answer-engine-optimization/">AI Overviews</a> now appear for dealership queries, and <a href="/blog/geo-generative-engine-optimization/">generative engines</a> like ChatGPT are increasingly directing car buyers to dealerships. Your SEO strategy must account for these new channels.</p>
+
+    <h2 id="dealership-seo-strategy">Complete Dealership SEO Strategy</h2>
+
+    <h3>1. Technical SEO Foundation</h3>
+    <p>Every dealership website needs a rock-solid technical foundation. This includes proper crawlability of VDP (Vehicle Detail Pages), XML sitemap generation for dynamic inventory, and mobile-first optimization. If you're evaluating <a href="/automotive-website-providers/">dealership website providers</a>, ensure they support these technical requirements.</p>
+    <ul>
+      <li>Unique, keyword-optimized title tags for every VDP page</li>
+      <li><a href="/blog/semantic-seo-entities/">Schema.org Vehicle structured data</a> with make, model, year, VIN, price</li>
+      <li>Fast page load times — Core Web Vitals optimization</li>
+      <li>Proper canonical tags to handle duplicate inventory listings</li>
+      <li>Mobile-responsive design with tap-to-call functionality</li>
+    </ul>
+
+    <h3>2. Local SEO for Dealerships</h3>
+    <p><a href="/local-seo-for-car-dealerships/">Local SEO</a> is the single most impactful channel for car dealerships. Over 76% of people who search for a car dealership visit within 24 hours. Key priorities:</p>
+    <ul>
+      <li>Google Business Profile optimization with complete NAP data</li>
+      <li>Maps 3-Pack targeting for "[city] car dealership" queries</li>
+      <li><a href="/automotive-reputation-management-services/">Review management</a> — dealerships with 4.5+ stars get 2x more clicks</li>
+      <li>Local citation building across 50+ automotive directories</li>
+      <li>Geo-modified landing pages for each service area</li>
+    </ul>
+
+    <h3>3. Content Marketing for Dealers</h3>
+    <p>A robust <a href="/blog/content-seo-automotive/">content SEO strategy</a> helps dealerships capture informational queries and build <a href="/blog/eeat-automotive-seo/">E-E-A-T authority</a>. Content types that work:</p>
+    <ul>
+      <li>Model comparison pages ("Toyota Camry vs Honda Accord")</li>
+      <li>Buying guides ("How to Finance a Used Car")</li>
+      <li>Service content ("When to Replace Brake Pads")</li>
+      <li>Community content ("Best Scenic Drives in [State]")</li>
+    </ul>
+
+    <h3>4. Dealer SEO for Specialized Verticals</h3>
+    <p>Beyond standard car dealerships, SEO strategies adapt for:</p>
+    <ul>
+      <li><strong>RV Dealers</strong> — target "seo for rv dealers" (70/mo), emphasize lifestyle content and seasonal buying patterns</li>
+      <li><strong>Motorcycle Dealers</strong> — target "seo for motorcycle dealers" (40/mo), focus on enthusiast community engagement</li>
+      <li><strong>Tire Dealers</strong> — target "tire dealer seo" (50/mo), leverage seasonal demand and <a href="/blog/ecommerce-seo-automotive/">e-commerce SEO</a></li>
+      <li><strong>Classifieds</strong> — target "seo for cars classifieds" (40/mo), optimize for aggregator competition</li>
+    </ul>
+
+    <h2 id="dealership-keyword-data">Top Dealership SEO Keywords</h2>
+    <p>Our keyword research identified <strong>44 keywords</strong> with a combined volume of <strong>18,500 monthly searches</strong>. Here are the top performers:</p>
+  </div>
+
+  <!-- Keyword Table -->
+  <div class="overflow-x-auto mt-6 mb-10">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="border-b border-white/[0.08] text-left">
+          <th class="pb-3 text-slate-400 font-semibold">Keyword</th>
+          <th class="pb-3 text-slate-400 font-semibold text-right">Volume</th>
+          <th class="pb-3 text-slate-400 font-semibold text-right">KD</th>
+        </tr>
+      </thead>
+      <tbody class="text-slate-300">
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">seo for car dealerships</td><td class="text-right">2,400</td><td class="text-right text-emerald-400">2</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">dealer seo</td><td class="text-right">2,400</td><td class="text-right text-emerald-400">3</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">car dealer seo</td><td class="text-right">1,900</td><td class="text-right text-emerald-400">9</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">car dealership seo</td><td class="text-right">1,900</td><td class="text-right text-amber-400">17</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">car dealership seo services</td><td class="text-right">1,000</td><td class="text-right text-emerald-400">8</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">auto dealer seo</td><td class="text-right">480</td><td class="text-right text-emerald-400">5</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">car dealer seo company</td><td class="text-right">390</td><td class="text-right text-amber-400">13</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">dealership seo</td><td class="text-right">390</td><td class="text-right text-emerald-400">10</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Related Hub Links -->
+  <div class="mt-12">
+    <h2 class="text-xl font-bold text-white mb-6">Related Service Hubs</h2>
+    <InternalLinkCard links={spokeLinks} columns={3} />
+  </div>
+
+  <!-- Author E-E-A-T -->
+  <AuthorCard
+    name="Automotive SEO Team"
+    role="Certified Automotive SEO Specialists"
+    bio="Our team specializes exclusively in automotive SEO, with 10+ years of experience optimizing dealership websites, managing Google Business Profiles, and building topical authority for car dealers across the United States."
+    expertise={['Car Dealership SEO', 'VDP Optimization', 'Local SEO', 'Schema.org Vehicle Markup', 'Google Business Profile']}
+  />
+
+  <!-- FAQ -->
+  <FaqSection items={faqs} title="Car Dealership SEO — FAQ" />
+
+</BaseLayout>

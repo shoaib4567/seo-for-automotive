@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import InternalLinkCard from '../components/InternalLinkCard.astro';
+import FaqSection from '../components/FaqSection.astro';
+import AuthorCard from '../components/AuthorCard.astro';
+
+const title = "Automotive SEO Agency — Top Auto SEO Companies & Firms [2026]";
+const description = "Find the best automotive SEO agency for your dealership or auto business. Compare 20+ agencies by results, pricing, and specialization. 8,610 monthly searches.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Automotive SEO Agency', href: '/automotive-seo-agency/' },
+];
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Automotive SEO Agency Services",
+  "description": description,
+  "provider": { "@type": "Organization", "name": "SEO for Automotive" },
+  "serviceType": "Search Engine Optimization Agency"
+};
+
+const spokeLinks = [
+  { title: 'Best Automotive SEO Agencies', href: '/best-automotive-seo-agencies/', description: 'Ranked list of top automotive SEO agencies with results and reviews.', icon: '🏆', volume: 'Listicle' },
+  { title: 'Automotive SEO Expert', href: '/automotive-seo-expert/', description: 'Connect with certified automotive SEO specialists and consultants.', icon: '🧠', volume: '520/mo' },
+  { title: 'Automotive SEO Services', href: '/automotive-seo-services/', description: 'Detailed SEO service packages and pricing.', icon: '⚙️', volume: '3,990/mo' },
+  { title: 'SEO & Internet Marketing', href: '/automotive-seo-marketing/', description: 'Full-service digital marketing for automotive.', icon: '📢', volume: '2,420/mo' },
+  { title: 'Car Dealership SEO', href: '/seo-for-car-dealerships/', description: 'Dealership-specific SEO strategies and services.', icon: '🚗', volume: '18,500/mo' },
+  { title: 'Auto Repair SEO', href: '/auto-repair-seo-services/', description: 'SEO services for repair shops and mechanics.', icon: '🔧', volume: '8,210/mo' },
+];
+
+const faqs = [
+  { question: 'How do I choose the best automotive SEO agency?', answer: 'Look for agencies with: (1) proven automotive-specific case studies, (2) transparent reporting and KPIs, (3) understanding of <a href="/blog/local-seo-for-automotive/">local SEO for automotive</a>, (4) <a href="/blog/eeat-automotive-seo/">E-E-A-T expertise</a>, and (5) familiarity with dealership website platforms. Our <a href="/best-automotive-seo-agencies/">agency comparison page</a> ranks the top companies by these criteria.' },
+  { question: 'What results should I expect from an automotive SEO company?', answer: 'A quality <strong>automotive SEO company</strong> should deliver: 30-50% organic traffic increase within 6 months, improved rankings for target keywords, increased leads/calls from organic search, and monthly reporting with actionable insights. Ask for case studies — keyword: "automotive seo company results" (90/mo).' },
+  { question: 'What is the difference between an SEO agency and an SEO consultant?', answer: 'An <a href="/automotive-seo-agency/">automotive SEO agency</a> provides a full team (strategists, writers, developers, link builders), while an <a href="/automotive-seo-expert/">SEO expert/consultant</a> is typically an individual specialist. Agencies suit larger operations; consultants work well for focused, strategic guidance.' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/automotive-seo-agency/" breadcrumbs={breadcrumbs} schemaData={schemaData}>
+
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="kw-badge">8,610/mo total volume</span>
+      <span class="kw-badge">20 keywords</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
+      Automotive <span class="text-gradient-amber">SEO Agency</span>
+    </h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl leading-relaxed">
+      Compare the best automotive SEO agencies, companies, and marketing firms. Find the right <a href="/automotive-seo-expert/" class="text-amber-400 hover:underline">SEO specialist</a> for your dealership, repair shop, or auto business.
+    </p>
+  </div>
+
+  <div class="prose-content">
+    <h2 id="top-agencies">Finding the Right Automotive SEO Agency</h2>
+    <p>With <strong>2,400 monthly searches</strong> for "automotive seo agency" alone, the demand for specialized automotive SEO companies is surging. Not all agencies are created equal — the best <strong>automotive SEO firms</strong> combine deep industry knowledge with proven technical expertise.</p>
+    <p>Whether you're a single-location <a href="/seo-for-car-dealerships/">car dealership</a>, a multi-rooftop dealer group, or an <a href="/auto-repair-seo-services/">auto repair chain</a>, choosing the right agency impacts your entire digital growth trajectory.</p>
+
+    <h2 id="what-agencies-offer">What Top Automotive SEO Companies Offer</h2>
+    <h3>Core SEO Services</h3>
+    <ul>
+      <li><strong>Technical SEO audits</strong> — site architecture, crawlability, Core Web Vitals</li>
+      <li><strong><a href="/local-seo-for-car-dealerships/">Local SEO management</a></strong> — GBP optimization, citation building, review management</li>
+      <li><strong><a href="/blog/content-seo-automotive/">Content strategy</a></strong> — keyword research, content briefs, blog production</li>
+      <li><strong>Link building</strong> — automotive directory submissions, digital PR, guest posts</li>
+      <li><strong><a href="/blog/semantic-seo-entities/">Schema markup</a></strong> — Vehicle, LocalBusiness, and FAQ structured data</li>
+    </ul>
+
+    <h3>Advanced Capabilities</h3>
+    <ul>
+      <li><a href="/blog/aeo-answer-engine-optimization/">Answer Engine Optimization (AEO)</a> — featured snippets and PAA targeting</li>
+      <li><a href="/blog/geo-generative-engine-optimization/">Generative Engine Optimization (GEO)</a> — AI citation optimization</li>
+      <li><a href="/automotive-reputation-management-services/">Reputation management</a> — review generation and response</li>
+      <li><a href="/automotive-website-providers/">Website platform consulting</a> — platform migration and optimization</li>
+    </ul>
+
+    <h2 id="agency-keyword-data">Agency SEO Keywords</h2>
+  </div>
+
+  <div class="overflow-x-auto mt-6 mb-10">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="border-b border-white/[0.08] text-left">
+          <th class="pb-3 text-slate-400 font-semibold">Keyword</th>
+          <th class="pb-3 text-slate-400 font-semibold text-right">Volume</th>
+          <th class="pb-3 text-slate-400 font-semibold text-right">KD</th>
+        </tr>
+      </thead>
+      <tbody class="text-slate-300">
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">automotive seo agency</td><td class="text-right">2,400</td><td class="text-right text-emerald-400">5</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">automotive seo company</td><td class="text-right">1,900</td><td class="text-right text-amber-400">15</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">automotive seo companies</td><td class="text-right">1,300</td><td class="text-right text-amber-400">11</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">automotive seo optimization company</td><td class="text-right">720</td><td class="text-right text-amber-400">11</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">automotive seo agencies</td><td class="text-right">320</td><td class="text-right text-amber-400">15</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">seo company for automotive</td><td class="text-right">320</td><td class="text-right text-amber-400">17</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">automotive seo marketing agency</td><td class="text-right">210</td><td class="text-right text-amber-400">16</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mt-12">
+    <h2 class="text-xl font-bold text-white mb-6">Related Pages</h2>
+    <InternalLinkCard links={spokeLinks} columns={3} />
+  </div>
+
+  <AuthorCard name="Automotive SEO Team" role="Agency Evaluation Specialists" bio="We evaluate and compare automotive SEO agencies based on verifiable results, client testimonials, industry certifications, and technical capabilities." expertise={['Agency Evaluation', 'SEO Auditing', 'Automotive Marketing', 'Performance Metrics']} />
+
+  <FaqSection items={faqs} title="Automotive SEO Agency — FAQ" />
+</BaseLayout>

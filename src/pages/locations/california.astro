@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InternalLinkCard from '../../components/InternalLinkCard.astro';
+const title = "Automotive SEO in California — Car Dealership & Repair Shop SEO [2026]";
+const description = "Automotive SEO services in California. SEO for car dealerships, auto repair shops, and auto businesses across LA, San Francisco, San Diego, and all California markets.";
+const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Locations', href: '/locations/california/' }, { label: 'California', href: '/locations/california/' }];
+const relatedLinks = [
+  { title: 'Car Dealership SEO', href: '/seo-for-car-dealerships/', description: 'National dealership SEO.', icon: '🚗', volume: '18,500/mo' },
+  { title: 'Auto Repair SEO', href: '/auto-repair-seo-services/', description: 'National repair shop SEO.', icon: '🔧', volume: '8,210/mo' },
+  { title: 'Local SEO', href: '/local-seo-for-car-dealerships/', description: 'Local SEO methodology.', icon: '📍', volume: '3,180/mo' },
+  { title: 'SEO Services', href: '/automotive-seo-services/', description: 'Service packages.', icon: '⚙️', volume: '3,990/mo' },
+];
+---
+<BaseLayout title={title} description={description} canonicalPath="/locations/california/" breadcrumbs={breadcrumbs}>
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4"><span class="kw-badge">🌴 California</span><span class="px-2.5 py-0.5 text-[10px] font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full uppercase">Geo Page</span></div>
+    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">Automotive SEO in <span class="text-gradient-amber">California</span></h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl">
+      California is the largest automotive market in the US. Targeted <a href="/seo-for-car-dealerships/" class="text-amber-400 hover:underline">car dealership SEO</a> and <a href="/auto-repair-seo-services/" class="text-amber-400 hover:underline">auto repair SEO</a> strategies for LA, SF, San Diego, and all California markets.
+    </p>
+  </div>
+  <div class="prose-content">
+    <h2>California Automotive Market Overview</h2>
+    <p>California has the largest concentration of car dealerships and auto repair shops in the United States, making it the most competitive market for <a href="/local-seo-for-car-dealerships/">automotive local SEO</a>. With markets spanning Los Angeles, San Francisco, San Diego, Sacramento, and dozens of mid-size cities, geo-targeted SEO is essential.</p>
+
+    <h2>SEO Strategy for California Auto Businesses</h2>
+    <h3>Market-Specific Local SEO</h3>
+    <ul>
+      <li><strong>Los Angeles</strong> — hyper-competitive; requires aggressive <a href="/local-seo-for-car-dealerships/">GBP optimization</a> and <a href="/automotive-reputation-management-services/">review management</a></li>
+      <li><strong>San Francisco / Bay Area</strong> — EV-focused market; target Tesla, Rivian, and EV servicing keywords</li>
+      <li><strong>San Diego</strong> — military market; target military discounts and base-proximity keywords</li>
+      <li><strong>Sacramento / Central Valley</strong> — truck and agriculture vehicle market</li>
+    </ul>
+
+    <h3>California-Specific Content</h3>
+    <ul>
+      <li>CARB emissions compliance and smog check content</li>
+      <li>California lemon law guides</li>
+      <li>EV incentive and rebate content (California leads in EV adoption)</li>
+      <li>Best scenic drives in California (lifestyle content)</li>
+    </ul>
+
+    <h2>California Automotive SEO Services</h2>
+    <p>Our <a href="/automotive-seo-services/">SEO service packages</a> include California-specific optimization: geo-targeted landing pages for each metro area, California directory citations, and content optimized for California search behavior. Find an <a href="/automotive-seo-agency/">agency</a> or <a href="/automotive-seo-expert/">expert</a> with California market experience.</p>
+  </div>
+  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Explore National Services</h2><InternalLinkCard links={relatedLinks} columns={2} /></div>
+</BaseLayout>

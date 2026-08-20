@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Contact — Request an Automotive SEO Consultation | SEO for Automotive";
+const description = "Get in touch with our automotive SEO team. Request a strategy call, SEO consultation, or audit for your dealership, repair shop, parts store, or automotive business.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Contact', href: '/contact/' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/contact/" breadcrumbs={breadcrumbs} pageType="contact">
+
+  <div class="max-w-3xl mx-auto">
+    <div class="mb-10">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+        Start a <span class="text-gradient-gold">conversation</span>
+      </h1>
+      <p class="mt-4 text-lg text-slate-400 leading-relaxed">
+        Tell us about your automotive business and search goals. We'll respond with a tailored perspective on how specialized automotive SEO can improve your organic visibility.
+      </p>
+    </div>
+
+    <form class="space-y-5" id="contact-form" action="#" method="POST">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="contact-name" class="block text-sm font-medium text-slate-400 mb-1.5">Full Name *</label>
+          <input type="text" id="contact-name" name="name" required autocomplete="name"
+            class="w-full bg-[#0c1019] border border-white/[0.08] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-[#d4a853]/50 focus:ring-1 focus:ring-[#d4a853]/25 transition-colors"
+            placeholder="Your name" />
+        </div>
+        <div>
+          <label for="contact-email" class="block text-sm font-medium text-slate-400 mb-1.5">Email *</label>
+          <input type="email" id="contact-email" name="email" required autocomplete="email"
+            class="w-full bg-[#0c1019] border border-white/[0.08] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-[#d4a853]/50 focus:ring-1 focus:ring-[#d4a853]/25 transition-colors"
+            placeholder="you@company.com" />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="contact-company" class="block text-sm font-medium text-slate-400 mb-1.5">Business Name</label>
+          <input type="text" id="contact-company" name="company" autocomplete="organization"
+            class="w-full bg-[#0c1019] border border-white/[0.08] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-[#d4a853]/50 focus:ring-1 focus:ring-[#d4a853]/25 transition-colors"
+            placeholder="Dealership or business name" />
+        </div>
+        <div>
+          <label for="contact-type" class="block text-sm font-medium text-slate-400 mb-1.5">Business Type</label>
+          <select id="contact-type" name="business_type"
+            class="w-full bg-[#0c1019] border border-white/[0.08] rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-[#d4a853]/50 focus:ring-1 focus:ring-[#d4a853]/25 transition-colors">
+            <option value="">Select your business type</option>
+            <option value="dealership">Car Dealership</option>
+            <option value="dealer-group">Dealer Group (Multi-location)</option>
+            <option value="repair">Auto Repair / Service</option>
+            <option value="parts">Auto Parts / eCommerce</option>
+            <option value="body">Auto Body / Collision</option>
+            <option value="detailing">Auto Detailing / PPF</option>
+            <option value="carwash">Car Wash</option>
+            <option value="other">Other Automotive Business</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label for="contact-website" class="block text-sm font-medium text-slate-400 mb-1.5">Website URL</label>
+        <input type="url" id="contact-website" name="website" autocomplete="url"
+          class="w-full bg-[#0c1019] border border-white/[0.08] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-[#d4a853]/50 focus:ring-1 focus:ring-[#d4a853]/25 transition-colors"
+          placeholder="https://yourdealership.com" />
+      </div>
+
+      <div>
+        <label for="contact-message" class="block text-sm font-medium text-slate-400 mb-1.5">Tell us about your search goals *</label>
+        <textarea id="contact-message" name="message" required rows="5"
+          class="w-full bg-[#0c1019] border border-white/[0.08] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-[#d4a853]/50 focus:ring-1 focus:ring-[#d4a853]/25 transition-colors resize-y"
+          placeholder="What are your main search challenges? What results are you looking for?"></textarea>
+      </div>
+
+      <div class="flex items-center justify-between pt-2">
+        <button type="submit" class="btn-primary" id="contact-submit">
+          Send Message
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+        </button>
+        <span class="text-xs text-slate-600">* Required fields</span>
+      </div>
+    </form>
+
+    <div class="mt-12 section-border pt-10">
+      <h2 class="text-lg font-bold text-white mb-4">Other ways to connect</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a href="/audit/" class="glass-card rounded-lg p-4 block group">
+          <h3 class="text-sm font-semibold text-white group-hover:text-[#d4a853] transition-colors mb-1">Request an SEO Audit</h3>
+          <p class="text-xs text-slate-500">Get a comprehensive automotive SEO audit of your website.</p>
+        </a>
+        <a href="/services/" class="glass-card rounded-lg p-4 block group">
+          <h3 class="text-sm font-semibold text-white group-hover:text-[#d4a853] transition-colors mb-1">Explore Services</h3>
+          <p class="text-xs text-slate-500">View our automotive SEO service options and approach.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</BaseLayout>

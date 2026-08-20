@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import InternalLinkCard from '../components/InternalLinkCard.astro';
+import FaqSection from '../components/FaqSection.astro';
+import AuthorCard from '../components/AuthorCard.astro';
+
+const title = "Automotive SEO Services — Packages, Pricing & Deliverables [2026]";
+const description = "Comprehensive automotive SEO service packages for dealerships, repair shops, and auto businesses. Pricing, deliverables, and ROI expectations. 3,990 monthly searches.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'SEO Services', href: '/automotive-seo-services/' },
+];
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Automotive SEO Services",
+  "description": description,
+  "provider": { "@type": "Organization", "name": "SEO for Automotive" },
+  "serviceType": "Search Engine Optimization",
+  "offers": [
+    { "@type": "Offer", "name": "Starter Package", "priceCurrency": "USD", "price": "1500", "description": "Single-location automotive SEO" },
+    { "@type": "Offer", "name": "Growth Package", "priceCurrency": "USD", "price": "3500", "description": "Multi-location with content" },
+    { "@type": "Offer", "name": "Enterprise Package", "priceCurrency": "USD", "price": "7500", "description": "Full-service dealership group SEO" }
+  ]
+};
+
+const spokeLinks = [
+  { title: 'Car Dealership SEO', href: '/seo-for-car-dealerships/', description: 'Dealership-specific SEO strategies.', icon: '🚗', volume: '18,500/mo' },
+  { title: 'Auto Repair SEO', href: '/auto-repair-seo-services/', description: 'SEO for mechanics and repair shops.', icon: '🔧', volume: '8,210/mo' },
+  { title: 'SEO Agency', href: '/automotive-seo-agency/', description: 'Find the right automotive SEO partner.', icon: '🏢', volume: '8,610/mo' },
+  { title: 'Local SEO', href: '/local-seo-for-car-dealerships/', description: 'Local search optimization for automotive.', icon: '📍', volume: '3,180/mo' },
+  { title: 'Reputation Management', href: '/automotive-reputation-management-services/', description: 'Review and reputation management.', icon: '⭐', volume: '2,720/mo' },
+  { title: 'Website Providers', href: '/automotive-website-providers/', description: 'Dealership website platforms.', icon: '🌐' },
+];
+
+const faqs = [
+  { question: 'What is included in automotive SEO services?', answer: 'Comprehensive <strong>automotive SEO services</strong> typically include: technical SEO audit, keyword research, on-page optimization, <a href="/blog/content-seo-automotive/">content creation</a>, <a href="/local-seo-for-car-dealerships/">local SEO management</a>, link building, <a href="/blog/semantic-seo-entities/">schema markup</a>, and monthly reporting with analytics.' },
+  { question: 'How much do automotive SEO services cost?', answer: 'Pricing ranges from $1,500/month for single-location businesses to $7,500+/month for multi-location dealer groups. Factors include competition level, number of locations, content volume, and scope of <a href="/automotive-seo-agency/">agency services</a>.' },
+  { question: 'Is there automotive SEO software available?', answer: 'Yes — "online automotive seo software" (170/mo) is a growing search category. Tools include SEMrush, Ahrefs, and BrightLocal for <a href="/blog/local-seo-for-automotive/">local SEO tracking</a>, plus automotive-specific platforms for inventory SEO and VDP optimization.' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/automotive-seo-services/" breadcrumbs={breadcrumbs} schemaData={schemaData}>
+
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="kw-badge">3,990/mo total volume</span>
+      <span class="kw-badge">10 keywords</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
+      Automotive <span class="text-gradient-amber">SEO Services</span>
+    </h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl leading-relaxed">
+      Professional SEO services designed specifically for the automotive industry. From <a href="/seo-for-car-dealerships/" class="text-amber-400 hover:underline">car dealerships</a> to <a href="/auto-repair-seo-services/" class="text-amber-400 hover:underline">repair shops</a>, get transparent pricing and measurable results.
+    </p>
+  </div>
+
+  <div class="prose-content">
+    <h2 id="service-packages">SEO Service Packages</h2>
+    <p>Our <strong>automotive SEO services</strong> (2,900/mo search volume) are structured into three tiers based on business size and growth goals. Each package includes a dedicated account manager, monthly reporting, and access to our <a href="/blog/automotive-seo-strategy/">SEO strategy playbook</a>.</p>
+  </div>
+
+  <!-- Pricing Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mb-12">
+    <div class="glass-card rounded-2xl p-6">
+      <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Starter</span>
+      <div class="text-3xl font-black text-white mt-2">$1,500<span class="text-base font-normal text-slate-500">/mo</span></div>
+      <p class="text-sm text-slate-400 mt-3 mb-6">Single-location automotive businesses</p>
+      <ul class="space-y-2.5 text-sm text-slate-400">
+        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg> Technical SEO audit</li>
+        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg> Google Business Profile optimization</li>
+        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg> 4 blog posts/month</li>
+        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg> Monthly reporting</li>
+      </ul>
+    </div>
+    <div class="glass-card rounded-2xl p-6 border-amber-500/30 relative">
+      <span class="absolute -top-3 left-6 px-3 py-1 text-xs font-bold text-slate-950 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full">MOST POPULAR</span>
+      <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Growth</span>
+      <div class="text-3xl font-black text-white mt-2">$3,500<span class="text-base font-normal text-slate-500">/mo</span></div>
+      <p class="text-sm text-slate-400 mt-3 mb-6">Multi-location dealerships & repair chains</p>
+      <ul class="space-y-2.5 text-sm text-slate-400">
+        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg> Everything in Starter</li>
+        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg> Up to 5 locations</li>
+        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg> 8 blog posts + link building</li>
+        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg> Schema markup implementation</li>
+        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg> Reputation management</li>
+      </ul>
+    </div>
+    <div class="glass-card rounded-2xl p-6">
+      <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Enterprise</span>
+      <div class="text-3xl font-black text-white mt-2">$7,500<span class="text-base font-normal text-slate-500">/mo</span></div>
+      <p class="text-sm text-slate-400 mt-3 mb-6">Dealer groups & OEM marketing teams</p>
+      <ul class="space-y-2.5 text-sm text-slate-400">
+        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg> Everything in Growth</li>
+        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg> Unlimited locations</li>
+        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg> AEO + GEO optimization</li>
+        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg> Dedicated SEO strategist</li>
+        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg> Competitive intelligence reports</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-12">
+    <h2 class="text-xl font-bold text-white mb-6">Explore by Vertical</h2>
+    <InternalLinkCard links={spokeLinks} columns={3} />
+  </div>
+
+  <AuthorCard name="Automotive SEO Team" role="Service Architecture Specialists" bio="We design scalable SEO service packages for automotive businesses of all sizes, from single-location repair shops to multi-state dealer groups." expertise={['SEO Service Design', 'Pricing Strategy', 'Automotive Digital Marketing', 'ROI Optimization']} />
+
+  <FaqSection items={faqs} title="Automotive SEO Services — FAQ" />
+</BaseLayout>

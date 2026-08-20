@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import InternalLinkCard from '../components/InternalLinkCard.astro';
+import AuthorCard from '../components/AuthorCard.astro';
+
+const title = "Automotive SEO Expert — Top SEO Specialists for the Auto Industry [2026]";
+const description = "Connect with certified automotive SEO experts and specialists. 6 keywords, 520 monthly volume. Find the right SEO consultant for your automotive business.";
+const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'SEO Expert', href: '/automotive-seo-expert/' }];
+const relatedLinks = [
+  { title: 'SEO Agency', href: '/automotive-seo-agency/', description: 'Agency vs consultant comparison.', icon: '🏢', volume: '8,610/mo' },
+  { title: 'Best Agencies Listicle', href: '/best-automotive-seo-agencies/', description: 'Ranked list of top SEO agencies.', icon: '🏆' },
+  { title: 'SEO Services', href: '/automotive-seo-services/', description: 'Service packages and pricing.', icon: '⚙️', volume: '3,990/mo' },
+  { title: 'E-E-A-T Guide', href: '/blog/eeat-automotive-seo/', description: 'What makes a true SEO expert.', icon: '🏆' },
+];
+---
+<BaseLayout title={title} description={description} canonicalPath="/automotive-seo-expert/" breadcrumbs={breadcrumbs}>
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4"><span class="kw-badge">520/mo</span><span class="kw-badge">6 keywords</span></div>
+    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">Automotive <span class="text-gradient-amber">SEO Expert</span></h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl">Who are the top SEO experts in automotive? Find certified specialists with proven <a href="/blog/eeat-automotive-seo/" class="text-amber-400 hover:underline">E-E-A-T credentials</a> for <a href="/seo-for-car-dealerships/" class="text-amber-400 hover:underline">dealership</a> and <a href="/auto-repair-seo-services/" class="text-amber-400 hover:underline">repair shop</a> SEO.</p>
+  </div>
+  <div class="prose-content">
+    <h2>What Makes an Automotive SEO Expert?</h2>
+    <p>True <strong>automotive SEO specialists</strong> (70/mo) combine deep <a href="/blog/eeat-automotive-seo/">E-E-A-T signals</a> — real experience running automotive SEO campaigns — with technical expertise in <a href="/blog/semantic-seo-entities/">semantic SEO</a>, <a href="/local-seo-for-car-dealerships/">local SEO</a>, and emerging disciplines like <a href="/blog/aeo-answer-engine-optimization/">AEO</a> and <a href="/blog/geo-generative-engine-optimization/">GEO</a>.</p>
+    <h2>Expert vs Agency</h2>
+    <p>Choosing between an <strong>automotive SEO expert</strong> (210/mo) and an <a href="/automotive-seo-agency/">automotive SEO agency</a> (2,400/mo) depends on your needs. Experts provide focused strategic guidance; agencies deliver full-service execution including <a href="/blog/content-seo-automotive/">content production</a>, link building, and <a href="/automotive-reputation-management-services/">reputation management</a>.</p>
+    <h2>Keywords</h2>
+  </div>
+  <div class="overflow-x-auto mt-6 mb-10">
+    <table class="w-full text-sm">
+      <thead><tr class="border-b border-white/[0.08] text-left"><th class="pb-3 text-slate-400 font-semibold">Keyword</th><th class="pb-3 text-slate-400 font-semibold text-right">Volume</th><th class="pb-3 text-slate-400 font-semibold text-right">KD</th></tr></thead>
+      <tbody class="text-slate-300">
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">automotive seo expert</td><td class="text-right">210</td><td class="text-right text-emerald-400">7</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">automotive seo specialists</td><td class="text-right">70</td><td class="text-right text-emerald-400">0</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">seo specialists for automotive industry</td><td class="text-right">70</td><td class="text-right text-emerald-400">8</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">who are the top seo experts in automotive</td><td class="text-right">70</td><td class="text-right text-emerald-400">4</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <AuthorCard name="Automotive SEO Team" role="Certified Automotive SEO Experts" bio="10+ years of exclusive automotive SEO experience across dealerships, repair chains, auto parts e-commerce, and OEM marketing." expertise={['Technical SEO', 'Local SEO', 'Schema.org Markup', 'E-E-A-T Strategy', 'AEO/GEO Optimization']} />
+  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Related Pages</h2><InternalLinkCard links={relatedLinks} columns={2} /></div>
+</BaseLayout>

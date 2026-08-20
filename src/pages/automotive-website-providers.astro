@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import InternalLinkCard from '../components/InternalLinkCard.astro';
+import FaqSection from '../components/FaqSection.astro';
+import AuthorCard from '../components/AuthorCard.astro';
+
+const title = "Automotive Website Providers — Dealership Website Platforms & Design [2026]";
+const description = "Compare automotive website providers, dealership website platforms, and web design companies. Coverage of providers, design, platform builders, and vertical spin-offs.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Website Providers', href: '/automotive-website-providers/' },
+];
+
+const spokeLinks = [
+  { title: 'Car Dealership SEO', href: '/seo-for-car-dealerships/', description: 'SEO strategy for your dealership website.', icon: '🚗', volume: '18,500/mo' },
+  { title: 'Auto Repair SEO', href: '/auto-repair-seo-services/', description: 'Website optimization for repair shops.', icon: '🔧', volume: '8,210/mo' },
+  { title: 'Semantic SEO & Entities', href: '/blog/semantic-seo-entities/', description: 'Schema markup for automotive websites.', icon: '🧬' },
+  { title: 'SEO Services', href: '/automotive-seo-services/', description: 'Full SEO service packages.', icon: '⚙️', volume: '3,990/mo' },
+  { title: 'Auto Detailing Website', href: '/auto-detailing-seo-services/', description: 'Detailing website design & SEO.', icon: '✨', volume: '1,570/mo' },
+  { title: 'Car Wash Website', href: '/seo-for-car-wash/', description: 'Car wash website design & SEO.', icon: '🧽', volume: '750/mo' },
+];
+
+const faqs = [
+  { question: 'What are the top automotive website providers?', answer: 'Leading dealership website providers include Dealer.com (Cox Automotive), DealerOn, DealerInspire (Cars.com), Dealer eProcess, and Digital Air Strike. Compare by SEO capabilities, customization options, inventory integration, and <a href="/blog/semantic-seo-entities/">schema markup support</a>.' },
+  { question: 'Should my dealership use a custom website or a platform?', answer: 'Most dealerships benefit from automotive-specific platforms that include inventory management and lead tools. However, custom websites offer more <a href="/seo-for-car-dealerships/">SEO flexibility</a>. The key is ensuring your platform supports technical SEO requirements.' },
+  { question: 'What makes an SEO-friendly dealership website?', answer: 'An SEO-friendly dealership website needs: fast page load, mobile-first design, proper URL structure, unique content per VDP, <a href="/blog/semantic-seo-entities/">Vehicle schema markup</a>, crawlable JavaScript, and integration with <a href="/local-seo-for-car-dealerships/">Google Business Profile</a>.' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/automotive-website-providers/" breadcrumbs={breadcrumbs}>
+
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="kw-badge">Seed Cluster</span>
+      <span class="kw-badge">42 keywords (5 sub-clusters)</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
+      Automotive <span class="text-gradient-amber">Website Providers</span>
+    </h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl leading-relaxed">
+      Compare dealership website platforms, <strong>automotive web design companies</strong>, and <strong>website builders</strong> for auto businesses. Bridge your website with <a href="/seo-for-car-dealerships/" class="text-amber-400 hover:underline">dealership SEO</a> for maximum search visibility.
+    </p>
+  </div>
+
+  <div class="prose-content">
+    <h2 id="providers-overview">Dealership Website Providers & Vendors</h2>
+    <p>Choosing the right website provider is the foundation of <a href="/seo-for-car-dealerships/">car dealership SEO</a>. Your platform determines technical SEO capabilities, page speed, and how well search engines can crawl your inventory.</p>
+
+    <h2 id="website-design">Automotive Website Design</h2>
+    <p>Top search terms include <strong>"car dealership website design"</strong>, <strong>"automotive website design company"</strong>, and <strong>"automotive web design agency"</strong>. A well-designed automotive website should prioritize:</p>
+    <ul>
+      <li>Mobile-first responsive design with tap-to-call CTAs</li>
+      <li>Fast inventory search with filterable results</li>
+      <li>Individual VDP pages optimized for <a href="/blog/semantic-seo-entities/">Schema.org Vehicle markup</a></li>
+      <li>Integration with CRM and lead management systems</li>
+      <li><a href="/local-seo-for-car-dealerships/">Local SEO elements</a> — maps, directions, hours, and NAP</li>
+    </ul>
+
+    <h2 id="platforms">Website Platforms & Builders</h2>
+    <p>Keywords like <strong>"dealership website platform"</strong>, <strong>"car dealership website builder"</strong>, and <strong>"dealer website software"</strong> target businesses evaluating self-serve platforms versus managed solutions.</p>
+
+    <h2 id="vertical-spinoffs">Vertical Website Design</h2>
+    <p>Website design extends beyond dealerships to related automotive verticals:</p>
+    <ul>
+      <li><strong><a href="/auto-repair-seo-services/">Auto repair shop website design</a></strong> — service menus, appointment booking, customer portals</li>
+      <li><strong><a href="/auto-detailing-seo-services/">Auto detailing website design</a></strong> — portfolio galleries, package pricing, online booking</li>
+      <li><strong><a href="/seo-for-car-wash/">Car wash website design</a></strong> — membership management, location finders</li>
+      <li><strong><a href="/auto-parts-seo-services/">Auto parts website design</a></strong> — <a href="/blog/ecommerce-seo-automotive/">e-commerce</a> with fitment data and year/make/model lookup</li>
+      <li><strong><a href="/truck-company-seo-services/">Trucking company website design</a></strong> — fleet showcases, load board integration</li>
+    </ul>
+
+    <h2 id="seo-bridge">Website + SEO Bridge</h2>
+    <p>The bridge between your website platform and SEO success is critical. Keywords like <strong>"dealership website seo"</strong>, <strong>"automotive website seo"</strong>, and <strong>"seo friendly dealership website"</strong> reflect this intersection. Every platform decision should be evaluated through an SEO lens.</p>
+  </div>
+
+  <div class="mt-12">
+    <h2 class="text-xl font-bold text-white mb-6">Related Pages</h2>
+    <InternalLinkCard links={spokeLinks} columns={3} />
+  </div>
+
+  <AuthorCard name="Automotive SEO Team" role="Website Platform & SEO Integration Specialists" bio="We evaluate automotive website providers and platforms with a laser focus on SEO capabilities, ensuring every platform decision supports organic growth." expertise={['Website Platform Evaluation', 'Technical SEO', 'Dealership Web Design', 'CMS Architecture']} />
+
+  <FaqSection items={faqs} title="Website Providers — FAQ" />
+</BaseLayout>

@@ -1,63 +1,352 @@
 ---
-import AppShell from '../components/AppShell.jsx';
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FaqSection from '../components/FaqSection.astro';
 
-const title = "SEO for Automotive - Dealership & Auto Enterprise Intelligence Platform";
-const description = "Accelerate dealership organic search traffic, generate Schema.org Vehicle JSON-LD, dominate Google Maps 3-Pack, audit VDPs, and calculate dealer SEO ROI.";
-const canonicalUrl = "https://shoaib4567.github.io/seo-for-automotive/";
+const title = "SEO for Automotive — Specialist Automotive Search & SEO Company";
+const description = "The specialist automotive SEO company. We help car dealerships, auto repair shops, parts stores, and automotive businesses dominate organic search, local search, and AI-powered search engines.";
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SEO for Automotive",
+  "url": "https://seoforautomotive.com",
+  "description": description,
+  "knowsAbout": [
+    "Automotive SEO",
+    "Car Dealership SEO",
+    "Auto Repair SEO",
+    "Auto Parts SEO",
+    "Local SEO for Automotive",
+    "Technical SEO for Automotive",
+    "eCommerce SEO for Automotive",
+    "Answer Engine Optimization",
+    "Generative Engine Optimization",
+    "Automotive Structured Data",
+    "E-E-A-T",
+    "Semantic SEO"
+  ]
+};
+
+const industries = [
+  {
+    title: 'Car Dealerships',
+    href: '/industries/car-dealership-seo/',
+    desc: 'Inventory SEO, VDP optimization, make/model/year architecture, local visibility, and dealer reputation management.',
+    icon: '🚗',
+  },
+  {
+    title: 'Auto Repair Shops',
+    href: '/industries/auto-repair-seo/',
+    desc: 'Service-area SEO, Google Maps ranking, review management, and mobile-first optimization for mechanics and repair centers.',
+    icon: '🔧',
+  },
+  {
+    title: 'Auto Parts Stores',
+    href: '/industries/auto-parts-seo/',
+    desc: 'Product SEO, category architecture, part number optimization, faceted navigation, and compatibility-based search.',
+    icon: '🔩',
+  },
+  {
+    title: 'Auto Body & Collision',
+    href: '/industries/auto-body-seo/',
+    desc: 'Local trust signals, insurance-related search, before/after content strategy, and collision repair visibility.',
+    icon: '🛡️',
+  },
+  {
+    title: 'Auto Detailing & PPF',
+    href: '/industries/auto-detailing-seo/',
+    desc: 'Service-area optimization, ceramic coating and PPF keywords, visual content SEO, and mobile booking conversion.',
+    icon: '✨',
+  },
+  {
+    title: 'Car Wash',
+    href: '/industries/car-wash-seo/',
+    desc: 'Multi-location local SEO, membership conversion, Maps 3-Pack targeting, and seasonal demand optimization.',
+    icon: '🧽',
+  },
+];
+
+const services = [
+  { title: 'Local SEO', href: '/services/automotive-local-seo/', desc: 'Google Business Profile, Maps 3-Pack, local citations, and "near me" targeting.' },
+  { title: 'Technical SEO', href: '/services/automotive-technical-seo/', desc: 'Crawlability, indexation, Core Web Vitals, inventory rendering, and structured data.' },
+  { title: 'eCommerce SEO', href: '/services/automotive-ecommerce-seo/', desc: 'Product pages, categories, part numbers, faceted navigation, and merchant visibility.' },
+  { title: 'Content SEO', href: '/services/automotive-content-seo/', desc: 'Topical authority, content clusters, editorial strategy, and information gain.' },
+  { title: 'AEO', href: '/services/automotive-aeo/', desc: 'Featured snippets, People Also Ask, AI Overviews, and voice search optimization.' },
+  { title: 'GEO / AI Search', href: '/services/automotive-geo/', desc: 'ChatGPT, Gemini, Perplexity — getting your brand cited by AI assistants.' },
+];
+
+const problems = [
+  { problem: 'Vehicle pages aren\'t being indexed', context: 'Dynamic inventory systems often create crawlability issues — thousands of VDPs that Google never discovers or drops from the index.' },
+  { problem: 'Local competitors outrank you in Maps', context: 'Google Business Profile optimization, NAP consistency, review velocity, and local entity signals directly determine Maps 3-Pack ranking.' },
+  { problem: 'Parts pages don\'t rank for product searches', context: 'Auto parts eCommerce requires part-number SEO, compatibility architecture, faceted navigation strategy, and proper product schema.' },
+  { problem: 'AI search engines don\'t mention your brand', context: 'ChatGPT, Gemini, and Perplexity pull from authoritative, well-structured sources — most automotive businesses aren\'t optimized for AI citation.' },
+];
+
+const tools = [
+  { title: 'Schema Generator', href: '/tools/automotive-schema-generator/', desc: 'Generate Vehicle, AutoDealer, and AutoRepair structured data.' },
+  { title: 'VDP Auditor', href: '/tools/vdp-auditor/', desc: 'Audit Vehicle Detail Pages for SEO best practices.' },
+  { title: 'Local SEO Optimizer', href: '/tools/local-seo-optimizer/', desc: 'Analyze Google Maps 3-Pack visibility and GBP health.' },
+  { title: 'ROI Calculator', href: '/tools/seo-roi-calculator/', desc: 'Model dealership SEO revenue and return on investment.' },
+];
+
+const faqs = [
+  {
+    question: 'What is automotive SEO?',
+    answer: 'Automotive SEO is the practice of optimizing websites for car dealerships, auto repair shops, auto parts stores, and other automotive businesses to rank higher in search engine results. It encompasses <a href="/services/automotive-local-seo/">local SEO</a>, <a href="/services/automotive-technical-seo/">technical optimization</a>, content strategy, <a href="/knowledge/semantic-seo-automotive/">semantic SEO</a>, and structured data — tailored specifically to the unique challenges of the automotive industry such as inventory management, make/model/year architecture, and multi-location search.'
+  },
+  {
+    question: 'How is automotive SEO different from general SEO?',
+    answer: 'Automotive businesses face unique search challenges that general SEO doesn\'t address: dynamic vehicle inventory indexation, Vehicle Detail Page (VDP) optimization, make/model/year entity relationships, <a href="/industries/auto-parts-seo/">part number and compatibility search</a>, multi-location dealer group management, and automotive-specific schema types (Vehicle, AutoDealer, AutoRepair). A specialist understands these structural differences.'
+  },
+  {
+    question: 'How much does automotive SEO cost?',
+    answer: 'Automotive SEO services typically range from $1,500 to $10,000+ per month depending on the scope, competition level, and number of locations. Single-location repair shops start at the lower end, while multi-location dealer groups require enterprise-level investment. See our <a href="/services/">services page</a> for detailed information.'
+  },
+  {
+    question: 'What is AEO and GEO for automotive businesses?',
+    answer: '<strong>AEO (Answer Engine Optimization)</strong> focuses on getting your content featured in Google\'s answer boxes, People Also Ask results, and AI Overviews. <strong>GEO (Generative Engine Optimization)</strong> focuses on getting your brand cited by AI assistants like ChatGPT, Gemini, and Perplexity. Both are increasingly important for automotive businesses. Learn more about <a href="/services/automotive-aeo/">AEO</a> and <a href="/services/automotive-geo/">GEO</a>.'
+  },
+  {
+    question: 'Why is local SEO important for automotive businesses?',
+    answer: 'Over 76% of people who search for an automotive business on their phone visit one within a day. <a href="/services/automotive-local-seo/">Automotive local SEO</a> ensures your business appears in the Google Maps 3-Pack, has optimized Google Business Profile listings, maintains NAP consistency across directories, and ranks for high-intent "near me" searches. For dealerships, repair shops, and service businesses, local SEO often delivers the highest ROI of any search channel.'
+  },
+];
 ---
 
-<!usr/bin/env html>
-<html lang="en" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/seo-for-automotive/favicon.svg" />
-    
-    <!-- Primary Meta Tags -->
-    <title>{title}</title>
-    <meta name="title" content={title} />
-    <meta name="description" content={description} />
-    <link rel="canonical" href={canonicalUrl} />
+<BaseLayout title={title} description={description} canonicalPath="/" schemaData={schemaData} noContainer={true}>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://shoaib4567.github.io/seo-for-automotive/hero.jpg" />
+  <!-- ================================ -->
+  <!-- HERO — Problem-led, not stats-led -->
+  <!-- ================================ -->
+  <section class="hero-glow relative overflow-hidden">
+    <div class="container-main pt-16 pb-20 relative z-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <!-- Specialization badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#d4a853]/10 border border-[#d4a853]/20 mb-7 animate-fadeIn">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#d4a853] animate-pulse" aria-hidden="true"></span>
+          <span class="text-xs font-semibold text-[#d4a853] tracking-wide">Specialist Automotive SEO Company</span>
+        </div>
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalUrl} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content="https://shoaib4567.github.io/seo-for-automotive/hero.jpg" />
+        <!-- H1 — business-value-led, not keyword-volume-led -->
+        <h1 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-white leading-[1.12] animate-slideUp">
+          Automotive search,<br />
+          <span class="text-gradient-gold">engineered.</span>
+        </h1>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+        <p class="mt-6 text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed animate-slideUp" style="animation-delay: 80ms;">
+          We help <a href="/industries/car-dealership-seo/" class="text-[#d4a853] hover:underline underline-offset-2">car dealerships</a>,
+          <a href="/industries/auto-repair-seo/" class="text-[#d4a853] hover:underline underline-offset-2">auto repair shops</a>,
+          <a href="/industries/auto-parts-seo/" class="text-[#d4a853] hover:underline underline-offset-2">parts stores</a>,
+          and automotive businesses dominate organic search, local search, and AI-powered search engines.
+        </p>
 
-    <!-- Schema.org Application Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "SEO for Automotive Intelligence Platform",
-      "operatingSystem": "Web",
-      "applicationCategory": "BusinessApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "shoaib4567"
-      }
-    })} />
-  </head>
-  <body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-amber-500 selection:text-slate-950">
-    <AppShell client:only="react" />
-  </body>
-</html>
+        <!-- CTAs -->
+        <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3 animate-slideUp" style="animation-delay: 150ms;">
+          <a href="/contact/" class="btn-primary" id="hero-cta-primary">
+            Request a Strategy Call
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+          </a>
+          <a href="/services/" class="btn-secondary" id="hero-cta-secondary">
+            Explore Services
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ -->
+  <!-- WHY AUTOMOTIVE SEO IS DIFFERENT -->
+  <!-- ================================ -->
+  <section class="container-main section-spacing" id="problems">
+    <div class="text-center mb-12 max-w-2xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white">
+        Why automotive search is structurally different
+      </h2>
+      <p class="text-slate-400 mt-3">
+        General SEO agencies don't understand the structural challenges unique to automotive businesses.
+        We do — because automotive search is all we do.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+      {problems.map((item, i) => (
+        <div class="glass-card rounded-lg p-5">
+          <div class="flex items-start gap-3">
+            <span class="w-7 h-7 rounded-md bg-red-500/10 flex items-center justify-center text-red-400 text-sm font-bold shrink-0 mt-0.5" aria-hidden="true">!</span>
+            <div>
+              <h3 class="text-sm font-semibold text-white mb-1.5">{item.problem}</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">{item.context}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ================================ -->
+  <!-- INDUSTRIES WE SERVE -->
+  <!-- ================================ -->
+  <section class="container-main section-spacing section-border" id="industries">
+    <div class="mb-10">
+      <span class="badge-outline mb-3">Industry Expertise</span>
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mt-2">
+        Built for every automotive vertical
+      </h2>
+      <p class="text-slate-400 mt-3 max-w-2xl">
+        We understand the search architecture, customer journey, and technical challenges specific to each automotive business type.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {industries.map(ind => (
+        <a href={ind.href} class="service-card group" id={`ind-${ind.href.split('/').filter(Boolean).pop()}`}>
+          <span class="text-2xl mb-3 block" aria-hidden="true">{ind.icon}</span>
+          <h3 class="text-base font-bold text-slate-200 group-hover:text-[#d4a853] transition-colors mb-2">{ind.title}</h3>
+          <p class="text-xs text-slate-500 leading-relaxed mb-3">{ind.desc}</p>
+          <span class="btn-ghost text-xs p-0">Learn more →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- ================================ -->
+  <!-- CORE SERVICES -->
+  <!-- ================================ -->
+  <section class="container-main section-spacing section-border" id="services">
+    <div class="mb-10">
+      <span class="badge-outline mb-3">SEO Services</span>
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mt-2">
+        Automotive SEO services
+      </h2>
+      <p class="text-slate-400 mt-3 max-w-2xl">
+        From <a href="/services/automotive-local-seo/" class="text-[#d4a853] hover:underline">local search</a> to
+        <a href="/services/automotive-geo/" class="text-[#d4a853] hover:underline">AI-powered search engines</a> —
+        every service is designed specifically for automotive businesses.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {services.map(svc => (
+        <a href={svc.href} class="glass-card rounded-lg p-5 group block">
+          <h3 class="text-sm font-bold text-slate-200 group-hover:text-[#d4a853] transition-colors mb-2">{svc.title}</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">{svc.desc}</p>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-6 text-center">
+      <a href="/services/" class="btn-secondary">View All Services & Pricing →</a>
+    </div>
+  </section>
+
+  <!-- ================================ -->
+  <!-- METHODOLOGY — How we think -->
+  <!-- ================================ -->
+  <section class="container-main section-spacing section-border" id="methodology">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div>
+        <span class="badge-outline mb-3">Our Approach</span>
+        <h2 class="text-2xl font-bold text-white mt-2 mb-5">How automotive SEO actually works</h2>
+        <div class="prose-content">
+          <p>Most SEO agencies apply generic strategies to automotive businesses and wonder why vehicle pages don't rank. Automotive search requires understanding the structural relationships between <strong>inventory, locations, services, and entities</strong> that define how search engines model the automotive industry.</p>
+
+          <h3>Entity-first architecture</h3>
+          <p>We build <a href="/knowledge/semantic-seo-automotive/">semantic relationships</a> between automotive entities — makes, models, service types, locations, and business categories — rather than chasing individual keywords. This creates a coherent information architecture that search engines understand.</p>
+
+          <h3>Automotive-specific technical SEO</h3>
+          <p>Vehicle inventory creates unique <a href="/services/automotive-technical-seo/">technical challenges</a>: dynamic page generation, duplicate URL management, faceted navigation, JavaScript rendering of VDP content, and proper canonical handling across thousands of listings.</p>
+
+          <h3>Beyond traditional search</h3>
+          <p>We optimize for where automotive search is going — <a href="/services/automotive-aeo/">answer engines</a>, <a href="/services/automotive-geo/">AI assistants</a>, and large language models that increasingly influence how consumers find automotive businesses.</p>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <div class="glass-card rounded-lg p-4">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="w-7 h-7 rounded-md bg-[#d4a853]/10 flex items-center justify-center text-[#d4a853] font-bold text-xs">1</span>
+            <h3 class="text-sm font-bold text-white">Automotive Audit</h3>
+          </div>
+          <p class="text-xs text-slate-500 ml-10">Technical, content, semantic, entity, and local SEO analysis built specifically for automotive website architectures.</p>
+        </div>
+        <div class="glass-card rounded-lg p-4">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="w-7 h-7 rounded-md bg-[#d4a853]/10 flex items-center justify-center text-[#d4a853] font-bold text-xs">2</span>
+            <h3 class="text-sm font-bold text-white">Search Architecture</h3>
+          </div>
+          <p class="text-xs text-slate-500 ml-10">Entity mapping, topical authority design, internal linking architecture, and <a href="/knowledge/automotive-schema-guide/" class="text-[#d4a853] hover:underline">structured data</a> implementation.</p>
+        </div>
+        <div class="glass-card rounded-lg p-4">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="w-7 h-7 rounded-md bg-[#0f9d8e]/10 flex items-center justify-center text-[#0f9d8e] font-bold text-xs">3</span>
+            <h3 class="text-sm font-bold text-white">Content & Authority</h3>
+          </div>
+          <p class="text-xs text-slate-500 ml-10">Topic clusters, <a href="/knowledge/eeat-automotive-seo/" class="text-[#d4a853] hover:underline">E-E-A-T</a> signals, expertise demonstration, and strategic content that builds topical authority.</p>
+        </div>
+        <div class="glass-card rounded-lg p-4">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="w-7 h-7 rounded-md bg-[#0f9d8e]/10 flex items-center justify-center text-[#0f9d8e] font-bold text-xs">4</span>
+            <h3 class="text-sm font-bold text-white">Measurement & Growth</h3>
+          </div>
+          <p class="text-xs text-slate-500 ml-10">Organic traffic, qualified leads, local visibility, AI citations, and revenue attribution — not just rankings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ -->
+  <!-- TOOLS -->
+  <!-- ================================ -->
+  <section class="container-main section-spacing section-border" id="tools">
+    <div class="mb-10">
+      <span class="badge-outline mb-3">Free Tools</span>
+      <h2 class="text-2xl font-bold text-white mt-2">Automotive SEO tools</h2>
+      <p class="text-slate-400 mt-3 max-w-xl">Purpose-built tools for automotive search optimization — from schema generation to VDP auditing.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {tools.map(tool => (
+        <a href={tool.href} class="glass-card rounded-lg p-4 group block">
+          <h3 class="text-sm font-semibold text-white group-hover:text-[#d4a853] transition-colors mb-1.5">{tool.title}</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">{tool.desc}</p>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-5 text-center">
+      <a href="/tools/" class="btn-ghost">View All Tools →</a>
+    </div>
+  </section>
+
+  <!-- ================================ -->
+  <!-- CTA — Final conversion -->
+  <!-- ================================ -->
+  <section class="container-main section-spacing section-border">
+    <div class="glass-panel rounded-xl p-8 sm:p-12 text-center max-w-3xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">
+        Ready to dominate automotive search?
+      </h2>
+      <p class="text-slate-400 mb-7 max-w-lg mx-auto">
+        Whether you're a single-location repair shop or a multi-state dealer group —
+        let's build a search strategy designed for your automotive business.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="/contact/" class="btn-primary" id="footer-cta-primary">
+          Request a Strategy Call
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+        </a>
+        <a href="/audit/" class="btn-secondary" id="footer-cta-audit">
+          Request a Free SEO Audit
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ -->
+  <!-- FAQ -->
+  <!-- ================================ -->
+  <section class="container-main pb-16">
+    <FaqSection items={faqs} title="Automotive SEO — Frequently Asked Questions" />
+  </section>
+
+</BaseLayout>

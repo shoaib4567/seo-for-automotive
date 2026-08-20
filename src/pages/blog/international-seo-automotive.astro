@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InternalLinkCard from '../../components/InternalLinkCard.astro';
+const title = "International SEO for Automotive — Multi-Market & OEM Strategies [2026]";
+const description = "International SEO for automotive OEMs, global dealer networks, and multi-market automotive businesses. Hreflang, geo-targeting, and localization strategies.";
+const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Knowledge Hub', href: '/blog/automotive-seo-strategy/' }, { label: 'International SEO', href: '/blog/international-seo-automotive/' }];
+const relatedLinks = [
+  { title: 'SEO Strategy', href: '/blog/automotive-seo-strategy/', description: 'International in overall strategy.', icon: '📋' },
+  { title: 'Local SEO Guide', href: '/blog/local-seo-for-automotive/', description: 'Local vs international SEO.', icon: '📍' },
+  { title: 'Content SEO', href: '/blog/content-seo-automotive/', description: 'Multi-language content strategy.', icon: '📝' },
+  { title: 'Semantic SEO', href: '/blog/semantic-seo-entities/', description: 'Entity markup for multi-market.', icon: '🧬' },
+];
+---
+<BaseLayout title={title} description={description} canonicalPath="/blog/international-seo-automotive/" breadcrumbs={breadcrumbs}>
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4"><span class="px-2.5 py-0.5 text-[10px] font-bold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 rounded-full uppercase">Knowledge Hub</span></div>
+    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">International SEO for <span class="text-gradient-amber">Automotive</span></h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl">Multi-market SEO strategies for automotive OEMs, global dealer networks, and international auto businesses. Targets "automotive seo report 2025 uk" (70/mo).</p>
+  </div>
+  <div class="prose-content">
+    <h2>International Automotive SEO Framework</h2>
+    <p>Global automotive brands need SEO strategies that work across markets. Key challenges include hreflang implementation, multi-language content, and market-specific search behavior differences.</p>
+    <h3>Hreflang Implementation</h3>
+    <ul>
+      <li>Proper hreflang tags for language/region targeting (en-US, en-GB, de-DE, etc.)</li>
+      <li>Self-referencing hreflang on every page</li>
+      <li>X-default fallback for unmatched languages</li>
+      <li>Consistent URL structure: subdirectories (/en/, /de/) vs subdomains</li>
+    </ul>
+    <h3>Market-Specific Content</h3>
+    <ul>
+      <li><strong>UK market</strong> — targets "automotive seo report 2025 uk" (70/mo), different terminology (boot vs trunk, bonnet vs hood)</li>
+      <li><strong>European markets</strong> — diesel-focused, EV regulations, different OEM landscapes</li>
+      <li><strong>Regional search engines</strong> — Yandex (Russia), Baidu (China) for global OEMs</li>
+    </ul>
+    <h3>OEM Multi-Dealer SEO</h3>
+    <p>Automotive OEMs face unique challenges: coordinating SEO across dealer networks, managing co-op marketing programs, and maintaining brand consistency while allowing <a href="/local-seo-for-car-dealerships/">local optimization</a>. See our <a href="/automotive-seo-marketing/">SEO marketing guide</a> for OEM digital campaign strategies.</p>
+  </div>
+  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Related Pages</h2><InternalLinkCard links={relatedLinks} columns={2} /></div>
+</BaseLayout>

@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "About — SEO for Automotive | Specialist Automotive Search Company";
+const description = "SEO for Automotive is a specialist automotive search company. We focus exclusively on helping automotive businesses dominate organic search, local search, and AI-powered search engines.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about/' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/about/" breadcrumbs={breadcrumbs} pageType="about">
+
+  <div class="max-w-3xl">
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-6">
+      About <span class="text-gradient-gold">SEO for Automotive</span>
+    </h1>
+
+    <div class="prose-content">
+      <p class="text-lg text-slate-400 leading-relaxed">We are a specialist automotive search company. We focus exclusively on helping automotive businesses — dealerships, repair shops, parts stores, and automotive companies — dominate organic search, local search, and AI-powered search engines.</p>
+
+      <h2>Why specialization matters</h2>
+      <p>Automotive search is structurally different from any other industry. Dynamic vehicle inventory creates unique indexation challenges. Make/model/year entity hierarchies require specialized content architecture. Multi-department dealerships need coordinated search strategies across sales, service, parts, and body shop. Multi-location dealer groups need enterprise-level location management.</p>
+      <p>A general SEO agency treats automotive as one of many industries. We treat it as the only industry — which means we understand the technical nuances, entity relationships, and search patterns that define automotive search.</p>
+
+      <h2>What we do</h2>
+      <ul>
+        <li><strong><a href="/services/automotive-local-seo/">Local SEO</a></strong> — Google Business Profile optimization, Maps 3-Pack strategy, review management, and local citation building</li>
+        <li><strong><a href="/services/automotive-technical-seo/">Technical SEO</a></strong> — inventory crawlability, VDP indexation, Core Web Vitals, and structured data implementation</li>
+        <li><strong><a href="/services/automotive-ecommerce-seo/">eCommerce SEO</a></strong> — product pages, category architecture, part number optimization, and faceted navigation</li>
+        <li><strong><a href="/services/automotive-content-seo/">Content SEO</a></strong> — topical authority, content clusters, and information-gain content strategy</li>
+        <li><strong><a href="/services/automotive-aeo/">AEO</a></strong> — featured snippets, AI Overviews, and answer engine optimization</li>
+        <li><strong><a href="/services/automotive-geo/">GEO</a></strong> — ChatGPT, Gemini, Perplexity, and large language model optimization</li>
+      </ul>
+
+      <h2>Our approach</h2>
+      <p>We build <a href="/knowledge/semantic-seo-automotive/">semantic relationships</a> between automotive entities rather than chasing individual keywords. We implement <a href="/knowledge/automotive-schema-guide/">structured data</a> that accurately represents the automotive entities on your website. We create content that demonstrates <a href="/knowledge/eeat-automotive-seo/">genuine expertise</a> in automotive search. And we optimize for where search is going — not just where it's been.</p>
+
+      <h2>Get in touch</h2>
+      <p>If you're an automotive business looking for a specialist search partner, <a href="/contact/">start a conversation</a> or <a href="/audit/">request a free SEO audit</a>.</p>
+    </div>
+  </div>
+
+</BaseLayout>

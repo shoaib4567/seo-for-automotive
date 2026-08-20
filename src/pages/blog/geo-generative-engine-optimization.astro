@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InternalLinkCard from '../../components/InternalLinkCard.astro';
+import AuthorCard from '../../components/AuthorCard.astro';
+
+const title = "GEO — Generative Engine Optimization for Automotive [2026 Guide]";
+const description = "Master Generative Engine Optimization (GEO) for automotive. Get cited by ChatGPT, Gemini, Perplexity, and AI Overviews. Brand mention strategies for AI-generated answers.";
+const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Knowledge Hub', href: '/blog/automotive-seo-strategy/' }, { label: 'GEO', href: '/blog/geo-generative-engine-optimization/' }];
+const relatedLinks = [
+  { title: 'AEO — Answer Engine', href: '/blog/aeo-answer-engine-optimization/', description: 'GEO\'s companion discipline.', icon: '💬' },
+  { title: 'LLMs & AI SEO', href: '/blog/llm-seo-automotive/', description: 'How LLMs surface automotive businesses.', icon: '⚡' },
+  { title: 'E-E-A-T Guide', href: '/blog/eeat-automotive-seo/', description: 'Authority signals AI relies on.', icon: '🏆' },
+  { title: 'Semantic SEO & Entities', href: '/blog/semantic-seo-entities/', description: 'Entity clarity for AI understanding.', icon: '🧬' },
+  { title: 'SEO Strategy', href: '/blog/automotive-seo-strategy/', description: 'GEO in your overall strategy.', icon: '📋' },
+  { title: 'Holistic SEO', href: '/blog/holistic-seo-automotive/', description: 'GEO as part of holistic approach.', icon: '🔄' },
+];
+---
+<BaseLayout title={title} description={description} canonicalPath="/blog/geo-generative-engine-optimization/" breadcrumbs={breadcrumbs}>
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4"><span class="px-2.5 py-0.5 text-[10px] font-bold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 rounded-full uppercase">Knowledge Hub</span><span class="px-2.5 py-0.5 text-[10px] font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full uppercase">Next-Gen SEO</span></div>
+    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">GEO — <span class="text-gradient-amber">Generative Engine Optimization</span></h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl">Get your automotive brand cited by ChatGPT, Gemini, Perplexity, and Google AI Overviews. The definitive GEO playbook for <a href="/seo-for-car-dealerships/" class="text-amber-400 hover:underline">dealerships</a> and auto businesses.</p>
+  </div>
+  <div class="prose-content">
+    <h2>What is Generative Engine Optimization (GEO)?</h2>
+    <p>GEO is the discipline of optimizing your brand, content, and online presence to be <strong>cited and recommended by AI-powered generative engines</strong> — ChatGPT, Google Gemini, Perplexity, Claude, and Google's AI Overviews (formerly SGE). While <a href="/blog/aeo-answer-engine-optimization/">AEO</a> targets traditional answer formats, GEO targets the new wave of AI-generated responses.</p>
+
+    <h2>Why GEO Matters for Automotive</h2>
+    <p>When a potential customer asks an AI: <em>"What's the best automotive SEO agency?"</em> or <em>"How do I optimize my dealership website for SEO?"</em>, generative engines synthesize answers from their training data and web retrieval. If your brand isn't present in these answers, you're invisible to a growing segment of searchers.</p>
+    <p>Our competitor data already shows AIO (AI Overview) appearances for automotive keywords like <strong>"trucking seo"</strong> and <strong>"transportation company seo"</strong> — this will only expand.</p>
+
+    <h2>GEO Strategies for Automotive Businesses</h2>
+    <h3>1. Brand Entity Optimization</h3>
+    <ul>
+      <li>Establish a clear, consistent brand entity across the web (Google Knowledge Panel, Wikipedia, industry directories)</li>
+      <li><a href="/blog/semantic-seo-entities/">Schema.org Organization markup</a> with complete properties</li>
+      <li>Consistent NAP data across <a href="/local-seo-for-car-dealerships/">local citations</a></li>
+      <li>Active presence on platforms LLMs reference (Reddit, Quora, industry forums)</li>
+    </ul>
+
+    <h3>2. Citation-Worthy Content</h3>
+    <ul>
+      <li>Publish original research, data, and statistics that LLMs can cite</li>
+      <li>Create definitive guides (like this one) that become reference sources</li>
+      <li>Use authoritative language and cite primary sources</li>
+      <li>Structure content with clear headings, definitions, and factual claims</li>
+    </ul>
+
+    <h3>3. E-E-A-T as GEO Fuel</h3>
+    <p><a href="/blog/eeat-automotive-seo/">E-E-A-T signals</a> directly influence whether AI engines trust and cite your content. LLMs prioritize sources with:</p>
+    <ul>
+      <li>High domain authority and backlink profiles</li>
+      <li>Author entities with verifiable expertise</li>
+      <li>Positive <a href="/automotive-reputation-management-services/">online reputation</a> signals</li>
+      <li>Fresh, regularly updated content</li>
+    </ul>
+
+    <h3>4. Structured Data for AI Comprehension</h3>
+    <ul>
+      <li><a href="/blog/semantic-seo-entities/">Schema.org markup</a> helps AI engines parse your content accurately</li>
+      <li>FAQ schema increases chances of being quoted in AI-generated answers</li>
+      <li>Organization, Service, and LocalBusiness schema establishes entity relationships</li>
+    </ul>
+
+    <h2>GEO vs Traditional SEO ROI</h2>
+    <p>GEO complements traditional SEO — it doesn't replace it. Think of it as an <strong>additional visibility channel</strong>. As more searches shift to AI interfaces, businesses optimized for GEO will capture traffic that traditional SEO misses.</p>
+  </div>
+  <AuthorCard name="Automotive SEO Team" role="Generative Engine Optimization Pioneers" bio="We track AI citation patterns across ChatGPT, Gemini, and Perplexity for automotive queries. Our GEO strategies help automotive brands maintain visibility in the AI search era." expertise={['Generative Engine Optimization', 'AI Citation Tracking', 'LLM Optimization', 'Brand Entity Management', 'AI Overview Strategy']} />
+  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Related Knowledge Hub Pages</h2><InternalLinkCard links={relatedLinks} columns={3} /></div>
+</BaseLayout>

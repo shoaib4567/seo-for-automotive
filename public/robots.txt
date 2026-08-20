@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seoforautomotive.com/sitemap-index.xml
+
+# Disallow crawling of tool-generated output files
+Disallow: /api/

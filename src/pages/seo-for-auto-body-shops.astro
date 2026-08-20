@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import InternalLinkCard from '../components/InternalLinkCard.astro';
+
+const title = "SEO for Auto Body Shops — Collision Repair SEO Services [2026]";
+const description = "SEO for auto body shops and collision repair centers. 3 keywords, 560 monthly volume. Local search domination for body shop businesses.";
+const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Auto Repair SEO', href: '/auto-repair-seo-services/' }, { label: 'Auto Body SEO', href: '/seo-for-auto-body-shops/' }];
+const relatedLinks = [
+  { title: 'Auto Repair SEO (Parent Hub)', href: '/auto-repair-seo-services/', description: 'Complete repair shop SEO.', icon: '🔧', volume: '8,210/mo' },
+  { title: 'Local SEO', href: '/local-seo-for-car-dealerships/', description: 'Local search for body shops.', icon: '📍', volume: '3,180/mo' },
+  { title: 'Reputation Management', href: '/automotive-reputation-management-services/', description: 'Review management for body shops.', icon: '⭐', volume: '2,720/mo' },
+  { title: 'Website Design', href: '/automotive-website-providers/', description: 'Auto body shop websites.', icon: '🌐' },
+];
+---
+<BaseLayout title={title} description={description} canonicalPath="/seo-for-auto-body-shops/" breadcrumbs={breadcrumbs}>
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4"><span class="kw-badge">560/mo</span><span class="kw-badge">3 keywords</span></div>
+    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">SEO for <span class="text-gradient-amber">Auto Body Shops</span></h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl">Collision repair and auto body shop SEO strategies. Drive insurance referrals and DRP leads through <a href="/local-seo-for-car-dealerships/" class="text-amber-400 hover:underline">local search optimization</a>.</p>
+  </div>
+  <div class="prose-content">
+    <h2>Auto Body Shop SEO Strategy</h2>
+    <p><strong>"SEO for auto body shops"</strong> (260/mo) leads this compact but high-intent cluster. Body shops rely heavily on <a href="/local-seo-for-car-dealerships/">local SEO</a> and <a href="/automotive-reputation-management-services/">reputation management</a> since customers typically search during a stressful situation (after an accident).</p>
+    <ul>
+      <li><strong>Emergency intent optimization</strong> — target "auto body shop near me" and "collision repair [city]"</li>
+      <li><strong>Insurance partnership content</strong> — DRP program pages, insurance partner listings</li>
+      <li><strong>Before/after galleries</strong> — visual proof of quality work boosts <a href="/blog/eeat-automotive-seo/">E-E-A-T</a></li>
+      <li><strong><a href="/blog/semantic-seo-entities/">Schema markup</a></strong> — AutoBodyShop type with services, hours, and reviews</li>
+      <li><strong>Content marketing</strong> — "what to do after a car accident" guides per <a href="/blog/content-seo-automotive/">content playbook</a></li>
+    </ul>
+    <h2>Keywords</h2>
+  </div>
+  <div class="overflow-x-auto mt-6 mb-10">
+    <table class="w-full text-sm">
+      <thead><tr class="border-b border-white/[0.08] text-left"><th class="pb-3 text-slate-400 font-semibold">Keyword</th><th class="pb-3 text-slate-400 font-semibold text-right">Volume</th><th class="pb-3 text-slate-400 font-semibold text-right">KD</th></tr></thead>
+      <tbody class="text-slate-300">
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">seo for auto body shops</td><td class="text-right">260</td><td class="text-right text-emerald-400">1</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">seo auto body shop</td><td class="text-right">210</td><td class="text-right text-emerald-400">4</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">auto body seo</td><td class="text-right">90</td><td class="text-right text-emerald-400">2</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Related Pages</h2><InternalLinkCard links={relatedLinks} columns={2} /></div>
+</BaseLayout>

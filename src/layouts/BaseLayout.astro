@@ -1,0 +1,148 @@
+---
+import MegaNav from '../components/MegaNav.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import BreadcrumbNav from '../components/BreadcrumbNav.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  ogImage?: string;
+  breadcrumbs?: { label: string; href: string }[];
+  schemaData?: object | object[];
+  noContainer?: boolean;
+  pageType?: 'website' | 'article' | 'service' | 'about' | 'contact';
+}
+
+const {
+  title,
+  description,
+  canonicalPath = '/',
+  ogImage = '/og-default.jpg',
+  breadcrumbs = [],
+  schemaData,
+  noContainer = false,
+  pageType = 'website',
+} = Astro.props;
+
+const siteUrl = 'https://seoforautomotive.com';
+const siteName = 'SEO for Automotive';
+const fullCanonical = `${siteUrl}${canonicalPath}`;
+const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+
+// WebSite schema — included on every page
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": siteName,
+  "url": siteUrl,
+  "description": "Specialized automotive SEO company — helping dealerships, repair shops, parts businesses, and automotive companies dominate organic search, local search, and AI-powered search engines.",
+  "publisher": {
+    "@type": "Organization",
+    "name": siteName,
+    "url": siteUrl,
+  }
+};
+
+// WebPage schema for the current page
+const webPageType = {
+  website: 'WebPage',
+  article: 'Article',
+  service: 'WebPage',
+  about: 'AboutPage',
+  contact: 'ContactPage',
+}[pageType] || 'WebPage';
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": webPageType,
+  "name": title,
+  "description": description,
+  "url": fullCanonical,
+  "isPartOf": { "@type": "WebSite", "name": siteName, "url": siteUrl },
+};
+
+// Breadcrumb schema
+const breadcrumbSchema = breadcrumbs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map((crumb, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": crumb.label,
+    "item": `${siteUrl}${crumb.href}`
+  }))
+} : null;
+
+// Collect all schemas
+const allSchemas: object[] = [websiteSchema, webPageSchema];
+if (breadcrumbSchema) allSchemas.push(breadcrumbSchema);
+if (schemaData) {
+  if (Array.isArray(schemaData)) {
+    allSchemas.push(...schemaData);
+  } else {
+    allSchemas.push(schemaData);
+  }
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={fullCanonical} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={fullCanonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullOgImage} />
+    <meta property="og:site_name" content={siteName} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={fullCanonical} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={fullOgImage} />
+
+    <!-- Google Fonts — optimized load -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data -->
+    {allSchemas.map(schema => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
+  </head>
+  <body class="bg-[#07090e] text-slate-100 min-h-screen antialiased">
+    <MegaNav />
+
+    {breadcrumbs.length > 0 && (
+      <BreadcrumbNav items={breadcrumbs} />
+    )}
+
+    {noContainer ? (
+      <main id="main-content">
+        <slot />
+      </main>
+    ) : (
+      <main id="main-content" class="container-main py-10">
+        <slot />
+      </main>
+    )}
+
+    <SiteFooter />
+  </body>
+</html>

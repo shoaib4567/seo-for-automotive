@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InternalLinkCard from '../../components/InternalLinkCard.astro';
+import AuthorCard from '../../components/AuthorCard.astro';
+
+const title = "AEO — Answer Engine Optimization for Automotive [2026 Guide]";
+const description = "Master Answer Engine Optimization (AEO) for automotive businesses. Featured snippets, People Also Ask, voice search, and AI Overview optimization strategies.";
+const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Knowledge Hub', href: '/blog/automotive-seo-strategy/' }, { label: 'AEO', href: '/blog/aeo-answer-engine-optimization/' }];
+const relatedLinks = [
+  { title: 'GEO — Generative Engine', href: '/blog/geo-generative-engine-optimization/', description: 'AEO\'s companion discipline.', icon: '🤖' },
+  { title: 'LLMs & AI SEO', href: '/blog/llm-seo-automotive/', description: 'AI reshaping automotive search.', icon: '⚡' },
+  { title: 'E-E-A-T Guide', href: '/blog/eeat-automotive-seo/', description: 'Trust signals for answer selection.', icon: '🏆' },
+  { title: 'Semantic SEO & Entities', href: '/blog/semantic-seo-entities/', description: 'Entity optimization for answers.', icon: '🧬' },
+  { title: 'Content SEO Playbook', href: '/blog/content-seo-automotive/', description: 'Content formats that win answers.', icon: '📝' },
+  { title: 'SEO Strategy', href: '/blog/automotive-seo-strategy/', description: 'AEO within your overall strategy.', icon: '📋' },
+];
+---
+<BaseLayout title={title} description={description} canonicalPath="/blog/aeo-answer-engine-optimization/" breadcrumbs={breadcrumbs}>
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4"><span class="px-2.5 py-0.5 text-[10px] font-bold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 rounded-full uppercase">Knowledge Hub</span><span class="px-2.5 py-0.5 text-[10px] font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full uppercase">Next-Gen SEO</span></div>
+    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">AEO — <span class="text-gradient-amber">Answer Engine Optimization</span></h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl">Optimize for featured snippets, People Also Ask, voice search, and Google AI Overviews. The automotive industry's guide to winning zero-click search results.</p>
+  </div>
+  <div class="prose-content">
+    <h2>What is Answer Engine Optimization (AEO)?</h2>
+    <p>AEO is the practice of optimizing content to appear in <strong>direct answer formats</strong> — featured snippets, People Also Ask (PAA) boxes, voice search results, and Google's AI Overviews (AIO). Unlike traditional SEO that aims for blue link clicks, AEO targets <strong>Position Zero</strong>.</p>
+    <p>For automotive businesses, AEO is critical because Google now shows AI-generated answers for queries like "how much does car dealership SEO cost?" and competitor data shows several keywords triggering AIO and PAA results.</p>
+
+    <h2>AEO vs Traditional SEO vs GEO</h2>
+    <ul>
+      <li><strong>Traditional SEO</strong> — rank in blue links for organic clicks</li>
+      <li><strong>AEO (Answer Engine)</strong> — win Position Zero: featured snippets, PAA, voice answers</li>
+      <li><strong><a href="/blog/geo-generative-engine-optimization/">GEO (Generative Engine)</a></strong> — get cited by AI assistants (ChatGPT, Gemini, Perplexity)</li>
+    </ul>
+
+    <h2>AEO Strategies for Automotive</h2>
+    <h3>1. Featured Snippet Optimization</h3>
+    <ul>
+      <li>Use question-answer (Q&A) format in headings: "What is automotive SEO?"</li>
+      <li>Provide concise, definitive answers in 40-60 words immediately after the question</li>
+      <li>Use lists, tables, and structured data — Google pulls these for snippets</li>
+      <li>Target "how to", "what is", "best" queries related to <a href="/seo-for-car-dealerships/">dealership SEO</a></li>
+    </ul>
+
+    <h3>2. People Also Ask (PAA) Targeting</h3>
+    <ul>
+      <li>Research PAA clusters around your target keywords</li>
+      <li>Create dedicated FAQ sections with <a href="/blog/semantic-seo-entities/">FAQPage schema markup</a></li>
+      <li>Answer related questions within your content (not just the primary query)</li>
+      <li>Competitor data shows PAA appearances for "local seo enterprise reseller" on dealership pages</li>
+    </ul>
+
+    <h3>3. Voice Search Optimization</h3>
+    <ul>
+      <li>Optimize for conversational queries: "find auto repair near me"</li>
+      <li>Target long-tail question keywords</li>
+      <li><a href="/local-seo-for-car-dealerships/">Local SEO optimization</a> is essential — voice searches are 3x more likely to be local</li>
+      <li>Ensure your <a href="/automotive-website-providers/">website</a> loads fast and is mobile-responsive</li>
+    </ul>
+
+    <h3>4. AI Overview (AIO) Optimization</h3>
+    <ul>
+      <li>Several automotive SEO keywords already trigger Google AI Overviews (trucking seo, transportation company seo)</li>
+      <li>Provide comprehensive, authoritative content that AI can synthesize</li>
+      <li>Build strong <a href="/blog/eeat-automotive-seo/">E-E-A-T signals</a> — AIO preferentially cites trusted sources</li>
+      <li>Use <a href="/blog/semantic-seo-entities/">structured data</a> to help AI understand your content entities</li>
+    </ul>
+
+    <h2>AEO Content Formats That Win</h2>
+    <ul>
+      <li><strong>Comparison tables</strong> — "Dealership SEO vs Auto Repair SEO"</li>
+      <li><strong>Step-by-step guides</strong> — "How to optimize your GBP in 10 steps"</li>
+      <li><strong>Definition paragraphs</strong> — "What is automotive SEO?" with concise answer</li>
+      <li><strong>FAQ sections</strong> — like the ones on every page of this site</li>
+      <li><strong>Lists</strong> — "Top 5 automotive SEO agencies" (see our <a href="/best-automotive-seo-agencies/">listicle</a>)</li>
+    </ul>
+  </div>
+  <AuthorCard name="Automotive SEO Team" role="Answer Engine & AI Search Specialists" bio="Pioneering AEO and AI search optimization for the automotive industry. We track featured snippet, PAA, and AI Overview appearance rates across 269+ automotive keywords." expertise={['Answer Engine Optimization', 'Featured Snippets', 'Voice Search SEO', 'AI Overviews', 'PAA Targeting']} />
+  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Related Knowledge Hub Pages</h2><InternalLinkCard links={relatedLinks} columns={3} /></div>
+</BaseLayout>

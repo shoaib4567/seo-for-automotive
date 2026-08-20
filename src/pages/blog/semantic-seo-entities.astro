@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InternalLinkCard from '../../components/InternalLinkCard.astro';
+const title = "Semantic SEO & Entities for Automotive — Schema, Knowledge Graph & Entity Optimization [2026]";
+const description = "Master semantic SEO for automotive. Entity optimization, Schema.org Vehicle markup, Knowledge Graph, attributes, and entity-based content architecture.";
+const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Knowledge Hub', href: '/blog/automotive-seo-strategy/' }, { label: 'Semantic SEO', href: '/blog/semantic-seo-entities/' }];
+const relatedLinks = [
+  { title: 'E-E-A-T Guide', href: '/blog/eeat-automotive-seo/', description: 'Entity authority and trust.', icon: '🏆' },
+  { title: 'AEO — Answer Engine', href: '/blog/aeo-answer-engine-optimization/', description: 'Entities in answer optimization.', icon: '💬' },
+  { title: 'GEO — Generative Engine', href: '/blog/geo-generative-engine-optimization/', description: 'Entity clarity for AI citations.', icon: '🤖' },
+  { title: 'Content SEO Playbook', href: '/blog/content-seo-automotive/', description: 'Entity-first content strategy.', icon: '📝' },
+  { title: 'Holistic SEO', href: '/blog/holistic-seo-automotive/', description: 'Entities in holistic framework.', icon: '🔄' },
+  { title: 'Car Dealership SEO', href: '/seo-for-car-dealerships/', description: 'Vehicle entity optimization.', icon: '🚗', volume: '18,500/mo' },
+];
+---
+<BaseLayout title={title} description={description} canonicalPath="/blog/semantic-seo-entities/" breadcrumbs={breadcrumbs}>
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4"><span class="px-2.5 py-0.5 text-[10px] font-bold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 rounded-full uppercase">Knowledge Hub</span></div>
+    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">Semantic SEO & <span class="text-gradient-amber">Entities</span></h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl">Entity-based SEO for automotive businesses. Schema.org Vehicle markup, Knowledge Graph optimization, entity attributes, and <a href="/blog/holistic-seo-automotive/" class="text-amber-400 hover:underline">holistic</a> semantic architecture.</p>
+  </div>
+  <div class="prose-content">
+    <h2>What is Semantic SEO?</h2>
+    <p>Semantic SEO goes beyond keywords to optimize for <strong>entities</strong> — real-world things (cars, dealerships, services, people, locations) and the <strong>relationships</strong> between them. Search engines and <a href="/blog/llm-seo-automotive/">LLMs</a> understand entities, not just strings of text.</p>
+
+    <h2>Automotive Entities & Attributes</h2>
+    <h3>Vehicle Entities</h3>
+    <p>Every vehicle is an entity with attributes:</p>
+    <ul>
+      <li><strong>Make</strong> (Toyota, Ford, BMW) — brand entity</li>
+      <li><strong>Model</strong> (Camry, F-150, X5) — product entity</li>
+      <li><strong>Year</strong> — temporal attribute</li>
+      <li><strong>Trim / Configuration</strong> — variant attribute</li>
+      <li><strong>VIN</strong> — unique identifier</li>
+      <li><strong>Price, Mileage, Color</strong> — descriptive attributes</li>
+    </ul>
+
+    <h3>Business Entities</h3>
+    <ul>
+      <li><strong><a href="/seo-for-car-dealerships/">Dealership</a></strong> — AutoDealer schema type</li>
+      <li><strong><a href="/auto-repair-seo-services/">Repair Shop</a></strong> — AutoRepair schema type</li>
+      <li><strong><a href="/seo-for-auto-body-shops/">Body Shop</a></strong> — AutoBodyShop schema type</li>
+      <li><strong>Service</strong> — individual services offered</li>
+      <li><strong>Person</strong> — technicians, sales staff, <a href="/automotive-seo-expert/">SEO experts</a></li>
+    </ul>
+
+    <h2>Schema.org Implementation for Automotive</h2>
+    <h3>Vehicle Markup</h3>
+    <p>Schema.org <code>Vehicle</code> type with properties: name, brand, model, modelDate, vehicleIdentificationNumber, mileage, fuelType, color, price. Implement on every VDP (Vehicle Detail Page) for <a href="/seo-for-car-dealerships/">dealership SEO</a>.</p>
+
+    <h3>LocalBusiness Markup</h3>
+    <p><code>AutoDealer</code>, <code>AutoRepair</code>, <code>AutoBodyShop</code> types with geo coordinates, opening hours, payment methods, service areas. Essential for <a href="/local-seo-for-car-dealerships/">local SEO</a>.</p>
+
+    <h3>Service Markup</h3>
+    <p><code>Service</code> type for each service offered — oil change, brake repair, detailing packages. Link to <code>Offer</code> schema with pricing.</p>
+
+    <h3>FAQPage Markup</h3>
+    <p>Every page on this site includes <code>FAQPage</code> schema — a critical <a href="/blog/aeo-answer-engine-optimization/">AEO strategy</a> for winning PAA boxes and featured snippets.</p>
+
+    <h2>Entity-Based Content Architecture</h2>
+    <p>This site itself demonstrates entity-based content architecture:</p>
+    <ul>
+      <li><strong>Hub entities</strong> — "Automotive SEO", "Car Dealership SEO", "Auto Repair SEO" are the primary entities</li>
+      <li><strong>Entity attributes</strong> — search volume, keyword count, KD are attributes of each cluster</li>
+      <li><strong>Entity relationships</strong> — internal links express relationships (dealership → local SEO → reputation management)</li>
+      <li><strong>Entity co-occurrence</strong> — related terms naturally appear together in content</li>
+    </ul>
+
+    <h2>Knowledge Graph Optimization</h2>
+    <p>Getting your business into Google's Knowledge Graph requires:</p>
+    <ul>
+      <li>Consistent entity data across web (name, address, phone, website)</li>
+      <li>Structured data on your <a href="/automotive-website-providers/">website</a></li>
+      <li>Wikipedia/Wikidata presence (for brands/agencies)</li>
+      <li>Google Business Profile verification</li>
+      <li>Strong <a href="/blog/eeat-automotive-seo/">E-E-A-T signals</a></li>
+    </ul>
+  </div>
+  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Related Pages</h2><InternalLinkCard links={relatedLinks} columns={3} /></div>
+</BaseLayout>

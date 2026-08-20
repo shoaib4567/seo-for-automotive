@@ -1,0 +1,111 @@
+---
+const serviceLinks = [
+  { label: 'Automotive SEO', href: '/services/automotive-seo/' },
+  { label: 'Local SEO', href: '/services/automotive-local-seo/' },
+  { label: 'Technical SEO', href: '/services/automotive-technical-seo/' },
+  { label: 'eCommerce SEO', href: '/services/automotive-ecommerce-seo/' },
+  { label: 'Content SEO', href: '/services/automotive-content-seo/' },
+  { label: 'B2B SEO', href: '/services/automotive-b2b-seo/' },
+  { label: 'AEO', href: '/services/automotive-aeo/' },
+  { label: 'GEO / AI Search', href: '/services/automotive-geo/' },
+  { label: 'SEO Agency', href: '/services/automotive-seo-agency/' },
+];
+
+const industryLinks = [
+  { label: 'Car Dealership SEO', href: '/industries/car-dealership-seo/' },
+  { label: 'Auto Repair SEO', href: '/industries/auto-repair-seo/' },
+  { label: 'Auto Parts SEO', href: '/industries/auto-parts-seo/' },
+  { label: 'Auto Body SEO', href: '/industries/auto-body-seo/' },
+  { label: 'Auto Detailing SEO', href: '/industries/auto-detailing-seo/' },
+  { label: 'Car Wash SEO', href: '/industries/car-wash-seo/' },
+];
+
+const resourceLinks = [
+  { label: 'SEO Strategy Guide', href: '/knowledge/automotive-seo-strategy/' },
+  { label: 'Semantic SEO', href: '/knowledge/semantic-seo-automotive/' },
+  { label: 'E-E-A-T Guide', href: '/knowledge/eeat-automotive-seo/' },
+  { label: 'AEO Guide', href: '/knowledge/aeo-answer-engine-optimization/' },
+  { label: 'GEO Guide', href: '/knowledge/geo-generative-engine/' },
+  { label: 'Schema Guide', href: '/knowledge/automotive-schema-guide/' },
+];
+
+const companyLinks = [
+  { label: 'About', href: '/about/' },
+  { label: 'Results', href: '/results/' },
+  { label: 'Tools', href: '/tools/' },
+  { label: 'Contact', href: '/contact/' },
+  { label: 'Request an Audit', href: '/audit/' },
+];
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/[0.06] bg-[#050710] mt-20" role="contentinfo">
+  <div class="container-main py-14">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-10">
+
+      <!-- Brand -->
+      <div class="col-span-2 sm:col-span-3 lg:col-span-1">
+        <a href="/" class="flex items-center gap-2.5 mb-4" aria-label="SEO for Automotive — Home">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#d4a853] to-[#0f9d8e] p-[1.5px]">
+            <div class="w-full h-full bg-[#050710] rounded-[6px] flex items-center justify-center">
+              <svg class="w-4 h-4 text-[#d4a853]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+              </svg>
+            </div>
+          </div>
+          <span class="text-sm font-bold text-white">SEO<span class="text-gradient-gold ml-1">for Automotive</span></span>
+        </a>
+        <p class="text-sm text-slate-500 leading-relaxed mb-5 max-w-[260px]">
+          The specialist automotive search company — helping automotive businesses dominate organic, local, and AI-powered search.
+        </p>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Services</h3>
+        <ul class="space-y-2" role="list">
+          {serviceLinks.map(link => (
+            <li><a href={link.href} class="text-sm text-slate-500 hover:text-[#d4a853] transition-colors">{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Industries -->
+      <div>
+        <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Industries</h3>
+        <ul class="space-y-2" role="list">
+          {industryLinks.map(link => (
+            <li><a href={link.href} class="text-sm text-slate-500 hover:text-[#d4a853] transition-colors">{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Knowledge</h3>
+        <ul class="space-y-2" role="list">
+          {resourceLinks.map(link => (
+            <li><a href={link.href} class="text-sm text-slate-500 hover:text-[#d4a853] transition-colors">{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Company</h3>
+        <ul class="space-y-2" role="list">
+          {companyLinks.map(link => (
+            <li><a href={link.href} class="text-sm text-slate-500 hover:text-[#d4a853] transition-colors">{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="mt-12 pt-6 border-t border-white/[0.04] flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-xs text-slate-600">© {currentYear} SEO for Automotive. All rights reserved.</p>
+      <p class="text-xs text-slate-700">Automotive search, engineered.</p>
+    </div>
+  </div>
+</footer>

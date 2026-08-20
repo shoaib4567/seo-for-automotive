@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import AuthorCard from '../../components/AuthorCard.astro';
+
+const title = "SEO for Car Dealerships — Complete Dealer SEO Strategy [2026]";
+const description = "The specialist guide to SEO for car dealerships. Inventory indexation, VDP optimization, make/model/year architecture, dealer local SEO, and service department search visibility.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Industries', href: '/industries/car-dealership-seo/' },
+  { label: 'Car Dealership SEO', href: '/industries/car-dealership-seo/' },
+];
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Car Dealership SEO",
+  "description": description,
+  "provider": { "@type": "Organization", "name": "SEO for Automotive", "url": "https://seoforautomotive.com" },
+  "serviceType": "Search Engine Optimization for Car Dealerships",
+  "areaServed": "United States",
+};
+
+const faqs = [
+  { question: 'How much does SEO cost for a car dealership?', answer: 'Car dealership SEO typically costs between $2,500–$8,000/month for a single-location dealership, and $5,000–$20,000/month for multi-location dealer groups. The investment depends on competition level, number of locations, inventory size, and scope of services. <a href="/services/">View our services</a> for more detail.' },
+  { question: 'What are the most important SEO factors for car dealerships?', answer: 'The highest-impact factors are: 1) <a href="/services/automotive-local-seo/">Google Business Profile optimization</a> and local SEO, 2) Vehicle Detail Page (VDP) indexation and optimization, 3) Make/model/year content architecture, 4) <a href="/knowledge/automotive-schema-guide/">Vehicle schema structured data</a>, 5) Review management and reputation, and 6) <a href="/services/automotive-technical-seo/">Technical SEO</a> for dynamic inventory.' },
+  { question: 'Why aren\'t my vehicle pages ranking in Google?', answer: 'Common causes include: JavaScript-rendered inventory content that Googlebot can\'t crawl, duplicate URL parameters from filters, missing or incorrect canonical tags, thin content on VDPs (just specs with no unique copy), missing Vehicle schema markup, and crawl budget being wasted on faceted navigation pages. Our <a href="/tools/vdp-auditor/">VDP Auditor tool</a> can help identify issues.' },
+  { question: 'Does SEO work for used car dealerships?', answer: 'Yes — used car dealerships often benefit even more from SEO because buyers research extensively online before purchasing. Long-tail queries like "used [make] [model] near [city]" have high conversion intent. The key is proper inventory indexation, unique VDP content, and strong <a href="/services/automotive-local-seo/">local SEO</a> signals.' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/industries/car-dealership-seo/" breadcrumbs={breadcrumbs} schemaData={schemaData}>
+
+  <!-- Hero -->
+  <div class="mb-12">
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+      SEO for <span class="text-gradient-gold">Car Dealerships</span>
+    </h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl leading-relaxed">
+      Car dealerships face unique search challenges that general SEO doesn't address: dynamic inventory indexation, Vehicle Detail Page optimization, make/model/year entity relationships, and multi-department search architecture. This is our most in-demand expertise area.
+    </p>
+  </div>
+
+  <!-- Content -->
+  <div class="prose-content">
+    <h2 id="why-dealer-seo">Why car dealerships need specialized SEO</h2>
+    <p>A car dealership website isn't like a typical business website. It has <strong>thousands of dynamically generated pages</strong> (one per vehicle), complex filtering and faceted navigation, multiple departments (sales, service, parts, body shop), and a search landscape dominated by aggregators like AutoTrader, Cars.com, and CarGurus.</p>
+    <p>Generic SEO strategies fail for dealerships because they don't account for the structural relationship between <strong>inventory, location, and intent</strong>. A searcher looking for "2026 Toyota Camry near Austin TX" has a fundamentally different intent — and requires a fundamentally different page architecture — than someone searching "best family sedan."</p>
+
+    <h2 id="inventory-seo">Inventory SEO & VDP optimization</h2>
+    <p>Vehicle Detail Pages (VDPs) are the primary conversion pages for any dealership website, yet most dealer sites have severe VDP indexation problems. Common issues we solve:</p>
+    <ul>
+      <li><strong>JavaScript rendering</strong> — many dealership platforms render inventory client-side, making VDPs invisible to search engines without proper SSR or dynamic rendering</li>
+      <li><strong>Duplicate URLs</strong> — filter parameters create thousands of duplicate pages that waste crawl budget</li>
+      <li><strong>Thin content</strong> — VDPs with only vehicle specifications and no unique descriptive content don't compete</li>
+      <li><strong>Missing structured data</strong> — <a href="/knowledge/automotive-schema-guide/">Vehicle schema markup</a> (make, model, year, VIN, price, condition) is essential for Google Vehicle Listings</li>
+      <li><strong>Canonical issues</strong> — incorrect canonical implementation across inventory pagination and sorting</li>
+    </ul>
+    <p>Our <a href="/tools/vdp-auditor/">VDP Auditor tool</a> demonstrates the audit methodology we apply to every dealership engagement.</p>
+
+    <h2 id="make-model-year">Make/model/year content architecture</h2>
+    <p>The make → model → year → trim entity hierarchy is the backbone of automotive search. Dealerships that build content around these relationships capture high-intent informational searches:</p>
+    <ul>
+      <li><strong>Make pages</strong> — "Toyota dealership near me" (navigational + local intent)</li>
+      <li><strong>Model pages</strong> — "2026 Toyota Camry review" (informational + commercial investigation)</li>
+      <li><strong>Comparison pages</strong> — "Toyota Camry vs Honda Accord" (commercial comparison)</li>
+      <li><strong>Category pages</strong> — "used SUVs under $30,000" (transactional)</li>
+    </ul>
+    <p>Each page type requires distinct <a href="/services/automotive-content-seo/">content strategy</a>, <a href="/services/automotive-technical-seo/">technical architecture</a>, and <a href="/knowledge/automotive-schema-guide/">structured data</a>.</p>
+
+    <h2 id="dealer-local-seo">Local SEO for dealerships</h2>
+    <p>Over 76% of people who search for a car dealership on their phone visit one within 24 hours. <a href="/services/automotive-local-seo/">Local SEO</a> is the highest-ROI channel for most dealerships:</p>
+    <ul>
+      <li><strong>Google Business Profile</strong> — complete optimization including vehicle inventory integration, service menus, and department-specific listings</li>
+      <li><strong>Maps 3-Pack</strong> — ranking in the local map results for "[city] car dealership" and "[brand] dealer near me"</li>
+      <li><strong>Review management</strong> — dealerships with 4.5+ star ratings and high review volume dominate local results</li>
+      <li><strong>Multi-location architecture</strong> — dealer groups need location-specific content, not templated city pages</li>
+      <li><strong>NAP consistency</strong> — exact name, address, phone matching across 50+ automotive directories</li>
+    </ul>
+
+    <h2 id="service-department">Service department SEO</h2>
+    <p>Many dealerships neglect their service department's search potential. Service-related searches ("oil change near me," "brake repair [city]") drive high-frequency repeat customers and are less competitive than vehicle sales keywords. Key strategies:</p>
+    <ul>
+      <li>Dedicated service pages for each maintenance type</li>
+      <li>Service coupons and specials with proper schema</li>
+      <li>Service-specific GBP categories and attributes</li>
+      <li>Recall-related content targeting make/model</li>
+    </ul>
+
+    <h2 id="dealer-seo-services">Our approach to dealer SEO</h2>
+    <p>We combine <a href="/services/automotive-technical-seo/">technical SEO</a> (inventory crawlability, VDP optimization, structured data), <a href="/services/automotive-local-seo/">local SEO</a> (GBP, Maps, citations), <a href="/services/automotive-content-seo/">content strategy</a> (make/model pages, buying guides, service content), and <a href="/services/automotive-aeo/">answer engine optimization</a> into a unified dealership search strategy.</p>
+  </div>
+
+  <!-- Related Services -->
+  <div class="mt-12 section-border pt-10">
+    <h2 class="text-xl font-bold text-white mb-5">Related services for dealerships</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <a href="/services/automotive-local-seo/" class="glass-card rounded-lg p-4 group block">
+        <h3 class="text-sm font-semibold text-white group-hover:text-[#d4a853] transition-colors mb-1">Local SEO</h3>
+        <p class="text-xs text-slate-500">GBP optimization, Maps 3-Pack, and local visibility for dealerships.</p>
+      </a>
+      <a href="/services/automotive-technical-seo/" class="glass-card rounded-lg p-4 group block">
+        <h3 class="text-sm font-semibold text-white group-hover:text-[#d4a853] transition-colors mb-1">Technical SEO</h3>
+        <p class="text-xs text-slate-500">Inventory crawlability, VDP indexation, and structured data.</p>
+      </a>
+      <a href="/tools/automotive-schema-generator/" class="glass-card rounded-lg p-4 group block">
+        <h3 class="text-sm font-semibold text-white group-hover:text-[#d4a853] transition-colors mb-1">Schema Generator</h3>
+        <p class="text-xs text-slate-500">Generate Vehicle and AutoDealer JSON-LD structured data.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- E-E-A-T -->
+  <AuthorCard
+    name="SEO for Automotive Team"
+    role="Car Dealership SEO Specialists"
+    bio="We specialize in dealership search architecture — from inventory indexation and VDP optimization to multi-location local SEO and make/model/year content strategy."
+    expertise={['Dealership SEO', 'Inventory Indexation', 'VDP Optimization', 'Dealer Local SEO', 'Vehicle Schema']}
+  />
+
+  <!-- FAQ -->
+  <FaqSection items={faqs} title="Car Dealership SEO — Frequently Asked Questions" />
+
+</BaseLayout>

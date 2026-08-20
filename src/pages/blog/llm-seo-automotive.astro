@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InternalLinkCard from '../../components/InternalLinkCard.astro';
+const title = "LLMs & AI in Automotive SEO — How AI is Reshaping Auto Search [2026]";
+const description = "How Large Language Models and AI are transforming automotive SEO. AI-powered content, automotive AI SEO strategies, and LLM optimization for car dealers.";
+const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Knowledge Hub', href: '/blog/automotive-seo-strategy/' }, { label: 'LLMs & AI', href: '/blog/llm-seo-automotive/' }];
+const relatedLinks = [
+  { title: 'AEO — Answer Engine', href: '/blog/aeo-answer-engine-optimization/', description: 'Optimize for AI-generated answers.', icon: '💬' },
+  { title: 'GEO — Generative Engine', href: '/blog/geo-generative-engine-optimization/', description: 'Get cited by AI assistants.', icon: '🤖' },
+  { title: 'E-E-A-T Guide', href: '/blog/eeat-automotive-seo/', description: 'Trust signals AI relies on.', icon: '🏆' },
+  { title: 'Semantic SEO', href: '/blog/semantic-seo-entities/', description: 'Entity clarity for AI comprehension.', icon: '🧬' },
+  { title: 'SEO Strategy', href: '/blog/automotive-seo-strategy/', description: 'AI in your overall strategy.', icon: '📋' },
+];
+---
+<BaseLayout title={title} description={description} canonicalPath="/blog/llm-seo-automotive/" breadcrumbs={breadcrumbs}>
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4"><span class="px-2.5 py-0.5 text-[10px] font-bold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 rounded-full uppercase">Knowledge Hub</span><span class="px-2.5 py-0.5 text-[10px] font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full uppercase">AI & Emerging</span></div>
+    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">LLMs & AI in <span class="text-gradient-amber">Automotive SEO</span></h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl">How Large Language Models are reshaping automotive search. Targets <strong>"automotive ai seo"</strong> (10/mo) — an emerging keyword with massive growth potential.</p>
+  </div>
+  <div class="prose-content">
+    <h2>The AI Revolution in Automotive Search</h2>
+    <p>The keyword <strong>"automotive ai seo"</strong> (10/mo) may have low volume today, but it represents the fastest-growing frontier in automotive digital marketing. LLMs like ChatGPT, Gemini, Claude, and Perplexity are increasingly becoming discovery engines for automotive consumers.</p>
+
+    <h2>How LLMs Impact Automotive SEO</h2>
+    <h3>1. AI-Powered Search Results</h3>
+    <p>Google's AI Overviews now appear for many automotive queries. Our competitor data shows AIO presence for keywords like "trucking seo" and "transportation company seo". This trend will expand to <a href="/seo-for-car-dealerships/">dealership</a> and <a href="/auto-repair-seo-services/">repair shop</a> queries.</p>
+
+    <h3>2. Conversational Discovery</h3>
+    <p>Consumers increasingly ask AI assistants: <em>"What's the best auto repair shop in [city]?"</em> or <em>"How much does a brake job cost?"</em>. Your business needs to be in the AI's knowledge base — this is <a href="/blog/geo-generative-engine-optimization/">GEO optimization</a>.</p>
+
+    <h3>3. AI-Powered Content Creation</h3>
+    <p>While AI can assist with <a href="/blog/content-seo-automotive/">content creation</a>, the key differentiator is <a href="/blog/eeat-automotive-seo/">E-E-A-T</a> — first-hand Experience and genuine Expertise that AI cannot replicate. Use AI as a tool, not a replacement for domain expertise.</p>
+
+    <h3>4. Predictive Search Optimization</h3>
+    <p>AI enables predictive keyword research, content gap analysis, and real-time optimization. Combined with <a href="/blog/semantic-seo-entities/">semantic SEO</a>, AI tools can map entity relationships and identify topical authority gaps.</p>
+
+    <h2>Preparing Your Automotive Business for AI Search</h2>
+    <ul>
+      <li>Build comprehensive <a href="/blog/semantic-seo-entities/">entity profiles</a> with structured data</li>
+      <li>Implement <a href="/blog/geo-generative-engine-optimization/">GEO strategies</a> to appear in AI-generated answers</li>
+      <li>Optimize for <a href="/blog/aeo-answer-engine-optimization/">featured snippets and PAAs</a></li>
+      <li>Maintain strong <a href="/blog/eeat-automotive-seo/">E-E-A-T signals</a> — AI trusts authoritative sources</li>
+      <li>Diversify your presence across platforms LLMs reference</li>
+    </ul>
+  </div>
+  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Related Pages</h2><InternalLinkCard links={relatedLinks} columns={3} /></div>
+</BaseLayout>

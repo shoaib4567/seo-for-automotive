@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import InternalLinkCard from '../components/InternalLinkCard.astro';
+import FaqSection from '../components/FaqSection.astro';
+import AuthorCard from '../components/AuthorCard.astro';
+
+const title = "Automotive SEO Marketing — Search Engine & Internet Marketing [2026]";
+const description = "Integrated automotive SEO and internet marketing strategies. Content marketing, SEM, and digital campaigns for dealerships and automotive brands. 2,420 monthly searches.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'SEO Marketing', href: '/automotive-seo-marketing/' },
+];
+
+const spokeLinks = [
+  { title: 'SEO Services', href: '/automotive-seo-services/', description: 'Detailed SEO service packages.', icon: '⚙️', volume: '3,990/mo' },
+  { title: 'Content SEO Playbook', href: '/blog/content-seo-automotive/', description: 'Content marketing strategies for automotive.', icon: '📝' },
+  { title: 'SEO Strategy & Tips', href: '/blog/automotive-seo-strategy/', description: 'Best practices and trend analysis.', icon: '📋' },
+  { title: 'SEO Agency', href: '/automotive-seo-agency/', description: 'Find an integrated marketing agency.', icon: '🏢', volume: '8,610/mo' },
+  { title: 'Car Dealership SEO', href: '/seo-for-car-dealerships/', description: 'SEO marketing for car dealers.', icon: '🚗', volume: '18,500/mo' },
+  { title: 'AEO & Answer Engine', href: '/blog/aeo-answer-engine-optimization/', description: 'Next-gen search marketing tactics.', icon: '💬' },
+];
+
+const faqs = [
+  { question: 'What is automotive search engine marketing?', answer: 'Automotive search engine marketing (SEM) combines <a href="/automotive-seo-services/">SEO</a> (organic search optimization) with paid search advertising (PPC). For automotive businesses, this means optimizing for keywords like "car dealership near me" while also running targeted Google Ads campaigns.' },
+  { question: 'How does content marketing drive SEO for automotive?', answer: 'A structured <a href="/blog/content-seo-automotive/">content SEO strategy</a> builds <a href="/blog/eeat-automotive-seo/">topical authority</a> through blog posts, guides, and <a href="/blog/semantic-seo-entities/">entity-optimized content</a>. For automotive B2B, content marketing can generate 1,000+ leads through strategic <a href="/blog/automotive-seo-strategy/">SEO content campaigns</a>.' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/automotive-seo-marketing/" breadcrumbs={breadcrumbs}>
+
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="kw-badge">2,420/mo total volume</span>
+      <span class="kw-badge">15 keywords</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
+      Automotive <span class="text-gradient-amber">SEO Marketing</span>
+    </h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl leading-relaxed">
+      Integrated search engine marketing and <a href="/blog/content-seo-automotive/" class="text-amber-400 hover:underline">content marketing</a> strategies for automotive businesses. From <a href="/seo-for-car-dealerships/" class="text-amber-400 hover:underline">dealership internet marketing</a> to <a href="/blog/aeo-answer-engine-optimization/" class="text-amber-400 hover:underline">answer engine optimization</a>.
+    </p>
+  </div>
+
+  <div class="prose-content">
+    <h2 id="sem-overview">SEO + Internet Marketing Convergence</h2>
+    <p><strong>"Automotive search engine marketing"</strong> (590/mo) represents the intersection of organic SEO and paid search. Modern automotive marketing requires an integrated approach — <a href="/automotive-seo-services/">SEO services</a> for long-term organic growth paired with PPC for immediate visibility.</p>
+
+    <h2 id="content-marketing">Content Marketing for Automotive</h2>
+    <p>The keyword <strong>"content marketing seo 1000 leads strategy automotive b2b"</strong> (260/mo) shows demand for B2B automotive content strategies. Key <a href="/blog/content-seo-automotive/">content SEO</a> approaches include:</p>
+    <ul>
+      <li><strong>Hub-and-spoke content architecture</strong> — exactly what this site demonstrates</li>
+      <li><strong>Topical authority building</strong> — comprehensive coverage of automotive SEO topics</li>
+      <li><strong><a href="/blog/semantic-seo-entities/">Entity-based content optimization</a></strong> — structuring content around automotive entities</li>
+      <li><strong>Video SEO</strong> — vehicle walkarounds, service tutorials, and customer testimonials</li>
+      <li><strong><a href="/blog/aeo-answer-engine-optimization/">AEO optimization</a></strong> — formatting content for featured snippets and AI answers</li>
+    </ul>
+
+    <h2 id="digital-campaigns">Digital Campaign Creation for OEMs</h2>
+    <p>Targeting <strong>"seo automotive digital content campaign creation for automotive oems"</strong> (20/mo), we cover enterprise-level automotive marketing including multi-brand SEO, dealer co-op programs, and <a href="/blog/international-seo-automotive/">international SEO for global OEMs</a>.</p>
+  </div>
+
+  <div class="mt-12">
+    <h2 class="text-xl font-bold text-white mb-6">Related Pages</h2>
+    <InternalLinkCard links={spokeLinks} columns={3} />
+  </div>
+
+  <AuthorCard name="Automotive SEO Team" role="Digital Marketing Strategists" bio="We design integrated search marketing campaigns for automotive brands, combining organic SEO with paid search, content marketing, and social media." expertise={['Search Engine Marketing', 'Content Marketing', 'PPC Campaigns', 'B2B Automotive Marketing']} />
+
+  <FaqSection items={faqs} title="Automotive SEO Marketing — FAQ" />
+</BaseLayout>

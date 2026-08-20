@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import InternalLinkCard from '../components/InternalLinkCard.astro';
+import FaqSection from '../components/FaqSection.astro';
+
+const title = "Trucking SEO Company — SEO for Trucking, Transport & Logistics [2026]";
+const description = "SEO for trucking companies, transportation firms, and logistics businesses. 14 keywords, 1,350 monthly volume. Dominate search in the transport industry.";
+const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Trucking SEO', href: '/truck-company-seo-services/' }];
+
+const relatedLinks = [
+  { title: 'Auto Repair SEO', href: '/auto-repair-seo-services/', description: 'SEO for truck repair shops.', icon: '🔧', volume: '8,210/mo' },
+  { title: 'Local SEO', href: '/local-seo-for-car-dealerships/', description: 'Local search for transport companies.', icon: '📍', volume: '3,180/mo' },
+  { title: 'SEO Agency', href: '/automotive-seo-agency/', description: 'Find a transport SEO agency.', icon: '🏢', volume: '8,610/mo' },
+  { title: 'Website Providers', href: '/automotive-website-providers/', description: 'Trucking company website design.', icon: '🌐' },
+];
+
+const faqs = [
+  { question: 'Does SEO work for trucking companies?', answer: 'Absolutely. The trucking SEO cluster has <strong>1,350 monthly searches</strong> across 14 keywords. SEO drives leads for freight brokers, trucking companies, and logistics firms through organic search, <a href="/local-seo-for-car-dealerships/">local SEO</a>, and <a href="/blog/content-seo-automotive/">content marketing</a>.' },
+  { question: 'What SEO keywords should trucking companies target?', answer: 'Key targets: <strong>"trucking seo company"</strong> (260/mo), <strong>"truck company seo marketing"</strong> (260/mo), <strong>"truck company seo"</strong> (210/mo), and service-area terms like "[city] trucking company" and "freight services near me".' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/truck-company-seo-services/" breadcrumbs={breadcrumbs}>
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4"><span class="kw-badge">1,350/mo</span><span class="kw-badge">14 keywords</span></div>
+    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">Trucking <span class="text-gradient-amber">SEO Company</span></h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl">SEO for trucking companies, transportation firms, and logistics businesses. From <a href="/local-seo-for-car-dealerships/" class="text-amber-400 hover:underline">local SEO</a> to <a href="/blog/content-seo-automotive/" class="text-amber-400 hover:underline">content marketing</a>.</p>
+  </div>
+  <div class="prose-content">
+    <h2>Trucking & Transport SEO Strategy</h2>
+    <p>The trucking SEO vertical generates <strong>1,350 monthly searches</strong> across keywords like <strong>"trucking seo company"</strong> (260/mo) and <strong>"seo for logistics business"</strong> (70/mo). Key strategies include:</p>
+    <ul>
+      <li>Service area pages for each route/region served</li>
+      <li><a href="/blog/local-seo-for-automotive/">Local SEO</a> for terminal and depot locations</li>
+      <li>Industry-specific content: DOT compliance, fleet management, load board optimization</li>
+      <li><a href="/blog/ecommerce-seo-automotive/">E-commerce SEO</a> for parts and accessory sales</li>
+      <li><strong>Truck repair shop SEO</strong> (40/mo) — cross-promote with <a href="/auto-repair-seo-services/">auto repair SEO</a></li>
+    </ul>
+    <h2>Top Keywords</h2>
+  </div>
+  <div class="overflow-x-auto mt-6 mb-10">
+    <table class="w-full text-sm">
+      <thead><tr class="border-b border-white/[0.08] text-left"><th class="pb-3 text-slate-400 font-semibold">Keyword</th><th class="pb-3 text-slate-400 font-semibold text-right">Volume</th><th class="pb-3 text-slate-400 font-semibold text-right">KD</th></tr></thead>
+      <tbody class="text-slate-300">
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">trucking seo company</td><td class="text-right">260</td><td class="text-right text-emerald-400">1</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">truck company seo marketing</td><td class="text-right">260</td><td class="text-right text-emerald-400">8</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">truck company seo</td><td class="text-right">210</td><td class="text-right text-emerald-400">7</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">transportation seo company</td><td class="text-right">110</td><td class="text-right text-amber-400">12</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">seo for logistics business</td><td class="text-right">70</td><td class="text-right text-emerald-400">0</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Related Pages</h2><InternalLinkCard links={relatedLinks} columns={2} /></div>
+  <FaqSection items={faqs} title="Trucking SEO — FAQ" />
+</BaseLayout>

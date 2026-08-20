@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SchemaGenerator from '../../components/SchemaGenerator.jsx';
+
+const title = "Automotive Schema Generator — Vehicle, AutoDealer & AutoRepair JSON-LD";
+const description = "Generate Schema.org compliant JSON-LD structured data for Vehicle, AutoDealer, and AutoRepair entities. Copy-paste ready for Google Vehicle Listings and rich snippets.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Tools', href: '/tools/' },
+  { label: 'Schema Generator', href: '/tools/automotive-schema-generator/' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/tools/automotive-schema-generator/" breadcrumbs={breadcrumbs}>
+
+  <div class="mb-8">
+    <h1 class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+      Automotive <span class="text-gradient-gold">Schema Generator</span>
+    </h1>
+    <p class="mt-3 text-slate-400 max-w-2xl leading-relaxed">
+      Generate Schema.org compliant structured data for your automotive website. Supports Vehicle, AutoDealer, and AutoRepair entity types. <a href="/knowledge/automotive-schema-guide/" class="text-[#d4a853] hover:underline">Read our Schema guide</a> to understand implementation.
+    </p>
+  </div>
+
+  <SchemaGenerator client:visible />
+
+  <div class="mt-12 section-border pt-10 prose-content">
+    <h2>Why automotive structured data matters</h2>
+    <p>Structured data helps search engines understand the entities on your pages — vehicles, dealerships, repair services, and their relationships. Proper implementation enables:</p>
+    <ul>
+      <li><strong>Google Vehicle Listings</strong> — rich vehicle results in search with price, mileage, and dealer info</li>
+      <li><strong>Knowledge Graph presence</strong> — your dealership or business appearing as an entity in Google's Knowledge Graph</li>
+      <li><strong>Rich snippets</strong> — enhanced search results with ratings, pricing, and availability</li>
+      <li><strong>AI search citations</strong> — <a href="/services/automotive-geo/">generative engines</a> rely heavily on structured data to understand business entities</li>
+    </ul>
+    <p>Most automotive websites either lack structured data entirely or implement it incorrectly. The most common issues we see: missing Vehicle schema on VDPs, incorrect AutoDealer schema with incomplete address data, and AutoRepair schema without service catalog information.</p>
+
+    <h2>Supported schema types</h2>
+    <h3>Vehicle</h3>
+    <p>For Vehicle Detail Pages (VDPs) — includes make, model, year, VIN, price, mileage, fuel type, and seller information. Essential for <a href="/industries/car-dealership-seo/">dealership SEO</a>.</p>
+
+    <h3>AutoDealer</h3>
+    <p>For dealership location pages — includes address, opening hours, geo coordinates, and service information. Critical for <a href="/services/automotive-local-seo/">local SEO</a>.</p>
+
+    <h3>AutoRepair</h3>
+    <p>For repair shop pages — includes service catalog, contact information, and business details. Essential for <a href="/industries/auto-repair-seo/">auto repair SEO</a>.</p>
+  </div>
+
+</BaseLayout>

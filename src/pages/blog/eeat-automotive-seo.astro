@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InternalLinkCard from '../../components/InternalLinkCard.astro';
+import AuthorCard from '../../components/AuthorCard.astro';
+
+const title = "E-E-A-T for Automotive SEO — Experience, Expertise, Authority & Trust [2026]";
+const description = "Master E-E-A-T for automotive SEO. Build Experience, Expertise, Authoritativeness, and Trustworthiness signals for dealerships, repair shops, and auto businesses.";
+const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Knowledge Hub', href: '/blog/automotive-seo-strategy/' }, { label: 'E-E-A-T', href: '/blog/eeat-automotive-seo/' }];
+const relatedLinks = [
+  { title: 'Semantic SEO & Entities', href: '/blog/semantic-seo-entities/', description: 'Entity optimization amplifies E-E-A-T.', icon: '🧬' },
+  { title: 'Reputation Management', href: '/automotive-reputation-management-services/', description: 'Reviews as trust signals.', icon: '⭐', volume: '2,720/mo' },
+  { title: 'SEO Expert', href: '/automotive-seo-expert/', description: 'Expert E-E-A-T credentials.', icon: '🧠', volume: '520/mo' },
+  { title: 'GEO — Generative Engine', href: '/blog/geo-generative-engine-optimization/', description: 'E-E-A-T impacts AI citations.', icon: '🤖' },
+  { title: 'SEO Strategy', href: '/blog/automotive-seo-strategy/', description: 'E-E-A-T in your overall strategy.', icon: '📋' },
+  { title: 'Holistic SEO', href: '/blog/holistic-seo-automotive/', description: 'E-E-A-T as part of holistic approach.', icon: '🔄' },
+];
+---
+<BaseLayout title={title} description={description} canonicalPath="/blog/eeat-automotive-seo/" breadcrumbs={breadcrumbs}>
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4"><span class="px-2.5 py-0.5 text-[10px] font-bold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 rounded-full uppercase">Knowledge Hub</span></div>
+    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">E-E-A-T for <span class="text-gradient-amber">Automotive SEO</span></h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl">How to build Experience, Expertise, Authoritativeness, and Trustworthiness signals for <a href="/seo-for-car-dealerships/" class="text-amber-400 hover:underline">car dealerships</a>, <a href="/auto-repair-seo-services/" class="text-amber-400 hover:underline">repair shops</a>, and every automotive vertical.</p>
+  </div>
+  <div class="prose-content">
+    <h2>What is E-E-A-T?</h2>
+    <p>E-E-A-T is Google's framework for evaluating content quality. The double-E adds <strong>Experience</strong> — demonstrating real-world, first-hand experience — to the original E-A-T (Expertise, Authoritativeness, Trustworthiness). For automotive businesses, this means:</p>
+
+    <h3>Experience (the first E)</h3>
+    <ul>
+      <li>First-hand customer testimonials and <a href="/automotive-reputation-management-services/">verified reviews</a></li>
+      <li>Before/after case studies with real data</li>
+      <li>Team bios showing automotive industry tenure</li>
+      <li>Photo and video evidence of real work performed</li>
+    </ul>
+
+    <h3>Expertise</h3>
+    <ul>
+      <li>ASE certifications, OEM training credentials</li>
+      <li>Industry-specific <a href="/blog/content-seo-automotive/">content depth</a> — not generic SEO advice</li>
+      <li>Author entities with verifiable automotive expertise</li>
+      <li>Technical accuracy in all <a href="/blog/semantic-seo-entities/">schema markup</a> and content</li>
+    </ul>
+
+    <h3>Authoritativeness</h3>
+    <ul>
+      <li>Backlinks from automotive industry publications (Motor Trend, NADA, etc.)</li>
+      <li>Industry awards, association memberships</li>
+      <li>Brand mentions across <a href="/blog/geo-generative-engine-optimization/">generative engines</a> and LLMs</li>
+      <li>Google Knowledge Panel for your brand entity</li>
+    </ul>
+
+    <h3>Trustworthiness</h3>
+    <ul>
+      <li><strong><a href="/automotive-reputation-management-services/">Online reputation</a></strong> — 4.5+ star average across review platforms</li>
+      <li>BBB accreditation, consumer complaint resolution</li>
+      <li>Transparent pricing and policies on your <a href="/automotive-website-providers/">website</a></li>
+      <li>HTTPS, privacy policy, clear contact information</li>
+    </ul>
+
+    <h2>E-E-A-T and Next-Gen Search</h2>
+    <p>E-E-A-T signals are increasingly important for <a href="/blog/aeo-answer-engine-optimization/">AEO (Answer Engine Optimization)</a> — Google prioritizes high E-E-A-T sources for featured snippets. For <a href="/blog/geo-generative-engine-optimization/">GEO (Generative Engine Optimization)</a>, <a href="/blog/llm-seo-automotive/">LLMs</a> preferentially cite authoritative, well-known brands in their responses.</p>
+
+    <h2>Automotive E-E-A-T Checklist</h2>
+    <ul>
+      <li>✅ Author bios on all content pages with verifiable credentials</li>
+      <li>✅ <a href="/blog/semantic-seo-entities/">Schema.org Person markup</a> for expert authors</li>
+      <li>✅ Customer review integration on service pages</li>
+      <li>✅ Case studies with named clients (where permitted)</li>
+      <li>✅ Industry certifications displayed prominently</li>
+      <li>✅ Editorial review process documented</li>
+      <li>✅ Transparent pricing on <a href="/automotive-seo-services/">services pages</a></li>
+    </ul>
+  </div>
+  <AuthorCard name="Automotive SEO Team" role="E-E-A-T & Quality Assurance" bio="We build E-E-A-T authority for automotive businesses through expert content, verified credentials, and reputation management. Every page on this site demonstrates E-E-A-T principles in practice." expertise={['E-E-A-T Strategy', 'Quality Rater Guidelines', 'Author Entity Optimization', 'Trust Signal Architecture']} />
+  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Related Knowledge Hub Pages</h2><InternalLinkCard links={relatedLinks} columns={3} /></div>
+</BaseLayout>

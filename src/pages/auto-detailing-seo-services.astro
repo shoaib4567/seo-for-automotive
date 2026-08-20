@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import InternalLinkCard from '../components/InternalLinkCard.astro';
+import FaqSection from '../components/FaqSection.astro';
+
+const title = "Auto Detailing SEO Services — SEO for Car Detailers [2026]";
+const description = "SEO strategies for auto detailing businesses and mobile detailers. 11 keywords, 1,570 monthly volume. Dominate local search for your detailing shop.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Auto Repair SEO', href: '/auto-repair-seo-services/' },
+  { label: 'Auto Detailing SEO', href: '/auto-detailing-seo-services/' },
+];
+
+const relatedLinks = [
+  { title: 'Auto Repair SEO (Parent Hub)', href: '/auto-repair-seo-services/', description: 'Comprehensive repair shop SEO.', icon: '🔧', volume: '8,210/mo' },
+  { title: 'Car Wash SEO', href: '/seo-for-car-wash/', description: 'SEO for car wash & detailing combos.', icon: '🧽', volume: '750/mo' },
+  { title: 'Local SEO', href: '/local-seo-for-car-dealerships/', description: 'GBP optimization for detailers.', icon: '📍', volume: '3,180/mo' },
+  { title: 'Website Design', href: '/automotive-website-providers/', description: 'Auto detailing website design.', icon: '🌐' },
+];
+
+const faqs = [
+  { question: 'What SEO keywords should car detailers target?', answer: 'Top keywords: <strong>"auto detailing seo company"</strong> (720/mo), <strong>"auto detailing seo"</strong> (260/mo), <strong>"seo for car detailing"</strong> (140/mo), and <strong>"car detailing seo"</strong> (110/mo). Also target geo-modified variants and service-specific terms like "ceramic coating [city]".' },
+  { question: 'How can mobile detailers optimize for SEO?', answer: 'Mobile detailers should focus on service area optimization in <a href="/local-seo-for-car-dealerships/">Google Business Profile</a>, create city-specific landing pages, and target "mobile detailing near me" queries. <a href="/blog/local-seo-for-automotive/">Local SEO</a> is critical since 92% of detailing customers search on mobile.' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/auto-detailing-seo-services/" breadcrumbs={breadcrumbs}>
+  <div class="mb-12">
+    <div class="flex items-center gap-3 mb-4"><span class="kw-badge">1,570/mo</span><span class="kw-badge">11 keywords</span></div>
+    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">Auto Detailing <span class="text-gradient-amber">SEO Services</span></h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl">SEO for car detailing businesses, mobile detailers, and ceramic coating shops. Part of the <a href="/auto-repair-seo-services/" class="text-amber-400 hover:underline">auto repair SEO</a> hub network.</p>
+  </div>
+  <div class="prose-content">
+    <h2>Why Auto Detailers Need SEO</h2>
+    <p><strong>"Auto detailing seo company"</strong> (720/mo) is the highest-volume keyword in this cluster. Detailing businesses are highly local, making <a href="/local-seo-for-car-dealerships/">local SEO</a> and <a href="/automotive-reputation-management-services/">review management</a> the primary growth channels.</p>
+    <h2>Detailing SEO Strategy</h2>
+    <ul>
+      <li>Service-specific pages for each detailing tier (basic wash, full detail, ceramic coating, paint correction)</li>
+      <li><a href="/blog/semantic-seo-entities/">Schema.org Service markup</a> for each package</li>
+      <li>Before/after photo galleries with optimized alt text</li>
+      <li>Customer review integration as <a href="/blog/eeat-automotive-seo/">E-E-A-T signals</a></li>
+      <li><a href="/blog/content-seo-automotive/">Blog content</a> on car care tips, product recommendations</li>
+    </ul>
+    <h2>Top Keywords</h2>
+  </div>
+  <div class="overflow-x-auto mt-6 mb-10">
+    <table class="w-full text-sm">
+      <thead><tr class="border-b border-white/[0.08] text-left"><th class="pb-3 text-slate-400 font-semibold">Keyword</th><th class="pb-3 text-slate-400 font-semibold text-right">Volume</th><th class="pb-3 text-slate-400 font-semibold text-right">KD</th></tr></thead>
+      <tbody class="text-slate-300">
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">auto detailing seo company</td><td class="text-right">720</td><td class="text-right text-amber-400">22</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">auto detailing seo</td><td class="text-right">260</td><td class="text-right text-emerald-400">6</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">seo for car detailing</td><td class="text-right">140</td><td class="text-right text-emerald-400">3</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">car detailing seo</td><td class="text-right">110</td><td class="text-right text-emerald-400">3</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">seo keywords for car detailing</td><td class="text-right">70</td><td class="text-right text-emerald-400">4</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Related Pages</h2><InternalLinkCard links={relatedLinks} columns={2} /></div>
+  <FaqSection items={faqs} title="Auto Detailing SEO — FAQ" />
+</BaseLayout>
