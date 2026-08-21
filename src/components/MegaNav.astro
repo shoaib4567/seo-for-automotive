@@ -203,13 +203,35 @@ const currentPath = Astro.url.pathname;
 
 <style>
   .nav-link {
-    @apply px-3 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-200 hover:bg-white/[0.04] transition-all cursor-pointer;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: #94a3b8;
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+  .nav-link:hover {
+    color: #e2e8f0;
+    background-color: rgba(255, 255, 255, 0.04);
   }
   .nav-link.active {
-    @apply text-[#d4a853] bg-[#d4a853]/10;
+    color: #d4a853;
+    background-color: rgba(212, 168, 83, 0.1);
   }
   .mobile-link {
-    @apply block px-3 py-2.5 rounded-lg text-sm text-slate-300 hover:text-[#d4a853] hover:bg-white/[0.04] transition-colors;
+    display: block;
+    padding: 0.625rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #cbd5e1;
+    transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .mobile-link:hover {
+    color: #d4a853;
+    background-color: rgba(255, 255, 255, 0.04);
   }
 </style>
 
