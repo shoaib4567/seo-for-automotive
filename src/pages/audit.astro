@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import AuditTool from '../components/AuditTool.jsx';
 
-const title = "Request an Automotive SEO Audit | SEO for Automotive";
-const description = "Request a free automotive SEO audit for your dealership, repair shop, or automotive business. We evaluate technical SEO, local SEO, content, schema, and AI-search readiness.";
+const title = "Free Automotive SEO Audit Tool | SEO for Automotive";
+const description = "Get an instant, free SEO audit for your automotive website. Analyzes technical SEO, Core Web Vitals, meta tags, schema markup, AEO/GEO readiness, and CRO signals — built specifically for automotive businesses.";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
-  { label: 'SEO Audit', href: '/audit/' },
+  { label: 'Free SEO Audit', href: '/audit/' },
 ];
 ---
 
@@ -13,89 +14,52 @@ const breadcrumbs = [
 
   <div class="max-w-3xl mx-auto">
     <div class="mb-10">
-      <span class="badge-outline mb-3">Free Assessment</span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight mt-2">
-        Request an Automotive <span class="text-gradient-gold">SEO Audit</span>
+      <span class="badge-outline mb-3">Free Instant Analysis</span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mt-2" style="color: var(--color-text-primary);">
+        Free Automotive <span class="text-gradient-gold">SEO Audit</span>
       </h1>
-      <p class="mt-4 text-lg text-slate-400 leading-relaxed">
-        Get a comprehensive evaluation of your automotive website's search performance. We assess technical SEO, local visibility, content quality, structured data, and AI-search readiness — specifically for automotive businesses.
+      <p class="mt-4 text-lg leading-relaxed" style="color: var(--color-text-secondary);">
+        Enter your website URL below and get an instant analysis of your technical SEO, Core Web Vitals, meta tags, structured data, AEO & GEO readiness, and conversion signals — built specifically for automotive websites.
       </p>
     </div>
 
-    <div class="glass-panel rounded-xl p-6 mb-10">
-      <h2 class="text-lg font-bold text-white mb-4">What we evaluate</h2>
+    <!-- What we analyze -->
+    <div class="glass-panel rounded-xl p-6 mb-8">
+      <h2 class="text-lg font-bold mb-4" style="color: var(--color-text-primary);">What this audit analyzes</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div class="flex items-start gap-2.5">
-          <span class="w-5 h-5 rounded-full bg-[#d4a853]/10 flex items-center justify-center text-[#d4a853] text-xs shrink-0 mt-0.5">✓</span>
+          <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs shrink-0 mt-0.5" style="background: var(--color-gold-muted); color: var(--color-gold);">✓</span>
           <div>
-            <div class="text-sm font-medium text-white">Technical SEO</div>
-            <div class="text-xs text-slate-500">Crawlability, indexation, Core Web Vitals</div>
+            <div class="text-sm font-medium" style="color: var(--color-text-primary);">Technical SEO</div>
+            <div class="text-xs" style="color: var(--color-text-muted);">HTTPS, mobile, Core Web Vitals, titles, meta</div>
           </div>
         </div>
         <div class="flex items-start gap-2.5">
-          <span class="w-5 h-5 rounded-full bg-[#d4a853]/10 flex items-center justify-center text-[#d4a853] text-xs shrink-0 mt-0.5">✓</span>
+          <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs shrink-0 mt-0.5" style="background: var(--color-gold-muted); color: var(--color-gold);">✓</span>
           <div>
-            <div class="text-sm font-medium text-white">Local SEO</div>
-            <div class="text-xs text-slate-500">GBP, Maps, citations, reviews</div>
+            <div class="text-sm font-medium" style="color: var(--color-text-primary);">SEO Analysis</div>
+            <div class="text-xs" style="color: var(--color-text-muted);">Google SEO score, canonical, robots, schema</div>
           </div>
         </div>
         <div class="flex items-start gap-2.5">
-          <span class="w-5 h-5 rounded-full bg-[#d4a853]/10 flex items-center justify-center text-[#d4a853] text-xs shrink-0 mt-0.5">✓</span>
+          <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs shrink-0 mt-0.5" style="background: var(--color-secondary-muted); color: var(--color-secondary);">✓</span>
           <div>
-            <div class="text-sm font-medium text-white">Content & Authority</div>
-            <div class="text-xs text-slate-500">Topical coverage, E-E-A-T signals</div>
+            <div class="text-sm font-medium" style="color: var(--color-text-primary);">AEO & GEO Readiness</div>
+            <div class="text-xs" style="color: var(--color-text-muted);">AI Overview, answer engine, LLM optimization</div>
           </div>
         </div>
         <div class="flex items-start gap-2.5">
-          <span class="w-5 h-5 rounded-full bg-[#d4a853]/10 flex items-center justify-center text-[#d4a853] text-xs shrink-0 mt-0.5">✓</span>
+          <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs shrink-0 mt-0.5" style="background: var(--color-secondary-muted); color: var(--color-secondary);">✓</span>
           <div>
-            <div class="text-sm font-medium text-white">Structured Data</div>
-            <div class="text-xs text-slate-500">Schema.org implementation quality</div>
-          </div>
-        </div>
-        <div class="flex items-start gap-2.5">
-          <span class="w-5 h-5 rounded-full bg-[#0f9d8e]/10 flex items-center justify-center text-[#0f9d8e] text-xs shrink-0 mt-0.5">✓</span>
-          <div>
-            <div class="text-sm font-medium text-white">AI Search Readiness</div>
-            <div class="text-xs text-slate-500">AEO, GEO, LLM visibility</div>
-          </div>
-        </div>
-        <div class="flex items-start gap-2.5">
-          <span class="w-5 h-5 rounded-full bg-[#0f9d8e]/10 flex items-center justify-center text-[#0f9d8e] text-xs shrink-0 mt-0.5">✓</span>
-          <div>
-            <div class="text-sm font-medium text-white">Competitive Landscape</div>
-            <div class="text-xs text-slate-500">Where you stand vs. competitors</div>
+            <div class="text-sm font-medium" style="color: var(--color-text-primary);">CRO & UX</div>
+            <div class="text-xs" style="color: var(--color-text-muted);">Accessibility, best practices, mobile usability</div>
           </div>
         </div>
       </div>
     </div>
 
-    <form class="space-y-5" id="audit-form" action="#" method="POST">
-      <div>
-        <label for="audit-website" class="block text-sm font-medium text-slate-400 mb-1.5">Your Website URL *</label>
-        <input type="url" id="audit-website" name="website" required
-          class="w-full bg-[#0c1019] border border-white/[0.08] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-[#d4a853]/50 focus:ring-1 focus:ring-[#d4a853]/25 transition-colors"
-          placeholder="https://yourdealership.com" />
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label for="audit-name" class="block text-sm font-medium text-slate-400 mb-1.5">Your Name *</label>
-          <input type="text" id="audit-name" name="name" required autocomplete="name"
-            class="w-full bg-[#0c1019] border border-white/[0.08] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-[#d4a853]/50 focus:ring-1 focus:ring-[#d4a853]/25 transition-colors"
-            placeholder="Your name" />
-        </div>
-        <div>
-          <label for="audit-email" class="block text-sm font-medium text-slate-400 mb-1.5">Email *</label>
-          <input type="email" id="audit-email" name="email" required autocomplete="email"
-            class="w-full bg-[#0c1019] border border-white/[0.08] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-[#d4a853]/50 focus:ring-1 focus:ring-[#d4a853]/25 transition-colors"
-            placeholder="you@company.com" />
-        </div>
-      </div>
-      <button type="submit" class="btn-primary" id="audit-submit">
-        Request Free Audit
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
-      </button>
-    </form>
+    <!-- Audit Tool (React, client-only rendering) -->
+    <AuditTool client:only="react" />
   </div>
 
 </BaseLayout>

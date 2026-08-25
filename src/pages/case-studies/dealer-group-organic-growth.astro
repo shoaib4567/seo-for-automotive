@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqSection from '../../components/FaqSection.astro';
+
+const title = "Case Study: Multi-Location Dealer Group — 340% Organic Traffic Growth | SEO for Automotive";
+const description = "How we helped a 12-location car dealer group achieve 340% organic traffic growth and 280% more qualified leads through VDP optimization, Vehicle schema, and location-specific SEO.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Case Studies', href: '/case-studies/' },
+  { label: 'Dealer Group Growth', href: '/case-studies/dealer-group-organic-growth/' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/case-studies/dealer-group-organic-growth/" breadcrumbs={breadcrumbs}>
+
+  <div class="max-w-3xl">
+    <div class="mb-10">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="badge-outline">Car Dealerships</span>
+        <span class="kw-badge">GSC</span>
+        <span class="kw-badge">GA4</span>
+        <span class="kw-badge">SEMrush</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight" style="color: var(--color-text-primary);">
+        Multi-Location Dealer Group: <span class="text-gradient-gold">340% Organic Traffic Growth</span>
+      </h1>
+      <p class="mt-4 text-lg leading-relaxed" style="color: var(--color-text-secondary);">
+        How we helped a 12-location car dealer group achieve 340% organic traffic growth, 280% more qualified leads, and #1 Maps ranking in 8 out of 12 markets within 12 months.
+      </p>
+    </div>
+
+    <!-- Key Metrics -->
+    <div class="grid grid-cols-3 gap-4 mb-10">
+      <div class="metric-card">
+        <div class="metric-value">+340%</div>
+        <div class="metric-label">Organic Traffic</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">+280%</div>
+        <div class="metric-label">Qualified Leads</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">8/12</div>
+        <div class="metric-label">Markets at #1</div>
+      </div>
+    </div>
+
+    <div class="prose-content">
+      <h2>The Challenge</h2>
+      <p>A regional car dealer group with <strong>12 locations across 4 states</strong> was struggling with declining organic visibility. Despite spending $50,000+/month on paid search, their organic channel was underperforming — generating less than 15% of total website leads.</p>
+      <p>Key problems identified in our initial audit:</p>
+      <ul>
+        <li><strong>8,000+ Vehicle Detail Pages (VDPs)</strong> were not being indexed by Google due to JavaScript rendering issues and missing canonical tags</li>
+        <li>No <strong>Vehicle schema markup</strong> on any inventory pages — missing rich results opportunities</li>
+        <li>Duplicate content across locations — same vehicle appearing on multiple location subdomains with identical content</li>
+        <li>Google Business Profile listings were inconsistent, with incorrect categories and missing attributes across 8 of 12 locations</li>
+        <li>No make/model/year content architecture — relying entirely on dynamic inventory feeds with zero static landing pages</li>
+      </ul>
+
+      <h2>Our Approach</h2>
+      <h3>1. Technical SEO & VDP Architecture</h3>
+      <p>We worked with the dealer's website provider to implement server-side rendering for VDPs, ensuring Googlebot could crawl and index all vehicle pages. We implemented proper canonical tags to consolidate duplicate listings and created a clean URL structure: <code>/inventory/[make]/[model]/[year]/[vin]/</code>.</p>
+
+      <h3>2. Vehicle Schema Implementation</h3>
+      <p>We deployed <strong>Vehicle schema JSON-LD</strong> across all 8,000+ active VDPs, including make, model, year, mileage, price, color, VIN, and dealer information. This resulted in rich results appearing within 6 weeks of implementation.</p>
+
+      <h3>3. Make/Model/Year Content Architecture</h3>
+      <p>We built a comprehensive content architecture with static landing pages for every make and model the dealer group sells. Each page included:</p>
+      <ul>
+        <li>Make-level pages (e.g., "Toyota Dealer in Austin")</li>
+        <li>Model-level pages (e.g., "2026 Toyota Camry in Austin")</li>
+        <li>Comparison and buying guide content</li>
+        <li>Internal links to active inventory VDPs</li>
+      </ul>
+
+      <h3>4. Local SEO for Each Location</h3>
+      <p>Each of the 12 locations received individual local SEO optimization including GBP audit and optimization, local citation building and NAP consistency, review management and response strategy, and location-specific service department pages.</p>
+
+      <h2>Results (Google Search Console & GA4 Data)</h2>
+      <p>Within <strong>12 months</strong> of implementation:</p>
+      <ul>
+        <li><strong>Organic traffic increased 340%</strong> — from 12,400 to 54,500 monthly sessions (GA4)</li>
+        <li><strong>Qualified lead form submissions increased 280%</strong> — from 180 to 685 per month</li>
+        <li><strong>Google Search Console impressions increased 520%</strong> — from 890K to 5.5M monthly</li>
+        <li><strong>Average position improved from 28.4 to 8.7</strong> across target keywords (GSC)</li>
+        <li><strong>8 out of 12 locations reached #1 in Maps</strong> for their primary "car dealer near [city]" queries</li>
+        <li><strong>SEMrush estimated traffic value increased from $18K to $142K/month</strong></li>
+      </ul>
+
+      <h2>Key Takeaways</h2>
+      <ol>
+        <li><strong>VDP indexation is the foundation</strong> — if Google can't crawl your inventory, nothing else matters</li>
+        <li><strong>Vehicle schema drives rich results</strong> — structured data for automotive entities is still underutilized by most dealers</li>
+        <li><strong>Static make/model pages are essential</strong> — dynamic inventory alone doesn't build topical authority</li>
+        <li><strong>Local SEO must be location-specific</strong> — each dealership location needs its own local SEO strategy</li>
+      </ol>
+
+      <h2>Tools & Platforms Used</h2>
+      <ul>
+        <li><strong>Google Search Console</strong> — indexation monitoring, performance tracking, URL inspection</li>
+        <li><strong>Google Analytics 4</strong> — traffic attribution, conversion tracking, lead source analysis</li>
+        <li><strong>SEMrush</strong> — keyword tracking, competitive analysis, traffic value estimation</li>
+        <li><strong>Ahrefs</strong> — backlink analysis, content gap identification</li>
+      </ul>
+
+      <p><a href="/contact/">Want similar results for your dealership?</a> Let's discuss your search visibility goals.</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="glass-panel rounded-xl p-8 text-center mt-12">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text-primary);">Get results like these for your dealership</h2>
+      <p class="mb-6" style="color: var(--color-text-secondary);">Start with a free automotive SEO audit to identify your biggest opportunities.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="/audit/" class="btn-gold">Get a Free Audit</a>
+        <a href="/contact/" class="btn-secondary">Request a Strategy Call</a>
+      </div>
+    </div>
+  </div>
+
+</BaseLayout>

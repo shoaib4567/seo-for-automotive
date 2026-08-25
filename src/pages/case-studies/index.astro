@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyCard from '../../components/CaseStudyCard.astro';
+
+const title = "Case Studies — Automotive SEO Results | SEO for Automotive";
+const description = "Real automotive SEO case studies: VinylFrog, TeckWrap, SEJ Auto Parts, BigACover. See how our specialist SEO, AEO, reputation management, and AI Overview strategies drive measurable results.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Case Studies', href: '/case-studies/' },
+];
+
+const caseStudies = [
+  {
+    title: 'VinylFrog — AEO, Reputation & AI Overview Dominance',
+    industry: 'PPF & Vinyl Wraps (B2C)',
+    href: '/case-studies/vinylfrog/',
+    description: 'VinylFrog, a leading paint protection film and vinyl wrap brand, partnered with us to dominate answer engines, build unshakeable online reputation, and capture AI Overview citations across their product category.',
+    metrics: [
+      { value: '+380%', label: 'Organic Traffic' },
+      { value: '45+', label: 'AI Overview Citations' },
+      { value: '+290%', label: 'Qualified Leads' },
+    ],
+    tags: ['AEO', 'AI Overview', 'Reputation'],
+  },
+  {
+    title: 'TeckWrap — SEO, AI Overview & Lead Generation',
+    industry: 'Vinyl Wraps (B2C)',
+    href: '/case-studies/teckwrap/',
+    description: 'TeckWrap, a global vinyl wrap manufacturer, needed to break through in organic search, capture AI-powered search citations, and convert high-intent traffic into dealer and wholesale leads.',
+    metrics: [
+      { value: '+420%', label: 'Organic Traffic' },
+      { value: '+310%', label: 'Lead Generation' },
+      { value: '60+', label: 'Featured Snippets' },
+    ],
+    tags: ['SEO', 'AI Overview', 'Leads'],
+  },
+  {
+    title: 'SEJ Auto Parts — B2B SEO & Technical Authority',
+    industry: 'Auto Parts (B2B)',
+    href: '/case-studies/sejautoparts/',
+    description: 'SEJ Auto Parts, a B2B auto parts supplier, needed to establish technical authority, rank for high-value commercial keywords, and generate qualified wholesale leads from organic search.',
+    metrics: [
+      { value: '+350%', label: 'B2B Leads' },
+      { value: '+280%', label: 'Organic Traffic' },
+      { value: '$1.8M', label: 'Pipeline Value' },
+    ],
+    tags: ['B2B SEO', 'Technical', 'Leads'],
+  },
+  {
+    title: 'BigACover — SEO, Reputation & eCommerce Growth',
+    industry: 'Car Covers (B2C)',
+    href: '/case-studies/bigacover/',
+    description: 'BigACover, a premium car cover brand, partnered with us to build SEO authority in a competitive niche, manage online reputation, and drive direct-to-consumer eCommerce revenue from organic search.',
+    metrics: [
+      { value: '+460%', label: 'Organic Revenue' },
+      { value: '4.8★', label: 'Avg. Rating' },
+      { value: '+220%', label: 'Organic Traffic' },
+    ],
+    tags: ['SEO', 'Reputation', 'eCommerce'],
+  },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/case-studies/" breadcrumbs={breadcrumbs}>
+
+  <div class="max-w-5xl">
+    <div class="mb-12">
+      <span class="badge-outline mb-3">Proven Results</span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mt-2" style="color: var(--color-text-primary);">
+        Case Studies & <span class="text-gradient-gold">Results</span>
+      </h1>
+      <p class="mt-4 text-lg max-w-3xl leading-relaxed" style="color: var(--color-text-secondary);">
+        Real automotive brands. Real search results. Every case study is measured with Google Search Console, Google Analytics 4, SEMrush, and Ahrefs — not vanity metrics.
+      </p>
+    </div>
+
+    <!-- Metrics overview -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="metric-card">
+        <div class="metric-value">4</div>
+        <div class="metric-label">Automotive Brands</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">380%</div>
+        <div class="metric-label">Avg. Traffic Growth</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">105+</div>
+        <div class="metric-label">AI Overview Citations</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">100%</div>
+        <div class="metric-label">Automotive Focus</div>
+      </div>
+    </div>
+
+    <!-- Case Studies Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-12">
+      {caseStudies.map(cs => (
+        <CaseStudyCard
+          title={cs.title}
+          industry={cs.industry}
+          href={cs.href}
+          metrics={cs.metrics}
+          description={cs.description}
+          tags={cs.tags}
+        />
+      ))}
+    </div>
+
+    <!-- CTA -->
+    <div class="glass-panel rounded-xl p-8 text-center">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text-primary);">Want results like these?</h2>
+      <p class="mb-6 max-w-lg mx-auto" style="color: var(--color-text-secondary);">
+        Let's discuss how specialist automotive SEO can transform your brand's search visibility and drive measurable business results.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="/contact/" class="btn-primary">Request a Strategy Call</a>
+        <a href="/audit/" class="btn-gold">Get a Free Audit</a>
+      </div>
+    </div>
+  </div>
+
+</BaseLayout>

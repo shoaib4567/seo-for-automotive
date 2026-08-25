@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import ServiceGrid from '../../components/ServiceGrid.astro';
+
+const title = "SEO for Auto Body & Collision Repair Shops [2026]";
+const description = "Specialist SEO for auto body shops and collision repair centers. Local search visibility, insurance-related keyword targeting, before/after content, and trust signal optimization.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Industries', href: '/industries/car-dealership-seo/' },
+  { label: 'Auto Body SEO', href: '/industries/auto-body-seo/' },
+];
+
+const relevantServices = [
+  { title: 'Local SEO', href: '/services/automotive-local-seo/', desc: 'GBP optimization, Maps ranking, and "collision repair near me" targeting.', icon: '📍' },
+  { title: 'Content SEO', href: '/services/automotive-content-seo/', desc: 'Before/after galleries, insurance guides, and repair process content.', icon: '📝' },
+  { title: 'Technical SEO', href: '/services/automotive-technical-seo/', desc: 'Image-heavy site optimization, page speed, and structured data.', icon: '🔧' },
+  { title: 'Reputation Management', href: '/automotive-reputation-management-services/', desc: 'Review management for building insurance company trust.', icon: '⭐' },
+];
+
+const faqs = [
+  { question: 'How important is local SEO for auto body shops?', answer: 'Critical. Most collision repair searches are local and urgent — "auto body shop near me," "collision repair [city]." <a href="/services/automotive-local-seo/">Local SEO</a> with Google Maps visibility drives the majority of leads for body shops.' },
+  { question: 'How do reviews impact auto body shop SEO?', answer: 'Reviews directly impact Google Maps ranking and are the primary trust signal for customers choosing between body shops. Insurance companies also check review ratings when recommending shops to policyholders.' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/industries/auto-body-seo/" breadcrumbs={breadcrumbs}>
+  <div class="max-w-3xl">
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
+      SEO for <span class="text-gradient-gold">Auto Body & Collision Shops</span>
+    </h1>
+
+    <div class="prose-content">
+      <p class="text-lg" style="color: var(--color-text-secondary);">Auto body and collision repair shops depend on local visibility and trust signals. When a customer's car is damaged, they search for the nearest, most trusted body shop — and your search presence determines whether they find you or your competitor.</p>
+
+      <h2>Auto body shop SEO challenges</h2>
+      <ul>
+        <li><strong>Urgent local search intent</strong> — "collision repair near me" searches are immediate, high-intent, and conversion-ready</li>
+        <li><strong>Insurance company relationships</strong> — online reputation influences which shops insurance adjusters recommend</li>
+        <li><strong>Visual content needs</strong> — before/after repair galleries are essential but require image SEO optimization</li>
+        <li><strong>OEM certification keywords</strong> — "certified [manufacturer] body shop" queries target shops with OEM certifications</li>
+        <li><strong>Multi-service targeting</strong> — collision repair, paintless dent repair, paint matching, frame straightening all need dedicated pages</li>
+      </ul>
+
+      <h2>Our approach</h2>
+      <p>We build body shop SEO around three pillars: <strong>local visibility</strong> (Maps 3-Pack, GBP optimization, service-area pages), <strong>trust signals</strong> (reviews, certifications, insurance partnerships), and <strong>visual content</strong> (optimized before/after galleries with proper alt text and schema).</p>
+      <p>Each repair service gets its own dedicated landing page with service-specific content, pricing guidance, and LocalBusiness + AutoRepair schema markup.</p>
+    </div>
+
+    <ServiceGrid services={relevantServices} heading="Our services for auto body shops" subheading="Local SEO and reputation management tailored for collision repair businesses." />
+    <FaqSection items={faqs} title="Auto Body Shop SEO — FAQ" />
+  </div>
+</BaseLayout>

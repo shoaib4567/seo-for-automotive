@@ -2,6 +2,16 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FaqSection from '../../components/FaqSection.astro';
 import AuthorCard from '../../components/AuthorCard.astro';
+import ServiceGrid from '../../components/ServiceGrid.astro';
+
+const dealerServices = [
+  { title: 'Local SEO', href: '/services/automotive-local-seo/', desc: 'GBP optimization, Maps 3-Pack, and multi-location dealer group local SEO.', icon: '📍' },
+  { title: 'Technical SEO', href: '/services/automotive-technical-seo/', desc: 'VDP indexation, inventory crawling, Core Web Vitals, and structured data.', icon: '🔧' },
+  { title: 'Content SEO', href: '/services/automotive-content-seo/', desc: 'Make/model/year content architecture, topical authority, and buying guides.', icon: '📝' },
+  { title: 'eCommerce SEO', href: '/services/automotive-ecommerce-seo/', desc: 'Inventory search, VDP optimization, and vehicle comparison pages.', icon: '🛒' },
+  { title: 'AEO', href: '/services/automotive-aeo/', desc: 'Featured snippets and AI Overviews for dealership-related queries.', icon: '💬' },
+  { title: 'GEO / AI Search', href: '/services/automotive-geo/', desc: 'Getting your dealership cited by ChatGPT and AI search assistants.', icon: '🤖' },
+];
 
 const title = "SEO for Car Dealerships — Complete Dealer SEO Strategy [2026]";
 const description = "The specialist guide to SEO for car dealerships. Inventory indexation, VDP optimization, make/model/year architecture, dealer local SEO, and service department search visibility.";
@@ -109,6 +119,13 @@ const faqs = [
       </a>
     </div>
   </div>
+
+  <!-- Services Grid -->
+  <ServiceGrid
+    services={dealerServices}
+    heading="Our services for car dealerships"
+    subheading="Specialized SEO services tailored for single-location dealerships and multi-location dealer groups."
+  />
 
   <!-- E-E-A-T -->
   <AuthorCard

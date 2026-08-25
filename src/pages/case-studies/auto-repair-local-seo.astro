@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Case Study: Auto Repair Shop — 520% Increase in Calls from Search | SEO for Automotive";
+const description = "How we helped an independent auto repair shop dominate Google Maps 3-Pack for 45+ keywords and increase phone calls from search by 520% through local SEO optimization.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Case Studies', href: '/case-studies/' },
+  { label: 'Auto Repair Local SEO', href: '/case-studies/auto-repair-local-seo/' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/case-studies/auto-repair-local-seo/" breadcrumbs={breadcrumbs}>
+  <div class="max-w-3xl">
+    <div class="mb-10">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="badge-outline">Auto Repair</span>
+        <span class="kw-badge">Local SEO</span>
+        <span class="kw-badge">GBP</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight" style="color: var(--color-text-primary);">
+        Independent Auto Repair: <span class="text-gradient-gold">520% Increase in Calls</span>
+      </h1>
+      <p class="mt-4 text-lg leading-relaxed" style="color: var(--color-text-secondary);">
+        How we helped a single-location independent auto repair shop dominate the Google Maps 3-Pack and increase phone calls from search by 520% in 8 months.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-3 gap-4 mb-10">
+      <div class="metric-card"><div class="metric-value">+520%</div><div class="metric-label">Calls from Search</div></div>
+      <div class="metric-card"><div class="metric-value">45+</div><div class="metric-label">Maps Keywords</div></div>
+      <div class="metric-card"><div class="metric-value">+180%</div><div class="metric-label">Organic Traffic</div></div>
+    </div>
+
+    <div class="prose-content">
+      <h2>The Challenge</h2>
+      <p>A family-owned independent auto repair shop in a competitive suburban market was struggling to compete with chain repair centers. Despite 25+ years of service excellence and hundreds of positive customer experiences, they were <strong>invisible in Google Maps</strong> for key repair-related searches.</p>
+      <ul>
+        <li>Not appearing in Google Maps 3-Pack for any primary service keywords</li>
+        <li>Google Business Profile was unoptimized — wrong primary category, missing services, no regular posts</li>
+        <li>Only 23 Google reviews (vs. 200+ for chain competitors)</li>
+        <li>Website had no service-area pages, no service-specific content, and no schema markup</li>
+        <li>NAP (Name, Address, Phone) inconsistencies across 40+ directory listings</li>
+      </ul>
+
+      <h2>Our Approach</h2>
+      <h3>1. Google Business Profile Optimization</h3>
+      <p>Complete GBP overhaul: corrected primary category to "Auto Repair Shop," added all relevant secondary categories, filled out every service with descriptions and pricing, enabled messaging, added business attributes, and established a weekly Google Posts schedule.</p>
+
+      <h3>2. Review Velocity System</h3>
+      <p>We implemented an automated review request system that sends SMS follow-ups after service completion. Within 6 months, reviews grew from <strong>23 to 187</strong>, with a consistent 4.9-star average rating. We also implemented a review response SOP for the owner.</p>
+
+      <h3>3. Service-Area Content Strategy</h3>
+      <p>Created dedicated service pages for every major service type (brake repair, oil change, engine diagnostics, transmission service, etc.) and location-specific landing pages for surrounding cities and neighborhoods. Each page included unique content, LocalBusiness schema, and internal links to related services.</p>
+
+      <h3>4. Local Citation & NAP Cleanup</h3>
+      <p>Audited and corrected NAP data across 60+ directories, aggregators, and social platforms. Submitted to industry-specific directories (RepairPal, Mechanic Advisor, ASE) and ensured consistent business information everywhere.</p>
+
+      <h2>Results (GBP Insights & GSC Data)</h2>
+      <ul>
+        <li><strong>Phone calls from Google Search/Maps increased 520%</strong> — from 34 to 211 per month</li>
+        <li><strong>Maps 3-Pack ranking for 45+ keywords</strong> including "auto repair near me," "brake repair [city]," "oil change [city]"</li>
+        <li><strong>Organic website traffic increased 180%</strong> — from 890 to 2,490 monthly sessions</li>
+        <li><strong>Direction requests from GBP increased 340%</strong></li>
+        <li><strong>Google reviews grew from 23 to 187</strong> with a 4.9-star average</li>
+      </ul>
+
+      <h2>Key Takeaways</h2>
+      <ol>
+        <li><strong>GBP optimization is the highest-ROI activity</strong> for local automotive businesses</li>
+        <li><strong>Review velocity matters more than total review count</strong> — consistent new reviews signal activity to Google</li>
+        <li><strong>Service-specific content pages</strong> create topical relevance for each repair type</li>
+        <li><strong>NAP consistency</strong> is foundational — inconsistencies actively hurt local rankings</li>
+      </ol>
+
+      <p><a href="/contact/">Ready to dominate local search?</a> Let's build a local SEO strategy for your repair shop.</p>
+    </div>
+
+    <div class="glass-panel rounded-xl p-8 text-center mt-12">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text-primary);">Want to dominate your local market?</h2>
+      <p class="mb-6" style="color: var(--color-text-secondary);">Start with a free audit to see how your Google Maps visibility compares to competitors.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="/audit/" class="btn-gold">Get a Free Audit</a>
+        <a href="/contact/" class="btn-secondary">Request a Strategy Call</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

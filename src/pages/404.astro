@@ -1,39 +1,34 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Page Not Found — SEO for Automotive";
+const description = "The page you're looking for doesn't exist. Explore our automotive SEO services, case studies, or get a free audit.";
 ---
 
-<BaseLayout
-  title="404 — Page Not Found | SEO for Automotive"
-  description="The page you're looking for doesn't exist. Browse our automotive SEO services, industry guides, and tools."
-  canonicalPath="/404/"
-  noContainer={true}
->
-  <section class="container-main section-spacing text-center">
-    <div class="max-w-lg mx-auto">
-      <span class="text-6xl font-black text-gradient-gold">404</span>
-      <h1 class="text-2xl font-bold text-white mt-4 mb-3">Page not found</h1>
-      <p class="text-slate-400 mb-8">
-        The page you're looking for doesn't exist or has moved. Try one of these instead:
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-        <a href="/" class="btn-primary">Back to Home</a>
-        <a href="/services/" class="btn-secondary">Explore Services</a>
-      </div>
-
-      <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
-        <a href="/industries/car-dealership-seo/" class="glass-card rounded-lg p-4 block hover:border-[#d4a853]/25">
-          <div class="text-sm font-semibold text-white mb-1">Car Dealership SEO</div>
-          <div class="text-xs text-slate-500">Complete dealership SEO guide</div>
-        </a>
-        <a href="/tools/" class="glass-card rounded-lg p-4 block hover:border-[#d4a853]/25">
-          <div class="text-sm font-semibold text-white mb-1">SEO Tools</div>
-          <div class="text-xs text-slate-500">Schema generator, auditors & more</div>
-        </a>
-        <a href="/knowledge/automotive-seo-strategy/" class="glass-card rounded-lg p-4 block hover:border-[#d4a853]/25">
-          <div class="text-sm font-semibold text-white mb-1">SEO Strategy Guide</div>
-          <div class="text-xs text-slate-500">Automotive SEO best practices</div>
-        </a>
-      </div>
+<BaseLayout title={title} description={description} canonicalPath="/404/">
+  <div class="max-w-xl mx-auto text-center py-12">
+    <div class="text-6xl mb-6" aria-hidden="true">🚗</div>
+    <h1 class="text-3xl font-extrabold mb-3" style="color: var(--color-text-primary);">
+      Page not found
+    </h1>
+    <p class="text-lg mb-8" style="color: var(--color-text-secondary);">
+      This page doesn't exist. Maybe it took a wrong turn — let's get you back on track.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+      <a href="/" class="btn-primary">Go Home</a>
+      <a href="/case-studies/" class="btn-secondary">View Case Studies</a>
+      <a href="/audit/" class="btn-gold">Free Audit</a>
     </div>
-  </section>
+
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+      <a href="/services/" class="glass-card rounded-lg p-4 group block">
+        <h3 class="text-sm font-semibold mb-1" style="color: var(--color-text-primary);">Our Services</h3>
+        <p class="text-xs" style="color: var(--color-text-muted);">Automotive SEO, Local SEO, AEO, GEO, and more.</p>
+      </a>
+      <a href="/contact/" class="glass-card rounded-lg p-4 group block">
+        <h3 class="text-sm font-semibold mb-1" style="color: var(--color-text-primary);">Contact Us</h3>
+        <p class="text-xs" style="color: var(--color-text-muted);">Start a conversation about your search goals.</p>
+      </a>
+    </div>
+  </div>
 </BaseLayout>

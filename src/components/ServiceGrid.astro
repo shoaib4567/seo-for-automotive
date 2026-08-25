@@ -1,0 +1,27 @@
+---
+interface Props {
+  services: { title: string; href: string; desc: string; icon: string }[];
+  heading?: string;
+  subheading?: string;
+}
+
+const {
+  services,
+  heading = 'Our Services',
+  subheading = 'Specialized SEO services tailored for this vertical.',
+} = Astro.props;
+---
+
+<section class="mt-16 section-border pt-12" id="services-grid">
+  <h2 class="text-xl font-bold mb-2" style="color: var(--color-text-primary);">{heading}</h2>
+  <p class="text-sm mb-6" style="color: var(--color-text-secondary);">{subheading}</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {services.map(svc => (
+      <a href={svc.href} class="glass-card rounded-lg p-5 group block">
+        <span class="text-2xl mb-3 block" aria-hidden="true">{svc.icon}</span>
+        <h3 class="text-sm font-bold transition-colors mb-2" style="color: var(--color-text-primary);">{svc.title}</h3>
+        <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);">{svc.desc}</p>
+      </a>
+    ))}
+  </div>
+</section>

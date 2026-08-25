@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "TeckWrap Case Study — SEO, AI Overview & Lead Generation | SEO for Automotive";
+const description = "How we helped TeckWrap achieve 420% organic traffic growth, capture 60+ featured snippets, and generate 310% more leads through SEO and AI search optimization.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Case Studies', href: '/case-studies/' },
+  { label: 'TeckWrap', href: '/case-studies/teckwrap/' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/case-studies/teckwrap/" breadcrumbs={breadcrumbs}>
+  <div class="max-w-3xl">
+    <div class="mb-10">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="badge-outline">Vinyl Wraps (B2C)</span>
+        <span class="kw-badge">SEO</span>
+        <span class="kw-badge">AI Overview</span>
+        <span class="kw-badge">Leads</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight" style="color: var(--color-text-primary);">
+        TeckWrap: <span class="text-gradient-gold">SEO, AI Overview & Lead Generation</span>
+      </h1>
+      <p class="mt-4 text-lg leading-relaxed" style="color: var(--color-text-secondary);">
+        How we helped TeckWrap — a global vinyl wrap manufacturer — achieve 420% organic traffic growth, capture 60+ featured snippets, and generate 310% more dealer and wholesale leads.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+      <div class="metric-card"><div class="metric-value">+420%</div><div class="metric-label">Organic Traffic</div></div>
+      <div class="metric-card"><div class="metric-value">+310%</div><div class="metric-label">Lead Generation</div></div>
+      <div class="metric-card"><div class="metric-value">60+</div><div class="metric-label">Featured Snippets</div></div>
+      <div class="metric-card"><div class="metric-value">35+</div><div class="metric-label">AI Overview Citations</div></div>
+    </div>
+
+    <div class="prose-content">
+      <h2>About TeckWrap</h2>
+      <p><strong>TeckWrap</strong> is a global B2C vinyl wrap manufacturer offering premium color-change wraps, carbon fiber films, chrome wraps, and specialty finishes. They sell directly to consumers and through a dealer network of professional wrap installers worldwide.</p>
+
+      <h2>The Challenge</h2>
+      <p>TeckWrap had a strong product line but was losing market share in organic search to competitors with deeper content and stronger digital presence:</p>
+      <ul>
+        <li><strong>Low organic visibility</strong> — ranking outside the top 50 for competitive terms like "vinyl wrap colors," "best car wrap brands," "chrome vinyl wrap"</li>
+        <li><strong>No AI search presence</strong> — not appearing in Google AI Overviews or cited by AI assistants for wrap-related queries</li>
+        <li><strong>Lead generation bottleneck</strong> — relying almost entirely on paid social and marketplace sales, with organic generating less than 8% of dealer inquiries</li>
+        <li><strong>Product pages lacking SEO depth</strong> — color/product pages had minimal descriptions, no comparison data, and no application guidance</li>
+        <li><strong>No content ecosystem</strong> — missing the educational content layer that builds topical authority in the wrap industry</li>
+      </ul>
+
+      <h2>Our Strategy</h2>
+
+      <h3>1. Comprehensive SEO Architecture</h3>
+      <p>We rebuilt TeckWrap's entire site architecture around how customers search for vinyl wraps:</p>
+      <ul>
+        <li><strong>Product taxonomy restructure</strong> — organized by finish type (gloss, matte, satin, chrome, carbon fiber), color family, and vehicle application</li>
+        <li><strong>Color-specific landing pages</strong> — 100+ individual color pages with unique descriptions, application photos, and vehicle compatibility data</li>
+        <li><strong>Comparison content</strong> — "TeckWrap vs 3M," "TeckWrap vs Avery Dennison," brand comparison pages with honest, factual comparisons</li>
+        <li><strong>Application guides</strong> — step-by-step wrap installation guides with HowTo schema, targeting DIY and professional installer queries</li>
+      </ul>
+
+      <h3>2. AI Overview & Featured Snippet Capture</h3>
+      <ul>
+        <li><strong>Question-led content</strong> — created answers for every major vinyl wrap question: cost, durability, maintenance, removal, warranty</li>
+        <li><strong>Featured snippet formatting</strong> — structured content with definition paragraphs, numbered lists, and comparison tables that Google prefers for snippet extraction</li>
+        <li><strong>Product specification tables</strong> — standardized spec tables with film thickness, durability years, finish type, and price range that AI systems cite</li>
+        <li><strong>Entity building</strong> — established TeckWrap as a recognized entity across Google Knowledge Graph through consistent structured data and cross-platform presence</li>
+      </ul>
+
+      <h3>3. Lead Generation Optimization</h3>
+      <ul>
+        <li><strong>Dealer locator SEO</strong> — optimized dealer/installer locator pages for "vinyl wrap installer near [city]" queries</li>
+        <li><strong>Sample request funnel</strong> — created sample-request landing pages targeting high-intent "buy vinyl wrap" and "vinyl wrap samples" queries</li>
+        <li><strong>Wholesale inquiry forms</strong> — B2B lead capture forms on commercial-intent pages with structured data</li>
+        <li><strong>Content-to-product funnels</strong> — every educational article links to relevant products and includes contextual CTAs for samples or quotes</li>
+      </ul>
+
+      <h3>4. Technical SEO</h3>
+      <ul>
+        <li>Product schema (Product, Offer, AggregateRating) on all product pages</li>
+        <li>Image optimization — compressed product images, WebP format, lazy loading, alt text with color and finish descriptions</li>
+        <li>International SEO — hreflang implementation for global markets</li>
+        <li>Core Web Vitals — LCP optimization from 3.8s to 1.6s</li>
+      </ul>
+
+      <h2>Results (GSC, GA4, SEMrush Data)</h2>
+      <ul>
+        <li><strong>Organic traffic grew 420%</strong> — from 6,800 to 35,400 monthly sessions (GA4)</li>
+        <li><strong>Lead generation increased 310%</strong> — from 85 to 348 monthly dealer inquiries and sample requests</li>
+        <li><strong>60+ featured snippets captured</strong> — dominating zero-click results for vinyl wrap queries</li>
+        <li><strong>35+ AI Overview citations</strong> — TeckWrap cited in Google AI-generated answers</li>
+        <li><strong>Organic now generates 34% of all leads</strong> — up from 8%</li>
+        <li><strong>SEMrush traffic value increased from $8K to $67K/month</strong></li>
+        <li><strong>Top 3 rankings for 120+ keywords</strong> including "vinyl wrap colors," "car wrap near me," and "chrome vinyl wrap"</li>
+      </ul>
+
+      <h2>Key Takeaways</h2>
+      <ol>
+        <li><strong>Product taxonomy is the foundation</strong> — how you structure products determines which searches you're eligible for</li>
+        <li><strong>Comparison content builds authority</strong> — honest brand comparisons show confidence and attract high-intent traffic</li>
+        <li><strong>AI search visibility requires entity recognition</strong> — structured data and cross-platform consistency make AI systems trust and cite your brand</li>
+        <li><strong>Content-to-product funnels convert</strong> — educational content that naturally links to products creates a sustainable lead pipeline</li>
+      </ol>
+
+      <p><a href="/contact/">Want to grow leads from organic search?</a> Let's discuss your SEO and AI search strategy.</p>
+    </div>
+
+    <div class="glass-panel rounded-xl p-8 text-center mt-12">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text-primary);">Ready to grow your organic leads?</h2>
+      <p class="mb-6" style="color: var(--color-text-secondary);">Start with a free audit to identify your biggest SEO opportunities.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="/audit/" class="btn-gold">Get a Free Audit</a>
+        <a href="/contact/" class="btn-secondary">Request a Strategy Call</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

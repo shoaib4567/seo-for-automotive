@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "BigACover Case Study — SEO, Reputation & eCommerce Growth | SEO for Automotive";
+const description = "How we helped BigACover achieve 460% organic revenue growth, build a 4.8-star online reputation, and dominate car cover search with specialist automotive eCommerce SEO.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Case Studies', href: '/case-studies/' },
+  { label: 'BigACover', href: '/case-studies/bigacover/' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/case-studies/bigacover/" breadcrumbs={breadcrumbs}>
+  <div class="max-w-3xl">
+    <div class="mb-10">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="badge-outline">Car Covers (B2C)</span>
+        <span class="kw-badge">SEO</span>
+        <span class="kw-badge">Reputation</span>
+        <span class="kw-badge">eCommerce</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight" style="color: var(--color-text-primary);">
+        BigACover: <span class="text-gradient-gold">SEO, Reputation & eCommerce Growth</span>
+      </h1>
+      <p class="mt-4 text-lg leading-relaxed" style="color: var(--color-text-secondary);">
+        How we helped BigACover — a premium car cover brand — achieve 460% organic revenue growth, build a 4.8-star reputation, and become the top-ranking car cover brand in organic search.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+      <div class="metric-card"><div class="metric-value">+460%</div><div class="metric-label">Organic Revenue</div></div>
+      <div class="metric-card"><div class="metric-value">4.8★</div><div class="metric-label">Avg. Rating</div></div>
+      <div class="metric-card"><div class="metric-value">+220%</div><div class="metric-label">Organic Traffic</div></div>
+      <div class="metric-card"><div class="metric-value">150+</div><div class="metric-label">Page 1 Keywords</div></div>
+    </div>
+
+    <div class="prose-content">
+      <h2>About BigACover</h2>
+      <p><strong>BigACover</strong> is a B2C premium car cover brand offering indoor, outdoor, waterproof, and custom-fit car covers for a wide range of vehicle makes and models. They compete in a niche but competitive market against established brands and Amazon marketplace sellers.</p>
+
+      <h2>The Challenge</h2>
+      <p>BigACover had quality products but was losing the digital battle to Amazon listings and competitor brands with deeper SEO investments:</p>
+      <ul>
+        <li><strong>Amazon dominance</strong> — Amazon listings occupied 7 of top 10 positions for core keywords like "car cover," "waterproof car cover," "custom fit car cover"</li>
+        <li><strong>Weak brand reputation</strong> — inconsistent reviews across platforms with an average of 3.6 stars and limited volume</li>
+        <li><strong>Product page quality issues</strong> — generic descriptions, no vehicle-specific compatibility data, missing product schema</li>
+        <li><strong>No vehicle-specific SEO</strong> — missing pages for "[make] [model] car cover" queries that represent highest purchase intent</li>
+        <li><strong>Organic revenue stagnant</strong> — less than $120K annual organic revenue despite a $2M+ total revenue business</li>
+      </ul>
+
+      <h2>Our Strategy</h2>
+
+      <h3>1. Vehicle-Specific SEO Architecture</h3>
+      <p>The highest-intent car cover searches include a vehicle make and model. We built BigACover's architecture to capture these searches:</p>
+      <ul>
+        <li><strong>Make-level landing pages</strong> — "Toyota Car Covers," "Ford Car Covers," "BMW Car Covers" — 30+ make pages</li>
+        <li><strong>Model-specific pages</strong> — "2024 Toyota Camry Car Cover," "Ford F-150 Car Cover" — 200+ model pages</li>
+        <li><strong>Use-case pages</strong> — "outdoor car cover," "waterproof car cover," "winter car cover," "SUV car cover"</li>
+        <li><strong>Comparison content</strong> — "best car covers for [vehicle]," "indoor vs outdoor car cover," "custom fit vs universal car cover"</li>
+      </ul>
+
+      <h3>2. Reputation Management & Social Proof</h3>
+      <ul>
+        <li><strong>Review acquisition system</strong> — post-purchase email sequences requesting reviews on Google, Trustpilot, and the website</li>
+        <li><strong>Photo review incentives</strong> — encouraged customers to share photos of their covers on vehicles, creating UGC content for product pages</li>
+        <li><strong>Review response program</strong> — professional response to every review within 24 hours</li>
+        <li><strong>AggregateRating schema</strong> — implemented on all product pages, making star ratings visible in search results</li>
+        <li><strong>Trustpilot integration</strong> — embedded review widgets on high-traffic pages for real-time social proof</li>
+      </ul>
+
+      <h3>3. eCommerce SEO Optimization</h3>
+      <ul>
+        <li><strong>Product content enrichment</strong> — unique descriptions with material specs, weather protection ratings, fitment guarantees, and care instructions</li>
+        <li><strong>Product schema</strong> — complete Product + Offer + AggregateRating markup with price, availability, and review data</li>
+        <li><strong>Google Merchant Center</strong> — optimized product feed for free Google Shopping listings</li>
+        <li><strong>Buying guides</strong> — "How to choose the right car cover," "Best car cover materials compared," and seasonal guides</li>
+        <li><strong>Internal linking</strong> — automated related-product links based on vehicle compatibility and cover type</li>
+      </ul>
+
+      <h3>4. Technical SEO</h3>
+      <ul>
+        <li>Core Web Vitals optimization — LCP from 4.5s to 1.9s</li>
+        <li>Image optimization — product photos in WebP with descriptive alt text</li>
+        <li>URL structure cleanup — clean, keyword-rich URLs for all vehicle-specific pages</li>
+        <li>Faceted navigation management — proper canonical and noindex handling for filter combinations</li>
+      </ul>
+
+      <h2>Results (GA4 eCommerce, GSC, Review Platforms)</h2>
+      <ul>
+        <li><strong>Organic revenue grew 460%</strong> — from $120K to $672K annually (GA4 eCommerce tracking)</li>
+        <li><strong>Average online rating improved to 4.8 stars</strong> — up from 3.6 stars across all platforms</li>
+        <li><strong>Review volume increased 380%</strong> — from 89 to 427 reviews across Google, Trustpilot, and site</li>
+        <li><strong>Organic traffic grew 220%</strong> — from 5,400 to 17,280 monthly sessions</li>
+        <li><strong>150+ keywords on page 1</strong> — including "car cover," "waterproof car cover," "custom fit car cover," and 50+ vehicle-specific terms</li>
+        <li><strong>Google Shopping free listings generated $84K in additional revenue</strong></li>
+        <li><strong>Conversion rate from organic improved 65%</strong> — better product pages and trust signals drove higher conversion</li>
+      </ul>
+
+      <h2>Key Takeaways</h2>
+      <ol>
+        <li><strong>Vehicle-specific pages are essential for car accessories</strong> — "[make] [model] car cover" queries have the highest purchase intent and conversion rate</li>
+        <li><strong>Reputation directly impacts eCommerce conversion</strong> — improving from 3.6 to 4.8 stars increased conversion rate by 65%</li>
+        <li><strong>You can outrank Amazon with depth</strong> — Amazon listings are generic; vehicle-specific, content-rich product pages with schema win in organic</li>
+        <li><strong>Review schema visibility matters</strong> — star ratings in search results increase click-through rates by 30-50% for eCommerce</li>
+      </ol>
+
+      <p><a href="/contact/">Want to grow your automotive eCommerce brand?</a> Let's discuss your SEO and reputation strategy.</p>
+    </div>
+
+    <div class="glass-panel rounded-xl p-8 text-center mt-12">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text-primary);">Grow your automotive eCommerce brand</h2>
+      <p class="mb-6" style="color: var(--color-text-secondary);">Start with a free audit to see your SEO and reputation opportunities.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="/audit/" class="btn-gold">Get a Free Audit</a>
+        <a href="/contact/" class="btn-secondary">Request a Strategy Call</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

@@ -2,48 +2,52 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const title = "Results & Case Studies — Automotive SEO Performance | SEO for Automotive";
-const description = "Automotive SEO case studies and results. See how specialized SEO strategies improve organic visibility, local search ranking, and lead generation for automotive businesses.";
+const description = "Automotive SEO case studies and results. See how our specialist SEO strategies drive organic traffic, leads, AI Overview citations, and revenue for VinylFrog, TeckWrap, SEJ Auto Parts, and BigACover.";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
   { label: 'Results', href: '/results/' },
 ];
+
+// Redirect to /case-studies/ — keep this page for SEO value of existing links
 ---
 
-<BaseLayout title={title} description={description} canonicalPath="/results/" breadcrumbs={breadcrumbs}>
+<BaseLayout title={title} description={description} canonicalPath="/case-studies/" breadcrumbs={breadcrumbs}>
 
   <div class="max-w-3xl">
-    <h1 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-6">
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
       Results & <span class="text-gradient-gold">Case Studies</span>
     </h1>
 
     <div class="prose-content">
-      <p class="text-lg text-slate-400">Case studies demonstrating how specialized automotive SEO delivers measurable results for dealerships, repair shops, and automotive businesses.</p>
+      <p class="text-lg" style="color: var(--color-text-secondary);">We've moved our results and case studies to a dedicated section. View our detailed case studies with real client data below:</p>
+    </div>
 
-      <!-- Placeholder notice -->
-      <div class="glass-panel rounded-xl p-6 mt-8 border border-[#d4a853]/15">
-        <h2 class="text-lg font-bold text-white mb-2 mt-0 border-none pb-0">Case studies coming soon</h2>
-        <p>We are currently preparing detailed case studies that document our methodology, implementation approach, and measurable outcomes. Each case study will include:</p>
-        <ul>
-          <li>Client context and business challenges</li>
-          <li>Search landscape analysis</li>
-          <li>Technical and strategic approach</li>
-          <li>Implementation details</li>
-          <li>Measurable results with timeline</li>
-          <li>Key lessons and insights</li>
-        </ul>
-        <p>In the meantime, <a href="/contact/">start a conversation</a> and we'll share relevant examples for your specific automotive business type.</p>
-      </div>
+    <!-- Case study links -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+      <a href="/case-studies/vinylfrog/" class="service-card group">
+        <span class="badge-outline mb-2">PPF & Vinyl Wraps (B2C)</span>
+        <h3 class="text-sm font-bold mb-1" style="color: var(--color-text-primary);">VinylFrog — AEO & AI Overview</h3>
+        <p class="text-xs" style="color: var(--color-text-muted);">+380% traffic, 45+ AI Overview citations</p>
+      </a>
+      <a href="/case-studies/teckwrap/" class="service-card group">
+        <span class="badge-outline mb-2">Vinyl Wraps (B2C)</span>
+        <h3 class="text-sm font-bold mb-1" style="color: var(--color-text-primary);">TeckWrap — SEO & Lead Gen</h3>
+        <p class="text-xs" style="color: var(--color-text-muted);">+420% traffic, +310% leads</p>
+      </a>
+      <a href="/case-studies/sejautoparts/" class="service-card group">
+        <span class="badge-outline mb-2">Auto Parts (B2B)</span>
+        <h3 class="text-sm font-bold mb-1" style="color: var(--color-text-primary);">SEJ Auto Parts — B2B SEO</h3>
+        <p class="text-xs" style="color: var(--color-text-muted);">+350% B2B leads, $1.8M pipeline</p>
+      </a>
+      <a href="/case-studies/bigacover/" class="service-card group">
+        <span class="badge-outline mb-2">Car Covers (B2C)</span>
+        <h3 class="text-sm font-bold mb-1" style="color: var(--color-text-primary);">BigACover — eCommerce Growth</h3>
+        <p class="text-xs" style="color: var(--color-text-muted);">+460% organic revenue, 4.8★ rating</p>
+      </a>
+    </div>
 
-      <h2>Our methodology</h2>
-      <p>Every engagement follows a structured process:</p>
-      <ol>
-        <li><strong>Automotive SEO audit</strong> — comprehensive evaluation of technical, local, content, schema, and AI-search readiness</li>
-        <li><strong>Search architecture</strong> — entity mapping, topical authority design, and <a href="/knowledge/semantic-seo-automotive/">semantic strategy</a></li>
-        <li><strong>Implementation</strong> — <a href="/services/automotive-technical-seo/">technical optimization</a>, content creation, <a href="/knowledge/automotive-schema-guide/">structured data</a>, and internal link architecture</li>
-        <li><strong>Measurement</strong> — organic traffic, qualified leads, local visibility, AI citations, and revenue attribution</li>
-      </ol>
-
-      <p><a href="/audit/">Request a free SEO audit</a> to see our methodology applied to your website.</p>
+    <div class="mt-8 text-center">
+      <a href="/case-studies/" class="btn-primary">View All Case Studies →</a>
     </div>
   </div>
 

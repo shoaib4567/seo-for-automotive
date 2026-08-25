@@ -13,90 +13,192 @@ const breadcrumbs = [
 
   <div class="max-w-3xl mx-auto">
     <div class="mb-10">
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+      <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight" style="color: var(--color-text-primary);">
         Start a <span class="text-gradient-gold">conversation</span>
       </h1>
-      <p class="mt-4 text-lg text-slate-400 leading-relaxed">
+      <p class="mt-4 text-lg leading-relaxed" style="color: var(--color-text-secondary);">
         Tell us about your automotive business and search goals. We'll respond with a tailored perspective on how specialized automotive SEO can improve your organic visibility.
       </p>
     </div>
 
-    <form class="space-y-5" id="contact-form" action="#" method="POST">
+    <!-- Contact Form — EmailJS Integration -->
+    <form class="space-y-5" id="contact-form">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label for="contact-name" class="block text-sm font-medium text-slate-400 mb-1.5">Full Name *</label>
-          <input type="text" id="contact-name" name="name" required autocomplete="name"
-            class="w-full bg-[#0c1019] border border-white/[0.08] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-[#d4a853]/50 focus:ring-1 focus:ring-[#d4a853]/25 transition-colors"
-            placeholder="Your name" />
+          <label for="contact-name" class="form-label">Full Name *</label>
+          <input type="text" id="contact-name" name="from_name" required autocomplete="name"
+            class="form-input" placeholder="Your name" />
         </div>
         <div>
-          <label for="contact-email" class="block text-sm font-medium text-slate-400 mb-1.5">Email *</label>
-          <input type="email" id="contact-email" name="email" required autocomplete="email"
-            class="w-full bg-[#0c1019] border border-white/[0.08] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-[#d4a853]/50 focus:ring-1 focus:ring-[#d4a853]/25 transition-colors"
-            placeholder="you@company.com" />
+          <label for="contact-email" class="form-label">Email *</label>
+          <input type="email" id="contact-email" name="from_email" required autocomplete="email"
+            class="form-input" placeholder="you@company.com" />
         </div>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label for="contact-company" class="block text-sm font-medium text-slate-400 mb-1.5">Business Name</label>
+          <label for="contact-company" class="form-label">Business Name</label>
           <input type="text" id="contact-company" name="company" autocomplete="organization"
-            class="w-full bg-[#0c1019] border border-white/[0.08] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-[#d4a853]/50 focus:ring-1 focus:ring-[#d4a853]/25 transition-colors"
-            placeholder="Dealership or business name" />
+            class="form-input" placeholder="Dealership or business name" />
         </div>
         <div>
-          <label for="contact-type" class="block text-sm font-medium text-slate-400 mb-1.5">Business Type</label>
-          <select id="contact-type" name="business_type"
-            class="w-full bg-[#0c1019] border border-white/[0.08] rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-[#d4a853]/50 focus:ring-1 focus:ring-[#d4a853]/25 transition-colors">
+          <label for="contact-phone" class="form-label">Phone</label>
+          <input type="tel" id="contact-phone" name="phone" autocomplete="tel"
+            class="form-input" placeholder="+1 (555) 000-0000" />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="contact-type" class="form-label">Business Type</label>
+          <select id="contact-type" name="business_type" class="form-input">
             <option value="">Select your business type</option>
             <option value="dealership">Car Dealership</option>
             <option value="dealer-group">Dealer Group (Multi-location)</option>
             <option value="repair">Auto Repair / Service</option>
             <option value="parts">Auto Parts / eCommerce</option>
             <option value="body">Auto Body / Collision</option>
-            <option value="detailing">Auto Detailing / PPF</option>
+            <option value="detailing">Auto Detailing / PPF / Ceramic</option>
             <option value="carwash">Car Wash</option>
+            <option value="vinyl-wrap">Vinyl Wrap / Film</option>
+            <option value="covers">Car Covers / Accessories</option>
             <option value="other">Other Automotive Business</option>
+          </select>
+        </div>
+        <div>
+          <label for="contact-service" class="form-label">Interested In</label>
+          <select id="contact-service" name="service_interest" class="form-input">
+            <option value="">What are you looking for?</option>
+            <option value="seo-audit">Free SEO Audit</option>
+            <option value="seo-strategy">SEO Strategy Call</option>
+            <option value="local-seo">Local SEO / Maps</option>
+            <option value="technical-seo">Technical SEO</option>
+            <option value="content-seo">Content SEO</option>
+            <option value="aeo-geo">AEO / GEO / AI Search</option>
+            <option value="reputation">Reputation Management</option>
+            <option value="ecommerce">eCommerce SEO</option>
+            <option value="full-service">Full-Service Automotive SEO</option>
           </select>
         </div>
       </div>
 
       <div>
-        <label for="contact-website" class="block text-sm font-medium text-slate-400 mb-1.5">Website URL</label>
+        <label for="contact-website" class="form-label">Website URL</label>
         <input type="url" id="contact-website" name="website" autocomplete="url"
-          class="w-full bg-[#0c1019] border border-white/[0.08] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-[#d4a853]/50 focus:ring-1 focus:ring-[#d4a853]/25 transition-colors"
-          placeholder="https://yourdealership.com" />
+          class="form-input" placeholder="https://yourbusiness.com" />
       </div>
 
       <div>
-        <label for="contact-message" class="block text-sm font-medium text-slate-400 mb-1.5">Tell us about your search goals *</label>
+        <label for="contact-message" class="form-label">Tell us about your search goals *</label>
         <textarea id="contact-message" name="message" required rows="5"
-          class="w-full bg-[#0c1019] border border-white/[0.08] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-[#d4a853]/50 focus:ring-1 focus:ring-[#d4a853]/25 transition-colors resize-y"
+          class="form-input" style="resize: vertical;"
           placeholder="What are your main search challenges? What results are you looking for?"></textarea>
       </div>
+
+      <!-- Status messages -->
+      <div id="form-status" class="hidden rounded-lg p-4 text-sm"></div>
 
       <div class="flex items-center justify-between pt-2">
         <button type="submit" class="btn-primary" id="contact-submit">
           Send Message
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
         </button>
-        <span class="text-xs text-slate-600">* Required fields</span>
+        <span class="text-xs" style="color: var(--color-text-muted);">* Required fields</span>
       </div>
     </form>
 
+    <!-- Other ways to connect -->
     <div class="mt-12 section-border pt-10">
-      <h2 class="text-lg font-bold text-white mb-4">Other ways to connect</h2>
+      <h2 class="text-lg font-bold mb-4" style="color: var(--color-text-primary);">Other ways to connect</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <a href="/audit/" class="glass-card rounded-lg p-4 block group">
-          <h3 class="text-sm font-semibold text-white group-hover:text-[#d4a853] transition-colors mb-1">Request an SEO Audit</h3>
-          <p class="text-xs text-slate-500">Get a comprehensive automotive SEO audit of your website.</p>
+          <h3 class="text-sm font-semibold transition-colors mb-1" style="color: var(--color-text-primary);">Free SEO Audit</h3>
+          <p class="text-xs" style="color: var(--color-text-muted);">Get an instant technical SEO, AEO, and CRO analysis of your automotive website.</p>
         </a>
-        <a href="/services/" class="glass-card rounded-lg p-4 block group">
-          <h3 class="text-sm font-semibold text-white group-hover:text-[#d4a853] transition-colors mb-1">Explore Services</h3>
-          <p class="text-xs text-slate-500">View our automotive SEO service options and approach.</p>
+        <a href="/case-studies/" class="glass-card rounded-lg p-4 block group">
+          <h3 class="text-sm font-semibold transition-colors mb-1" style="color: var(--color-text-primary);">View Case Studies</h3>
+          <p class="text-xs" style="color: var(--color-text-muted);">See results from VinylFrog, TeckWrap, SEJ Auto Parts, and BigACover.</p>
         </a>
       </div>
     </div>
   </div>
 
 </BaseLayout>
+
+<!-- EmailJS SDK -->
+<script is:inline src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script is:inline>
+  // =============================================================
+  // EmailJS Configuration
+  // Replace these with your actual EmailJS credentials:
+  //
+  // 1. Sign up at https://www.emailjs.com/ (free tier = 200 emails/month)
+  // 2. Add your Gmail as an "Email Service" (Service ID)
+  // 3. Create an "Email Template" with these variables:
+  //    - {{from_name}}, {{from_email}}, {{company}}, {{phone}}
+  //    - {{business_type}}, {{service_interest}}, {{website}}, {{message}}
+  //    - Set "Reply To" = {{from_email}} so you can reply directly
+  // 4. Replace the IDs below with your own:
+  // =============================================================
+
+  const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';       // From EmailJS dashboard → Account → API Keys
+  const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';       // From EmailJS dashboard → Email Services
+  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';     // From EmailJS dashboard → Email Templates
+
+  (function() {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+
+    const form = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('contact-submit');
+    const statusEl = document.getElementById('form-status');
+
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Show loading state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending... <span class="animate-pulse-subtle">⏳</span>';
+      statusEl.classList.add('hidden');
+
+      // Collect form data
+      const templateParams = {
+        from_name: form.querySelector('[name="from_name"]').value,
+        from_email: form.querySelector('[name="from_email"]').value,
+        company: form.querySelector('[name="company"]').value || 'Not provided',
+        phone: form.querySelector('[name="phone"]').value || 'Not provided',
+        business_type: form.querySelector('[name="business_type"]').value || 'Not specified',
+        service_interest: form.querySelector('[name="service_interest"]').value || 'Not specified',
+        website: form.querySelector('[name="website"]').value || 'Not provided',
+        message: form.querySelector('[name="message"]').value,
+      };
+
+      // Send via EmailJS
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+        .then(function() {
+          // Success
+          statusEl.classList.remove('hidden');
+          statusEl.style.background = 'rgba(22, 163, 74, 0.08)';
+          statusEl.style.border = '1px solid rgba(22, 163, 74, 0.2)';
+          statusEl.style.color = '#16a34a';
+          statusEl.innerHTML = '✓ <strong>Message sent successfully!</strong> We\'ll respond within 24 hours with a tailored perspective on your automotive SEO opportunity.';
+          form.reset();
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Send Message <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>';
+        })
+        .catch(function(error) {
+          // Error
+          statusEl.classList.remove('hidden');
+          statusEl.style.background = 'rgba(220, 38, 38, 0.08)';
+          statusEl.style.border = '1px solid rgba(220, 38, 38, 0.2)';
+          statusEl.style.color = '#dc2626';
+          statusEl.innerHTML = '✗ <strong>Failed to send.</strong> Please try again or email us directly. Error: ' + (error.text || 'Unknown error');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Send Message <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>';
+        });
+    });
+  })();
+</script>

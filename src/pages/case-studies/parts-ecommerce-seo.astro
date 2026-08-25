@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Case Study: Auto Parts eCommerce — $2.4M Organic Revenue | SEO for Automotive";
+const description = "How we helped an auto parts eCommerce store with 50,000+ SKUs achieve 410% organic revenue growth and $2.4M in incremental revenue through product SEO and category architecture.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Case Studies', href: '/case-studies/' },
+  { label: 'Parts eCommerce SEO', href: '/case-studies/parts-ecommerce-seo/' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/case-studies/parts-ecommerce-seo/" breadcrumbs={breadcrumbs}>
+  <div class="max-w-3xl">
+    <div class="mb-10">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="badge-outline">Auto Parts</span>
+        <span class="kw-badge">SEMrush</span>
+        <span class="kw-badge">GA4</span>
+        <span class="kw-badge">eCommerce</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight" style="color: var(--color-text-primary);">
+        Auto Parts eCommerce: <span class="text-gradient-gold">$2.4M Organic Revenue</span>
+      </h1>
+      <p class="mt-4 text-lg leading-relaxed" style="color: var(--color-text-secondary);">
+        How we transformed a 50,000+ SKU auto parts store from thin-content product pages to a $2.4M organic revenue channel with 410% growth in 14 months.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-3 gap-4 mb-10">
+      <div class="metric-card"><div class="metric-value">+410%</div><div class="metric-label">Organic Revenue</div></div>
+      <div class="metric-card"><div class="metric-value">+290%</div><div class="metric-label">Indexed Pages</div></div>
+      <div class="metric-card"><div class="metric-value">+65%</div><div class="metric-label">Avg. Order Value</div></div>
+    </div>
+
+    <div class="prose-content">
+      <h2>The Challenge</h2>
+      <p>An established auto parts retailer with <strong>50,000+ SKUs</strong> was generating less than $480K annually from organic search — a fraction of their paid search revenue. Their product pages were essentially data-feed dumps with no unique content, and their category architecture didn't reflect how customers actually search for parts.</p>
+      <ul>
+        <li><strong>Thin product pages</strong> — OEM part number, price, and a stock photo. No unique descriptions, fitment details, or installation guidance</li>
+        <li><strong>Flat category structure</strong> — parts organized by brand only, not by vehicle compatibility or part type</li>
+        <li><strong>Faceted navigation creating millions of indexable URL combinations</strong>, diluting crawl budget</li>
+        <li>No Product schema markup on any pages</li>
+        <li>Competitor content gap: rivals had buying guides, fitment guides, and video installation content</li>
+      </ul>
+
+      <h2>Our Approach</h2>
+      <h3>1. Category Architecture Redesign</h3>
+      <p>We rebuilt the category taxonomy around how customers search: <strong>Vehicle → Part Type → Brand</strong> instead of <strong>Brand → Part Number</strong>. This created intuitive browsing paths like "2024 Ford F-150 Brake Pads" and matched high-intent search queries.</p>
+
+      <h3>2. Product Content Enrichment at Scale</h3>
+      <p>We developed templates and processes to enrich product pages with unique descriptions, fitment compatibility data, installation difficulty ratings, and "customers also bought" cross-links. We prioritized the top 5,000 SKUs by search volume and revenue potential.</p>
+
+      <h3>3. Faceted Navigation & Crawl Budget Control</h3>
+      <p>Implemented proper <code>noindex</code> and canonical strategies for filter combinations, reducing indexable URLs from 2.3 million to 180,000 high-value pages. Added <code>robots.txt</code> rules for low-value filter parameters.</p>
+
+      <h3>4. Product Schema & Merchant Center</h3>
+      <p>Deployed Product schema with price, availability, brand, SKU, and review data across all product pages. Integrated with Google Merchant Center for free product listings in Google Shopping.</p>
+
+      <h3>5. Content Marketing — Buying & Fitment Guides</h3>
+      <p>Created a library of 150+ buying guides and fitment guides targeting informational queries like "best brake pads for [vehicle]" and "how to replace [part] on [vehicle]." These pages drive top-of-funnel traffic and link to relevant product pages.</p>
+
+      <h2>Results (GA4 eCommerce & SEMrush Data)</h2>
+      <ul>
+        <li><strong>Organic revenue grew 410%</strong> — from $480K to $2.4M annually (GA4 eCommerce tracking)</li>
+        <li><strong>Indexed pages increased 290%</strong> — from 46,000 to 180,000 valuable pages (while reducing total indexable URLs)</li>
+        <li><strong>Average order value from organic increased 65%</strong> — better product pages drove higher-value purchases</li>
+        <li><strong>SEMrush organic traffic value increased from $34K to $218K/month</strong></li>
+        <li><strong>Google Shopping free listings generated $320K in additional revenue</strong></li>
+        <li><strong>Buying guide content drove 45,000 monthly sessions</strong> with a 12% product page click-through rate</li>
+      </ul>
+
+      <h2>Key Takeaways</h2>
+      <ol>
+        <li><strong>Category architecture drives eCommerce SEO</strong> — how you organize parts matters more than individual page optimization</li>
+        <li><strong>Thin product pages are an opportunity, not just a problem</strong> — enriched content creates competitive advantage</li>
+        <li><strong>Crawl budget management is critical at scale</strong> — 50K+ SKUs with faceted navigation needs strategic URL management</li>
+        <li><strong>Content marketing supports eCommerce</strong> — buying guides create the topical authority that product pages alone can't</li>
+      </ol>
+
+      <p><a href="/contact/">Ready to unlock organic revenue for your parts store?</a> Let's talk about your eCommerce SEO opportunity.</p>
+    </div>
+
+    <div class="glass-panel rounded-xl p-8 text-center mt-12">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text-primary);">Unlock your eCommerce SEO potential</h2>
+      <p class="mb-6" style="color: var(--color-text-secondary);">Get a free audit to identify revenue opportunities in your auto parts catalog.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="/audit/" class="btn-gold">Get a Free Audit</a>
+        <a href="/contact/" class="btn-secondary">Request a Strategy Call</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

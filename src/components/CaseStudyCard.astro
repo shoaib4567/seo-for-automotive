@@ -1,0 +1,38 @@
+---
+interface Props {
+  title: string;
+  industry: string;
+  href: string;
+  metrics: { value: string; label: string }[];
+  description: string;
+  tags?: string[];
+}
+
+const { title, industry, href, metrics, description, tags = [] } = Astro.props;
+---
+
+<a href={href} class="service-card group block" id={`cs-${href.split('/').filter(Boolean).pop()}`}>
+  <div class="flex items-center gap-2 mb-3">
+    <span class="badge-outline">{industry}</span>
+    {tags.map(tag => (
+      <span class="kw-badge">{tag}</span>
+    ))}
+  </div>
+
+  <h3 class="text-lg font-bold mb-2 transition-colors" style="color: var(--color-text-primary);">
+    <span class="group-hover:text-gradient-gold">{title}</span>
+  </h3>
+
+  <p class="text-sm leading-relaxed mb-4" style="color: var(--color-text-secondary);">{description}</p>
+
+  <div class="grid grid-cols-3 gap-3 mb-4">
+    {metrics.map(m => (
+      <div class="text-center">
+        <div class="text-xl font-extrabold" style="color: var(--color-gold);">{m.value}</div>
+        <div class="text-xs mt-0.5" style="color: var(--color-text-muted);">{m.label}</div>
+      </div>
+    ))}
+  </div>
+
+  <span class="btn-ghost text-xs p-0" style="color: var(--color-accent-text);">Read full case study →</span>
+</a>
