@@ -148,7 +148,11 @@ const breadcrumbs = [
   const EMAILJS_TEMPLATE_ID = 'template_rdi2uzo';       // Live Template ID
 
   (function() {
-    emailjs.init(EMAILJS_PUBLIC_KEY);
+    try {
+      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    } catch(err) {
+      try { emailjs.init(EMAILJS_PUBLIC_KEY); } catch(e) {}
+    }
 
     const form = document.getElementById('contact-form');
     const submitBtn = document.getElementById('contact-submit');
@@ -176,8 +180,8 @@ const breadcrumbs = [
         message: form.querySelector('[name="message"]').value,
       };
 
-      // Send via EmailJS
-      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+      // Send via EmailJS (pass publicKey explicitly as 4th parameter for v4/v3 compatibility)
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY)
         .then(function() {
           // Success
           statusEl.classList.remove('hidden');
