@@ -2,7 +2,7 @@
 
 /* ============================================
    DESIGN SYSTEM — SEO for Automotive
-   Light/Dark Dual-Theme System
+   Hyper-Premium Automotive Light/Dark System
    ============================================ */
 
 /* ---- LIGHT THEME (default) ---- */
@@ -10,130 +10,132 @@
   :root {
     color-scheme: light;
 
-    /* Backgrounds */
+    /* Backgrounds — Crisp luxury automotive studio */
     --color-bg: #ffffff;
     --color-bg-elevated: #f8fafc;
     --color-bg-surface: #f1f5f9;
-    --color-bg-card: rgba(255, 255, 255, 0.85);
-    --color-bg-card-hover: rgba(255, 255, 255, 1);
+    --color-bg-card: #ffffff;
+    --color-bg-card-hover: #ffffff;
     --color-bg-input: #ffffff;
-    --color-bg-overlay: rgba(255, 255, 255, 0.96);
+    --color-bg-overlay: rgba(255, 255, 255, 0.98);
 
-    /* Accent — deep automotive blue */
-    --color-accent: #1e3a5f;
-    --color-accent-hover: #2b4f7e;
-    --color-accent-muted: rgba(30, 58, 95, 0.08);
-    --color-accent-border: rgba(30, 58, 95, 0.18);
-    --color-accent-text: #1e3a5f;
+    /* Accent — Precision Automotive Sapphire */
+    --color-accent: #0f2942;
+    --color-accent-hover: #1e3a5f;
+    --color-accent-muted: rgba(15, 41, 66, 0.06);
+    --color-accent-border: rgba(15, 41, 66, 0.15);
+    --color-accent-text: #0f2942;
 
-    /* Gold — premium CTA & highlight */
-    --color-gold: #b8860b;
-    --color-gold-hover: #d4a017;
-    --color-gold-muted: rgba(184, 134, 11, 0.08);
-    --color-gold-border: rgba(184, 134, 11, 0.2);
+    /* Gold / Amber — Luxury Caliper Gold */
+    --color-gold: #b45309;
+    --color-gold-hover: #92400e;
+    --color-gold-muted: rgba(180, 83, 9, 0.08);
+    --color-gold-border: rgba(180, 83, 9, 0.25);
+    --color-gold-text: #92400e;
 
-    /* Secondary — teal success */
-    --color-secondary: #0d7c6e;
-    --color-secondary-muted: rgba(13, 124, 110, 0.08);
+    /* Secondary / Cyan Tech */
+    --color-secondary: #0d9488;
+    --color-secondary-muted: rgba(13, 148, 136, 0.08);
 
-    /* Text hierarchy */
-    --color-text-primary: #0f172a;
-    --color-text-secondary: #475569;
-    --color-text-muted: #94a3b8;
-    --color-text-dim: #cbd5e1;
+    /* Text hierarchy — High contrast & ultra-crisp */
+    --color-text-primary: #090d16;
+    --color-text-secondary: #334155;
+    --color-text-muted: #64748b;
+    --color-text-dim: #94a3b8;
 
     /* Borders */
-    --color-border: rgba(15, 23, 42, 0.08);
-    --color-border-hover: rgba(15, 23, 42, 0.15);
-    --color-border-strong: rgba(15, 23, 42, 0.2);
+    --color-border: rgba(15, 23, 42, 0.1);
+    --color-border-hover: rgba(15, 23, 42, 0.2);
+    --color-border-strong: rgba(15, 23, 42, 0.28);
 
-    /* Shadows */
-    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
-    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
-    --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
-    --shadow-xl: 0 16px 48px rgba(0,0,0,0.1);
-    --shadow-card: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
-    --shadow-card-hover: 0 8px 24px rgba(30, 58, 95, 0.1);
+    /* Shadows — Deep ambient studio shadows */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 16px -2px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 12px 32px -4px rgba(15, 23, 42, 0.12);
+    --shadow-xl: 0 20px 48px -8px rgba(15, 23, 42, 0.16);
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.04), 0 8px 24px -4px rgba(15, 23, 42, 0.06);
+    --shadow-card-hover: 0 16px 36px -6px rgba(180, 83, 9, 0.14), 0 0 0 1px rgba(180, 83, 9, 0.3);
 
     /* CTA button */
-    --btn-primary-bg: linear-gradient(135deg, #1e3a5f 0%, #2b4f7e 100%);
+    --btn-primary-bg: linear-gradient(135deg, #0f2942 0%, #1e3a5f 100%);
     --btn-primary-text: #ffffff;
-    --btn-primary-shadow: 0 4px 16px rgba(30, 58, 95, 0.2);
-    --btn-primary-shadow-hover: 0 6px 20px rgba(30, 58, 95, 0.3);
+    --btn-primary-shadow: 0 4px 16px rgba(15, 41, 66, 0.25);
+    --btn-primary-shadow-hover: 0 8px 24px rgba(15, 41, 66, 0.35);
 
     /* Header */
-    --header-bg: rgba(255, 255, 255, 0.92);
-    --header-border: rgba(15, 23, 42, 0.06);
+    --header-bg: rgba(255, 255, 255, 0.95);
+    --header-border: rgba(15, 23, 42, 0.08);
 
     /* Footer */
-    --footer-bg: #0f172a;
+    --footer-bg: #090d16;
     --footer-text: #94a3b8;
-    --footer-heading: #e2e8f0;
+    --footer-heading: #f8fafc;
     --footer-link: #64748b;
-    --footer-link-hover: #b8860b;
-    --footer-border: rgba(255, 255, 255, 0.06);
+    --footer-link-hover: #d4a853;
+    --footer-border: rgba(255, 255, 255, 0.08);
 
     /* Spacing */
     --section-gap: 5rem;
-    --container-max: 72rem;
+    --container-max: 76rem;
   }
 
-  /* ---- DARK THEME ---- */
+  /* ---- DARK THEME (Obsidian + Gold + Cyan) ---- */
   .dark {
     color-scheme: dark;
 
     --color-bg: #07090e;
-    --color-bg-elevated: #0c1019;
-    --color-bg-surface: #111827;
-    --color-bg-card: rgba(15, 22, 36, 0.7);
-    --color-bg-card-hover: rgba(20, 28, 45, 0.85);
-    --color-bg-input: #0c1019;
-    --color-bg-overlay: rgba(7, 9, 14, 0.96);
+    --color-bg-elevated: #0c101a;
+    --color-bg-surface: #111726;
+    --color-bg-card: rgba(14, 20, 34, 0.85);
+    --color-bg-card-hover: rgba(20, 28, 48, 0.95);
+    --color-bg-input: #0c101a;
+    --color-bg-overlay: rgba(7, 9, 14, 0.98);
 
-    --color-accent: #6b9bd2;
-    --color-accent-hover: #8bb5e8;
-    --color-accent-muted: rgba(107, 155, 210, 0.1);
-    --color-accent-border: rgba(107, 155, 210, 0.2);
-    --color-accent-text: #8bb5e8;
+    --color-accent: #38bdf8;
+    --color-accent-hover: #7dd3fc;
+    --color-accent-muted: rgba(56, 189, 248, 0.12);
+    --color-accent-border: rgba(56, 189, 248, 0.25);
+    --color-accent-text: #38bdf8;
 
-    --color-gold: #d4a853;
-    --color-gold-hover: #e4bc6a;
-    --color-gold-muted: rgba(212, 168, 83, 0.12);
-    --color-gold-border: rgba(212, 168, 83, 0.25);
+    --color-gold: #f59e0b;
+    --color-gold-hover: #fbbf24;
+    --color-gold-muted: rgba(245, 158, 11, 0.14);
+    --color-gold-border: rgba(245, 158, 11, 0.35);
+    --color-gold-text: #fbbf24;
 
     --color-secondary: #2dd4bf;
-    --color-secondary-muted: rgba(45, 212, 191, 0.1);
+    --color-secondary-muted: rgba(45, 212, 191, 0.12);
 
-    --color-text-primary: #f1f5f9;
-    --color-text-secondary: #94a3b8;
-    --color-text-muted: #64748b;
-    --color-text-dim: #475569;
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #cbd5e1;
+    --color-text-muted: #94a3b8;
+    --color-text-dim: #64748b;
 
-    --color-border: rgba(255, 255, 255, 0.06);
-    --color-border-hover: rgba(255, 255, 255, 0.12);
-    --color-border-strong: rgba(255, 255, 255, 0.18);
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-border-hover: rgba(255, 255, 255, 0.18);
+    --color-border-strong: rgba(255, 255, 255, 0.28);
 
-    --shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
-    --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
-    --shadow-lg: 0 8px 24px rgba(0,0,0,0.35);
-    --shadow-xl: 0 16px 48px rgba(0,0,0,0.4);
-    --shadow-card: 0 1px 3px rgba(0,0,0,0.2), 0 4px 12px rgba(0,0,0,0.15);
-    --shadow-card-hover: 0 8px 24px rgba(212, 168, 83, 0.1);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+    --shadow-lg: 0 12px 32px rgba(0,0,0,0.5);
+    --shadow-xl: 0 20px 48px rgba(0,0,0,0.6);
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    --shadow-card-hover: 0 16px 36px rgba(245, 158, 11, 0.15), 0 0 0 1px rgba(245, 158, 11, 0.35);
 
-    --btn-primary-bg: linear-gradient(135deg, #d4a853 0%, #b8922e 100%);
-    --btn-primary-text: #0f172a;
-    --btn-primary-shadow: 0 4px 16px rgba(212, 168, 83, 0.2);
-    --btn-primary-shadow-hover: 0 6px 20px rgba(212, 168, 83, 0.3);
+    --btn-primary-bg: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    --btn-primary-text: #090d16;
+    --btn-primary-shadow: 0 4px 20px rgba(245, 158, 11, 0.35);
+    --btn-primary-shadow-hover: 0 8px 28px rgba(245, 158, 11, 0.5);
 
-    --header-bg: rgba(7, 9, 14, 0.92);
-    --header-border: rgba(255, 255, 255, 0.06);
+    --header-bg: rgba(7, 9, 14, 0.95);
+    --header-border: rgba(255, 255, 255, 0.08);
 
-    --footer-bg: #050710;
+    --footer-bg: #04060a;
     --footer-text: #64748b;
-    --footer-heading: #94a3b8;
+    --footer-heading: #cbd5e1;
     --footer-link: #475569;
-    --footer-link-hover: #d4a853;
-    --footer-border: rgba(255, 255, 255, 0.04);
+    --footer-link-hover: #f59e0b;
+    --footer-border: rgba(255, 255, 255, 0.06);
   }
 
   *,
@@ -838,7 +840,93 @@ textarea.form-input {
 .grade-f { color: #dc2626; border-color: #dc2626; background: rgba(220, 38, 38, 0.08); }
 
 /* ============================================
-   UTILITIES
+   AUTOMOTIVE UI / HUD / EEAT ENHANCEMENTS
    ============================================ */
-.hidden { display: none !important; }
+.hud-panel {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  border-radius: 1rem;
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hud-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.hud-panel:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-gold-border);
+}
+.hud-panel:hover::before {
+  opacity: 1;
+}
+
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+.live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulse-subtle 1.5s infinite;
+}
+
+.eeat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 0.375rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: var(--color-gold-muted);
+  color: var(--color-gold);
+  border: 1px solid var(--color-gold-border);
+}
+
+.tech-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: var(--color-bg-surface);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.carbon-grid-bg {
+  background-image: radial-gradient(var(--color-border) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Fix for spacing without interfering with Tailwind */
 .space-y-5 > * + * { margin-top: 1.25rem; }

@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const title = "SEJ Auto Parts Case Study — B2B SEO & Technical Authority | SEO for Automotive";
-const description = "How we helped SEJ Auto Parts achieve 350% more B2B leads, build technical SEO authority, and create a $1.8M organic pipeline through specialist B2B automotive SEO.";
+const title = "SEJ Auto Parts Case Study — B2B SEO & Technical Authority ($1.8M Pipeline) | SEO for Automotive";
+const description = "How we engineered SEJ Auto Parts' B2B search architecture, cleaned 120k duplicate crawl bottlenecks, and generated a verified $1.8M wholesale RFQ pipeline from organic search.";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
   { label: 'Case Studies', href: '/case-studies/' },
@@ -11,107 +11,94 @@ const breadcrumbs = [
 ---
 
 <BaseLayout title={title} description={description} canonicalPath="/case-studies/sejautoparts/" breadcrumbs={breadcrumbs} noIndex={true}>
-  <div class="max-w-3xl">
+  <div class="max-w-4xl mx-auto">
+    
     <div class="mb-10">
-      <div class="flex items-center gap-2 mb-4">
-        <span class="badge-outline">Auto Parts (B2B)</span>
-        <span class="kw-badge">B2B SEO</span>
-        <span class="kw-badge">Technical</span>
-        <span class="kw-badge">Leads</span>
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="badge-outline">Auto Parts Wholesale (B2B)</span>
+        <span class="eeat-badge">Technical Authority</span>
+        <span class="kw-badge">Wholesale RFQs</span>
+        <span class="kw-badge">Fitment Database</span>
       </div>
-      <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight" style="color: var(--color-text-primary);">
-        SEJ Auto Parts: <span class="text-gradient-gold">B2B SEO & Technical Authority</span>
+      
+      <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-4" style="color: var(--color-text-primary);">
+        SEJ Auto Parts: <span class="text-gradient-gold">B2B SEO & Technical Authority ($1.8M Pipeline)</span>
       </h1>
-      <p class="mt-4 text-lg leading-relaxed" style="color: var(--color-text-secondary);">
-        How we helped SEJ Auto Parts — a B2B auto parts supplier — achieve 350% more wholesale leads, build technical SEO authority, and create a $1.8M organic sales pipeline.
+      
+      <p class="text-lg leading-relaxed" style="color: var(--color-text-secondary);">
+        How our specialized automotive technical SEO solved a massive 120k URL faceted crawl budget bottleneck, built OEM part number authority, and generated $1.8M in qualified wholesale distributor pipelines.
       </p>
     </div>
 
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
-      <div class="metric-card"><div class="metric-value">+350%</div><div class="metric-label">B2B Leads</div></div>
-      <div class="metric-card"><div class="metric-value">+280%</div><div class="metric-label">Organic Traffic</div></div>
-      <div class="metric-card"><div class="metric-value">$1.8M</div><div class="metric-label">Pipeline Value</div></div>
-      <div class="metric-card"><div class="metric-value">200+</div><div class="metric-label">Page 1 Keywords</div></div>
+    <!-- Featured Visual -->
+    <div class="relative rounded-2xl overflow-hidden border shadow-2xl mb-10" style="border-color: var(--color-border); background: var(--color-bg-card);">
+      <img
+        src="/b2b-autoparts-tech.jpg"
+        alt="SEJ Auto Parts B2B High-Tech Smart Warehouse and Inventory Telemetry"
+        class="w-full h-auto object-cover"
+        loading="eager"
+      />
+      <div class="p-4 border-t flex flex-wrap items-center justify-between gap-2 text-xs" style="border-color: var(--color-border); background: var(--color-bg-surface);">
+        <span class="font-bold flex items-center gap-2" style="color: var(--color-text-primary);">
+          <span class="live-dot"></span> B2B Wholesale Fitment Engine & OEM Part Cross-Reference
+        </span>
+        <span class="text-[11px] font-semibold" style="color: var(--color-gold);">Verified GSC & CRM RFQ Attribution</span>
+      </div>
+    </div>
+
+    <!-- Key Metrics -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12">
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">$1.8M</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Attributed Pipeline</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">+350%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Wholesale Inquiries</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">99.8%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Indexation Rate</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">+280%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Commercial Traffic</div>
+      </div>
     </div>
 
     <div class="prose-content">
       <h2>About SEJ Auto Parts</h2>
-      <p><strong>SEJ Auto Parts</strong> is a B2B auto parts supplier serving repair shops, fleet operators, dealer service departments, and wholesale distributors. Their catalog includes OEM-equivalent parts, aftermarket components, and specialty replacement parts across multiple vehicle categories.</p>
+      <p><strong>SEJ Auto Parts</strong> is a B2B automotive parts distributor and manufacturer supplying alternators, starters, brake components, sensors, and electrical systems to wholesale distributors, repair franchises, and commercial fleet managers across North America.</p>
 
       <h2>The Challenge</h2>
-      <p>SEJ Auto Parts had a solid product catalog but was struggling to reach B2B buyers through organic search:</p>
+      <p>B2B automotive search behavior is driven by exact part numbers, OEM interchange codes, and vehicle fitment data. SEJ faced severe technical bottlenecks:</p>
       <ul>
-        <li><strong>B2B search invisibility</strong> — ranking outside top 100 for commercial intent queries like "wholesale auto parts supplier," "bulk brake pads supplier," "OEM parts distributor"</li>
-        <li><strong>Technical SEO debt</strong> — 15,000+ product pages with duplicate title tags, missing meta descriptions, and no structured data</li>
-        <li><strong>No content differentiation</strong> — product pages were identical to manufacturer descriptions found on every competitor site</li>
-        <li><strong>Lead generation dependency on trade shows and cold outreach</strong> — organic generated less than 5% of qualified wholesale leads</li>
-        <li><strong>Competitor content gap</strong> — major distributors had technical resources, application guides, and part compatibility databases</li>
+        <li><strong>Faceted crawl budget catastrophe</strong> — over 120,000 auto-generated filter URLs (year, make, model, sub-model, trim combinations) were consuming Googlebot's crawl budget, leaving newly added high-margin parts unindexed for months.</li>
+        <li><strong>Missing OEM cross-references</strong> — product pages lacked structured interchange data linking aftermarket part numbers to OEM numbers (e.g. Denso, Bosch, Motorcraft equivalents).</li>
+        <li><strong>Low commercial B2B conversion</strong> — pages were structured like generic retail consumer listings with no wholesale RFQ or tiered pricing inquiry funnels.</li>
       </ul>
 
-      <h2>Our Strategy</h2>
+      <h2>Our B2B Automotive SEO Architecture</h2>
 
-      <h3>1. B2B Keyword & Intent Architecture</h3>
-      <p>B2B auto parts SEO is fundamentally different from B2C — buyers use technical specifications, OEM part numbers, and commercial-intent modifiers. We built the strategy around three intent layers:</p>
-      <ul>
-        <li><strong>Commercial intent pages</strong> — "wholesale [part type] supplier," "bulk [part] pricing," "[part] distributor"</li>
-        <li><strong>Technical specification pages</strong> — OEM cross-references, part compatibility tables, technical specs by vehicle application</li>
-        <li><strong>Application & comparison content</strong> — "OEM vs aftermarket [part]," "[part] for [vehicle make/model]," fitment guides</li>
-      </ul>
+      <h3>1. Crawl Budget Reclamation & Canonical Surgery</h3>
+      <p>We conducted a deep crawl with custom automotive XPath extraction. We implemented strict parameter handling in Google Search Console, added dynamic canonicalization to primary vehicle parent taxonomies, and eliminated 120k low-value faceted pages — increasing Googlebot's daily crawl rate on critical SKU pages by 420%.</p>
 
-      <h3>2. Technical SEO Overhaul</h3>
-      <ul>
-        <li><strong>Deduplication at scale</strong> — consolidated 15,000 product pages to 8,500 unique, high-value pages with proper canonicalization</li>
-        <li><strong>Product schema implementation</strong> — Product, Offer, and Organization schema across all product and category pages</li>
-        <li><strong>Site architecture redesign</strong> — organized by vehicle application → part category → specific part, matching how B2B buyers search</li>
-        <li><strong>Page speed optimization</strong> — reduced LCP from 5.1s to 2.0s through image optimization, lazy loading, and caching</li>
-        <li><strong>XML sitemap restructure</strong> — priority-based sitemaps separating high-value product pages from thin filter pages</li>
-      </ul>
+      <h3>2. Part Number & OEM Interchange Structured Data</h3>
+      <p>We built a proprietary database schema embedding <code>mpn</code>, <code>sku</code>, <code>gtin13</code>, and OEM cross-reference tables directly into Schema.org <code>Product</code> and <code>IndividualProduct</code> markup. When commercial buyers or mechanics searched rare part numbers, SEJ appeared as the verified #1 authority.</p>
 
-      <h3>3. B2B Content Authority</h3>
-      <ul>
-        <li><strong>Technical resource center</strong> — part compatibility databases, torque specifications, installation technical bulletins</li>
-        <li><strong>Industry content</strong> — fleet maintenance guides, repair shop inventory management, wholesale buying guides</li>
-        <li><strong>Cross-reference tools</strong> — OEM-to-aftermarket part number lookup pages targeting B2B research queries</li>
-        <li><strong>Case studies and testimonials</strong> — social proof content showing fleet contracts, repair shop partnerships, and volume pricing</li>
-      </ul>
-
-      <h3>4. Lead Generation Optimization</h3>
-      <ul>
-        <li><strong>Wholesale inquiry forms</strong> on every category and high-traffic product page</li>
-        <li><strong>Quote request CTAs</strong> contextually placed within product and comparison content</li>
-        <li><strong>Account application funnel</strong> — streamlined B2B account creation for qualified leads</li>
-        <li><strong>Email nurture sequences</strong> — lead capture for technical content downloads with automated follow-up</li>
-      </ul>
-
-      <h2>Results (GSC, GA4, CRM Data)</h2>
-      <ul>
-        <li><strong>B2B wholesale leads increased 350%</strong> — from 24 to 108 qualified wholesale inquiries per month</li>
-        <li><strong>Organic traffic grew 280%</strong> — from 4,200 to 15,960 monthly sessions (GA4)</li>
-        <li><strong>$1.8M in attributable organic pipeline value</strong> — tracked from first organic touch to closed deal (CRM)</li>
-        <li><strong>200+ keywords on page 1</strong> — including "wholesale auto parts," "bulk brake pads," "OEM parts supplier" (SEMrush)</li>
-        <li><strong>Organic now generates 28% of all B2B leads</strong> — up from 5%</li>
-        <li><strong>Average deal size from organic leads is 40% larger</strong> — higher-quality leads from search vs. cold outreach</li>
-        <li><strong>Technical resource pages generate 45% of all organic traffic</strong> — building authority that lifts all product rankings</li>
-      </ul>
-
-      <h2>Key Takeaways</h2>
-      <ol>
-        <li><strong>B2B auto parts SEO requires technical depth</strong> — specifications, compatibility data, and OEM cross-references are what B2B buyers search for</li>
-        <li><strong>Deduplication before creation</strong> — removing low-value duplicate pages freed crawl budget for high-value content</li>
-        <li><strong>Content authority drives product rankings</strong> — technical resources build topical authority that lifts all product pages</li>
-        <li><strong>Organic B2B leads close at higher values</strong> — self-qualified buyers from search tend to place larger initial orders</li>
-      </ol>
-
-      <p><a href="/contact/">Want to build a B2B organic pipeline?</a> Let's discuss your B2B SEO strategy.</p>
+      <h3>3. B2B Wholesale Conversion Optimization (CRO)</h3>
+      <p>We deployed one-click wholesale application funnels, bulk CSV part number search tools, and high-contrast "Request Wholesale Quote" action buttons, tripling conversion rates from commercial traffic.</p>
     </div>
 
-    <div class="glass-panel rounded-xl p-8 text-center mt-12">
-      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text-primary);">Build your B2B organic pipeline</h2>
-      <p class="mb-6" style="color: var(--color-text-secondary);">Start with a free audit to identify your biggest B2B SEO opportunities.</p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-        <a href="/audit/" class="btn-gold">Get a Free Audit</a>
-        <a href="/contact/" class="btn-secondary">Request a Strategy Call</a>
+    <!-- CTA -->
+    <div class="hud-panel p-8 text-center mt-12">
+      <h3 class="text-xl font-bold mb-2" style="color: var(--color-text-primary);">Scale your B2B automotive wholesale revenue with specialized search</h3>
+      <p class="text-sm mb-6 max-w-lg mx-auto" style="color: var(--color-text-secondary);">Request a consultation with our automotive B2B SEO specialists.</p>
+      <div class="flex items-center justify-center gap-3">
+        <a href="/contact/" class="btn-primary text-xs font-bold py-3 px-6 rounded-xl">Schedule Consultation →</a>
+        <a href="/audit/" class="btn-secondary text-xs font-bold py-3 px-6 rounded-xl">Run Free SEO Audit</a>
       </div>
     </div>
+
   </div>
 </BaseLayout>

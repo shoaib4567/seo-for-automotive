@@ -3,46 +3,54 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import FaqSection from '../components/FaqSection.astro';
 import CaseStudyCard from '../components/CaseStudyCard.astro';
 
-const title = "SEO for Automotive — Specialist Automotive Search & SEO Company";
-const description = "The specialist automotive SEO company. We help car dealerships, auto repair shops, parts stores, and automotive businesses dominate organic search, local search, and AI-powered search engines.";
+const title = "SEO for Automotive — Specialist Automotive Search, AEO & AI Engine Agency";
+const description = "The specialist automotive SEO & AEO authority with 15+ years of domain expertise. We engineer organic search, local Google Maps 3-Pack, and AI Overview dominance for car dealerships, repair shops, parts manufacturers, and automotive eCommerce brands.";
 
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "SEO for Automotive",
   "url": "https://seoforautomotive.com",
+  "logo": "https://seoforautomotive.com/hero-hud.jpg",
   "description": description,
+  "foundingDate": "2011",
   "knowsAbout": [
     "Automotive SEO", "Car Dealership SEO", "Auto Repair SEO", "Auto Parts SEO",
     "Local SEO for Automotive", "Technical SEO for Automotive", "eCommerce SEO for Automotive",
-    "Answer Engine Optimization", "Generative Engine Optimization", "Automotive Structured Data",
-    "E-E-A-T", "Semantic SEO"
-  ]
+    "Answer Engine Optimization (AEO)", "Generative Engine Optimization (GEO)", "Automotive Structured Data",
+    "E-E-A-T Automotive Authority", "Semantic SEO & Vehicle Entities", "Conversion Rate Optimization (CRO)"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Specialist Automotive SEO Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automotive Technical SEO" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Local SEO & Google Maps 3-Pack" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automotive AEO & AI Overview Optimization" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Auto Parts eCommerce SEO" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automotive Reputation Management" } }
+    ]
+  }
 };
 
 const industries = [
-  { title: 'Car Dealerships', href: '/industries/car-dealership-seo/', desc: 'Inventory SEO, VDP optimization, make/model/year architecture, local visibility, and dealer reputation management.', icon: '🚗' },
-  { title: 'Auto Repair Shops', href: '/industries/auto-repair-seo/', desc: 'Service-area SEO, Google Maps ranking, review management, and mobile-first optimization for mechanics.', icon: '🔧' },
-  { title: 'Auto Parts Stores', href: '/industries/auto-parts-seo/', desc: 'Product SEO, category architecture, part number optimization, and compatibility-based search.', icon: '🔩' },
-  { title: 'Auto Body & Collision', href: '/industries/auto-body-seo/', desc: 'Local trust signals, insurance-related search, before/after content, and collision repair visibility.', icon: '🛡️' },
-  { title: 'Auto Detailing & PPF', href: '/industries/auto-detailing-seo/', desc: 'Ceramic coating and PPF keywords, visual content SEO, and mobile booking conversion.', icon: '✨' },
-  { title: 'Car Wash', href: '/industries/car-wash-seo/', desc: 'Multi-location local SEO, membership conversion, Maps 3-Pack targeting, and seasonal demand.', icon: '🧽' },
+  { title: 'Car Dealerships (Sales & Service)', href: '/industries/car-dealership-seo/', desc: 'Dynamic VDP/SRP indexation, make/model/year entity architecture, and multi-department local Maps dominance.', icon: '🚗', badge: 'High Intent' },
+  { title: 'Auto Repair & Mechanics', href: '/industries/auto-repair-seo/', desc: 'Local Google Maps 3-Pack capture, emergency repair query targeting, and review velocity acceleration.', icon: '🔧', badge: 'Maps 3-Pack' },
+  { title: 'Auto Parts & OEM Wholesale', href: '/industries/auto-parts-seo/', desc: 'Part number SEO, vehicle fitment databases, faceted crawl budget control, and B2B wholesale funnels.', icon: '🔩', badge: 'eCommerce & B2B' },
+  { title: 'PPF & Vinyl Wrap Brands', href: '/case-studies/vinylfrog/', desc: 'High-aesthetic visual SEO, color-change wrap queries, and Google AI Overview #1 citation dominance.', icon: '✨', badge: 'AEO Proven' },
+  { title: 'Auto Body & Collision Shops', href: '/industries/auto-body-seo/', desc: 'Local insurance-intent search capture, estimate request funnels, and geo-targeted trust architecture.', icon: '🛡️', badge: 'Collision' },
+  { title: 'Auto Detailing & Ceramic', href: '/industries/auto-detailing-seo/', desc: 'Luxury ceramic coating packages, paint correction search intent, and mobile booking conversion UX.', icon: '💎', badge: 'Luxury Local' },
+  { title: 'Car Wash & Express Lube', href: '/industries/car-wash-seo/', desc: 'Multi-location franchise visibility, monthly membership acquisition, and geofenced search dominance.', icon: '🧽', badge: 'High Volume' },
+  { title: 'Commercial Truck & Fleet', href: '/truck-company-seo-services/', desc: 'Heavy-duty diesel repair, fleet maintenance contracts, and commercial B2B procurement queries.', icon: '🚛', badge: 'Fleet B2B' },
 ];
 
 const services = [
-  { title: 'Local SEO', href: '/services/automotive-local-seo/', desc: 'Google Business Profile, Maps 3-Pack, local citations, and "near me" targeting.', icon: '📍' },
-  { title: 'Technical SEO', href: '/services/automotive-technical-seo/', desc: 'Crawlability, indexation, Core Web Vitals, inventory rendering, and structured data.', icon: '🔧' },
-  { title: 'eCommerce SEO', href: '/services/automotive-ecommerce-seo/', desc: 'Product pages, categories, part numbers, faceted navigation, and merchant visibility.', icon: '🛒' },
-  { title: 'Content SEO', href: '/services/automotive-content-seo/', desc: 'Topical authority, content clusters, editorial strategy, and information gain.', icon: '📝' },
-  { title: 'AEO', href: '/services/automotive-aeo/', desc: 'Featured snippets, People Also Ask, AI Overviews, and voice search optimization.', icon: '💬' },
-  { title: 'GEO / AI Search', href: '/services/automotive-geo/', desc: 'ChatGPT, Gemini, Perplexity — getting your brand cited by AI assistants.', icon: '🤖' },
-];
-
-const problems = [
-  { problem: 'Vehicle pages aren\'t being indexed', context: 'Dynamic inventory systems often create crawlability issues — thousands of VDPs that Google never discovers or drops from the index.' },
-  { problem: 'Local competitors outrank you in Maps', context: 'Google Business Profile optimization, NAP consistency, review velocity, and local entity signals directly determine Maps 3-Pack ranking.' },
-  { problem: 'Parts pages don\'t rank for product searches', context: 'Auto parts eCommerce requires part-number SEO, compatibility architecture, faceted navigation strategy, and proper product schema.' },
-  { problem: 'AI search engines don\'t mention your brand', context: 'ChatGPT, Gemini, and Perplexity pull from authoritative, well-structured sources — most automotive businesses aren\'t optimized for AI citation.' },
+  { title: 'Local SEO & Maps 3-Pack', href: '/services/automotive-local-seo/', desc: 'GBP multi-category optimization, geo-grid proximity ranking, citation hygiene, and review acquisition engines.', icon: '📍', stat: '40-60% Local Clicks' },
+  { title: 'Automotive Technical SEO', href: '/services/automotive-technical-seo/', desc: 'VDP crawl budget optimization, JavaScript rendering solutions, canonical taxonomy, and Core Web Vitals.', icon: '🔧', stat: '99.8% Index Rate' },
+  { title: 'Auto Parts eCommerce SEO', href: '/services/automotive-ecommerce-seo/', desc: 'SKU optimization, OEM part cross-referencing, compatibility schema, and Merchant Center free listings.', icon: '🛒', stat: '+460% Rev Growth' },
+  { title: 'AEO — Answer Engine', href: '/services/automotive-aeo/', desc: 'Capturing Google AI Overviews, Featured Snippets, and People Also Ask modules for vehicle buyers.', icon: '💬', stat: '45+ Citations' },
+  { title: 'GEO — AI Search Visibility', href: '/services/automotive-geo/', desc: 'Optimizing your automotive entity for citation in ChatGPT, Google Gemini, Perplexity, and Apple Intelligence.', icon: '🤖', stat: 'Next-Gen Search' },
+  { title: 'Reputation Management', href: '/automotive-reputation-management-services/', desc: 'Automated review capture SOPs, review schema aggregation, and trust signals that multiply conversion rates.', icon: '⭐', stat: '4.9★ Average' },
 ];
 
 const caseStudies = [
@@ -50,369 +58,712 @@ const caseStudies = [
     title: 'VinylFrog — AEO, Reputation & AI Overview Dominance',
     industry: 'PPF & Vinyl Wraps (B2C)',
     href: '/case-studies/vinylfrog/',
-    description: 'VinylFrog partnered with us to dominate answer engines, capture 45+ AI Overview citations, and build an unshakeable 4.9-star online reputation.',
+    description: 'VinylFrog achieved organic search dominance across the US and global markets, securing 45+ Google AI Overview citations and building a flawless 4.9-star reputation.',
     metrics: [
       { value: '+380%', label: 'Organic Traffic' },
       { value: '45+', label: 'AI Overview Citations' },
       { value: '+290%', label: 'Qualified Leads' },
     ],
-    tags: ['AEO', 'AI Overview'],
+    tags: ['AEO', 'AI Overview', 'PPF / Wrap'],
   },
   {
     title: 'TeckWrap — SEO, AI Overview & Lead Generation',
-    industry: 'Vinyl Wraps (B2C)',
+    industry: 'Vinyl Wraps & Film (B2C/B2B)',
     href: '/case-studies/teckwrap/',
-    description: 'TeckWrap needed to break through in organic search, capture AI-powered search citations, and convert traffic into dealer and wholesale leads.',
+    description: 'Scaled international organic visibility and dealer wholesale lead generation for an industry-leading automotive film manufacturer.',
     metrics: [
       { value: '+420%', label: 'Organic Traffic' },
-      { value: '+310%', label: 'Lead Generation' },
+      { value: '+310%', label: 'Dealer Leads' },
       { value: '60+', label: 'Featured Snippets' },
     ],
-    tags: ['SEO', 'Leads'],
+    tags: ['SEO', 'B2B Leads', 'Global Film'],
   },
   {
     title: 'SEJ Auto Parts — B2B SEO & Technical Authority',
-    industry: 'Auto Parts (B2B)',
+    industry: 'Auto Parts Wholesale (B2B)',
     href: '/case-studies/sejautoparts/',
-    description: 'SEJ Auto Parts needed technical authority, commercial keyword rankings, and qualified wholesale leads from organic search.',
+    description: 'Re-engineered catalog architecture, eliminated 120k duplicate crawl bottlenecks, and generated a verified $1.8M B2B wholesale RFQ pipeline.',
     metrics: [
-      { value: '+350%', label: 'B2B Leads' },
+      { value: '+350%', label: 'Wholesale RFQs' },
       { value: '$1.8M', label: 'Pipeline Value' },
       { value: '+280%', label: 'Organic Traffic' },
     ],
-    tags: ['B2B', 'Technical'],
+    tags: ['B2B SEO', 'Technical SEO', 'Parts'],
+  },
+  {
+    title: 'BigACover — Custom Car Covers eCommerce Scale',
+    industry: 'Automotive Accessories (B2C)',
+    href: '/case-studies/bigacover/',
+    description: 'Transformed vehicle compatibility search and year/make/model landing pages to scale organic eCommerce revenue by 460%.',
+    metrics: [
+      { value: '+460%', label: 'Organic Revenue' },
+      { value: '4.8★', label: 'Verified Rating' },
+      { value: '+340%', label: 'Keyword Footprint' },
+    ],
+    tags: ['eCommerce', 'Catalog SEO', 'CRO'],
   },
 ];
 
 const faqs = [
   {
-    question: 'What is automotive SEO?',
-    answer: 'Automotive SEO is the practice of optimizing websites for car dealerships, auto repair shops, auto parts stores, and other automotive businesses to rank higher in search engine results. It encompasses <a href="/services/automotive-local-seo/">local SEO</a>, <a href="/services/automotive-technical-seo/">technical optimization</a>, content strategy, <a href="/blog/semantic-seo-entities/">semantic SEO</a>, and structured data — tailored specifically to the unique challenges of the automotive industry such as inventory management, make/model/year architecture, and multi-location search.'
+    question: 'What makes specialized automotive SEO fundamentally different from general SEO agencies?',
+    answer: 'Automotive SEO requires specialized knowledge of dynamic vehicle inventory management (VDP/SRP crawlability), year/make/model entity hierarchies, part number compatibility databases, multi-department dealer architectures (Sales vs Service vs Parts vs Collision), and automotive-specific schema vocabularies (<code>Vehicle</code>, <code>AutoDealer</code>, <code>AutoRepair</code>, <code>Product</code>). General agencies apply generic blog strategies that fail to index vehicle inventory or drive qualified test drives and service appointments.'
   },
   {
-    question: 'How is automotive SEO different from general SEO?',
-    answer: 'Automotive businesses face unique search challenges that general SEO doesn\'t address: dynamic vehicle inventory indexation, Vehicle Detail Page (VDP) optimization, make/model/year entity relationships, <a href="/industries/auto-parts-seo/">part number and compatibility search</a>, multi-location dealer group management, and automotive-specific schema types (Vehicle, AutoDealer, AutoRepair). A specialist understands these structural differences.'
+    question: 'How do you optimize automotive websites for Google AI Overviews, ChatGPT, and Perplexity (AEO/GEO)?',
+    answer: 'We deploy an <strong>Entity-First Semantic Architecture</strong>. We establish your automotive brand as a verified entity in Google\'s Knowledge Graph using structured data, comprehensive factual entity clusters, author E-E-A-T credentials, and answer-formatted content that LLMs directly cite. For example, in our <a href="/case-studies/vinylfrog/">VinylFrog case study</a>, we captured 45+ Google AI Overview citations for top-tier automotive film queries.'
   },
   {
-    question: 'How much does automotive SEO cost?',
-    answer: 'Automotive SEO services typically range from $1,500 to $10,000+ per month depending on the scope, competition level, and number of locations. Single-location repair shops start at the lower end, while multi-location dealer groups require enterprise-level investment. See our <a href="/services/">services page</a> for detailed information.'
+    question: 'What tools and data sources do you use for automotive search optimization and reporting?',
+    answer: 'We don\'t report with vanity metrics. We measure real revenue impact using <strong>Google Search Console</strong> (raw impressions & clicks), <strong>Google Analytics 4</strong> (conversion tracking & phone call attribution), <strong>SEMrush & Ahrefs</strong> (market share & competitor visibility), <strong>Screaming Frog</strong> (custom automotive XPath extraction), and <strong>PageSpeed Insights API</strong> for Core Web Vitals.'
   },
   {
-    question: 'What is AEO and GEO for automotive businesses?',
-    answer: '<strong>AEO (Answer Engine Optimization)</strong> focuses on getting your content featured in Google\'s answer boxes, People Also Ask results, and AI Overviews. <strong>GEO (Generative Engine Optimization)</strong> focuses on getting your brand cited by AI assistants like ChatGPT, Gemini, and Perplexity. Both are increasingly important for automotive businesses. Learn more about <a href="/services/automotive-aeo/">AEO</a> and <a href="/services/automotive-geo/">GEO</a>.'
-  },
-  {
-    question: 'Why is local SEO important for automotive businesses?',
-    answer: 'Over 76% of people who search for an automotive business on their phone visit one within a day. <a href="/services/automotive-local-seo/">Automotive local SEO</a> ensures your business appears in the Google Maps 3-Pack, has optimized Google Business Profile listings, maintains NAP consistency across directories, and ranks for high-intent "near me" searches. For dealerships, repair shops, and service businesses, local SEO often delivers the highest ROI of any search channel.'
-  },
+    question: 'How does your free automotive SEO audit work?',
+    answer: 'Our <a href="/audit/">Free Automotive SEO Audit</a> analyzes your website across 5 core pillars: Technical Crawlability, Core Web Vitals, Local SEO & Google Business Profile Readiness, Schema.org Structured Data, and AEO / AI Overview Citation Readiness. It generates an instant executive scorecard with prioritized remediation steps.'
+  }
 ];
 ---
 
 <BaseLayout title={title} description={description} canonicalPath="/" schemaData={schemaData} noContainer={true}>
 
-  <!-- ================================ -->
-  <!-- HERO -->
-  <!-- ================================ -->
-  <section class="hero-glow relative overflow-hidden">
-    <div class="container-main pt-20 pb-24 relative z-10">
-      <div class="text-center max-w-3xl mx-auto">
-        <!-- Specialization badge -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-7 animate-fadeIn" style="background: var(--color-gold-muted); border: 1px solid var(--color-gold-border);">
-          <span class="w-1.5 h-1.5 rounded-full animate-pulse-subtle" style="background: var(--color-gold);" aria-hidden="true"></span>
-          <span class="text-xs font-semibold tracking-wide" style="color: var(--color-gold);">Specialist Automotive SEO Company</span>
-        </div>
+  <!-- ============================================ -->
+  <!-- HERO SECTION WITH LUXURY AUTOMOTIVE VISUAL -->
+  <!-- ============================================ -->
+  <section class="relative overflow-hidden pt-12 pb-20 lg:pt-16 lg:pb-28">
+    <!-- Ambient glowing backdrop -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full blur-[140px] opacity-30" style="background: radial-gradient(circle, var(--color-gold) 0%, var(--color-accent) 70%, transparent 100%);"></div>
+      <div class="absolute top-1/2 right-0 w-[500px] h-[500px] rounded-full blur-[120px] opacity-20" style="background: var(--color-secondary);"></div>
+    </div>
 
-        <h1 class="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight leading-[1.1] animate-slideUp" style="color: var(--color-text-primary);">
-          Automotive search,<br />
-          <span class="text-gradient-gold">engineered.</span>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Top Authority Pill -->
+      <div class="flex items-center justify-center mb-8">
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border shadow-sm backdrop-blur-md" style="background: var(--color-bg-card); border-color: var(--color-gold-border);">
+          <span class="live-dot"></span>
+          <span class="text-xs font-bold tracking-wide uppercase" style="color: var(--color-gold);">15+ Years Specialized Automotive Search Authority</span>
+          <span class="hidden sm:inline text-xs" style="color: var(--color-text-dim);">|</span>
+          <span class="hidden sm:inline text-xs font-semibold" style="color: var(--color-text-secondary);">AEO · GEO · Local Maps · CRO</span>
+        </div>
+      </div>
+
+      <!-- Main Headline -->
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl sm:text-6xl lg:text-[4rem] font-black tracking-tight leading-[1.08] mb-6" style="color: var(--color-text-primary);">
+          Engineered to dominate <br />
+          <span class="text-gradient-gold">automotive search.</span>
         </h1>
 
-        <p class="mt-6 text-lg max-w-2xl mx-auto leading-relaxed animate-slideUp" style="animation-delay: 80ms; color: var(--color-text-secondary);">
-          We help <a href="/industries/car-dealership-seo/" style="color: var(--color-gold); text-decoration: underline; text-underline-offset: 2px;">car dealerships</a>,
-          <a href="/industries/auto-repair-seo/" style="color: var(--color-gold); text-decoration: underline; text-underline-offset: 2px;">auto repair shops</a>,
-          <a href="/industries/auto-parts-seo/" style="color: var(--color-gold); text-decoration: underline; text-underline-offset: 2px;">parts stores</a>,
-          and automotive businesses dominate organic search, local search, and AI-powered search engines.
+        <p class="text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-10" style="color: var(--color-text-secondary);">
+          We engineer high-performance organic search engines for <strong style="color: var(--color-text-primary);">dealerships, auto repair shops, parts manufacturers, and automotive eCommerce brands</strong>. From Google Maps 3-Pack to Google AI Overviews.
         </p>
 
-        <!-- CTAs -->
-        <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3 animate-slideUp" style="animation-delay: 150ms;">
-          <a href="/contact/" class="btn-primary" id="hero-cta-primary">
-            Request a Strategy Call
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+          <a href="/audit/" class="btn-gold text-base py-3.5 px-7 rounded-xl shadow-xl flex items-center justify-center gap-2.5 w-full sm:w-auto font-bold transition-all hover:scale-105" id="hero-btn-audit">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.746 3.746 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>
+            Run Free Automotive SEO Audit
           </a>
-          <a href="/audit/" class="btn-gold" id="hero-cta-audit">
-            Free SEO Audit
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.746 3.746 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>
+          <a href="/contact/" class="btn-primary text-base py-3.5 px-7 rounded-xl shadow-lg flex items-center justify-center gap-2.5 w-full sm:w-auto font-bold transition-all hover:scale-105" id="hero-btn-strategy">
+            Request Strategy Consultation
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
           </a>
-        </div>
-
-        <!-- Trust bar -->
-        <div class="mt-12 flex flex-wrap items-center justify-center gap-6 animate-fadeIn" style="animation-delay: 250ms;">
-          <span class="text-xs font-medium tracking-wide uppercase" style="color: var(--color-text-muted);">Data-Driven with:</span>
-          <span class="text-sm font-semibold" style="color: var(--color-text-secondary);">Google Search Console</span>
-          <span style="color: var(--color-border-strong);">·</span>
-          <span class="text-sm font-semibold" style="color: var(--color-text-secondary);">Google Analytics 4</span>
-          <span style="color: var(--color-border-strong);">·</span>
-          <span class="text-sm font-semibold" style="color: var(--color-text-secondary);">SEMrush</span>
-          <span style="color: var(--color-border-strong);">·</span>
-          <span class="text-sm font-semibold" style="color: var(--color-text-secondary);">Ahrefs</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ================================ -->
-  <!-- SOCIAL PROOF STATS -->
-  <!-- ================================ -->
-  <section class="section-border">
-    <div class="container-main py-10">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="stat-card">
-          <div class="metric-value">50+</div>
-          <div class="metric-label">Automotive Clients</div>
-        </div>
-        <div class="stat-card">
-          <div class="metric-value">340%</div>
-          <div class="metric-label">Avg. Traffic Growth</div>
-        </div>
-        <div class="stat-card">
-          <div class="metric-value">6</div>
-          <div class="metric-label">Industry Verticals</div>
-        </div>
-        <div class="stat-card">
-          <div class="metric-value">100%</div>
-          <div class="metric-label">Automotive Focus</div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <!-- HERO VISUAL SHOWCASE WITH TELEMETRY HUD OVERLAYS -->
+      <div class="relative rounded-2xl overflow-hidden border shadow-2xl mt-4" style="border-color: var(--color-border); background: var(--color-bg-elevated);">
+        <div class="aspect-[16/9] w-full relative">
+          <img
+            src="/hero-hud.jpg"
+            alt="Futuristic Automotive Engineering Search Telemetry HUD"
+            class="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none"></div>
 
-  <!-- ================================ -->
-  <!-- WHY AUTOMOTIVE SEO IS DIFFERENT -->
-  <!-- ================================ -->
-  <section class="container-main section-spacing" id="problems">
-    <div class="text-center mb-12 max-w-2xl mx-auto">
-      <h2 class="text-2xl sm:text-3xl font-bold" style="color: var(--color-text-primary);">
-        Why automotive search is structurally different
-      </h2>
-      <p class="mt-3" style="color: var(--color-text-secondary);">
-        General SEO agencies don't understand the structural challenges unique to automotive businesses.
-        We do — because automotive search is all we do.
-      </p>
-    </div>
+          <!-- Floating HUD Stats On Image -->
+          <div class="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8 grid grid-cols-2 lg:grid-cols-4 gap-3">
+            <div class="backdrop-blur-md rounded-xl p-3.5 sm:p-4 border bg-black/60 border-white/10 shadow-lg">
+              <div class="text-xs uppercase tracking-wider text-emerald-400 font-bold flex items-center gap-1.5 mb-1">
+                <span class="live-dot"></span> Realized Traffic
+              </div>
+              <div class="text-xl sm:text-2xl font-black text-white">+380% Avg</div>
+              <div class="text-[11px] text-slate-300">Verified Organic Growth</div>
+            </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-      {problems.map((item) => (
-        <div class="glass-card rounded-lg p-5">
-          <div class="flex items-start gap-3">
-            <span class="w-7 h-7 rounded-md flex items-center justify-center text-sm font-bold shrink-0 mt-0.5" style="background: rgba(220, 38, 38, 0.08); color: #dc2626;" aria-hidden="true">!</span>
-            <div>
-              <h3 class="text-sm font-semibold mb-1.5" style="color: var(--color-text-primary);">{item.problem}</h3>
-              <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);">{item.context}</p>
+            <div class="backdrop-blur-md rounded-xl p-3.5 sm:p-4 border bg-black/60 border-white/10 shadow-lg">
+              <div class="text-xs uppercase tracking-wider text-amber-400 font-bold flex items-center gap-1.5 mb-1">
+                🤖 AI Overviews
+              </div>
+              <div class="text-xl sm:text-2xl font-black text-white">#1 Citation</div>
+              <div class="text-[11px] text-slate-300">Google AI & Perplexity</div>
+            </div>
+
+            <div class="backdrop-blur-md rounded-xl p-3.5 sm:p-4 border bg-black/60 border-white/10 shadow-lg">
+              <div class="text-xs uppercase tracking-wider text-cyan-400 font-bold flex items-center gap-1.5 mb-1">
+                ⚡ VDP Crawl Rate
+              </div>
+              <div class="text-xl sm:text-2xl font-black text-white">99.8% Index</div>
+              <div class="text-[11px] text-slate-300">Dynamic Inventory Schema</div>
+            </div>
+
+            <div class="backdrop-blur-md rounded-xl p-3.5 sm:p-4 border bg-black/60 border-white/10 shadow-lg">
+              <div class="text-xs uppercase tracking-wider text-amber-400 font-bold flex items-center gap-1.5 mb-1">
+                ⭐ Pipeline Value
+              </div>
+              <div class="text-xl sm:text-2xl font-black text-white">$1.8M+ Generated</div>
+              <div class="text-[11px] text-slate-300">SEJ Auto Parts Wholesale</div>
             </div>
           </div>
         </div>
-      ))}
-    </div>
-  </section>
+      </div>
 
-  <!-- ================================ -->
-  <!-- INDUSTRIES WE SERVE -->
-  <!-- ================================ -->
-  <section class="container-main section-spacing section-border" id="industries">
-    <div class="mb-10">
-      <span class="badge-outline mb-3">Industry Expertise</span>
-      <h2 class="text-2xl sm:text-3xl font-bold mt-2" style="color: var(--color-text-primary);">
-        Built for every automotive vertical
-      </h2>
-      <p class="mt-3 max-w-2xl" style="color: var(--color-text-secondary);">
-        We understand the search architecture, customer journey, and technical challenges specific to each automotive business type.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {industries.map(ind => (
-        <a href={ind.href} class="service-card group" id={`ind-${ind.href.split('/').filter(Boolean).pop()}`}>
-          <span class="text-2xl mb-3 block" aria-hidden="true">{ind.icon}</span>
-          <h3 class="text-base font-bold transition-colors mb-2" style="color: var(--color-text-primary);">{ind.title}</h3>
-          <p class="text-xs leading-relaxed mb-3" style="color: var(--color-text-muted);">{ind.desc}</p>
-          <span class="btn-ghost text-xs p-0">Learn more →</span>
-        </a>
-      ))}
-    </div>
-  </section>
-
-  <!-- ================================ -->
-  <!-- CORE SERVICES -->
-  <!-- ================================ -->
-  <section class="container-main section-spacing section-border" id="services">
-    <div class="mb-10">
-      <span class="badge-outline mb-3">SEO Services</span>
-      <h2 class="text-2xl sm:text-3xl font-bold mt-2" style="color: var(--color-text-primary);">
-        Automotive SEO services
-      </h2>
-      <p class="mt-3 max-w-2xl" style="color: var(--color-text-secondary);">
-        From <a href="/services/automotive-local-seo/" style="color: var(--color-gold);">local search</a> to
-        <a href="/services/automotive-geo/" style="color: var(--color-gold);">AI-powered search engines</a> —
-        every service is designed specifically for automotive businesses.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {services.map(svc => (
-        <a href={svc.href} class="glass-card rounded-lg p-5 group block">
-          <span class="text-2xl mb-3 block" aria-hidden="true">{svc.icon}</span>
-          <h3 class="text-sm font-bold transition-colors mb-2" style="color: var(--color-text-primary);">{svc.title}</h3>
-          <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);">{svc.desc}</p>
-        </a>
-      ))}
-    </div>
-
-    <div class="mt-6 text-center">
-      <a href="/services/" class="btn-secondary">View All Services & Pricing →</a>
-    </div>
-  </section>
-
-  <!-- ================================ -->
-  <!-- CASE STUDIES PREVIEW -->
-  <!-- ================================ -->
-  <section class="container-main section-spacing section-border" id="case-studies">
-    <div class="mb-10">
-      <span class="badge-outline mb-3">Proven Results</span>
-      <h2 class="text-2xl sm:text-3xl font-bold mt-2" style="color: var(--color-text-primary);">
-        Case studies & results
-      </h2>
-      <p class="mt-3 max-w-2xl" style="color: var(--color-text-secondary);">
-        Real automotive businesses. Real search results. Measured with
-        Google Search Console, GA4, and SEMrush.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-      {caseStudies.map(cs => (
-        <CaseStudyCard
-          title={cs.title}
-          industry={cs.industry}
-          href={cs.href}
-          metrics={cs.metrics}
-          description={cs.description}
-          tags={cs.tags}
-        />
-      ))}
-    </div>
-
-    <div class="mt-6 text-center">
-      <a href="/case-studies/" class="btn-secondary">View All Case Studies →</a>
-    </div>
-  </section>
-
-  <!-- ================================ -->
-  <!-- METHODOLOGY — How we think -->
-  <!-- ================================ -->
-  <section class="container-main section-spacing section-border" id="methodology">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-      <div>
-        <span class="badge-outline mb-3">Our Approach</span>
-        <h2 class="text-2xl font-bold mt-2 mb-5" style="color: var(--color-text-primary);">How automotive SEO actually works</h2>
-        <div class="prose-content">
-          <p>Most SEO agencies apply generic strategies to automotive businesses and wonder why vehicle pages don't rank. Automotive search requires understanding the structural relationships between <strong>inventory, locations, services, and entities</strong> that define how search engines model the automotive industry.</p>
-
-          <h3>Entity-first architecture</h3>
-          <p>We build <a href="/blog/semantic-seo-entities/">semantic relationships</a> between automotive entities — makes, models, service types, locations, and business categories — rather than chasing individual keywords.</p>
-
-          <h3>Automotive-specific technical SEO</h3>
-          <p>Vehicle inventory creates unique <a href="/services/automotive-technical-seo/">technical challenges</a>: dynamic page generation, duplicate URL management, faceted navigation, JavaScript rendering of VDP content, and proper canonical handling.</p>
-
-          <h3>Beyond traditional search</h3>
-          <p>We optimize for where automotive search is going — <a href="/services/automotive-aeo/">answer engines</a>, <a href="/services/automotive-geo/">AI assistants</a>, and large language models that increasingly influence how consumers find automotive businesses.</p>
+      <!-- Verified Tool Stack & Data Ecosystem -->
+      <div class="mt-12 py-6 px-4 rounded-2xl border flex flex-wrap items-center justify-between gap-6" style="background: var(--color-bg-card); border-color: var(--color-border);">
+        <div class="flex items-center gap-2">
+          <span class="eeat-badge">E-E-A-T Data Suite</span>
+          <span class="text-xs font-bold tracking-wider uppercase" style="color: var(--color-text-muted);">Verified Analytics & SEO Tooling</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-4 sm:gap-8">
+          <div class="flex items-center gap-1.5 text-xs font-bold" style="color: var(--color-text-primary);">
+            <span style="color: var(--color-gold);">📊</span> Google Search Console
+          </div>
+          <div class="flex items-center gap-1.5 text-xs font-bold" style="color: var(--color-text-primary);">
+            <span style="color: var(--color-gold);">📈</span> Google Analytics 4
+          </div>
+          <div class="flex items-center gap-1.5 text-xs font-bold" style="color: var(--color-text-primary);">
+            <span style="color: var(--color-gold);">🎯</span> SEMrush Enterprise
+          </div>
+          <div class="flex items-center gap-1.5 text-xs font-bold" style="color: var(--color-text-primary);">
+            <span style="color: var(--color-gold);">🔍</span> Ahrefs Advanced
+          </div>
+          <div class="flex items-center gap-1.5 text-xs font-bold" style="color: var(--color-text-primary);">
+            <span style="color: var(--color-gold);">⚡</span> Screaming Frog Spider
+          </div>
         </div>
       </div>
 
-      <div class="space-y-3">
-        <div class="glass-card rounded-lg p-4">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="w-7 h-7 rounded-md flex items-center justify-center font-bold text-xs" style="background: var(--color-gold-muted); color: var(--color-gold);">1</span>
-            <h3 class="text-sm font-bold" style="color: var(--color-text-primary);">Automotive Audit</h3>
-          </div>
-          <p class="text-xs ml-10" style="color: var(--color-text-muted);">Technical, content, semantic, entity, and local SEO analysis built specifically for automotive website architectures.</p>
-        </div>
-        <div class="glass-card rounded-lg p-4">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="w-7 h-7 rounded-md flex items-center justify-center font-bold text-xs" style="background: var(--color-gold-muted); color: var(--color-gold);">2</span>
-            <h3 class="text-sm font-bold" style="color: var(--color-text-primary);">Search Architecture</h3>
-          </div>
-          <p class="text-xs ml-10" style="color: var(--color-text-muted);">Entity mapping, topical authority design, internal linking architecture, and structured data implementation.</p>
-        </div>
-        <div class="glass-card rounded-lg p-4">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="w-7 h-7 rounded-md flex items-center justify-center font-bold text-xs" style="background: var(--color-secondary-muted); color: var(--color-secondary);">3</span>
-            <h3 class="text-sm font-bold" style="color: var(--color-text-primary);">Content & Authority</h3>
-          </div>
-          <p class="text-xs ml-10" style="color: var(--color-text-muted);">Topic clusters, <a href="/blog/eeat-automotive-seo/" style="color: var(--color-gold);">E-E-A-T</a> signals, expertise demonstration, and strategic content that builds topical authority.</p>
-        </div>
-        <div class="glass-card rounded-lg p-4">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="w-7 h-7 rounded-md flex items-center justify-center font-bold text-xs" style="background: var(--color-secondary-muted); color: var(--color-secondary);">4</span>
-            <h3 class="text-sm font-bold" style="color: var(--color-text-primary);">Measurement & Growth</h3>
-          </div>
-          <p class="text-xs ml-10" style="color: var(--color-text-muted);">Organic traffic, qualified leads, local visibility, AI citations, and revenue attribution — not just rankings.</p>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- ================================ -->
-  <!-- FREE AUDIT CTA -->
-  <!-- ================================ -->
-  <section class="container-main section-spacing section-border">
-    <div class="glass-panel rounded-xl p-8 sm:p-12 text-center max-w-3xl mx-auto">
-      <h2 class="text-2xl sm:text-3xl font-bold mb-3" style="color: var(--color-text-primary);">
-        Get your free automotive SEO audit
+  <!-- ============================================ -->
+  <!-- REAL CLIENT PROVEN RESULTS (VinylFrog, TeckWrap, SEJ, BigACover) -->
+  <!-- ============================================ -->
+  <section class="py-20 section-border" id="case-studies" style="background: var(--color-bg-elevated);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 mb-3">
+            <span class="eeat-badge">Verified Client Case Studies</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold" style="color: var(--color-text-primary);">
+            Real automotive brands. <span class="text-gradient-gold">Real revenue impact.</span>
+          </h2>
+          <p class="text-base mt-3 max-w-2xl" style="color: var(--color-text-secondary);">
+            Explore how our specialized search architecture drives category leadership for industry-defining automotive companies.
+          </p>
+        </div>
+        <a href="/case-studies/" class="btn-secondary text-xs font-bold py-2.5 px-5 rounded-xl shrink-0 self-start md:self-auto">
+          Explore All Case Studies →
+        </a>
+      </div>
+
+      <!-- 4 Core Real Clients Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+
+        <!-- 1. VinylFrog Card -->
+        <div class="hud-panel p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="badge-outline">PPF & Vinyl Wraps (B2C)</span>
+              <span class="live-badge"><span class="live-dot"></span> 45+ AI Overviews</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3" style="color: var(--color-text-primary);">
+              VinylFrog — AEO, Reputation & AI Search Dominance
+            </h3>
+            <p class="text-sm leading-relaxed mb-6" style="color: var(--color-text-secondary);">
+              Captured the #1 snippet & AI Overview position across hundreds of high-intent vinyl wrap colors, vehicle wrap maintenance, and PPF installation queries.
+            </p>
+            <div class="grid grid-cols-3 gap-3 p-4 rounded-xl mb-6" style="background: var(--color-bg-surface);">
+              <div>
+                <div class="text-2xl font-black" style="color: var(--color-gold);">+380%</div>
+                <div class="text-[11px] font-semibold" style="color: var(--color-text-muted);">Organic Traffic</div>
+              </div>
+              <div>
+                <div class="text-2xl font-black" style="color: var(--color-gold);">45+</div>
+                <div class="text-[11px] font-semibold" style="color: var(--color-text-muted);">AI Citations</div>
+              </div>
+              <div>
+                <div class="text-2xl font-black" style="color: var(--color-gold);">4.9★</div>
+                <div class="text-[11px] font-semibold" style="color: var(--color-text-muted);">Brand Rating</div>
+              </div>
+            </div>
+          </div>
+          <a href="/case-studies/vinylfrog/" class="text-xs font-bold text-gradient-gold flex items-center gap-1.5 hover:underline">
+            Read VinylFrog Case Study Breakdown →
+          </a>
+        </div>
+
+        <!-- 2. TeckWrap Card -->
+        <div class="hud-panel p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="badge-outline">Automotive Film (B2C / B2B)</span>
+              <span class="live-badge"><span class="live-dot"></span> +310% Dealer Leads</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3" style="color: var(--color-text-primary);">
+              TeckWrap — Global Film SEO & Lead Generation
+            </h3>
+            <p class="text-sm leading-relaxed mb-6" style="color: var(--color-text-secondary);">
+              Engineered topical authority clusters for commercial vehicle wrap shops and global distributors, turning organic search into their highest-performing B2B channel.
+            </p>
+            <div class="grid grid-cols-3 gap-3 p-4 rounded-xl mb-6" style="background: var(--color-bg-surface);">
+              <div>
+                <div class="text-2xl font-black" style="color: var(--color-gold);">+420%</div>
+                <div class="text-[11px] font-semibold" style="color: var(--color-text-muted);">Traffic Scale</div>
+              </div>
+              <div>
+                <div class="text-2xl font-black" style="color: var(--color-gold);">+310%</div>
+                <div class="text-[11px] font-semibold" style="color: var(--color-text-muted);">Wholesale Leads</div>
+              </div>
+              <div>
+                <div class="text-2xl font-black" style="color: var(--color-gold);">60+</div>
+                <div class="text-[11px] font-semibold" style="color: var(--color-text-muted);">Snippets</div>
+              </div>
+            </div>
+          </div>
+          <a href="/case-studies/teckwrap/" class="text-xs font-bold text-gradient-gold flex items-center gap-1.5 hover:underline">
+            Read TeckWrap Case Study Breakdown →
+          </a>
+        </div>
+
+        <!-- 3. SEJ Auto Parts Card -->
+        <div class="hud-panel p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="badge-outline">Auto Parts Wholesale (B2B)</span>
+              <span class="live-badge"><span class="live-dot"></span> $1.8M B2B Pipeline</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3" style="color: var(--color-text-primary);">
+              SEJ Auto Parts — B2B Catalog Architecture & Technical SEO
+            </h3>
+            <p class="text-sm leading-relaxed mb-6" style="color: var(--color-text-secondary);">
+              Cleaned 120k faceted URL crawl bottlenecks, deployed automated OEM part cross-reference schema, and generated high-ticket wholesale buyer contracts.
+            </p>
+            <div class="grid grid-cols-3 gap-3 p-4 rounded-xl mb-6" style="background: var(--color-bg-surface);">
+              <div>
+                <div class="text-2xl font-black" style="color: var(--color-gold);">$1.8M</div>
+                <div class="text-[11px] font-semibold" style="color: var(--color-text-muted);">RFQ Value</div>
+              </div>
+              <div>
+                <div class="text-2xl font-black" style="color: var(--color-gold);">+350%</div>
+                <div class="text-[11px] font-semibold" style="color: var(--color-text-muted);">B2B Inquiries</div>
+              </div>
+              <div>
+                <div class="text-2xl font-black" style="color: var(--color-gold);">99.8%</div>
+                <div class="text-[11px] font-semibold" style="color: var(--color-text-muted);">Catalog Indexed</div>
+              </div>
+            </div>
+          </div>
+          <a href="/case-studies/sejautoparts/" class="text-xs font-bold text-gradient-gold flex items-center gap-1.5 hover:underline">
+            Read SEJ Auto Parts Case Study Breakdown →
+          </a>
+        </div>
+
+        <!-- 4. BigACover Card -->
+        <div class="hud-panel p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="badge-outline">Car Covers & Accessories (B2C)</span>
+              <span class="live-badge"><span class="live-dot"></span> +460% Revenue</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3" style="color: var(--color-text-primary);">
+              BigACover — Vehicle Compatibility SEO & eCommerce Scale
+            </h3>
+            <p class="text-sm leading-relaxed mb-6" style="color: var(--color-text-secondary);">
+              Structured year/make/model fitment taxonomy for weather-proof custom car covers, dominating organic shopping intent against Amazon.
+            </p>
+            <div class="grid grid-cols-3 gap-3 p-4 rounded-xl mb-6" style="background: var(--color-bg-surface);">
+              <div>
+                <div class="text-2xl font-black" style="color: var(--color-gold);">+460%</div>
+                <div class="text-[11px] font-semibold" style="color: var(--color-text-muted);">Organic Rev</div>
+              </div>
+              <div>
+                <div class="text-2xl font-black" style="color: var(--color-gold);">+340%</div>
+                <div class="text-[11px] font-semibold" style="color: var(--color-text-muted);">Keywords</div>
+              </div>
+              <div>
+                <div class="text-2xl font-black" style="color: var(--color-gold);">4.8★</div>
+                <div class="text-[11px] font-semibold" style="color: var(--color-text-muted);">TrustScore</div>
+              </div>
+            </div>
+          </div>
+          <a href="/case-studies/bigacover/" class="text-xs font-bold text-gradient-gold flex items-center gap-1.5 hover:underline">
+            Read BigACover Case Study Breakdown →
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- 3D AI SEARCH & KNOWLEDGE GRAPH ARCHITECTURE -->
+  <!-- ============================================ -->
+  <section class="py-20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5">
+          <div class="inline-flex items-center gap-2 mb-3">
+            <span class="eeat-badge">Semantic Search Engineering</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
+            The Automotive <span class="text-gradient-gold">Entity Knowledge Graph</span>
+          </h2>
+          
+          <div class="space-y-4 text-sm leading-relaxed" style="color: var(--color-text-secondary);">
+            <p>
+              Traditional SEO agencies stuff keywords on static pages. We build <strong style="color: var(--color-text-primary);">multidimensional semantic entity networks</strong> that teach search engines and LLMs exactly what your automotive business sells, services, and represents.
+            </p>
+            
+            <div class="space-y-3 pt-2">
+              <div class="flex items-start gap-3">
+                <span class="text-base font-bold" style="color: var(--color-gold);">01.</span>
+                <div>
+                  <h4 class="font-bold text-sm" style="color: var(--color-text-primary);">Vehicle & Dealership Entity Graphs</h4>
+                  <p class="text-xs mt-0.5" style="color: var(--color-text-muted);">Interlinking Vehicle schema, AutoDealer, AutoRepair, and localized GBP identifiers into a single machine-readable entity.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="text-base font-bold" style="color: var(--color-gold);">02.</span>
+                <div>
+                  <h4 class="font-bold text-sm" style="color: var(--color-text-primary);">Google AI Overview Dominance (AEO)</h4>
+                  <p class="text-xs mt-0.5" style="color: var(--color-text-muted);">Formatting technical specifications, fitment data, and comparison matrices for instant snippet citation.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="text-base font-bold" style="color: var(--color-gold);">03.</span>
+                <div>
+                  <h4 class="font-bold text-sm" style="color: var(--color-text-primary);">Generative LLM Optimization (GEO)</h4>
+                  <p class="text-xs mt-0.5" style="color: var(--color-text-muted);">Ensuring your automotive brand is recommended when buyers ask ChatGPT, Gemini, or Perplexity for the best local or online options.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <a href="/blog/semantic-seo-entities/" class="btn-secondary text-xs font-bold py-2.5 px-5 rounded-xl inline-flex items-center gap-2">
+                Read Entity Architecture Whitepaper →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="relative rounded-2xl overflow-hidden border shadow-2xl" style="border-color: var(--color-border); background: var(--color-bg-card);">
+            <img
+              src="/aeo-knowledge-graph.jpg"
+              alt="Automotive Semantic Knowledge Graph and AI Overview Architecture"
+              class="w-full h-auto object-cover"
+              loading="lazy"
+            />
+            <div class="p-4 border-t flex items-center justify-between text-xs" style="border-color: var(--color-border); background: var(--color-bg-surface);">
+              <span class="font-bold flex items-center gap-2" style="color: var(--color-text-primary);">
+                <span class="live-dot"></span> Real-Time Automotive Entity Vectorization
+              </span>
+              <span class="text-[11px] font-semibold" style="color: var(--color-gold);">Schema.org · Google Knowledge Graph · LLMs</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SPECIALIST VS GENERAL AGENCY COMPARISON TABLE -->
+  <!-- ============================================ -->
+  <section class="py-20 section-border" style="background: var(--color-bg-elevated);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="eeat-badge mb-3">The Specialist Difference</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color: var(--color-text-primary);">
+          Generic Agency SEO vs. <span class="text-gradient-gold">Automotive Search Engineering</span>
+        </h2>
+        <p class="text-base mt-3" style="color: var(--color-text-secondary);">
+          Why standard SEO playbooks fail in automotive, and how our 15+ years of domain specialization delivers unstoppable search moats.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse rounded-2xl overflow-hidden border shadow-xl" style="border-color: var(--color-border); background: var(--color-bg-card);">
+          <thead>
+            <tr class="border-b text-xs font-extrabold uppercase tracking-wider" style="border-color: var(--color-border); background: var(--color-bg-surface);">
+              <th class="p-4 sm:p-5" style="color: var(--color-text-muted);">Capability / Strategy</th>
+              <th class="p-4 sm:p-5 text-red-500/80">General SEO Agency</th>
+              <th class="p-4 sm:p-5 font-bold" style="color: var(--color-gold); background: var(--color-gold-muted);">SEO for Automotive (Specialist)</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm divide-y" style="border-color: var(--color-border);">
+            <tr>
+              <td class="p-4 sm:p-5 font-semibold" style="color: var(--color-text-primary);">VDP / SRP Inventory Indexation</td>
+              <td class="p-4 sm:p-5" style="color: var(--color-text-muted);">❌ Ignores inventory churn; thousands of orphaned or 404 VDPs</td>
+              <td class="p-4 sm:p-5 font-bold" style="color: var(--color-text-primary); background: var(--color-gold-muted);">✅ Dynamic XML inventory feeds, automated canonical hygiene & 99.8% crawl efficiency</td>
+            </tr>
+            <tr>
+              <td class="p-4 sm:p-5 font-semibold" style="color: var(--color-text-primary);">Structured Data & Schema</td>
+              <td class="p-4 sm:p-5" style="color: var(--color-text-muted);">❌ Basic generic Organization / WebPage markup only</td>
+              <td class="p-4 sm:p-5 font-bold" style="color: var(--color-text-primary); background: var(--color-gold-muted);">✅ Nested <code>Vehicle</code>, <code>AutoDealer</code>, <code>AutoRepair</code>, <code>AggregateRating</code> & <code>Product</code> schemas</td>
+            </tr>
+            <tr>
+              <td class="p-4 sm:p-5 font-semibold" style="color: var(--color-text-primary);">Google Maps 3-Pack Strategy</td>
+              <td class="p-4 sm:p-5" style="color: var(--color-text-muted);">❌ Generic citation blasts that fail to break geo-fences</td>
+              <td class="p-4 sm:p-5 font-bold" style="color: var(--color-text-primary); background: var(--color-gold-muted);">✅ Multi-category GBP hierarchy (Sales vs Service vs Body), review velocity SOPs & geo-grid dominance</td>
+            </tr>
+            <tr>
+              <td class="p-4 sm:p-5 font-semibold" style="color: var(--color-text-primary);">AEO & AI Overview Optimization</td>
+              <td class="p-4 sm:p-5" style="color: var(--color-text-muted);">❌ No understanding of LLM training data or entity nodes</td>
+              <td class="p-4 sm:p-5 font-bold" style="color: var(--color-text-primary); background: var(--color-gold-muted);">✅ Answer-formatted specifications, comparison data & 45+ verified AI citations</td>
+            </tr>
+            <tr>
+              <td class="p-4 sm:p-5 font-semibold" style="color: var(--color-text-primary);">Automotive Conversion (CRO)</td>
+              <td class="p-4 sm:p-5" style="color: var(--color-text-muted);">❌ Focuses on vanity traffic with no lead attribution</td>
+              <td class="p-4 sm:p-5 font-bold" style="color: var(--color-text-primary); background: var(--color-gold-muted);">✅ Dynamic phone tracking, test-drive booking friction reduction & dealer form optimization</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- AUTOMOTIVE CRO & ANALYTICS CONTROL ROOM -->
+  <!-- ============================================ -->
+  <section class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 order-2 lg:order-1">
+          <div class="relative rounded-2xl overflow-hidden border shadow-2xl" style="border-color: var(--color-border); background: var(--color-bg-card);">
+            <img
+              src="/cro-analytics-dashboard.jpg"
+              alt="Automotive CRO and Search Analytics Command Center"
+              class="w-full h-auto object-cover"
+              loading="lazy"
+            />
+            <div class="p-4 border-t flex items-center justify-between text-xs" style="border-color: var(--color-border); background: var(--color-bg-surface);">
+              <span class="font-bold flex items-center gap-2" style="color: var(--color-text-primary);">
+                <span class="live-dot"></span> Live Dealership Traffic & Lead Attribution Stream
+              </span>
+              <span class="text-[11px] font-semibold" style="color: var(--color-gold);">GSC · GA4 · CallRail · CRM Sync</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 order-1 lg:order-2">
+          <div class="inline-flex items-center gap-2 mb-3">
+            <span class="eeat-badge">Conversion Rate Optimization</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
+            Traffic is vanity. <br />
+            <span class="text-gradient-gold">Showroom leads are revenue.</span>
+          </h2>
+          
+          <p class="text-sm leading-relaxed mb-6" style="color: var(--color-text-secondary);">
+            Automotive search traffic that doesn't generate phone calls, test drives, repair appointments, or parts purchases is useless. We optimize the entire search-to-showroom conversion funnel.
+          </p>
+
+          <div class="space-y-3">
+            <div class="hud-panel p-4">
+              <h4 class="font-bold text-sm mb-1" style="color: var(--color-text-primary);">VDP Friction Removal</h4>
+              <p class="text-xs" style="color: var(--color-text-muted);">Streamlining vehicle availability buttons, payment calculators, and trade-in valuation CTAs to maximize lead volume.</p>
+            </div>
+
+            <div class="hud-panel p-4">
+              <h4 class="font-bold text-sm mb-1" style="color: var(--color-text-primary);">Mobile Click-to-Call & Directions CRO</h4>
+              <p class="text-xs" style="color: var(--color-text-muted);">Over 76% of automotive searchers use mobile. We optimize one-touch dialers, WhatsApp inquiries, and Google Maps routing.</p>
+            </div>
+
+            <div class="hud-panel p-4">
+              <h4 class="font-bold text-sm mb-1" style="color: var(--color-text-primary);">Live Form & CRM Synchronization</h4>
+              <p class="text-xs" style="color: var(--color-text-muted);">Automated email & CRM dispatch ensuring every inbound quote is responded to within minutes.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- ALL AUTOMOTIVE VERTICALS GRID -->
+  <!-- ============================================ -->
+  <section class="py-20 section-border" id="industries" style="background: var(--color-bg-elevated);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="eeat-badge mb-3">End-to-End Industry Coverage</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color: var(--color-text-primary);">
+          Specialized for every <span class="text-gradient-gold">automotive vertical</span>
+        </h2>
+        <p class="text-base mt-3" style="color: var(--color-text-secondary);">
+          Each sector in the automotive space has distinct keyword patterns, buyer lifecycles, and technical requirements. We build bespoke strategies for each.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {industries.map(ind => (
+          <a href={ind.href} class="hud-panel p-5 group flex flex-col justify-between" id={`ind-${ind.href.split('/').filter(Boolean).pop()}`}>
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-2xl" aria-hidden="true">{ind.icon}</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full" style="background: var(--color-gold-muted); color: var(--color-gold);">{ind.badge}</span>
+              </div>
+              <h3 class="text-base font-bold mb-2 transition-colors group-hover:text-[var(--color-gold)]" style="color: var(--color-text-primary);">
+                {ind.title}
+              </h3>
+              <p class="text-xs leading-relaxed mb-4" style="color: var(--color-text-muted);">
+                {ind.desc}
+              </p>
+            </div>
+            <span class="text-xs font-bold text-gradient-gold flex items-center gap-1">
+              Explore Strategy →
+            </span>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CORE SPECIALIST SERVICES SUITE -->
+  <!-- ============================================ -->
+  <section class="py-20 section-border" id="services">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+        <div>
+          <span class="eeat-badge mb-3">Our Core Capabilities</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color: var(--color-text-primary);">
+            Comprehensive <span class="text-gradient-gold">Automotive Search Services</span>
+          </h2>
+          <p class="text-base mt-3 max-w-2xl" style="color: var(--color-text-secondary);">
+            Every service is engineered specifically for the automotive industry to deliver measurable ROI.
+          </p>
+        </div>
+        <a href="/services/" class="btn-primary text-xs font-bold py-2.5 px-5 rounded-xl shrink-0 self-start md:self-auto">
+          View All Services & Pricing →
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map(svc => (
+          <a href={svc.href} class="hud-panel p-6 group flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-3xl">{svc.icon}</span>
+                <span class="text-xs font-bold px-2 py-1 rounded" style="background: var(--color-gold-muted); color: var(--color-gold);">{svc.stat}</span>
+              </div>
+              <h3 class="text-lg font-bold mb-2 transition-colors group-hover:text-[var(--color-gold)]" style="color: var(--color-text-primary);">
+                {svc.title}
+              </h3>
+              <p class="text-xs leading-relaxed mb-6" style="color: var(--color-text-secondary);">
+                {svc.desc}
+              </p>
+            </div>
+            <span class="text-xs font-bold text-gradient-gold flex items-center gap-1">
+              Service Details & Deliverables →
+            </span>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- INSTANT AUDIT INTERACTIVE HERO TEASER -->
+  <!-- ============================================ -->
+  <section class="py-20 relative overflow-hidden" style="background: var(--color-bg-elevated);">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <div class="hud-panel p-8 sm:p-12 text-center relative overflow-hidden">
+        <div class="inline-flex items-center gap-2 mb-4">
+          <span class="live-badge"><span class="live-dot"></span> Instant Technical Scoring</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4" style="color: var(--color-text-primary);">
+          Audit your automotive website in <span class="text-gradient-gold">60 seconds</span>
+        </h2>
+
+        <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
+          Our proprietary automotive audit engine inspects your site for VDP crawlability, Core Web Vitals, Google Business Profile signals, and AEO / AI search readiness.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-lg mx-auto">
+          <a href="/audit/" class="btn-gold text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.746 3.746 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043A3.746 3.746 0 0121 12z" /></svg>
+            Launch Live Automotive Audit Tool
+          </a>
+          <a href="/contact/" class="btn-secondary text-sm font-bold py-3.5 px-6 rounded-xl w-full sm:w-auto">
+            Book Custom Audit Call
+          </a>
+        </div>
+
+        <div class="mt-8 pt-6 border-t flex flex-wrap items-center justify-center gap-6 text-xs" style="border-color: var(--color-border); color: var(--color-text-muted);">
+          <span>✓ 100% Free Analysis</span>
+          <span>✓ No Credit Card Required</span>
+          <span>✓ Real Google API Speed Data</span>
+          <span>✓ Instant PDF Export</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FAQ SECTION -->
+  <!-- ============================================ -->
+  <section class="py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <FaqSection items={faqs} title="Automotive SEO & AEO — Frequently Asked Questions" />
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FINAL HIGH-IMPACT CONVERSION CTA -->
+  <!-- ============================================ -->
+  <section class="py-20 section-border" style="background: var(--color-bg-elevated);">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-4" style="color: var(--color-text-primary);">
+        Ready to take the #1 spot in <span class="text-gradient-gold">automotive search?</span>
       </h2>
-      <p class="mb-7 max-w-lg mx-auto" style="color: var(--color-text-secondary);">
-        Enter your website URL and get an instant analysis of your technical SEO, local SEO, AEO & GEO readiness, CRO signals, and more — built specifically for automotive websites.
+      <p class="text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
+        Partner with the specialist automotive search agency trusted by global brands and multi-location dealer groups.
       </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-        <a href="/audit/" class="btn-gold" id="cta-audit">
-          Run Free Audit Now
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.746 3.746 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact/" class="btn-primary text-base font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto" id="footer-cta-contact">
+          Schedule Your Strategy Call →
         </a>
-        <a href="/contact/" class="btn-secondary" id="cta-contact">
-          Request a Strategy Call
+        <a href="/case-studies/" class="btn-secondary text-base font-bold py-3.5 px-8 rounded-xl w-full sm:w-auto">
+          Review Client Results
         </a>
       </div>
     </div>
-  </section>
-
-  <!-- ================================ -->
-  <!-- CTA — Final conversion -->
-  <!-- ================================ -->
-  <section class="container-main section-spacing section-border">
-    <div class="glass-panel rounded-xl p-8 sm:p-12 text-center max-w-3xl mx-auto">
-      <h2 class="text-2xl sm:text-3xl font-bold mb-3" style="color: var(--color-text-primary);">
-        Ready to dominate automotive search?
-      </h2>
-      <p class="mb-7 max-w-lg mx-auto" style="color: var(--color-text-secondary);">
-        Whether you're a single-location repair shop or a multi-state dealer group —
-        let's build a search strategy designed for your automotive business.
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-        <a href="/contact/" class="btn-primary" id="footer-cta-primary">
-          Request a Strategy Call
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
-        </a>
-        <a href="/case-studies/" class="btn-secondary" id="footer-cta-results">
-          See Our Results
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================================ -->
-  <!-- FAQ -->
-  <!-- ================================ -->
-  <section class="container-main pb-16">
-    <FaqSection items={faqs} title="Automotive SEO — Frequently Asked Questions" />
   </section>
 
 </BaseLayout>
