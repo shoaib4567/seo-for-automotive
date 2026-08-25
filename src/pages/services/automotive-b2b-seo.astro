@@ -1,34 +1,120 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqSection from '../../components/FaqSection.astro';
 
-const title = "B2B SEO for Automotive — Manufacturers, Suppliers & Distributors";
-const description = "Specialist B2B SEO for automotive manufacturers, parts suppliers, and distributors. Commercial keyword targeting, technical resources, and wholesale lead generation from organic search.";
+const title = "B2B Automotive SEO — Manufacturers, Suppliers & Distributors | SEO for Automotive";
+const description = "Specialist B2B SEO for automotive OEM manufacturers, parts distributors, wholesale suppliers, and commercial fleet companies. Generate high-ticket RFQs and distributor contracts.";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services/' },
   { label: 'B2B SEO', href: '/services/automotive-b2b-seo/' },
 ];
+
+const pillars = [
+  { title: 'Commercial Procurement & RFQ Intent Capture', desc: 'Targeting procurement managers, repair franchises, and fleet buyers searching for wholesale volume pricing, OEM part numbers, and distributor agreements.' },
+  { title: 'Technical Spec Sheet & CAD File Indexing', desc: 'Making technical product schematics, CAD drawings, material safety data sheets (MSDS), and compliance certifications discoverable to engineers.' },
+  { title: 'Account-Based & Industry Keyword Strategy', desc: 'Ranking for high-ticket commercial keywords (e.g. "wholesale remanufactured alternators", "OEM brake pad supplier North America").' },
+  { title: 'Wholesale Lead Conversion Architecture', desc: 'Streamlined credit application portals, bulk part number CSV upload tools, and gated wholesale pricing funnels that convert traffic into revenue.' },
+];
+
+const faqs = [
+  {
+    question: 'How is B2B automotive SEO different from retail consumer SEO?',
+    answer: 'B2B automotive buyers search by exact part numbers, bulk case quantities, material specifications (e.g. ceramic vs semi-metallic formulation), and ISO/TS certifications. The sales cycle is longer, deal sizes range from $10k to $500k+, and conversion funnels require wholesale RFQ forms rather than simple consumer checkouts.'
+  }
+];
 ---
 
 <BaseLayout title={title} description={description} canonicalPath="/services/automotive-b2b-seo/" breadcrumbs={breadcrumbs}>
-  <div class="max-w-3xl">
-    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
-      B2B SEO for <span class="text-gradient-gold">Automotive</span>
-    </h1>
-    <div class="prose-content">
-      <p class="text-lg" style="color: var(--color-text-secondary);">B2B automotive SEO targets the people who make purchasing decisions for businesses — fleet managers, repair shop owners, dealer parts departments, and wholesale distributors. The search behavior, keyword intent, and conversion paths are fundamentally different from B2C.</p>
-
-      <h2>What we do</h2>
-      <ul>
-        <li><strong>Commercial intent targeting</strong> — "wholesale [part] supplier," "bulk [product] pricing," "[product] distributor" keywords</li>
-        <li><strong>Technical resource creation</strong> — specifications, compatibility databases, torque specs, and technical bulletins that attract B2B researchers</li>
-        <li><strong>OEM cross-reference content</strong> — part number lookup pages targeting B2B research queries</li>
-        <li><strong>B2B lead generation forms</strong> — wholesale inquiry forms, quote request CTAs, and account application funnels</li>
-        <li><strong>Industry authority content</strong> — fleet maintenance guides, inventory management resources, and buying guides for business buyers</li>
-        <li><strong>Organization schema</strong> — B2B-focused structured data for manufacturer and supplier entities</li>
-      </ul>
-
-      <p>See our <a href="/case-studies/sejautoparts/">SEJ Auto Parts case study</a> — 350% more B2B leads and $1.8M pipeline value through B2B automotive SEO.</p>
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Hero Header -->
+    <div class="mb-14">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="badge-outline">B2B Search Architecture</span>
+        <span class="eeat-badge">$1.8M Pipeline Generated</span>
+        <span class="live-badge"><span class="live-dot"></span> Wholesale & Distributor Focus</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
+        B2B Automotive SEO: <span class="text-gradient-gold">Wholesale & Distributor Pipeline Scale</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl leading-relaxed max-w-3xl" style="color: var(--color-text-secondary);">
+        We engineer high-ticket organic search pipelines for automotive manufacturers, tier-1 suppliers, remanufacturers, and wholesale parts distributors. Turn search engines into your #1 source of verified dealer contracts and RFQs.
+      </p>
     </div>
+
+    <!-- Visual Banner -->
+    <div class="relative rounded-2xl overflow-hidden border shadow-2xl mb-16" style="border-color: var(--color-border); background: var(--color-bg-card);">
+      <img
+        src="/b2b-autoparts-tech.jpg"
+        alt="B2B Automotive Logistics & Automated Warehouse Telemetry"
+        class="w-full h-auto object-cover"
+        loading="eager"
+      />
+      <div class="p-4 border-t flex flex-wrap items-center justify-between gap-3 text-xs" style="border-color: var(--color-border); background: var(--color-bg-surface);">
+        <span class="font-bold flex items-center gap-2" style="color: var(--color-text-primary);">
+          <span class="live-dot"></span> Proven B2B Pipeline: SEJ Auto Parts ($1.8M Attributed RFQ Pipeline, +350% Inquiries)
+        </span>
+        <a href="/case-studies/sejautoparts/" class="text-[11px] font-bold text-gradient-gold hover:underline">Read B2B Case Study →</a>
+      </div>
+    </div>
+
+    <!-- Metrics -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">$1.8M+</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Attributed Pipeline</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">+350%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Wholesale Inquiries</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">99.8%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Catalog Indexed</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">4x</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Deal Size Multiplier</div>
+      </div>
+    </div>
+
+    <!-- 4 Pillars -->
+    <div class="mb-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {pillars.map(p => (
+          <div class="hud-panel p-6">
+            <h3 class="text-lg font-bold mb-2" style="color: var(--color-text-primary);">{p.title}</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mb-20">
+      <FaqSection items={faqs} title="B2B Automotive SEO — Frequently Asked Questions" />
+    </div>
+
+    <!-- Consultation CTA -->
+    <div class="hud-panel p-8 sm:p-12 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color: var(--color-text-primary);">
+        Scale your B2B automotive wholesale contracts
+      </h2>
+      <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
+        Schedule a strategic consultation to discover untapped commercial search volume in your automotive product category.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact/" class="btn-primary text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto">
+          Schedule B2B Strategy Call →
+        </a>
+        <a href="/audit/" class="btn-gold text-sm font-bold py-3.5 px-8 rounded-xl w-full sm:w-auto">
+          Run Free Catalog Audit
+        </a>
+      </div>
+    </div>
+
   </div>
 </BaseLayout>

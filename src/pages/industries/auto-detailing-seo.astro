@@ -1,54 +1,138 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FaqSection from '../../components/FaqSection.astro';
-import ServiceGrid from '../../components/ServiceGrid.astro';
+import AuthorCard from '../../components/AuthorCard.astro';
 
-const title = "SEO for Auto Detailing, PPF & Ceramic Coating Shops [2026]";
-const description = "Specialist SEO for auto detailing, paint protection film (PPF), and ceramic coating businesses. Visual content SEO, local search, booking conversion, and luxury automotive targeting.";
+const detailingServices = [
+  { title: 'High-Ticket Ceramic Coating & PPF Hubs', desc: 'Targeting luxury vehicle owners searching for multi-year ceramic coating packages, paint correction, and clear bra PPF installation.' },
+  { title: 'Local Google Maps 3-Pack & Luxury Radius', desc: 'Dominating affluent zip codes where vehicle owners invest $1,500 to $5,000+ in vehicle protection services.' },
+  { title: 'Visual Gallery & Before/After Schema SEO', desc: 'Deploying high-resolution image schema and video walkarounds that rank in Google Image and Video search tabs.' },
+  { title: 'Online Booking & Package Selection CRO', desc: 'Streamlined package comparison matrices with instant deposit booking flows that maximize customer acquisition.' },
+];
+
+const title = "Auto Detailing & Ceramic Coating SEO — Luxury Vehicle Protection Search | SEO for Automotive";
+const description = "Specialist SEO for auto detailing studios, ceramic coating installers, and PPF shops. Dominate Google Maps 3-Pack and capture high-ticket luxury vehicle owners.";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
-  { label: 'Industries', href: '/industries/car-dealership-seo/' },
+  { label: 'Industries', href: '/industries/' },
   { label: 'Auto Detailing SEO', href: '/industries/auto-detailing-seo/' },
 ];
 
-const relevantServices = [
-  { title: 'Local SEO', href: '/services/automotive-local-seo/', desc: 'GBP optimization, Maps ranking, and "detailing near me" targeting.', icon: '📍' },
-  { title: 'Content SEO', href: '/services/automotive-content-seo/', desc: 'Before/after galleries, service descriptions, and PPF/ceramic guides.', icon: '📝' },
-  { title: 'AEO', href: '/services/automotive-aeo/', desc: 'Featured snippets for "PPF vs ceramic coating" comparison queries.', icon: '💬' },
-  { title: 'GEO / AI Search', href: '/services/automotive-geo/', desc: 'AI assistant citations for detailing and protection questions.', icon: '🤖' },
-  { title: 'Reputation Management', href: '/automotive-reputation-management-services/', desc: 'Review management and visual social proof systems.', icon: '⭐' },
-];
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Auto Detailing SEO Services",
+  "description": description,
+  "provider": { "@type": "Organization", "name": "SEO for Automotive", "url": "https://seoforautomotive.com" },
+  "serviceType": "Search Engine Optimization for Auto Detailing & Ceramic Shops",
+  "areaServed": "United States",
+};
 
 const faqs = [
-  { question: 'How do detailing shops rank in Google Maps?', answer: '<a href="/services/automotive-local-seo/">Google Business Profile optimization</a>, review velocity, service-specific categories, and consistent posting drive Maps 3-Pack visibility for detailing businesses.' },
-  { question: 'Is SEO important for PPF and ceramic coating businesses?', answer: 'Absolutely. PPF and ceramic coating services are high-ticket ($1,000-$8,000+). Customers research extensively before purchasing. SEO captures this research traffic and converts informed buyers. See our <a href="/case-studies/vinylfrog/">VinylFrog case study</a>.' },
+  { question: 'How do you target high-ticket ceramic coating and PPF customers rather than $50 basic washes?', answer: 'We build content hubs and Schema.org markup centered around luxury vehicle models (Porsche, Tesla, BMW), warranty-backed ceramic coatings (Gtechniq, Ceramic Pro, XPEL), multi-stage paint correction, and self-healing PPF.' },
 ];
 ---
 
-<BaseLayout title={title} description={description} canonicalPath="/industries/auto-detailing-seo/" breadcrumbs={breadcrumbs}>
-  <div class="max-w-3xl">
-    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
-      SEO for <span class="text-gradient-gold">Auto Detailing & PPF</span>
-    </h1>
+<BaseLayout title={title} description={description} canonicalPath="/industries/auto-detailing-seo/" breadcrumbs={breadcrumbs} schemaData={schemaData}>
+  <div class="max-w-5xl mx-auto">
 
-    <div class="prose-content">
-      <p class="text-lg" style="color: var(--color-text-secondary);">Auto detailing, PPF installation, and ceramic coating businesses compete on visual results and trust. Your online search presence needs to showcase your work quality while capturing high-intent local searches.</p>
-
-      <h2>Auto detailing SEO challenges</h2>
-      <ul>
-        <li><strong>Visual content is your differentiator</strong> — before/after photos are your primary conversion tool, but they need proper image SEO optimization</li>
-        <li><strong>High-ticket service targeting</strong> — PPF and ceramic coating are $1,000-$8,000+ services requiring trust-building content</li>
-        <li><strong>Service differentiation</strong> — detailing, PPF, ceramic coating, vinyl wrap, and paint correction all target different search intents</li>
-        <li><strong>Luxury vehicle market</strong> — targeting exotic and luxury car owners requires different content and keyword strategies</li>
-        <li><strong>Booking conversion</strong> — mobile-first booking flows and quote request forms are essential for conversion</li>
-      </ul>
-
-      <h2>Our approach</h2>
-      <p>We build detailing business SEO around <strong>visual authority</strong> (optimized galleries, video content SEO, Google Business photos), <strong>service-specific content</strong> (dedicated pages for each service type with pricing, process, and material information), and <strong>local dominance</strong> (Maps 3-Pack, city-specific pages, review management).</p>
-      <p>For PPF and ceramic coating businesses, we also implement <a href="/services/automotive-aeo/">AEO strategies</a> targeting comparison queries like "PPF vs ceramic coating" and "best PPF brand" — see our <a href="/case-studies/vinylfrog/">VinylFrog case study</a> for how we captured 45+ AI Overview citations.</p>
+    <!-- Hero Header -->
+    <div class="mb-14">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="badge-outline">Detailing, PPF & Ceramic</span>
+        <span class="eeat-badge">Luxury Vehicle Focus</span>
+        <span class="live-badge"><span class="live-dot"></span> $1,500+ Ticket Size</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
+        SEO for <span class="text-gradient-gold">Auto Detailing & Ceramic Coating Shops</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl leading-relaxed" style="color: var(--color-text-secondary);">
+        High-end detailing, paint correction, ceramic coatings, and PPF require attracting discerning luxury vehicle owners. We engineer Local SEO and visual search engines that fill your bays with high-margin protection packages.
+      </p>
     </div>
 
-    <ServiceGrid services={relevantServices} heading="Our services for detailing & PPF shops" subheading="SEO, AEO, and reputation management for auto detailing and protection businesses." />
-    <FaqSection items={faqs} title="Auto Detailing SEO — FAQ" />
+    <!-- Visual Banner -->
+    <div class="relative rounded-2xl overflow-hidden border shadow-2xl mb-16" style="border-color: var(--color-border); background: var(--color-bg-card);">
+      <img
+        src="/vinyl-wrap-studio.jpg"
+        alt="Luxury Auto Detailing, Ceramic Coating and PPF Studio"
+        class="w-full h-auto object-cover"
+        loading="eager"
+      />
+      <div class="p-4 border-t flex flex-wrap items-center justify-between gap-3 text-xs" style="border-color: var(--color-border); background: var(--color-bg-surface);">
+        <span class="font-bold flex items-center gap-2" style="color: var(--color-text-primary);">
+          <span class="live-dot"></span> Proven Detailing/Wrap Scale: VF (45+ AI Citations) & Color Bomb Wraps (#1 Maps 3-Pack)
+        </span>
+        <a href="/case-studies/vinylfrog/" class="text-[11px] font-bold text-gradient-gold hover:underline">Read Detail/Wrap Case Study →</a>
+      </div>
+    </div>
+
+    <!-- Metrics -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">+380%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">High-Ticket Bookings</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">#1</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Maps 3-Pack Placement</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">4.9★</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Average Google Rating</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">$2,400</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Average Lead Value</div>
+      </div>
+    </div>
+
+    <!-- 4 Pillars -->
+    <div class="mb-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {detailingServices.map(d => (
+          <div class="hud-panel p-6">
+            <h3 class="text-lg font-bold mb-2" style="color: var(--color-text-primary);">{d.title}</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">{d.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Author & E-E-A-T -->
+    <div class="mb-16">
+      <AuthorCard
+        name="Automotive Search Engineering Team"
+        role="Specialist Automotive SEO Leads"
+        bio="With 15+ years helping auto styling, detailing, and film installation studios scale, our engineers build localized luxury search engines that attract high-net-worth car enthusiasts."
+        expertise={['Ceramic & PPF Keyword Strategy', 'Local Maps 3-Pack', 'Visual Image Schema', 'High-Ticket Package CRO']}
+      />
+    </div>
+
+    <!-- FAQs -->
+    <div class="mb-16">
+      <FaqSection items={faqs} title="Auto Detailing SEO — Frequently Asked Questions" />
+    </div>
+
+    <!-- Consultation CTA -->
+    <div class="hud-panel p-8 sm:p-12 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color: var(--color-text-primary);">
+        Attract high-paying ceramic coating and PPF clients
+      </h2>
+      <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
+        Schedule a consultation to audit your local detailing market and capture affluent vehicle owners.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact/" class="btn-primary text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto">
+          Schedule Detailing SEO Call →
+        </a>
+        <a href="/audit/" class="btn-gold text-sm font-bold py-3.5 px-8 rounded-xl w-full sm:w-auto">
+          Run Free Studio Audit
+        </a>
+      </div>
+    </div>
+
   </div>
 </BaseLayout>

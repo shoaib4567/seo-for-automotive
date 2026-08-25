@@ -1,64 +1,146 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FaqSection from '../../components/FaqSection.astro';
-import ServiceGrid from '../../components/ServiceGrid.astro';
+import AuthorCard from '../../components/AuthorCard.astro';
 
-const title = "SEO for Auto Parts Stores — eCommerce & B2B Parts SEO [2026]";
-const description = "Specialist SEO for auto parts stores and eCommerce. Product page optimization, part number SEO, category architecture, faceted navigation, and compatibility-based search strategies.";
+const partsServices = [
+  { title: 'Part Number (MPN) & SKU Search Architecture', desc: 'Indexing millions of OEM part numbers, aftermarket interchange numbers, and cross-reference codes.' },
+  { title: 'Year / Make / Model (YMM) Fitment Databases', desc: 'Capturing granular vehicle compatibility searches with zero duplicate content penalties.' },
+  { title: 'B2B Wholesale & Distributor Portals', desc: 'Generating high-ticket wholesale buyer RFQs and procurement inquiries for tier-1 distributors.' },
+  { title: 'Schema.org Product & Fitment Markup', desc: 'Deploying structured data that wins Google Shopping free listings and rich product snippet ratings.' },
+];
+
+const title = "Auto Parts SEO — Manufacturers, Distributors & eCommerce | SEO for Automotive";
+const description = "The specialist SEO strategy for auto parts manufacturers, B2B wholesale suppliers, and online aftermarket retailers. Dominate part numbers, fitment search, and catalog architecture.";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
-  { label: 'Industries', href: '/industries/car-dealership-seo/' },
+  { label: 'Industries', href: '/industries/' },
   { label: 'Auto Parts SEO', href: '/industries/auto-parts-seo/' },
 ];
 
-const relevantServices = [
-  { title: 'eCommerce SEO', href: '/services/automotive-ecommerce-seo/', desc: 'Product pages, category architecture, part number optimization, and merchant visibility.', icon: '🛒' },
-  { title: 'Technical SEO', href: '/services/automotive-technical-seo/', desc: 'Crawl budget, faceted navigation, indexation control, and site speed for large catalogs.', icon: '🔧' },
-  { title: 'Content SEO', href: '/services/automotive-content-seo/', desc: 'Buying guides, fitment guides, and comparison content that builds topical authority.', icon: '📝' },
-  { title: 'B2B SEO', href: '/services/automotive-b2b-seo/', desc: 'Wholesale keyword targeting, B2B lead generation, and distributor visibility.', icon: '🏭' },
-  { title: 'AEO', href: '/services/automotive-aeo/', desc: 'Featured snippets for "best [part] for [vehicle]" queries.', icon: '💬' },
-  { title: 'GEO / AI Search', href: '/services/automotive-geo/', desc: 'Getting your parts catalog cited by AI search assistants.', icon: '🤖' },
-];
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Auto Parts SEO Services",
+  "description": description,
+  "provider": { "@type": "Organization", "name": "SEO for Automotive", "url": "https://seoforautomotive.com" },
+  "serviceType": "Search Engine Optimization for Auto Parts Businesses",
+  "areaServed": "United States",
+};
 
 const faqs = [
-  { question: 'How does SEO work for auto parts eCommerce?', answer: 'Auto parts eCommerce SEO focuses on three areas: <a href="/services/automotive-ecommerce-seo/">product page optimization</a> (unique descriptions, part number targeting, compatibility data), category architecture (organizing by vehicle → part type → brand), and <a href="/services/automotive-technical-seo/">technical SEO</a> (crawl budget management, faceted navigation, indexation control). See our <a href="/case-studies/sejautoparts/">SEJ Auto Parts case study</a> for a real example.' },
-  { question: 'How do you optimize for part number searches?', answer: 'Part number SEO involves including OEM part numbers, cross-reference numbers, and aftermarket equivalents in product page content, title tags, and structured data. We also create cross-reference lookup pages that target "[OEM number] replacement" queries.' },
-  { question: 'Can auto parts SEO compete with Amazon?', answer: 'Yes — Amazon listings are generic and lack vehicle-specific depth. A well-optimized auto parts site with compatibility data, fitment guides, and proper Product schema can outrank Amazon for vehicle-specific searches. See our <a href="/case-studies/bigacover/">BigACover case study</a>.' },
+  { question: 'How do you optimize 50,000+ auto parts SKUs without manual data entry?', answer: 'We build automated programmatic SEO taxonomies using dynamic product schema templates, database-driven fitment matrices, and automated canonical logic. Every SKU inherits optimized metadata, compatibility tags, and structured JSON-LD.' },
+  { question: 'Can you help wholesale auto parts distributors generate commercial B2B leads?', answer: 'Yes. Our B2B auto parts strategy captures procurement keywords like "wholesale OEM brake supplier" and "pallet quantity alternator distributor", driving verified commercial RFQ leads. See our SEJ Auto Parts case study.' },
 ];
 ---
 
-<BaseLayout title={title} description={description} canonicalPath="/industries/auto-parts-seo/" breadcrumbs={breadcrumbs}>
-  <div class="max-w-3xl">
-    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
-      SEO for <span class="text-gradient-gold">Auto Parts Stores</span>
-    </h1>
+<BaseLayout title={title} description={description} canonicalPath="/industries/auto-parts-seo/" breadcrumbs={breadcrumbs} schemaData={schemaData}>
+  <div class="max-w-5xl mx-auto">
 
-    <div class="prose-content">
-      <p class="text-lg" style="color: var(--color-text-secondary);">Auto parts eCommerce and B2B parts businesses face unique SEO challenges — massive product catalogs, part number-based search, vehicle compatibility requirements, and intense competition from Amazon and marketplace sellers.</p>
-
-      <h2>The auto parts SEO challenge</h2>
-      <ul>
-        <li><strong>Massive catalogs create crawl budget issues</strong> — 10,000-500,000+ SKUs with faceted navigation create millions of indexable URL combinations</li>
-        <li><strong>Part number search is unique to automotive</strong> — customers search by OEM number, aftermarket number, and cross-reference numbers</li>
-        <li><strong>Vehicle compatibility is essential</strong> — "[part] for [year] [make] [model]" queries require fitment data architecture</li>
-        <li><strong>Amazon dominance</strong> — marketplace listings occupy many top positions, requiring deeper content and authority to outrank</li>
-        <li><strong>B2B and B2C dual intent</strong> — wholesale buyers and retail consumers search differently for the same products</li>
-      </ul>
-
-      <h2>Our approach</h2>
-      <h3>Category architecture redesign</h3>
-      <p>We organize parts catalogs around how customers actually search: <strong>Vehicle → Part Type → Brand</strong>, creating natural landing pages for high-intent queries like "2024 Ford F-150 brake pads."</p>
-
-      <h3>Product content enrichment</h3>
-      <p>We transform thin product pages into conversion-optimized landing pages with unique descriptions, fitment data, installation difficulty, compatibility tables, and customer review integration.</p>
-
-      <h3>Crawl budget and indexation control</h3>
-      <p>Large catalogs need strategic <a href="/services/automotive-technical-seo/">technical SEO</a> — proper canonical handling, noindex for low-value filter combinations, priority-based XML sitemaps, and intelligent robots.txt management.</p>
-
-      <p>See our <a href="/case-studies/sejautoparts/">SEJ Auto Parts case study</a> — 350% more B2B leads and $1.8M pipeline value through specialist auto parts SEO.</p>
+    <!-- Hero Header -->
+    <div class="mb-14">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="badge-outline">Auto Parts & Wholesale</span>
+        <span class="eeat-badge">$1.8M Pipeline & +460% Rev</span>
+        <span class="live-badge"><span class="live-dot"></span> B2B & eCommerce Catalog SEO</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
+        SEO for <span class="text-gradient-gold">Auto Parts Businesses & Distributors</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl leading-relaxed" style="color: var(--color-text-secondary);">
+        Whether you distribute wholesale OEM components, manufacture performance aftermarket parts, or operate a high-volume online catalog — we engineer search architectures that dominate part number queries and vehicle fitment searches.
+      </p>
     </div>
 
-    <ServiceGrid services={relevantServices} heading="Our services for auto parts stores" subheading="Specialist SEO services for auto parts eCommerce and B2B parts businesses." />
-    <FaqSection items={faqs} title="Auto Parts SEO — FAQ" />
+    <!-- Visual Banner -->
+    <div class="relative rounded-2xl overflow-hidden border shadow-2xl mb-16" style="border-color: var(--color-border); background: var(--color-bg-card);">
+      <img
+        src="/b2b-autoparts-tech.jpg"
+        alt="Auto Parts Warehouse and Technical Fitment Data Telemetry"
+        class="w-full h-auto object-cover"
+        loading="eager"
+      />
+      <div class="p-4 border-t flex flex-wrap items-center justify-between gap-3 text-xs" style="border-color: var(--color-border); background: var(--color-bg-surface);">
+        <span class="font-bold flex items-center gap-2" style="color: var(--color-text-primary);">
+          <span class="live-dot"></span> Real Case Proof: SEJ Auto Parts ($1.8M Wholesale Pipeline) & Custom Covers (BAC) (+460% Revenue)
+        </span>
+        <a href="/case-studies/sejautoparts/" class="text-[11px] font-bold text-gradient-gold hover:underline">Read B2B Case Study →</a>
+      </div>
+    </div>
+
+    <!-- Metrics -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">$1.8M</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">B2B Pipeline</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">+460%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">eCommerce Revenue</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">99.8%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Catalog Index Rate</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">100k+</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">SKUs Managed</div>
+      </div>
+    </div>
+
+    <!-- 4 Pillars -->
+    <div class="mb-20">
+      <div class="mb-10 text-center max-w-2xl mx-auto">
+        <span class="eeat-badge mb-2">Parts Catalog Architecture</span>
+        <h2 class="text-2xl sm:text-3xl font-bold mt-2" style="color: var(--color-text-primary);">
+          Core Pillars of Auto Parts Search Engineering
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {partsServices.map(p => (
+          <div class="hud-panel p-6">
+            <h3 class="text-lg font-bold mb-2" style="color: var(--color-text-primary);">{p.title}</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Author & E-E-A-T -->
+    <div class="mb-16">
+      <AuthorCard
+        name="Automotive Search Engineering Team"
+        role="Specialist Automotive SEO Leads"
+        bio="With 15+ years managing enterprise catalog taxonomies, our engineers build database-driven search architectures for global auto parts manufacturers and distributor networks."
+        expertise={['YMM Fitment Architecture', 'OEM Interchange Schema', 'B2B Wholesale Portals', 'Crawl Budget Engineering']}
+      />
+    </div>
+
+    <!-- FAQs -->
+    <div class="mb-16">
+      <FaqSection items={faqs} title="Auto Parts SEO — Frequently Asked Questions" />
+    </div>
+
+    <!-- Consultation CTA -->
+    <div class="hud-panel p-8 sm:p-12 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color: var(--color-text-primary);">
+        Dominate auto parts search and wholesale procurement
+      </h2>
+      <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
+        Schedule a strategic catalog architecture audit for your auto parts store or wholesale distribution supply chain.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact/" class="btn-primary text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto">
+          Schedule Parts Strategy Call →
+        </a>
+        <a href="/audit/" class="btn-gold text-sm font-bold py-3.5 px-8 rounded-xl w-full sm:w-auto">
+          Run Free Catalog Audit
+        </a>
+      </div>
+    </div>
+
   </div>
 </BaseLayout>

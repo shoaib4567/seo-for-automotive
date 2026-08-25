@@ -2,52 +2,57 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const title = "Results & Case Studies — Automotive SEO Performance | SEO for Automotive";
-const description = "Automotive SEO case studies and results. See how our specialist SEO strategies drive organic traffic, leads, AI Overview citations, and revenue for VinylFrog, TeckWrap, SEJ Auto Parts, and BigACover.";
+const description = "Automotive SEO case studies and results categorized by business model: B2B parts, B2C eCommerce, and Local Services (VF, TW, SEJ, BAC, Color Bomb Wraps).";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
   { label: 'Results', href: '/results/' },
 ];
-
-// Redirect to /case-studies/ — keep this page for SEO value of existing links
 ---
 
 <BaseLayout title={title} description={description} canonicalPath="/case-studies/" breadcrumbs={breadcrumbs}>
 
-  <div class="max-w-3xl">
-    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
-      Results & <span class="text-gradient-gold">Case Studies</span>
-    </h1>
-
-    <div class="prose-content">
-      <p class="text-lg" style="color: var(--color-text-secondary);">We've moved our results and case studies to a dedicated section. View our detailed case studies with real client data below:</p>
+  <div class="max-w-4xl mx-auto">
+    <div class="mb-8">
+      <span class="eeat-badge mb-2">Verified Client Results</span>
+      <h1 class="text-3xl sm:text-4xl font-black leading-tight mt-2" style="color: var(--color-text-primary);">
+        Results & <span class="text-gradient-gold">Case Studies</span>
+      </h1>
+      <p class="text-base mt-2" style="color: var(--color-text-secondary);">
+        Explore documented search performance across our B2B wholesale, B2C eCommerce, and local automotive clients:
+      </p>
     </div>
 
     <!-- Case study links -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-      <a href="/case-studies/vinylfrog/" class="service-card group">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+      <a href="/case-studies/vinylfrog/" class="hud-panel p-5 block group">
         <span class="badge-outline mb-2">PPF & Vinyl Wraps (B2C)</span>
-        <h3 class="text-sm font-bold mb-1" style="color: var(--color-text-primary);">VinylFrog — AEO & AI Overview</h3>
-        <p class="text-xs" style="color: var(--color-text-muted);">+380% traffic, 45+ AI Overview citations</p>
+        <h3 class="text-sm font-bold mb-1 group-hover:text-[var(--color-gold)]" style="color: var(--color-text-primary);">B2C Wrap Brand (VF)</h3>
+        <p class="text-xs" style="color: var(--color-text-muted);">+380% traffic, 45+ AI Overview citations, 4.9★ rating</p>
       </a>
-      <a href="/case-studies/teckwrap/" class="service-card group">
-        <span class="badge-outline mb-2">Vinyl Wraps (B2C)</span>
-        <h3 class="text-sm font-bold mb-1" style="color: var(--color-text-primary);">TeckWrap — SEO & Lead Gen</h3>
-        <p class="text-xs" style="color: var(--color-text-muted);">+420% traffic, +310% leads</p>
+      <a href="/case-studies/teckwrap/" class="hud-panel p-5 block group">
+        <span class="badge-outline mb-2">Automotive Film (B2C & B2B)</span>
+        <h3 class="text-sm font-bold mb-1 group-hover:text-[var(--color-gold)]" style="color: var(--color-text-primary);">Global Film Brand (TW)</h3>
+        <p class="text-xs" style="color: var(--color-text-muted);">+420% traffic, +310% dealer leads, 60+ snippets</p>
       </a>
-      <a href="/case-studies/sejautoparts/" class="service-card group">
+      <a href="/case-studies/sejautoparts/" class="hud-panel p-5 block group">
         <span class="badge-outline mb-2">Auto Parts (B2B)</span>
-        <h3 class="text-sm font-bold mb-1" style="color: var(--color-text-primary);">SEJ Auto Parts — B2B SEO</h3>
-        <p class="text-xs" style="color: var(--color-text-muted);">+350% B2B leads, $1.8M pipeline</p>
+        <h3 class="text-sm font-bold mb-1 group-hover:text-[var(--color-gold)]" style="color: var(--color-text-primary);">B2B Parts Wholesale (SEJ)</h3>
+        <p class="text-xs" style="color: var(--color-text-muted);">+350% B2B leads, $1.8M pipeline value</p>
       </a>
-      <a href="/case-studies/bigacover/" class="service-card group">
+      <a href="/case-studies/bigacover/" class="hud-panel p-5 block group">
         <span class="badge-outline mb-2">Car Covers (B2C)</span>
-        <h3 class="text-sm font-bold mb-1" style="color: var(--color-text-primary);">BigACover — eCommerce Growth</h3>
-        <p class="text-xs" style="color: var(--color-text-muted);">+460% organic revenue, 4.8★ rating</p>
+        <h3 class="text-sm font-bold mb-1 group-hover:text-[var(--color-gold)]" style="color: var(--color-text-primary);">Custom Car Covers (BAC)</h3>
+        <p class="text-xs" style="color: var(--color-text-muted);">+460% organic revenue, 4.8★ verified score</p>
+      </a>
+      <a href="/case-studies/colorbombwraps/" class="hud-panel p-5 block group sm:col-span-2 lg:col-span-2">
+        <span class="badge-outline mb-2">Local Wraps & Fleet (B2B/B2C)</span>
+        <h3 class="text-sm font-bold mb-1 group-hover:text-[var(--color-gold)]" style="color: var(--color-text-primary);">Color Bomb Wraps Local SEO</h3>
+        <p class="text-xs" style="color: var(--color-text-muted);">#1 Google Maps 3-Pack across 18 zip codes, +540% calls, 5.0★ rating</p>
       </a>
     </div>
 
-    <div class="mt-8 text-center">
-      <a href="/case-studies/" class="btn-primary">View All Case Studies →</a>
+    <div class="mt-10 text-center">
+      <a href="/case-studies/" class="btn-primary text-xs font-bold py-3 px-6 rounded-xl">View All Case Studies →</a>
     </div>
   </div>
 

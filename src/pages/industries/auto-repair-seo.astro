@@ -1,73 +1,146 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FaqSection from '../../components/FaqSection.astro';
-import ServiceGrid from '../../components/ServiceGrid.astro';
+import AuthorCard from '../../components/AuthorCard.astro';
 
-const title = "SEO for Auto Repair Shops — Local SEO & Maps Strategy [2026]";
-const description = "Specialist SEO for auto repair shops and mechanics. Google Maps 3-Pack dominance, review management, service-area optimization, and mobile-first local search strategies.";
+const repairServices = [
+  { title: 'Emergency & Routine Repair Hubs', desc: 'Dedicated landing pages for brake repair, transmission diagnostics, engine replacement, check engine light OBD-II codes, and A/C service.' },
+  { title: 'Google Maps 3-Pack Proximity SEO', desc: 'Geo-grid radius expansion capturing high-intent "mechanic near me" and emergency roadside towing searches.' },
+  { title: 'Automated Review Velocity Engines', desc: 'SMS feedback loops generating authentic 5-star Google Reviews and syndicating star ratings on search results.' },
+  { title: 'Vehicle Make Specialty SEO', desc: 'Capturing high-margin European and diesel import repair searches (e.g. "BMW specialist near me", "Duramax diesel repair").' },
+];
+
+const title = "Auto Repair SEO — Mechanic & Service Shop Search Domination | SEO for Automotive";
+const description = "The specialist SEO strategy for auto repair shops, independent mechanics, and tire centers. Dominate Google Maps 3-Pack, capture high-margin repair jobs, and scale shop revenue.";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
-  { label: 'Industries', href: '/industries/car-dealership-seo/' },
+  { label: 'Industries', href: '/industries/' },
   { label: 'Auto Repair SEO', href: '/industries/auto-repair-seo/' },
 ];
 
-const relevantServices = [
-  { title: 'Local SEO', href: '/services/automotive-local-seo/', desc: 'GBP optimization, Maps 3-Pack, citations, and "near me" targeting for your repair shop.', icon: '📍' },
-  { title: 'Technical SEO', href: '/services/automotive-technical-seo/', desc: 'Site speed, mobile optimization, structured data, and crawlability for service pages.', icon: '🔧' },
-  { title: 'Content SEO', href: '/services/automotive-content-seo/', desc: 'Service descriptions, repair guides, and FAQ content that builds topical authority.', icon: '📝' },
-  { title: 'AEO — Answer Engines', href: '/services/automotive-aeo/', desc: 'Featured snippets and AI Overviews for common repair questions.', icon: '💬' },
-  { title: 'GEO — AI Search', href: '/services/automotive-geo/', desc: 'Getting your shop cited by ChatGPT and AI assistants.', icon: '🤖' },
-  { title: 'Reputation Management', href: '/automotive-reputation-management-services/', desc: 'Review management, response strategy, and online reputation building.', icon: '⭐' },
-];
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Auto Repair SEO Services",
+  "description": description,
+  "provider": { "@type": "Organization", "name": "SEO for Automotive", "url": "https://seoforautomotive.com" },
+  "serviceType": "Search Engine Optimization for Auto Repair Shops",
+  "areaServed": "United States",
+};
 
 const faqs = [
-  { question: 'How much does SEO cost for an auto repair shop?', answer: 'SEO for auto repair shops typically costs $1,500–$4,000/month depending on competition and scope. <a href="/services/automotive-local-seo/">Local SEO</a> packages start at the lower end, while comprehensive strategies including content and technical SEO are at the higher end.' },
-  { question: 'How long does it take for auto repair SEO to work?', answer: '<a href="/services/automotive-local-seo/">Local SEO improvements</a> (Maps, GBP) often appear within 2-4 months. Organic ranking improvements typically take 4-8 months, with significant results at 6-12 months.' },
-  { question: 'What is the most important SEO factor for repair shops?', answer: 'For most repair shops, <a href="/services/automotive-local-seo/">Google Business Profile optimization and local SEO</a> delivers the highest ROI. Google Maps 3-Pack visibility drives the most phone calls and direction requests from local searchers.' },
+  { question: 'What is the most profitable SEO strategy for auto repair shops?', answer: 'Dominating the Google Maps 3-Pack for specific high-ticket repair services (e.g., transmission rebuilds, timing belt replacements, European auto repair) rather than generic "mechanic near me" terms. High-ticket repair searches convert at over 25% into paid repair orders.' },
+  { question: 'How do you target specific vehicle makes for specialized repair shops?', answer: 'We build dedicated Make/Model specialization pages (e.g., Mercedes-Benz Certified Repair, Audi Diagnostic Services) with OEM technical data, factory scanner tooling mentions, and certified technician Schema.org markup.' },
 ];
 ---
 
-<BaseLayout title={title} description={description} canonicalPath="/industries/auto-repair-seo/" breadcrumbs={breadcrumbs}>
-  <div class="max-w-3xl">
-    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
-      SEO for <span class="text-gradient-gold">Auto Repair Shops</span>
-    </h1>
+<BaseLayout title={title} description={description} canonicalPath="/industries/auto-repair-seo/" breadcrumbs={breadcrumbs} schemaData={schemaData}>
+  <div class="max-w-5xl mx-auto">
 
-    <div class="prose-content">
-      <p class="text-lg" style="color: var(--color-text-secondary);">Auto repair shops depend on local search more than almost any other business type. When someone's car breaks down, they search "auto repair near me" — and the shops that appear in the Google Maps 3-Pack get the calls.</p>
-
-      <h2>Why auto repair shops need specialized SEO</h2>
-      <p>Repair shops face intense local competition — from national chains like Midas and Jiffy Lube to independent mechanics and specialty shops. General SEO doesn't address the specific challenges of repair shop search:</p>
-      <ul>
-        <li><strong>Google Maps 3-Pack is everything</strong> — 80%+ of repair-related clicks go to the top 3 Maps results</li>
-        <li><strong>Service-area optimization</strong> — you need to rank in your city AND surrounding areas</li>
-        <li><strong>Review management is critical</strong> — review count and rating directly impact Maps rankings</li>
-        <li><strong>Mobile-first experience</strong> — most repair searches happen on phones, often while stranded</li>
-        <li><strong>Emergency intent keywords</strong> — "24 hour mechanic," "emergency car repair" need immediate visibility</li>
-      </ul>
-
-      <h2>Our approach to auto repair SEO</h2>
-      <h3>Google Business Profile mastery</h3>
-      <p>We optimize every aspect of your GBP listing — primary and secondary categories, services with descriptions, business attributes, regular Google Posts, Q&A management, and photo optimization. This is the single highest-impact activity for repair shops.</p>
-
-      <h3>Service-specific content architecture</h3>
-      <p>Every repair service you offer needs its own dedicated page — brake repair, oil change, engine diagnostics, transmission service, tire service, AC repair, and more. Each page builds topical relevance for that specific service type.</p>
-
-      <h3>Review velocity and reputation</h3>
-      <p>We implement automated review request systems and response SOPs that build review velocity naturally. Google rewards consistent new reviews, and high ratings improve click-through rates.</p>
-
-      <h3>LocalBusiness schema</h3>
-      <p>We implement comprehensive AutoRepair and LocalBusiness schema markup — business hours, accepted payment types, service area, services offered, and aggregate review data.</p>
-
-      <p><a href="/case-studies/auto-repair-local-seo/">See our auto repair case study</a> — 520% increase in calls from search for an independent repair shop.</p>
+    <!-- Hero Header -->
+    <div class="mb-14">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="badge-outline">Auto Repair & Mechanics</span>
+        <span class="eeat-badge">Maps 3-Pack #1</span>
+        <span class="live-badge"><span class="live-dot"></span> High-Ticket Repair Orders</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
+        SEO for <span class="text-gradient-gold">Auto Repair Shops & Mechanics</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl leading-relaxed" style="color: var(--color-text-secondary);">
+        When drivers experience a check engine light, brake squeal, or transmission failure, they need immediate, trustworthy local service. We engineer Local SEO and Google Business Profile systems that position your repair bays at the top of local search.
+      </p>
     </div>
 
-    <ServiceGrid
-      services={relevantServices}
-      heading="Our services for auto repair shops"
-      subheading="Specialized SEO services tailored for repair shops, mechanics, and service centers."
-    />
+    <!-- Visual Dashboard Banner -->
+    <div class="relative rounded-2xl overflow-hidden border shadow-2xl mb-16" style="border-color: var(--color-border); background: var(--color-bg-card);">
+      <img
+        src="/colorbomb-local-wraps.jpg"
+        alt="Auto Repair Shop Local Google Maps Rank Dominance"
+        class="w-full h-auto object-cover"
+        loading="eager"
+      />
+      <div class="p-4 border-t flex flex-wrap items-center justify-between gap-3 text-xs" style="border-color: var(--color-border); background: var(--color-bg-surface);">
+        <span class="font-bold flex items-center gap-2" style="color: var(--color-text-primary);">
+          <span class="live-dot"></span> Local Auto Service Authority: Google Maps 3-Pack & Emergency Diagnostic Intent
+        </span>
+        <span class="text-[11px] font-semibold" style="color: var(--color-gold);">AutoRepair Schema · Review Automation</span>
+      </div>
+    </div>
 
-    <FaqSection items={faqs} title="Auto Repair SEO — FAQ" />
+    <!-- Metrics -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">+540%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Inbound Phone Calls</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">#1</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Maps 3-Pack Placement</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">4.9★</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Verified Shop Rating</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">100%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Local Schema Accuracy</div>
+      </div>
+    </div>
+
+    <!-- 4 Pillars -->
+    <div class="mb-20">
+      <div class="mb-10 text-center max-w-2xl mx-auto">
+        <span class="eeat-badge mb-2">Service Bay Strategy</span>
+        <h2 class="text-2xl sm:text-3xl font-bold mt-2" style="color: var(--color-text-primary);">
+          How We Fill Your Auto Repair Bays
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {repairServices.map(r => (
+          <div class="hud-panel p-6">
+            <h3 class="text-lg font-bold mb-2" style="color: var(--color-text-primary);">{r.title}</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">{r.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Author & E-E-A-T -->
+    <div class="mb-16">
+      <AuthorCard
+        name="Automotive Search Engineering Team"
+        role="Specialist Automotive SEO Leads"
+        bio="With 15+ years dedicated exclusively to automotive search, our engineers help independent auto repair facilities and multi-location mechanic franchises dominate local market search."
+        expertise={['AutoRepair Schema.org', 'Google Maps 3-Pack', 'OBD-II Diagnostic Content', 'Review Velocity Systems']}
+      />
+    </div>
+
+    <!-- FAQs -->
+    <div class="mb-16">
+      <FaqSection items={faqs} title="Auto Repair SEO — Frequently Asked Questions" />
+    </div>
+
+    <!-- Consultation CTA -->
+    <div class="hud-panel p-8 sm:p-12 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color: var(--color-text-primary);">
+        Fill your auto repair schedule with high-ticket jobs
+      </h2>
+      <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
+        Get a specialized Google Maps 3-Pack and local repair competitor audit for your shop.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact/" class="btn-primary text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto">
+          Schedule Repair Shop Consultation →
+        </a>
+        <a href="/audit/" class="btn-gold text-sm font-bold py-3.5 px-8 rounded-xl w-full sm:w-auto">
+          Run Free Local Shop Audit
+        </a>
+      </div>
+    </div>
+
   </div>
 </BaseLayout>

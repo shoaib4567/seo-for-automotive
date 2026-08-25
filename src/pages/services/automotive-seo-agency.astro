@@ -1,40 +1,120 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqSection from '../../components/FaqSection.astro';
 
-const title = "Automotive SEO Agency — Your Specialist Search Partner";
-const description = "We are a specialist automotive SEO agency focused exclusively on helping automotive businesses dominate organic search, local search, and AI-powered search engines.";
+const title = "Specialist Automotive SEO Agency — 15+ Years Search Authority | SEO for Automotive";
+const description = "Partner with the dedicated automotive SEO agency with 15+ years of domain expertise. We build unstoppable organic search engines for dealer groups, repair shops, and parts brands.";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services/' },
-  { label: 'SEO Agency', href: '/services/automotive-seo-agency/' },
+  { label: 'Automotive SEO Agency', href: '/services/automotive-seo-agency/' },
+];
+
+const pillars = [
+  { title: '100% Automotive Specialization', desc: 'We don\'t work with dentists, law firms, or restaurants. Every ounce of our R&D and algorithmic analysis is dedicated to solving automotive search challenges.' },
+  { title: 'Full-Spectrum Search Capabilities', desc: 'From multi-department Local SEO and VDP technical architecture to AEO, GEO, and high-conversion CRO funnels.' },
+  { title: 'Verified Revenue Attribution', desc: 'We measure success through raw GSC clicks, GA4 showroom visits, phone call recordings, and closed repair orders — never vanity rankings.' },
+  { title: 'Dedicated Search Engineers & Account Leads', desc: 'Direct access to senior automotive search engineers with a proven track record scaling global brands and multi-location franchises.' },
+];
+
+const faqs = [
+  {
+    question: 'How do agency contracts and engagements work?',
+    answer: 'We offer flexible, performance-driven monthly engagements tailored to your automotive business model (single shop, multi-rooftop dealer group, or national eCommerce). We begin with a comprehensive 30-day technical crawl audit and architectural roadmap.'
+  }
 ];
 ---
 
 <BaseLayout title={title} description={description} canonicalPath="/services/automotive-seo-agency/" breadcrumbs={breadcrumbs}>
-  <div class="max-w-3xl">
-    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
-      Your Specialist <span class="text-gradient-gold">Automotive SEO Agency</span>
-    </h1>
-    <div class="prose-content">
-      <p class="text-lg" style="color: var(--color-text-secondary);">We focus exclusively on automotive search. While general agencies spread their attention across industries, we invest all of our expertise into understanding the search patterns, technical challenges, and competitive dynamics unique to the automotive space.</p>
-
-      <h2>Why choose a specialist agency?</h2>
-      <ul>
-        <li><strong>Deep automotive knowledge</strong> — we understand VDP architecture, make/model/year hierarchies, part number search, and multi-location dealer group management</li>
-        <li><strong>Proven results</strong> — see our case studies with <a href="/case-studies/vinylfrog/">VinylFrog</a>, <a href="/case-studies/teckwrap/">TeckWrap</a>, <a href="/case-studies/sejautoparts/">SEJ Auto Parts</a>, and <a href="/case-studies/bigacover/">BigACover</a></li>
-        <li><strong>Full-spectrum services</strong> — <a href="/services/automotive-local-seo/">Local SEO</a>, <a href="/services/automotive-technical-seo/">Technical</a>, <a href="/services/automotive-content-seo/">Content</a>, <a href="/services/automotive-ecommerce-seo/">eCommerce</a>, <a href="/services/automotive-aeo/">AEO</a>, <a href="/services/automotive-geo/">GEO</a>, and <a href="/automotive-reputation-management-services/">Reputation Management</a></li>
-        <li><strong>Transparent reporting</strong> — we report with GSC, GA4, SEMrush, and Ahrefs data — not vanity metrics</li>
-      </ul>
-
-      <h2>How we work</h2>
-      <ol>
-        <li><strong>Audit & Strategy</strong> — comprehensive SEO audit and competitive analysis to identify your biggest opportunities</li>
-        <li><strong>Implementation</strong> — technical fixes, content creation, schema deployment, and local SEO optimization</li>
-        <li><strong>Ongoing Optimization</strong> — monthly strategy execution, content publishing, link building, and performance monitoring</li>
-        <li><strong>Reporting & Refinement</strong> — monthly reporting with actionable insights and strategy adjustments</li>
-      </ol>
-
-      <p><a href="/contact/">Start a conversation</a> about your automotive SEO goals, or <a href="/audit/">get a free instant audit</a>.</p>
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Hero Header -->
+    <div class="mb-14">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="badge-outline">Dedicated Agency Partnership</span>
+        <span class="eeat-badge">15+ Years Authority</span>
+        <span class="live-badge"><span class="live-dot"></span> 100% Automotive Focus</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
+        Your Specialist <span class="text-gradient-gold">Automotive SEO Agency Partner</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl leading-relaxed max-w-3xl" style="color: var(--color-text-secondary);">
+        While general digital agencies spread their attention across dozens of unrelated industries, we invest 100% of our expertise into understanding the complex search mechanics, buyer behaviors, and inventory dynamics of the automotive industry.
+      </p>
     </div>
+
+    <!-- Telemetry Banner -->
+    <div class="relative rounded-2xl overflow-hidden border shadow-2xl mb-16" style="border-color: var(--color-border); background: var(--color-bg-card);">
+      <img
+        src="/cro-analytics-dashboard.jpg"
+        alt="Automotive SEO Agency Control Room and Analytics Telemetry"
+        class="w-full h-auto object-cover"
+        loading="eager"
+      />
+      <div class="p-4 border-t flex flex-wrap items-center justify-between gap-3 text-xs" style="border-color: var(--color-border); background: var(--color-bg-surface);">
+        <span class="font-bold flex items-center gap-2" style="color: var(--color-text-primary);">
+          <span class="live-dot"></span> Senior Automotive Search Engineers & Real-Time Client Dashboards
+        </span>
+        <span class="text-[11px] font-semibold" style="color: var(--color-gold);">15+ Years Automotive Search Experience</span>
+      </div>
+    </div>
+
+    <!-- Metrics -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">15+</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Years Experience</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">100%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Automotive Only</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">+380%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Avg. Client Lift</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">$1.8M+</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Pipeline Created</div>
+      </div>
+    </div>
+
+    <!-- 4 Pillars -->
+    <div class="mb-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {pillars.map(p => (
+          <div class="hud-panel p-6">
+            <h3 class="text-lg font-bold mb-2" style="color: var(--color-text-primary);">{p.title}</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mb-20">
+      <FaqSection items={faqs} title="Automotive SEO Agency — Frequently Asked Questions" />
+    </div>
+
+    <!-- Consultation CTA -->
+    <div class="hud-panel p-8 sm:p-12 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color: var(--color-text-primary);">
+        Partner with the industry's dedicated automotive SEO specialists
+      </h2>
+      <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
+        Schedule a strategic consultation to review your current search footprint and discuss growth opportunities.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact/" class="btn-primary text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto">
+          Start Conversation →
+        </a>
+        <a href="/audit/" class="btn-gold text-sm font-bold py-3.5 px-8 rounded-xl w-full sm:w-auto">
+          Run Free SEO Audit
+        </a>
+      </div>
+    </div>
+
   </div>
 </BaseLayout>

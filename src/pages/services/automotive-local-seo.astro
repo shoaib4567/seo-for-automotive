@@ -2,46 +2,134 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FaqSection from '../../components/FaqSection.astro';
 
-const title = "Local SEO for Automotive — Google Maps, GBP & Local Visibility";
-const description = "Specialist local SEO for automotive businesses. Google Business Profile optimization, Maps 3-Pack rankings, citation building, review management, and service-area targeting.";
+const title = "Local SEO for Automotive — Google Maps 3-Pack & Dealership Proximity | SEO for Automotive";
+const description = "Specialist automotive local SEO engineering. Dominate Google Maps 3-Pack, optimize multi-department Google Business Profiles, and capture high-intent 'near me' car buyers and repair customers.";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services/' },
   { label: 'Local SEO', href: '/services/automotive-local-seo/' },
 ];
 
+const pillars = [
+  { title: 'Google Business Profile Multi-Department Hierarchy', desc: 'Separate, optimized GBP listings for Dealership Sales, Service Department, Parts Desk, and Collision Center to capture 4x more search real estate.', icon: 'building' },
+  { title: 'Geo-Grid Proximity & Local Entity Signals', desc: 'Expanding ranking radius across surrounding zip codes through localized content clusters, municipal geo-tags, and localized backlink authority.', icon: 'map' },
+  { title: 'Automated Review Velocity & Sentiment SOPs', desc: 'SMS/Email review acquisition systems that maintain a verified 4.8★+ rating and syndicate review rich snippets across SERPs.', icon: 'star' },
+  { title: 'Local Citations & NAP Consistency Hygiene', desc: '100% accurate synchronization across Apple Maps, Bing Places, Yelp, Edmunds, DealerRater, CarGurus, and tier-1 automotive directories.', icon: 'shield' },
+];
+
 const faqs = [
-  { question: 'What is automotive local SEO?', answer: 'Automotive local SEO focuses on getting your business visible in Google Maps, the Local 3-Pack, and location-based organic results. This includes Google Business Profile optimization, local citation building, review management, and service-area content creation.' },
-  { question: 'How important is Google Business Profile for automotive?', answer: 'Critical. For repair shops, dealerships, and service businesses, Google Business Profile is often the single highest-ROI SEO activity. The Maps 3-Pack receives 40-60% of clicks for local automotive searches.' },
+  {
+    question: 'Why do car dealerships need separate Google Business Profiles for Sales and Service?',
+    answer: 'Google allows franchised dealerships to maintain distinct GBP listings for their Sales showroom, Service department, Parts desk, and Body shop. Without separate listings, your service keywords ("brake repair near me", "oil change specials") compete against vehicle sales terms and lose to independent mechanics. Multi-department setup triples your Maps 3-Pack footprint.'
+  },
+  {
+    question: 'How do you expand a local automotive business ranking radius beyond its physical zip code?',
+    answer: 'We build structured <strong>Service Area Pages (SAPs)</strong> and localized entity hubs. We embed municipal geo-coordinates, reference recognized local landmarks, and build hyper-local citations that establish authority across all surrounding municipalities in your target PMA (Primary Market Area).'
+  },
+  {
+    question: 'How does review velocity impact Google Maps 3-Pack rankings?',
+    answer: 'Review frequency, recency, keyword sentiment (e.g. mentions of "transmission repair", "certified pre-owned", "friendly advisor"), and owner response rate are top-3 ranking factors in Google\'s local algorithm. Our automated workflows generate steady, positive review streams on autopilot.'
+  }
 ];
 ---
 
 <BaseLayout title={title} description={description} canonicalPath="/services/automotive-local-seo/" breadcrumbs={breadcrumbs}>
-  <div class="max-w-3xl">
-    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
-      Local SEO for <span class="text-gradient-gold">Automotive</span>
-    </h1>
-    <div class="prose-content">
-      <p class="text-lg" style="color: var(--color-text-secondary);">Local SEO is the most impactful search investment for location-dependent automotive businesses. When customers search "auto repair near me" or "car dealership in [city]," your Maps visibility determines whether they find you or your competitor.</p>
-
-      <h2>What we do</h2>
-      <h3>Google Business Profile Optimization</h3>
-      <p>Complete GBP overhaul: primary and secondary category selection, service descriptions, business attributes, Google Posts scheduling, Q&A management, photo optimization, and messaging setup. We optimize every signal that influences Maps rankings.</p>
-
-      <h3>Maps 3-Pack Strategy</h3>
-      <p>We analyze your local competitive landscape and build a targeted strategy to break into and maintain the Google Maps 3-Pack for your highest-value keywords — "auto repair near me," "[service] [city]," and emergency-intent queries.</p>
-
-      <h3>Citation Building & NAP Consistency</h3>
-      <p>We audit, correct, and build citations across 60+ directories, aggregators, and industry-specific platforms. Consistent Name, Address, and Phone (NAP) data is foundational for local search trust.</p>
-
-      <h3>Review Management</h3>
-      <p>Automated review request systems, response SOPs, and reputation monitoring. Review velocity and rating directly impact Maps rankings and conversion rates.</p>
-
-      <h3>Service-Area Content</h3>
-      <p>Location-specific landing pages for surrounding cities and neighborhoods, each with unique content, LocalBusiness schema, and internal linking to service pages.</p>
-
-      <p>See our <a href="/case-studies/auto-repair-local-seo/">auto repair case study</a> — 520% increase in calls from search through local SEO.</p>
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Hero Header -->
+    <div class="mb-14">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="badge-outline">Local Search Engineering</span>
+        <span class="eeat-badge">Google Maps 3-Pack #1</span>
+        <span class="live-badge"><span class="live-dot"></span> 40-60% of High-Intent Local Clicks</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
+        Local SEO for Automotive: <span class="text-gradient-gold">Google Maps & Proximity Dominance</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl leading-relaxed max-w-3xl" style="color: var(--color-text-secondary);">
+        Over 76% of automotive searchers visit a business within 24 hours of conducting a local search. We engineer multi-department GBP structures, geo-grid proximity expansions, and review acquisition engines that capture #1 spots in the Maps 3-Pack.
+      </p>
     </div>
-    <FaqSection items={faqs} title="Local SEO — FAQ" />
+
+    <!-- Visual Banner -->
+    <div class="relative rounded-2xl overflow-hidden border shadow-2xl mb-16" style="border-color: var(--color-border); background: var(--color-bg-card);">
+      <img
+        src="/colorbomb-local-wraps.jpg"
+        alt="Automotive Local SEO and Google Maps 3-Pack Dominance Case Study"
+        class="w-full h-auto object-cover"
+        loading="eager"
+      />
+      <div class="p-4 border-t flex flex-wrap items-center justify-between gap-3 text-xs" style="border-color: var(--color-border); background: var(--color-bg-surface);">
+        <span class="font-bold flex items-center gap-2" style="color: var(--color-text-primary);">
+          <span class="live-dot"></span> Proven Local SEO: Color Bomb Wraps (+540% Phone Calls, #1 Maps Rank Across 18 Zip Codes)
+        </span>
+        <a href="/case-studies/colorbombwraps/" class="text-[11px] font-bold text-gradient-gold hover:underline">Read Local Case Study →</a>
+      </div>
+    </div>
+
+    <!-- Metrics Proof -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">+540%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Phone & Direction Calls</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">#1</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Maps 3-Pack Placement</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">4x</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Multi-GBP Coverage</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">4.9★</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Avg. Review Rating</div>
+      </div>
+    </div>
+
+    <!-- 4 Core Pillars -->
+    <div class="mb-20">
+      <div class="mb-10 text-center max-w-2xl mx-auto">
+        <span class="eeat-badge mb-2">Pillars of Local Dominance</span>
+        <h2 class="text-2xl sm:text-3xl font-bold mt-2" style="color: var(--color-text-primary);">
+          The Automotive Local SEO Engine
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {pillars.map(p => (
+          <div class="hud-panel p-6">
+            <h3 class="text-lg font-bold mb-2" style="color: var(--color-text-primary);">{p.title}</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mb-20">
+      <FaqSection items={faqs} title="Automotive Local SEO — Frequently Asked Questions" />
+    </div>
+
+    <!-- Consultation CTA -->
+    <div class="hud-panel p-8 sm:p-12 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color: var(--color-text-primary);">
+        Ready to take the #1 Maps 3-Pack position in your market?
+      </h2>
+      <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
+        Get a customized Local SEO & Google Business Profile geo-grid audit for your dealership or auto shop.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact/" class="btn-primary text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto">
+          Schedule Local Strategy Call →
+        </a>
+        <a href="/audit/" class="btn-gold text-sm font-bold py-3.5 px-8 rounded-xl w-full sm:w-auto">
+          Run Instant Local Audit
+        </a>
+      </div>
+    </div>
+
   </div>
 </BaseLayout>

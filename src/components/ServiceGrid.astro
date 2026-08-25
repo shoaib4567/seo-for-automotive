@@ -1,26 +1,31 @@
 ---
 interface Props {
-  services: { title: string; href: string; desc: string; icon: string }[];
+  services: { title: string; href: string; desc: string; icon?: string }[];
   heading?: string;
   subheading?: string;
 }
 
 const {
   services,
-  heading = 'Our Services',
-  subheading = 'Specialized SEO services tailored for this vertical.',
+  heading = 'Our Core Capabilities',
+  subheading = 'Specialized automotive search engineering tailored for this vertical.',
 } = Astro.props;
 ---
 
 <section class="mt-16 section-border pt-12" id="services-grid">
-  <h2 class="text-xl font-bold mb-2" style="color: var(--color-text-primary);">{heading}</h2>
-  <p class="text-sm mb-6" style="color: var(--color-text-secondary);">{subheading}</p>
+  <div class="mb-6">
+    <span class="eeat-badge mb-2">Automotive Capabilities</span>
+    <h2 class="text-2xl font-bold mt-2" style="color: var(--color-text-primary);">{heading}</h2>
+    <p class="text-sm mt-1" style="color: var(--color-text-secondary);">{subheading}</p>
+  </div>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
     {services.map(svc => (
-      <a href={svc.href} class="glass-card rounded-lg p-5 group block">
-        <span class="text-2xl mb-3 block" aria-hidden="true">{svc.icon}</span>
-        <h3 class="text-sm font-bold transition-colors mb-2" style="color: var(--color-text-primary);">{svc.title}</h3>
-        <p class="text-xs leading-relaxed" style="color: var(--color-text-muted);">{svc.desc}</p>
+      <a href={svc.href} class="hud-panel p-5 group block">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-3" style="background: var(--color-gold-muted); color: var(--color-gold);">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+        </div>
+        <h3 class="text-sm font-bold transition-colors mb-1.5 group-hover:text-[var(--color-gold)]" style="color: var(--color-text-primary);">{svc.title}</h3>
+        <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">{svc.desc}</p>
       </a>
     ))}
   </div>

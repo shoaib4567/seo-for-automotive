@@ -1,35 +1,104 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqSection from '../../components/FaqSection.astro';
 
-const title = "Content SEO for Automotive — Topical Authority & Content Strategy";
-const description = "Specialist content SEO for automotive businesses. Topical authority building, content clusters, buying guides, comparison content, and information-gain strategies for automotive search.";
+const title = "Content SEO for Automotive — Topical Authority & E-E-A-T Strategy | SEO for Automotive";
+const description = "Specialist content SEO and topical authority architecture for automotive brands. Information-gain vehicle guides, maintenance clusters, comparison hubs, and E-E-A-T compliance.";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services/' },
   { label: 'Content SEO', href: '/services/automotive-content-seo/' },
 ];
+
+const pillars = [
+  { title: 'Topical Authority Cluster Architecture', desc: 'Designing interconnected hub-and-spoke content models that establish complete topical coverage across vehicle specs, maintenance, and buying guides.' },
+  { title: 'Automotive E-E-A-T & Expert Authorship', desc: 'Structuring content with ASE-certified technician reviews, manufacturer engineering citations, and expert author schema to satisfy Google\'s quality raters.' },
+  { title: 'Information Gain & Proprietary Data Modules', desc: 'Publishing original testing benchmarks, vehicle fitment charts, and real-world installation measurements that outrank AI-spun generic summaries.' },
+  { title: 'Commercial Buyer Intent Matching', desc: 'Guiding high-intent searchers through comparison tables, trim-level breakdowns, and financing calculators directly into conversion funnels.' },
+];
+
+const faqs = [
+  {
+    question: 'How do you create automotive content that demonstrates genuine E-E-A-T?',
+    answer: 'We don\'t produce generic AI filler. Every automotive article is written with exact technical accuracy — referencing torque specs, OBD-II diagnostic trouble codes, OEM maintenance intervals, and real installation procedures. We embed Schema.org <code>Person</code> author profiles with certified credentials.'
+  }
+];
 ---
 
 <BaseLayout title={title} description={description} canonicalPath="/services/automotive-content-seo/" breadcrumbs={breadcrumbs}>
-  <div class="max-w-3xl">
-    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
-      Content SEO for <span class="text-gradient-gold">Automotive</span>
-    </h1>
-    <div class="prose-content">
-      <p class="text-lg" style="color: var(--color-text-secondary);">Content is the foundation of topical authority. For automotive businesses, this means creating the content ecosystem that signals expertise to search engines — from service descriptions and buying guides to comparison content and technical resources.</p>
-
-      <h2>Our content approach</h2>
-      <ul>
-        <li><strong>Topical authority mapping</strong> — identifying all topics and sub-topics within your automotive niche and creating comprehensive coverage</li>
-        <li><strong>Content cluster architecture</strong> — pillar pages connected to supporting content through strategic internal linking</li>
-        <li><strong>Buying guides</strong> — "Best [product] for [vehicle]" content targeting high-intent informational queries</li>
-        <li><strong>Comparison content</strong> — honest, detailed product and service comparisons that build trust and capture competitive queries</li>
-        <li><strong>Service descriptions</strong> — unique, detailed content for every service your business offers</li>
-        <li><strong>Technical resources</strong> — specifications, compatibility data, and installation guides that establish expertise</li>
-        <li><strong>E-E-A-T signals</strong> — author attribution, expertise demonstration, and trust-building content elements</li>
-      </ul>
-
-      <p>Learn more about <a href="/blog/content-seo-automotive/">content SEO strategy for automotive</a> and <a href="/blog/semantic-seo-entities/">semantic SEO with entities</a>.</p>
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Hero Header -->
+    <div class="mb-14">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="badge-outline">Content Strategy</span>
+        <span class="eeat-badge">E-E-A-T Compliant</span>
+        <span class="live-badge"><span class="live-dot"></span> Topical Authority Hubs</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
+        Content SEO for Automotive: <span class="text-gradient-gold">Topical Authority & Information Gain</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl leading-relaxed max-w-3xl" style="color: var(--color-text-secondary);">
+        In the age of Google AI Overviews and helpful content updates, generic blogs are obsolete. We architect authoritative, technical automotive content clusters that position your brand as the undeniable market leader.
+      </p>
     </div>
+
+    <!-- Metrics -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">+380%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Organic Traffic Growth</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">60+</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Featured Snippets</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">100%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">E-E-A-T Verified</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">45+</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">AI Overview Citations</div>
+      </div>
+    </div>
+
+    <!-- 4 Pillars -->
+    <div class="mb-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {pillars.map(p => (
+          <div class="hud-panel p-6">
+            <h3 class="text-lg font-bold mb-2" style="color: var(--color-text-primary);">{p.title}</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mb-20">
+      <FaqSection items={faqs} title="Automotive Content SEO — Frequently Asked Questions" />
+    </div>
+
+    <!-- Consultation CTA -->
+    <div class="hud-panel p-8 sm:p-12 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color: var(--color-text-primary);">
+        Ready to build unstoppable topical authority in your automotive niche?
+      </h2>
+      <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
+        Let our automotive content strategists engineer your topical authority roadmap.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact/" class="btn-primary text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto">
+          Request Content Roadmap →
+        </a>
+        <a href="/audit/" class="btn-gold text-sm font-bold py-3.5 px-8 rounded-xl w-full sm:w-auto">
+          Run Free SEO Audit
+        </a>
+      </div>
+    </div>
+
   </div>
 </BaseLayout>

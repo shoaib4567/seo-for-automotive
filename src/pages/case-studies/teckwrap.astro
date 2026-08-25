@@ -1,117 +1,112 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const title = "TeckWrap Case Study — SEO, AI Overview & Lead Generation | SEO for Automotive";
-const description = "How we helped TeckWrap achieve 420% organic traffic growth, capture 60+ featured snippets, and generate 310% more leads through SEO and AI search optimization.";
+const title = "Global Automotive Film Manufacturer (TW) Case Study — SEO, AI Overviews & B2B Leads | SEO for Automotive";
+const description = "How we helped a global automotive film manufacturer (TW) achieve 420% organic traffic growth, capture 60+ featured snippets, and generate 310% more dealer and wholesale leads.";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
   { label: 'Case Studies', href: '/case-studies/' },
-  { label: 'TeckWrap', href: '/case-studies/teckwrap/' },
+  { label: 'Global Film Brand (TW)', href: '/case-studies/teckwrap/' },
 ];
 ---
 
 <BaseLayout title={title} description={description} canonicalPath="/case-studies/teckwrap/" breadcrumbs={breadcrumbs} noIndex={true}>
-  <div class="max-w-3xl">
+  <div class="max-w-4xl mx-auto">
+    
     <div class="mb-10">
-      <div class="flex items-center gap-2 mb-4">
-        <span class="badge-outline">Vinyl Wraps (B2C)</span>
-        <span class="kw-badge">SEO</span>
-        <span class="kw-badge">AI Overview</span>
-        <span class="kw-badge">Leads</span>
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="badge-outline">Automotive Film (B2C & B2B)</span>
+        <span class="eeat-badge">International Scale</span>
+        <span class="kw-badge">Dealer Leads</span>
+        <span class="kw-badge">Google AI Overviews</span>
       </div>
-      <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight" style="color: var(--color-text-primary);">
-        TeckWrap: <span class="text-gradient-gold">SEO, AI Overview & Lead Generation</span>
+      
+      <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-4" style="color: var(--color-text-primary);">
+        Global Film Brand (TW): <span class="text-gradient-gold">SEO, AI Overview & Dealer Lead Generation</span>
       </h1>
-      <p class="mt-4 text-lg leading-relaxed" style="color: var(--color-text-secondary);">
-        How we helped TeckWrap — a global vinyl wrap manufacturer — achieve 420% organic traffic growth, capture 60+ featured snippets, and generate 310% more dealer and wholesale leads.
+      
+      <p class="text-lg leading-relaxed" style="color: var(--color-text-secondary);">
+        How we helped an international automotive film manufacturer (TW) achieve 420% organic traffic growth, capture 60+ featured snippets, and scale qualified dealer and wholesale lead acquisition by 310%.
       </p>
     </div>
 
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
-      <div class="metric-card"><div class="metric-value">+420%</div><div class="metric-label">Organic Traffic</div></div>
-      <div class="metric-card"><div class="metric-value">+310%</div><div class="metric-label">Lead Generation</div></div>
-      <div class="metric-card"><div class="metric-value">60+</div><div class="metric-label">Featured Snippets</div></div>
-      <div class="metric-card"><div class="metric-value">35+</div><div class="metric-label">AI Overview Citations</div></div>
+    <!-- Featured Case Study Visual -->
+    <div class="relative rounded-2xl overflow-hidden border shadow-2xl mb-10" style="border-color: var(--color-border); background: var(--color-bg-card);">
+      <img
+        src="/vinyl-wrap-studio.jpg"
+        alt="Automotive Film Manufacturing & High-End Wrapping Studio"
+        class="w-full h-auto object-cover"
+        loading="eager"
+      />
+      <div class="p-4 border-t flex flex-wrap items-center justify-between gap-2 text-xs" style="border-color: var(--color-border); background: var(--color-bg-surface);">
+        <span class="font-bold flex items-center gap-2" style="color: var(--color-text-primary);">
+          <span class="live-dot"></span> B2B Dealer Acquisition & Global Automotive Film Taxonomy
+        </span>
+        <span class="text-[11px] font-semibold" style="color: var(--color-gold);">Verified GSC & GA4 Conversion Attribution</span>
+      </div>
+    </div>
+
+    <!-- Key Metrics -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12">
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">+420%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Organic Traffic Growth</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">+310%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Dealer & Wholesale Leads</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">60+</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Featured Snippets</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">35+</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">AI Overview Citations</div>
+      </div>
     </div>
 
     <div class="prose-content">
-      <h2>About TeckWrap</h2>
-      <p><strong>TeckWrap</strong> is a global B2C vinyl wrap manufacturer offering premium color-change wraps, carbon fiber films, chrome wraps, and specialty finishes. They sell directly to consumers and through a dealer network of professional wrap installers worldwide.</p>
+      <h2>About the Client (TW)</h2>
+      <p><strong>TW</strong> is a major international automotive vinyl wrap and protective film manufacturer offering premium color-change wraps, gloss metallic finishes, carbon fiber films, and installation tools. They distribute directly to end-consumers and through an extensive global network of certified professional wrap shops and wholesale distributors.</p>
 
-      <h2>The Challenge</h2>
-      <p>TeckWrap had a strong product line but was losing market share in organic search to competitors with deeper content and stronger digital presence:</p>
+      <h2>The Strategic Challenge</h2>
+      <p>Despite possessing world-class film formulations, TW was underperforming in organic search compared to older legacy conglomerates:</p>
       <ul>
-        <li><strong>Low organic visibility</strong> — ranking outside the top 50 for competitive terms like "vinyl wrap colors," "best car wrap brands," "chrome vinyl wrap"</li>
-        <li><strong>No AI search presence</strong> — not appearing in Google AI Overviews or cited by AI assistants for wrap-related queries</li>
-        <li><strong>Lead generation bottleneck</strong> — relying almost entirely on paid social and marketplace sales, with organic generating less than 8% of dealer inquiries</li>
-        <li><strong>Product pages lacking SEO depth</strong> — color/product pages had minimal descriptions, no comparison data, and no application guidance</li>
-        <li><strong>No content ecosystem</strong> — missing the educational content layer that builds topical authority in the wrap industry</li>
+        <li><strong>Low ranking on high-difficulty commercial terms</strong> — ranking on pages 4-6 for head terms like "vinyl wrap colors," "car wrap durability," and "metallic vehicle wraps."</li>
+        <li><strong>Absence from AI search engines</strong> — zero presence in Google AI Overviews and answer engine modules for film comparison queries.</li>
+        <li><strong>Under-monetized wholesale traffic</strong> — over 90% of wholesale dealer leads relied on expensive trade shows and paid social ads rather than organic search.</li>
+        <li><strong>Thin product pages</strong> — product pages lacked vehicle fitment guides, technical spec sheets, and installation temperature data.</li>
       </ul>
 
-      <h2>Our Strategy</h2>
+      <h2>Our Specialized Automotive Search Playbook</h2>
 
-      <h3>1. Comprehensive SEO Architecture</h3>
-      <p>We rebuilt TeckWrap's entire site architecture around how customers search for vinyl wraps:</p>
+      <h3>1. Color-Family & Finish Taxonomy Architecture</h3>
+      <p>We restructured their catalog by finish type (Gloss, Matte, Satin, Metallic, Carbon Fiber) and vehicle application. We built 100+ dedicated color-specific landing pages with high-res vehicle wrap showcase photography, exact roll dimensions, and compatibility data.</p>
+
+      <h3>2. Installer E-E-A-T & Technical Knowledge Base</h3>
+      <p>We created comprehensive technical installation guides with Schema.org <code>HowTo</code> markup covering heat gun calibration, post-heating temperatures, stretch percentages, and surface preparation. This established undeniable authority and captured over 60+ Google Featured Snippets.</p>
+
+      <h3>3. B2B Wholesale Lead Conversion Funnels</h3>
+      <p>We implemented automated sample swatch request workflows, wholesale dealer verification forms, and volume tier calculators, converting organic installer traffic into high-ticket recurring B2B accounts.</p>
+
+      <h2>The Verified Business Results</h2>
       <ul>
-        <li><strong>Product taxonomy restructure</strong> — organized by finish type (gloss, matte, satin, chrome, carbon fiber), color family, and vehicle application</li>
-        <li><strong>Color-specific landing pages</strong> — 100+ individual color pages with unique descriptions, application photos, and vehicle compatibility data</li>
-        <li><strong>Comparison content</strong> — "TeckWrap vs 3M," "TeckWrap vs Avery Dennison," brand comparison pages with honest, factual comparisons</li>
-        <li><strong>Application guides</strong> — step-by-step wrap installation guides with HowTo schema, targeting DIY and professional installer queries</li>
+        <li><strong>420% Organic Traffic Growth</strong> within 14 months of deployment.</li>
+        <li><strong>310% Surge in Qualified Dealer & Installer Wholesale Applications</strong>.</li>
+        <li><strong>60+ Featured Snippets & 35+ Google AI Overview Citations</strong> captured for top-tier automotive film queries.</li>
       </ul>
-
-      <h3>2. AI Overview & Featured Snippet Capture</h3>
-      <ul>
-        <li><strong>Question-led content</strong> — created answers for every major vinyl wrap question: cost, durability, maintenance, removal, warranty</li>
-        <li><strong>Featured snippet formatting</strong> — structured content with definition paragraphs, numbered lists, and comparison tables that Google prefers for snippet extraction</li>
-        <li><strong>Product specification tables</strong> — standardized spec tables with film thickness, durability years, finish type, and price range that AI systems cite</li>
-        <li><strong>Entity building</strong> — established TeckWrap as a recognized entity across Google Knowledge Graph through consistent structured data and cross-platform presence</li>
-      </ul>
-
-      <h3>3. Lead Generation Optimization</h3>
-      <ul>
-        <li><strong>Dealer locator SEO</strong> — optimized dealer/installer locator pages for "vinyl wrap installer near [city]" queries</li>
-        <li><strong>Sample request funnel</strong> — created sample-request landing pages targeting high-intent "buy vinyl wrap" and "vinyl wrap samples" queries</li>
-        <li><strong>Wholesale inquiry forms</strong> — B2B lead capture forms on commercial-intent pages with structured data</li>
-        <li><strong>Content-to-product funnels</strong> — every educational article links to relevant products and includes contextual CTAs for samples or quotes</li>
-      </ul>
-
-      <h3>4. Technical SEO</h3>
-      <ul>
-        <li>Product schema (Product, Offer, AggregateRating) on all product pages</li>
-        <li>Image optimization — compressed product images, WebP format, lazy loading, alt text with color and finish descriptions</li>
-        <li>International SEO — hreflang implementation for global markets</li>
-        <li>Core Web Vitals — LCP optimization from 3.8s to 1.6s</li>
-      </ul>
-
-      <h2>Results (GSC, GA4, SEMrush Data)</h2>
-      <ul>
-        <li><strong>Organic traffic grew 420%</strong> — from 6,800 to 35,400 monthly sessions (GA4)</li>
-        <li><strong>Lead generation increased 310%</strong> — from 85 to 348 monthly dealer inquiries and sample requests</li>
-        <li><strong>60+ featured snippets captured</strong> — dominating zero-click results for vinyl wrap queries</li>
-        <li><strong>35+ AI Overview citations</strong> — TeckWrap cited in Google AI-generated answers</li>
-        <li><strong>Organic now generates 34% of all leads</strong> — up from 8%</li>
-        <li><strong>SEMrush traffic value increased from $8K to $67K/month</strong></li>
-        <li><strong>Top 3 rankings for 120+ keywords</strong> including "vinyl wrap colors," "car wrap near me," and "chrome vinyl wrap"</li>
-      </ul>
-
-      <h2>Key Takeaways</h2>
-      <ol>
-        <li><strong>Product taxonomy is the foundation</strong> — how you structure products determines which searches you're eligible for</li>
-        <li><strong>Comparison content builds authority</strong> — honest brand comparisons show confidence and attract high-intent traffic</li>
-        <li><strong>AI search visibility requires entity recognition</strong> — structured data and cross-platform consistency make AI systems trust and cite your brand</li>
-        <li><strong>Content-to-product funnels convert</strong> — educational content that naturally links to products creates a sustainable lead pipeline</li>
-      </ol>
-
-      <p><a href="/contact/">Want to grow leads from organic search?</a> Let's discuss your SEO and AI search strategy.</p>
     </div>
 
-    <div class="glass-panel rounded-xl p-8 text-center mt-12">
-      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text-primary);">Ready to grow your organic leads?</h2>
-      <p class="mb-6" style="color: var(--color-text-secondary);">Start with a free audit to identify your biggest SEO opportunities.</p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-        <a href="/audit/" class="btn-gold">Get a Free Audit</a>
-        <a href="/contact/" class="btn-secondary">Request a Strategy Call</a>
+    <!-- CTA -->
+    <div class="hud-panel p-8 text-center mt-12">
+      <h3 class="text-xl font-bold mb-2" style="color: var(--color-text-primary);">Want your automotive manufacturing brand to dominate search?</h3>
+      <p class="text-sm mb-6 max-w-lg mx-auto" style="color: var(--color-text-secondary);">Request a bespoke search strategy consultation.</p>
+      <div class="flex items-center justify-center gap-3">
+        <a href="/contact/" class="btn-primary text-xs font-bold py-3 px-6 rounded-xl">Schedule Consultation →</a>
+        <a href="/audit/" class="btn-secondary text-xs font-bold py-3 px-6 rounded-xl">Run Free SEO Audit</a>
       </div>
     </div>
+
   </div>
 </BaseLayout>

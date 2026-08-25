@@ -2,54 +2,120 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import InternalLinkCard from '../components/InternalLinkCard.astro';
 import FaqSection from '../components/FaqSection.astro';
+import AuthorCard from '../components/AuthorCard.astro';
 
-const title = "Trucking SEO Company — SEO for Trucking, Transport & Logistics [2026]";
-const description = "SEO for trucking companies, transportation firms, and logistics businesses. 14 keywords, 1,350 monthly volume. Dominate search in the transport industry.";
-const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Trucking SEO', href: '/truck-company-seo-services/' }];
+const title = "Commercial Trucking & Fleet SEO Services — Transport & Heavy Duty Logistics | SEO for Automotive";
+const description = "Specialist SEO for commercial trucking companies, heavy-duty diesel repair shops, freight logistics, and commercial fleet services. 15+ years automotive and transport authority.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Industries', href: '/industries/' },
+  { label: 'Trucking & Fleet SEO', href: '/truck-company-seo-services/' }
+];
 
-const relatedLinks = [
-  { title: 'Auto Repair SEO', href: '/auto-repair-seo-services/', description: 'SEO for truck repair shops.', icon: '🔧', volume: '8,210/mo' },
-  { title: 'Local SEO', href: '/local-seo-for-car-dealerships/', description: 'Local search for transport companies.', icon: '📍', volume: '3,180/mo' },
-  { title: 'SEO Agency', href: '/automotive-seo-agency/', description: 'Find a transport SEO agency.', icon: '🏢', volume: '8,610/mo' },
-  { title: 'Website Providers', href: '/automotive-website-providers/', description: 'Trucking company website design.', icon: '🌐' },
+const fleetServices = [
+  { title: 'Commercial Freight & Shipper Intent', desc: 'Targeting high-ticket freight contracts, dedicated lane procurement, and 3PL warehousing searches.' },
+  { title: 'Heavy-Duty Diesel Repair & Fleet Maintenance', desc: 'Capturing commercial fleet maintenance contracts, mobile diesel repair, and DOT inspection queries.' },
+  { title: 'Multi-Terminal & Regional Depots Local SEO', desc: 'Optimizing terminal locations across interstate transit corridors for emergency fleet road service.' },
+  { title: 'Commercial B2B Lead Conversion Funnels', desc: 'Streamlined freight quote calculators and fleet maintenance RFQ portals.' },
 ];
 
 const faqs = [
-  { question: 'Does SEO work for trucking companies?', answer: 'Absolutely. The trucking SEO cluster has <strong>1,350 monthly searches</strong> across 14 keywords. SEO drives leads for freight brokers, trucking companies, and logistics firms through organic search, <a href="/local-seo-for-car-dealerships/">local SEO</a>, and <a href="/blog/content-seo-automotive/">content marketing</a>.' },
-  { question: 'What SEO keywords should trucking companies target?', answer: 'Key targets: <strong>"trucking seo company"</strong> (260/mo), <strong>"truck company seo marketing"</strong> (260/mo), <strong>"truck company seo"</strong> (210/mo), and service-area terms like "[city] trucking company" and "freight services near me".' },
+  { question: 'Does SEO work for B2B commercial trucking and logistics?', answer: 'Yes. Commercial shippers, supply chain directors, and fleet managers regularly search for regional carriers, specialized flatbed transport, and dedicated freight contracts online. A specialized search strategy generates high-ticket corporate contract inquiries.' },
+  { question: 'How do you target heavy-duty diesel repair and commercial fleet maintenance?', answer: 'We build dedicated emergency road service and commercial fleet maintenance landing pages with Schema.org <code>AutoRepair</code> markup, mobile dispatch triggers, and interstate exit targeting.' },
 ];
 ---
 
 <BaseLayout title={title} description={description} canonicalPath="/truck-company-seo-services/" breadcrumbs={breadcrumbs}>
-  <div class="mb-12">
-    <div class="flex items-center gap-3 mb-4"><span class="kw-badge">1,350/mo</span><span class="kw-badge">14 keywords</span></div>
-    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">Trucking <span class="text-gradient-amber">SEO Company</span></h1>
-    <p class="mt-4 text-lg text-slate-400 max-w-3xl">SEO for trucking companies, transportation firms, and logistics businesses. From <a href="/local-seo-for-car-dealerships/" class="text-amber-400 hover:underline">local SEO</a> to <a href="/blog/content-seo-automotive/" class="text-amber-400 hover:underline">content marketing</a>.</p>
+  <div class="max-w-5xl mx-auto">
+
+    <!-- Hero Header -->
+    <div class="mb-14">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="badge-outline">Commercial Fleet & Freight</span>
+        <span class="eeat-badge">Heavy-Duty & Logistics</span>
+        <span class="live-badge"><span class="live-dot"></span> B2B Contracts & Fleet Care</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
+        SEO for <span class="text-gradient-gold">Commercial Trucking & Fleet Services</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl leading-relaxed" style="color: var(--color-text-secondary);">
+        Commercial freight, heavy-duty diesel maintenance, and transport logistics require specialized B2B search architecture. We build high-performing search funnels that capture shippers, fleet managers, and long-haul contracts.
+      </p>
+    </div>
+
+    <!-- Metrics -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">+350%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Commercial RFQs</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">#1</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Corridor Search Rank</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">$25k+</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Avg. Contract Value</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">100%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">B2B Intent Focus</div>
+      </div>
+    </div>
+
+    <!-- 4 Pillars -->
+    <div class="mb-20">
+      <div class="mb-10 text-center max-w-2xl mx-auto">
+        <span class="eeat-badge mb-2">Transport SEO Strategy</span>
+        <h2 class="text-2xl sm:text-3xl font-bold mt-2" style="color: var(--color-text-primary);">
+          Core Pillars of Fleet & Transport Search
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {fleetServices.map(f => (
+          <div class="hud-panel p-6">
+            <h3 class="text-lg font-bold mb-2" style="color: var(--color-text-primary);">{f.title}</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">{f.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Author & E-E-A-T -->
+    <div class="mb-16">
+      <AuthorCard
+        name="Automotive Search Engineering Team"
+        role="Specialist Automotive SEO Leads"
+        bio="With 15+ years managing commercial fleet and transport search campaigns, our engineers understand freight procurement lifecycles, heavy-duty repair specifications, and regional terminal search."
+        expertise={['Freight RFQ Funnels', 'Heavy Duty Diesel SEO', 'Multi-Terminal GBP', 'Commercial Logistics SEO']}
+      />
+    </div>
+
+    <!-- FAQs -->
+    <div class="mb-16">
+      <FaqSection items={faqs} title="Trucking & Transport SEO — Frequently Asked Questions" />
+    </div>
+
+    <!-- Consultation CTA -->
+    <div class="hud-panel p-8 sm:p-12 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color: var(--color-text-primary);">
+        Scale your commercial freight and fleet service contracts
+      </h2>
+      <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
+        Schedule a strategic consultation to evaluate commercial search volume in your transport corridors.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact/" class="btn-primary text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto">
+          Schedule Transport SEO Call →
+        </a>
+        <a href="/audit/" class="btn-gold text-sm font-bold py-3.5 px-8 rounded-xl w-full sm:w-auto">
+          Run Free SEO Audit
+        </a>
+      </div>
+    </div>
+
   </div>
-  <div class="prose-content">
-    <h2>Trucking & Transport SEO Strategy</h2>
-    <p>The trucking SEO vertical generates <strong>1,350 monthly searches</strong> across keywords like <strong>"trucking seo company"</strong> (260/mo) and <strong>"seo for logistics business"</strong> (70/mo). Key strategies include:</p>
-    <ul>
-      <li>Service area pages for each route/region served</li>
-      <li><a href="/blog/local-seo-for-automotive/">Local SEO</a> for terminal and depot locations</li>
-      <li>Industry-specific content: DOT compliance, fleet management, load board optimization</li>
-      <li><a href="/blog/ecommerce-seo-automotive/">E-commerce SEO</a> for parts and accessory sales</li>
-      <li><strong>Truck repair shop SEO</strong> (40/mo) — cross-promote with <a href="/auto-repair-seo-services/">auto repair SEO</a></li>
-    </ul>
-    <h2>Top Keywords</h2>
-  </div>
-  <div class="overflow-x-auto mt-6 mb-10">
-    <table class="w-full text-sm">
-      <thead><tr class="border-b border-white/[0.08] text-left"><th class="pb-3 text-slate-400 font-semibold">Keyword</th><th class="pb-3 text-slate-400 font-semibold text-right">Volume</th><th class="pb-3 text-slate-400 font-semibold text-right">KD</th></tr></thead>
-      <tbody class="text-slate-300">
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">trucking seo company</td><td class="text-right">260</td><td class="text-right text-emerald-400">1</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">truck company seo marketing</td><td class="text-right">260</td><td class="text-right text-emerald-400">8</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">truck company seo</td><td class="text-right">210</td><td class="text-right text-emerald-400">7</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">transportation seo company</td><td class="text-right">110</td><td class="text-right text-amber-400">12</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">seo for logistics business</td><td class="text-right">70</td><td class="text-right text-emerald-400">0</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Related Pages</h2><InternalLinkCard links={relatedLinks} columns={2} /></div>
-  <FaqSection items={faqs} title="Trucking SEO — FAQ" />
 </BaseLayout>

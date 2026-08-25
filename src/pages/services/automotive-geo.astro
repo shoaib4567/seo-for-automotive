@@ -1,36 +1,104 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqSection from '../../components/FaqSection.astro';
 
-const title = "GEO for Automotive — Generative Engine Optimization & AI Search";
-const description = "Specialist Generative Engine Optimization (GEO) for automotive businesses. Get your brand cited by ChatGPT, Gemini, Perplexity, and other AI assistants for automotive queries.";
+const title = "GEO for Automotive — Generative Engine Optimization & LLM Visibility | SEO for Automotive";
+const description = "Specialist Generative Engine Optimization (GEO) for automotive businesses. Get your automotive brand recommended and cited by ChatGPT, Google Gemini, Perplexity, and Apple Intelligence.";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services/' },
   { label: 'GEO', href: '/services/automotive-geo/' },
 ];
+
+const pillars = [
+  { title: 'Brand Entity Embedding & Vectorization', desc: 'Establishing your dealership, parts brand, or repair shop as an authoritative entity in public knowledge repositories and LLM training corpora.' },
+  { title: 'Citation-Worthy Original Data & Testing', desc: 'Publishing definitive comparison benchmarks, automotive lab tests, and technical specs that LLMs systematically cite as primary sources.' },
+  { title: 'Cross-Platform Entity Consistency & Digital PR', desc: 'Managing entity mentions across automotive forums, Reddit, YouTube, industry trade publications, and authoritative review ecosystems.' },
+  { title: 'Multi-Modal AI Search Alignment', desc: 'Optimizing vehicle photography, video walkarounds, and structured product attributes for multi-modal visual search in Gemini and ChatGPT-4o.' },
+];
+
+const faqs = [
+  {
+    question: 'How is GEO (Generative Engine Optimization) different from traditional SEO?',
+    answer: 'Traditional SEO targets keyword rankings on search engine result pages. GEO targets citation frequency and recommendation probability within Large Language Models (LLMs) like ChatGPT, Gemini, Perplexity, and Copilot. When a prospective buyer prompts "What\'s the most reliable brake pad brand for heavy towing?" or "Find the top-rated PPF installer near me", GEO ensures your brand is the synthesized answer.'
+  }
+];
 ---
 
 <BaseLayout title={title} description={description} canonicalPath="/services/automotive-geo/" breadcrumbs={breadcrumbs}>
-  <div class="max-w-3xl">
-    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
-      GEO for <span class="text-gradient-gold">Automotive</span>
-    </h1>
-    <div class="prose-content">
-      <p class="text-lg" style="color: var(--color-text-secondary);">Generative Engine Optimization (GEO) is the practice of getting your automotive brand cited by AI-powered search systems — ChatGPT, Google Gemini, Perplexity, Microsoft Copilot, and other large language model (LLM) assistants that increasingly influence purchase decisions.</p>
-
-      <h2>Why GEO matters for automotive</h2>
-      <p>When someone asks ChatGPT "What's the best PPF brand?" or "Which car cover is most waterproof?" or "Find a good mechanic near me" — AI assistants synthesize information from across the web and present curated answers. If your brand isn't part of that synthesis, you're invisible to a growing segment of searchers.</p>
-
-      <h2>What we do</h2>
-      <ul>
-        <li><strong>Entity establishment</strong> — building your brand as a recognized entity in knowledge graphs through structured data, consistent naming, and cross-platform presence</li>
-        <li><strong>Citation-worthy content</strong> — publishing original data, specifications, test results, and authoritative content that LLMs prefer to reference</li>
-        <li><strong>Cross-platform presence</strong> — ensuring your brand is mentioned on forums, Reddit, YouTube, industry publications, and other sources LLMs train on</li>
-        <li><strong>Structured data depth</strong> — comprehensive schema markup that helps AI systems understand your products, services, and expertise</li>
-        <li><strong>Authoritative content signals</strong> — E-E-A-T compliance, expert authorship, and factual accuracy that build AI trust</li>
-      </ul>
-
-      <p>See our <a href="/case-studies/teckwrap/">TeckWrap case study</a> — 35+ AI Overview citations and LLM brand mentions. Learn more in our <a href="/blog/geo-generative-engine-optimization/">complete GEO guide</a>.</p>
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Hero Header -->
+    <div class="mb-14">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="badge-outline">Generative Search Intelligence</span>
+        <span class="eeat-badge">LLM Vectorization</span>
+        <span class="live-badge"><span class="live-dot"></span> ChatGPT, Gemini & Perplexity</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
+        GEO for Automotive: <span class="text-gradient-gold">Generative Engine Optimization & AI Citations</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl leading-relaxed max-w-3xl" style="color: var(--color-text-secondary);">
+        Millions of automotive purchase decisions now originate in conversational AI assistants. We engineer Generative Engine Optimization (GEO) strategies that ensure your automotive brand is cited and recommended by next-generation AI models.
+      </p>
     </div>
+
+    <!-- Metrics -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">100%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Entity Verification</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">4x</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">AI Citation Velocity</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">45+</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">LLM Brand Mentions</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">#1</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Recommended Brand</div>
+      </div>
+    </div>
+
+    <!-- 4 Pillars -->
+    <div class="mb-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {pillars.map(p => (
+          <div class="hud-panel p-6">
+            <h3 class="text-lg font-bold mb-2" style="color: var(--color-text-primary);">{p.title}</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mb-20">
+      <FaqSection items={faqs} title="Automotive GEO — Frequently Asked Questions" />
+    </div>
+
+    <!-- Consultation CTA -->
+    <div class="hud-panel p-8 sm:p-12 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color: var(--color-text-primary);">
+        Get your automotive brand cited in ChatGPT and Gemini
+      </h2>
+      <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
+        Schedule a GEO visibility audit to see how AI assistants currently represent your brand versus competitors.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact/" class="btn-primary text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto">
+          Schedule GEO Strategy Call →
+        </a>
+        <a href="/audit/" class="btn-gold text-sm font-bold py-3.5 px-8 rounded-xl w-full sm:w-auto">
+          Run Free AI Search Audit
+        </a>
+      </div>
+    </div>
+
   </div>
 </BaseLayout>

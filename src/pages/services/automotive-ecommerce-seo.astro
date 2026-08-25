@@ -1,35 +1,131 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqSection from '../../components/FaqSection.astro';
 
-const title = "eCommerce SEO for Automotive — Product & Catalog Optimization";
-const description = "Specialist eCommerce SEO for auto parts stores, accessories, and automotive product catalogs. Product page optimization, category architecture, part number SEO, and Google Shopping.";
+const title = "Auto Parts & Accessories eCommerce SEO — Fitment & Catalog Architecture | SEO for Automotive";
+const description = "Specialist eCommerce SEO for automotive parts stores, aftermarket accessories, wheels, tires, and performance brands. Dominate part number search, year/make/model fitment queries, and Google Shopping.";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services/' },
   { label: 'eCommerce SEO', href: '/services/automotive-ecommerce-seo/' },
 ];
+
+const pillars = [
+  { title: 'Year / Make / Model (YMM) Fitment SEO', desc: 'Engineered dynamic vehicle compatibility landing pages that capture granular long-tail buyer intent (e.g., "2024 Ford F-150 cold air intake").' },
+  { title: 'OEM Part Number & Interchange Hierarchy', desc: 'Structuring MPN, SKU, GTIN, and interchange cross-reference databases into Schema.org Product markup for maximum SERP dominance.' },
+  { title: 'Faceted Navigation & Crawl Budget Control', desc: 'Configuring canonical rules and robots directives on multi-attribute filters (bolt pattern, offset, finish, diameter) to eliminate duplicate content.' },
+  { title: 'Google Merchant Center & Free Listings', desc: 'Automated product feed optimization with vehicle fitment attributes, high-res gallery feeds, and Google Free Listings merchant authority.' },
+];
+
+const faqs = [
+  {
+    question: 'How do you structure Year/Make/Model fitment pages without creating duplicate content penalties?',
+    answer: 'We deploy dynamic parameterized canonicalization and hierarchical taxonomy structures. We group universal parts under core parent categories while exposing crawlable, unique metadata on high-volume specific vehicle fitment combinations.'
+  },
+  {
+    question: 'How does your eCommerce SEO help outrank Amazon and eBay Motors for auto parts?',
+    answer: 'Marketplaces rely on generic, scraped seller descriptions. We win by providing complete technical fitment schematics, installation torque specs, dynamic review ratings, and comprehensive OEM interchange data that Google\'s quality evaluators prioritize as superior information gain.'
+  }
+];
 ---
 
 <BaseLayout title={title} description={description} canonicalPath="/services/automotive-ecommerce-seo/" breadcrumbs={breadcrumbs}>
-  <div class="max-w-3xl">
-    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
-      eCommerce SEO for <span class="text-gradient-gold">Automotive</span>
-    </h1>
-    <div class="prose-content">
-      <p class="text-lg" style="color: var(--color-text-secondary);">Auto parts eCommerce and automotive accessories stores face unique challenges — massive SKU catalogs, part number-based search behavior, vehicle compatibility requirements, and intense competition from Amazon and marketplace sellers.</p>
-
-      <h2>What we optimize</h2>
-      <ul>
-        <li><strong>Product page enrichment</strong> — unique descriptions, fitment data, installation guides, and customer review integration</li>
-        <li><strong>Category architecture</strong> — Vehicle → Part Type → Brand taxonomy matching how customers search</li>
-        <li><strong>Part number SEO</strong> — OEM numbers, cross-references, and aftermarket equivalents in content and schema</li>
-        <li><strong>Faceted navigation management</strong> — crawl budget control for filter combinations</li>
-        <li><strong>Product schema</strong> — Product, Offer, AggregateRating markup for rich search results</li>
-        <li><strong>Google Merchant Center</strong> — product feed optimization for free Google Shopping listings</li>
-        <li><strong>Buying guides & comparison content</strong> — informational content driving top-of-funnel traffic to product pages</li>
-      </ul>
-
-      <p>See our <a href="/case-studies/bigacover/">BigACover case study</a> — 460% organic revenue growth for an automotive eCommerce brand.</p>
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Hero Header -->
+    <div class="mb-14">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="badge-outline">eCommerce Search Engineering</span>
+        <span class="eeat-badge">+460% Organic Revenue</span>
+        <span class="live-badge"><span class="live-dot"></span> YMM Fitment & Part Numbers</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
+        Auto Parts eCommerce SEO: <span class="text-gradient-gold">Fitment & Catalog Dominance</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl leading-relaxed max-w-3xl" style="color: var(--color-text-secondary);">
+        Auto parts eCommerce is defined by part number search, year/make/model compatibility, and complex catalog hierarchies. We engineer high-converting category architectures and fitment databases that scale direct-to-consumer revenue.
+      </p>
     </div>
+
+    <!-- Visual Banner -->
+    <div class="relative rounded-2xl overflow-hidden border shadow-2xl mb-16" style="border-color: var(--color-border); background: var(--color-bg-card);">
+      <img
+        src="/b2b-autoparts-tech.jpg"
+        alt="Automotive Parts Smart Warehouse and Fitment Schematic Telemetry"
+        class="w-full h-auto object-cover"
+        loading="eager"
+      />
+      <div class="p-4 border-t flex flex-wrap items-center justify-between gap-3 text-xs" style="border-color: var(--color-border); background: var(--color-bg-surface);">
+        <span class="font-bold flex items-center gap-2" style="color: var(--color-text-primary);">
+          <span class="live-dot"></span> Proven Scale: Custom Car Covers (BAC) +460% Revenue & SEJ Parts $1.8M Wholesale Pipeline
+        </span>
+        <a href="/case-studies/bigacover/" class="text-[11px] font-bold text-gradient-gold hover:underline">Read eCommerce Case Study →</a>
+      </div>
+    </div>
+
+    <!-- Metrics Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">+460%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Organic eCommerce Rev</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">100k+</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">SKUs Optimized</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">4.8★</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Product Review Rich Snippets</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">#1</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Part Number Authority</div>
+      </div>
+    </div>
+
+    <!-- 4 Pillars -->
+    <div class="mb-20">
+      <div class="mb-10 text-center max-w-2xl mx-auto">
+        <span class="eeat-badge mb-2">eCommerce Methodology</span>
+        <h2 class="text-2xl sm:text-3xl font-bold mt-2" style="color: var(--color-text-primary);">
+          How We Scale Automotive eCommerce Catalogs
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {pillars.map(p => (
+          <div class="hud-panel p-6">
+            <h3 class="text-lg font-bold mb-2" style="color: var(--color-text-primary);">{p.title}</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mb-20">
+      <FaqSection items={faqs} title="Automotive eCommerce SEO — Frequently Asked Questions" />
+    </div>
+
+    <!-- Consultation CTA -->
+    <div class="hud-panel p-8 sm:p-12 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color: var(--color-text-primary);">
+        Ready to scale your auto parts organic revenue?
+      </h2>
+      <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
+        Get a specialized catalog architecture and fitment audit for your online parts or accessories store.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact/" class="btn-primary text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto">
+          Schedule eCommerce Consultation →
+        </a>
+        <a href="/audit/" class="btn-gold text-sm font-bold py-3.5 px-8 rounded-xl w-full sm:w-auto">
+          Run Instant Catalog Audit
+        </a>
+      </div>
+    </div>
+
   </div>
 </BaseLayout>

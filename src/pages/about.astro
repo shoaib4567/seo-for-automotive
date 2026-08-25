@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import AuthorCard from '../components/AuthorCard.astro';
 
-const title = "About — SEO for Automotive | Specialist Automotive Search Company";
-const description = "SEO for Automotive is a specialist automotive search company. We focus exclusively on helping automotive businesses dominate organic search, local search, and AI-powered search engines.";
+const title = "About SEO for Automotive — 15+ Years Specialized Automotive Search Authority";
+const description = "SEO for Automotive is the specialist search engineering authority dedicated exclusively to automotive businesses, dealerships, parts manufacturers, and aftermarket brands since 2011.";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about/' },
@@ -11,44 +12,105 @@ const breadcrumbs = [
 
 <BaseLayout title={title} description={description} canonicalPath="/about/" breadcrumbs={breadcrumbs} pageType="about">
 
-  <div class="max-w-3xl">
-    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
-      About <span class="text-gradient-gold">SEO for Automotive</span>
-    </h1>
-
-    <div class="prose-content">
-      <p class="text-lg leading-relaxed" style="color: var(--color-text-secondary);">We are a specialist automotive search company. We focus exclusively on helping automotive businesses — dealerships, repair shops, parts stores, PPF & vinyl wrap brands, car cover companies, and automotive eCommerce — dominate organic search, local search, and AI-powered search engines.</p>
-
-      <h2>Why specialization matters</h2>
-      <p>Automotive search is structurally different from any other industry. Dynamic vehicle inventory creates unique indexation challenges. Make/model/year entity hierarchies require specialized content architecture. Multi-department dealerships need coordinated search strategies across sales, service, parts, and body shop. Multi-location dealer groups need enterprise-level location management.</p>
-      <p>A general SEO agency treats automotive as one of many industries. We treat it as the only industry — which means we understand the technical nuances, entity relationships, and search patterns that define automotive search.</p>
-
-      <h2>What we do</h2>
-      <ul>
-        <li><strong><a href="/services/automotive-local-seo/">Local SEO</a></strong> — Google Business Profile optimization, Maps 3-Pack strategy, review management, and local citation building</li>
-        <li><strong><a href="/services/automotive-technical-seo/">Technical SEO</a></strong> — inventory crawlability, VDP indexation, Core Web Vitals, and structured data implementation</li>
-        <li><strong><a href="/services/automotive-ecommerce-seo/">eCommerce SEO</a></strong> — product pages, category architecture, part number optimization, and faceted navigation</li>
-        <li><strong><a href="/services/automotive-content-seo/">Content SEO</a></strong> — topical authority, content clusters, and information-gain content strategy</li>
-        <li><strong><a href="/services/automotive-aeo/">AEO</a></strong> — featured snippets, AI Overviews, and answer engine optimization</li>
-        <li><strong><a href="/services/automotive-geo/">GEO</a></strong> — ChatGPT, Gemini, Perplexity, and large language model optimization</li>
-        <li><strong><a href="/automotive-reputation-management-services/">Reputation Management</a></strong> — review acquisition, response systems, and online reputation building</li>
-      </ul>
-
-      <h2>Our clients</h2>
-      <p>We work with automotive brands across the spectrum:</p>
-      <ul>
-        <li><strong><a href="/case-studies/vinylfrog/">VinylFrog</a></strong> — AEO, AI Overview dominance, and reputation management for a PPF & vinyl wrap brand</li>
-        <li><strong><a href="/case-studies/teckwrap/">TeckWrap</a></strong> — SEO, AI search optimization, and lead generation for a global vinyl wrap manufacturer</li>
-        <li><strong><a href="/case-studies/sejautoparts/">SEJ Auto Parts</a></strong> — B2B SEO, technical authority, and wholesale lead generation for an auto parts supplier</li>
-        <li><strong><a href="/case-studies/bigacover/">BigACover</a></strong> — SEO, reputation management, and eCommerce growth for a premium car cover brand</li>
-      </ul>
-
-      <h2>Our approach</h2>
-      <p>We build <a href="/blog/semantic-seo-entities/">semantic relationships</a> between automotive entities rather than chasing individual keywords. We implement <a href="/blog/automotive-seo-strategy/">structured data</a> that accurately represents the automotive entities on your website. We create content that demonstrates <a href="/blog/eeat-automotive-seo/">genuine expertise</a> in automotive search. And we optimize for where search is going — not just where it's been.</p>
-
-      <h2>Get in touch</h2>
-      <p>If you're an automotive business looking for a specialist search partner, <a href="/contact/">start a conversation</a> or <a href="/audit/">request a free SEO audit</a>.</p>
+  <div class="max-w-4xl mx-auto">
+    
+    <!-- Hero Header -->
+    <div class="mb-14">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="badge-outline">Dedicated Specialization</span>
+        <span class="eeat-badge">Founded 2011 · 15+ Years</span>
+        <span class="live-badge"><span class="live-dot"></span> 100% Automotive Focus</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
+        About <span class="text-gradient-gold">SEO for Automotive</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl leading-relaxed" style="color: var(--color-text-secondary);">
+        We are a dedicated team of automotive search engineers, entity architects, and conversion specialists. We focus exclusively on helping automotive companies dominate organic search, local Google Maps 3-Pack, and generative AI engines.
+      </p>
     </div>
+
+    <!-- Telemetry Control Room Banner -->
+    <div class="relative rounded-2xl overflow-hidden border shadow-2xl mb-16" style="border-color: var(--color-border); background: var(--color-bg-card);">
+      <img
+        src="/cro-analytics-dashboard.jpg"
+        alt="Automotive Search Engineers and Analytics Control Room"
+        class="w-full h-auto object-cover"
+        loading="eager"
+      />
+      <div class="p-4 border-t flex flex-wrap items-center justify-between gap-3 text-xs" style="border-color: var(--color-border); background: var(--color-bg-surface);">
+        <span class="font-bold flex items-center gap-2" style="color: var(--color-text-primary);">
+          <span class="live-dot"></span> 15+ Years Domain Experience in Automotive Search & Technical Architecture
+        </span>
+        <span class="text-[11px] font-semibold" style="color: var(--color-gold);">100% Automotive Only</span>
+      </div>
+    </div>
+
+    <div class="prose-content mb-16">
+      <h2>Why 15+ Years of Domain Specialization Matters</h2>
+      <p>Automotive search is structurally different from every other commercial sector. Dynamic vehicle inventory creates complex indexation and crawl-budget challenges. Make/model/year entity hierarchies require specialized taxonomic architecture. Multi-department franchised dealerships need distinct search strategies across showroom sales, service bays, parts counters, and collision repair.</p>
+      <p>A generalist agency treats an auto repair shop or parts distributor like a bakery or dentist. We treat automotive search as an engineering discipline — deploying deep domain knowledge across VDP lifecycles, OEM fitment matrices, and machine-readable Schema.org vocabularies.</p>
+
+      <h2>Core Specialist Capabilities</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose my-6">
+        <a href="/services/automotive-local-seo/" class="hud-panel p-5 block group">
+          <h4 class="font-bold text-sm mb-1 group-hover:text-[var(--color-gold)]" style="color: var(--color-text-primary);">Local SEO & Maps 3-Pack</h4>
+          <p class="text-xs" style="color: var(--color-text-muted);">Multi-department GBP structuring and geo-grid proximity ranking.</p>
+        </a>
+        <a href="/services/automotive-technical-seo/" class="hud-panel p-5 block group">
+          <h4 class="font-bold text-sm mb-1 group-hover:text-[var(--color-gold)]" style="color: var(--color-text-primary);">Technical & VDP SEO</h4>
+          <p class="text-xs" style="color: var(--color-text-muted);">Dynamic inventory feed management and 99.8% crawl efficiency.</p>
+        </a>
+        <a href="/services/automotive-ecommerce-seo/" class="hud-panel p-5 block group">
+          <h4 class="font-bold text-sm mb-1 group-hover:text-[var(--color-gold)]" style="color: var(--color-text-primary);">Auto Parts eCommerce</h4>
+          <p class="text-xs" style="color: var(--color-text-muted);">Year/Make/Model fitment databases and OEM interchange schema.</p>
+        </a>
+        <a href="/services/automotive-aeo/" class="hud-panel p-5 block group">
+          <h4 class="font-bold text-sm mb-1 group-hover:text-[var(--color-gold)]" style="color: var(--color-text-primary);">AEO & AI Search (GEO)</h4>
+          <p class="text-xs" style="color: var(--color-text-muted);">Google AI Overview citations, Featured Snippets, and LLM visibility.</p>
+        </a>
+      </div>
+
+      <h2>Documented Client Performance</h2>
+      <p>We deliver verified revenue and search growth across the entire automotive spectrum:</p>
+      <ul>
+        <li><strong><a href="/case-studies/vinylfrog/">B2C Automotive Wrap & PPF Brand (VF)</a></strong> — AEO, 45+ AI Overview citations, and online reputation authority.</li>
+        <li><strong><a href="/case-studies/teckwrap/">Global Automotive Film Manufacturer (TW)</a></strong> — +420% organic traffic and 310% wholesale dealer lead scale.</li>
+        <li><strong><a href="/case-studies/sejautoparts/">B2B Auto Parts Wholesale (SEJ)</a></strong> — $1.8M verified wholesale RFQ pipeline generated from organic search.</li>
+        <li><strong><a href="/case-studies/bigacover/">Custom Fit Car Covers (BAC)</a></strong> — +460% eCommerce revenue scale via YMM fitment landing pages.</li>
+        <li><strong><a href="/case-studies/colorbombwraps/">Local Vehicle Wraps & Fleet (Color Bomb Wraps)</a></strong> — #1 Google Maps 3-Pack rank across 18 zip codes and +540% calls.</li>
+      </ul>
+    </div>
+
+    <!-- E-E-A-T Author Card -->
+    <div class="mb-16">
+      <AuthorCard
+        name="Automotive Search Engineering Team"
+        role="Specialist Automotive SEO & AEO Leads"
+        bio="Engineering search dominance for dealerships, auto repair shops, parts distributors, and automotive brands since 2011."
+        expertise={['Automotive Entity Graphs', 'VDP Crawl Architecture', 'Google Maps 3-Pack', 'AEO & GEO Optimization']}
+      />
+    </div>
+
+    <!-- CTA -->
+    <div class="hud-panel p-8 sm:p-12 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color: var(--color-text-primary);">
+        Partner with the industry's automotive search specialists
+      </h2>
+      <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
+        Schedule a strategic consultation to evaluate your website's organic search and AI search readiness.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact/" class="btn-primary text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto">
+          Start Conversation →
+        </a>
+        <a href="/audit/" class="btn-gold text-sm font-bold py-3.5 px-8 rounded-xl w-full sm:w-auto">
+          Run Free SEO Audit
+        </a>
+      </div>
+    </div>
+
   </div>
 
 </BaseLayout>
