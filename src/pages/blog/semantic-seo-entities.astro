@@ -1,80 +1,103 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import InternalLinkCard from '../../components/InternalLinkCard.astro';
-const title = "Semantic SEO & Entities for Automotive — Schema, Knowledge Graph & Entity Optimization [2026]";
-const description = "Master semantic SEO for automotive. Entity optimization, Schema.org Vehicle markup, Knowledge Graph, attributes, and entity-based content architecture.";
+import FaqSection from '../../components/FaqSection.astro';
+import AuthorCard from '../../components/AuthorCard.astro';
+
+const title = "Semantic SEO & Automotive Entities: Schema, Knowledge Graph & Architecture [2026]";
+const description = "Master semantic SEO for automotive websites. Implement Schema.org Vehicle and AutoDealer entities, Knowledge Graph mapping, and machine-readable data structures.";
 const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Knowledge Hub', href: '/blog/automotive-seo-strategy/' }, { label: 'Semantic SEO', href: '/blog/semantic-seo-entities/' }];
 const relatedLinks = [
-  { title: 'E-E-A-T Guide', href: '/blog/eeat-automotive-seo/', description: 'Entity authority and trust.', icon: '🏆' },
-  { title: 'AEO — Answer Engine', href: '/blog/aeo-answer-engine-optimization/', description: 'Entities in answer optimization.', icon: '💬' },
-  { title: 'GEO — Generative Engine', href: '/blog/geo-generative-engine-optimization/', description: 'Entity clarity for AI citations.', icon: '🤖' },
-  { title: 'Content SEO Playbook', href: '/blog/content-seo-automotive/', description: 'Entity-first content strategy.', icon: '📝' },
-  { title: 'Holistic SEO', href: '/blog/holistic-seo-automotive/', description: 'Entities in holistic framework.', icon: '🔄' },
-  { title: 'Car Dealership SEO', href: '/seo-for-car-dealerships/', description: 'Vehicle entity optimization.', icon: '🚗', volume: '18,500/mo' },
+  { title: 'E-E-A-T Guide for Automotive', href: '/blog/eeat-automotive-seo/', description: 'Entity trust, technician certifications, and authority signals.' },
+  { title: 'AEO — Answer Engine Optimization', href: '/blog/aeo-answer-engine-optimization/', description: 'Winning featured snippets with entity clarity.' },
+  { title: 'GEO — Generative Engine Optimization', href: '/blog/geo-generative-engine-optimization/', description: 'Structuring entity attributes for AI citations.' },
+  { title: 'Content SEO Playbook', href: '/blog/content-seo-automotive/', description: 'Entity-first automotive content architectures.' },
+  { title: 'Holistic SEO Framework', href: '/blog/holistic-seo-automotive/', description: 'Unified technical and commercial search architecture.' },
+  { title: 'Car Dealership SEO Services', href: '/industries/car-dealership-seo/', description: 'Vehicle entity optimization for franchised dealer groups.' },
+];
+
+const faqs = [
+  { question: 'What is semantic SEO in the automotive industry?', answer: 'Semantic SEO is the practice of structuring website content and metadata around real-world automotive entities (makes, models, VINs, trims, OEM part numbers, dealership locations) and their relationships, rather than optimizing solely for isolated keywords. This enables Google and AI search engines to interpret and cite the data accurately.' },
+  { question: 'What Schema.org types are required for automotive websites?', answer: 'Automotive websites require nested Schema.org structures including Vehicle, AutoDealer, AutoRepair, AutoBodyShop, Product (with mpn, gtin13, sku), Service, Offer, FAQPage, and Review vocabularies.' },
 ];
 ---
 <BaseLayout title={title} description={description} canonicalPath="/blog/semantic-seo-entities/" breadcrumbs={breadcrumbs}>
   <div class="mb-12">
-    <div class="flex items-center gap-3 mb-4"><span class="px-2.5 py-0.5 text-[10px] font-bold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 rounded-full uppercase">Knowledge Hub</span></div>
-    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">Semantic SEO & <span class="text-gradient-amber">Entities</span></h1>
-    <p class="mt-4 text-lg text-slate-400 max-w-3xl">Entity-based SEO for automotive businesses. Schema.org Vehicle markup, Knowledge Graph optimization, entity attributes, and <a href="/blog/holistic-seo-automotive/" class="text-amber-400 hover:underline">holistic</a> semantic architecture.</p>
+    <div class="flex items-center gap-3 mb-4">
+      <span class="px-2.5 py-0.5 text-[10px] font-bold text-cyan-500 dark:text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 rounded-full uppercase">Knowledge Hub</span>
+      <span class="px-2.5 py-0.5 text-[10px] font-bold text-amber-600 dark:text-amber-400 bg-amber-500/10 border border-amber-500/20 rounded-full uppercase">Entity Architecture</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-black leading-tight" style="color: var(--color-text-primary);">Semantic SEO &amp; <span class="text-gradient-gold">Automotive Knowledge Entities</span></h1>
+    <p class="mt-4 text-lg max-w-3xl" style="color: var(--color-text-secondary);">
+      Semantic SEO is the optimization method that structures automotive web pages around distinct entities—such as vehicle makes, models, VIN identifiers, and dealership facilities—enabling Google's Knowledge Graph and generative AI engines to verify factual authority and rank pages above generic aggregators.
+    </p>
   </div>
+
   <div class="prose-content">
-    <h2>What is Semantic SEO?</h2>
-    <p>Semantic SEO goes beyond keywords to optimize for <strong>entities</strong> — real-world things (cars, dealerships, services, people, locations) and the <strong>relationships</strong> between them. Search engines and <a href="/blog/llm-seo-automotive/">LLMs</a> understand entities, not just strings of text.</p>
-
-    <h2>Automotive Entities & Attributes</h2>
-    <h3>Vehicle Entities</h3>
-    <p>Every vehicle is an entity with attributes:</p>
+    <h2>Moving From Strings to Things in Automotive Search</h2>
+    <p>
+      Search engines no longer match strings of text against keyword databases. Google's algorithms parse entities: unique, identifiable concepts defined by their attributes and connections to other entities.
+    </p>
+    <p>
+      When a searcher inputs "used 2023 ford f150 lariat under 45k near me", the search engine evaluates four distinct entity layers simultaneously:
+    </p>
     <ul>
-      <li><strong>Make</strong> (Toyota, Ford, BMW) — brand entity</li>
-      <li><strong>Model</strong> (Camry, F-150, X5) — product entity</li>
-      <li><strong>Year</strong> — temporal attribute</li>
-      <li><strong>Trim / Configuration</strong> — variant attribute</li>
-      <li><strong>VIN</strong> — unique identifier</li>
-      <li><strong>Price, Mileage, Color</strong> — descriptive attributes</li>
+      <li><strong>Brand Entity:</strong> Ford Motor Company (Wikidata ID: Q44294)</li>
+      <li><strong>Product Entity:</strong> Ford F-Series / F-150 (Wikidata ID: Q241477)</li>
+      <li><strong>Temporal &amp; Trim Attributes:</strong> Model Year 2023, Trim Level "Lariat", Price ceiling $45,000</li>
+      <li><strong>Geographic &amp; Business Entity:</strong> Licensed AutoDealer within the searcher's physical radius</li>
     </ul>
 
-    <h3>Business Entities</h3>
+    <h2>Essential Automotive Schema.org Types</h2>
+    
+    <h3>1. Vehicle Schema on Inventory Pages</h3>
+    <p>
+      Every Vehicle Detail Page (VDP) must output microdata or JSON-LD utilizing the Schema.org <code>Vehicle</code> or <code>Car</code> type. Critical properties include:
+    </p>
     <ul>
-      <li><strong><a href="/seo-for-car-dealerships/">Dealership</a></strong> — AutoDealer schema type</li>
-      <li><strong><a href="/auto-repair-seo-services/">Repair Shop</a></strong> — AutoRepair schema type</li>
-      <li><strong><a href="/seo-for-auto-body-shops/">Body Shop</a></strong> — AutoBodyShop schema type</li>
-      <li><strong>Service</strong> — individual services offered</li>
-      <li><strong>Person</strong> — technicians, sales staff, <a href="/automotive-seo-expert/">SEO experts</a></li>
+      <li><code>vehicleIdentificationNumber</code> (VIN) for unique indexation</li>
+      <li><code>brand</code> (Organization entity)</li>
+      <li><code>model</code>, <code>modelDate</code> (Year), and <code>vehicleConfiguration</code> (Trim)</li>
+      <li><code>mileageFromOdometer</code> (QuantitativeValue with unitCode "SMI")</li>
+      <li><code>fuelType</code>, <code>driveWheelConfiguration</code>, and <code>itemCondition</code></li>
+      <li><code>offers</code> (Offer schema detailing exact price, currency, and availability)</li>
     </ul>
 
-    <h2>Schema.org Implementation for Automotive</h2>
-    <h3>Vehicle Markup</h3>
-    <p>Schema.org <code>Vehicle</code> type with properties: name, brand, model, modelDate, vehicleIdentificationNumber, mileage, fuelType, color, price. Implement on every VDP (Vehicle Detail Page) for <a href="/seo-for-car-dealerships/">dealership SEO</a>.</p>
+    <h3>2. AutoDealer &amp; AutoRepair Multi-Department Schema</h3>
+    <p>
+      Franchised dealerships require distinct schema declarations for each functional department. Linking these via <code>department</code> and <code>parentOrganization</code> relationships establishes unambiguous local entity boundaries.
+    </p>
 
-    <h3>LocalBusiness Markup</h3>
-    <p><code>AutoDealer</code>, <code>AutoRepair</code>, <code>AutoBodyShop</code> types with geo coordinates, opening hours, payment methods, service areas. Essential for <a href="/local-seo-for-car-dealerships/">local SEO</a>.</p>
+    <h3>3. Product &amp; Part Number Schema (ACES/PIES Fitment)</h3>
+    <p>
+      For automotive parts manufacturers and eCommerce catalogs, part number taxonomy is foundational. Schema.org <code>Product</code> must specify <code>mpn</code> (Manufacturer Part Number), <code>gtin13</code>, and cross-reference vehicle fitment compatibility matrices.
+    </p>
 
-    <h3>Service Markup</h3>
-    <p><code>Service</code> type for each service offered — oil change, brake repair, detailing packages. Link to <code>Offer</code> schema with pricing.</p>
-
-    <h3>FAQPage Markup</h3>
-    <p>Every page on this site includes <code>FAQPage</code> schema — a critical <a href="/blog/aeo-answer-engine-optimization/">AEO strategy</a> for winning PAA boxes and featured snippets.</p>
-
-    <h2>Entity-Based Content Architecture</h2>
-    <p>This site itself demonstrates entity-based content architecture:</p>
+    <h2>Knowledge Graph Optimization Checklist</h2>
+    <p>
+      To establish your automotive brand as a verified entity in Google's Knowledge Graph:
+    </p>
     <ul>
-      <li><strong>Hub entities</strong> — "Automotive SEO", "Car Dealership SEO", "Auto Repair SEO" are the primary entities</li>
-      <li><strong>Entity attributes</strong> — search volume, keyword count, KD are attributes of each cluster</li>
-      <li><strong>Entity relationships</strong> — internal links express relationships (dealership → local SEO → reputation management)</li>
-      <li><strong>Entity co-occurrence</strong> — related terms naturally appear together in content</li>
-    </ul>
-
-    <h2>Knowledge Graph Optimization</h2>
-    <p>Getting your business into Google's Knowledge Graph requires:</p>
-    <ul>
-      <li>Consistent entity data across web (name, address, phone, website)</li>
-      <li>Structured data on your <a href="/automotive-website-providers/">website</a></li>
-      <li>Wikipedia/Wikidata presence (for brands/agencies)</li>
-      <li>Google Business Profile verification</li>
-      <li>Strong <a href="/blog/eeat-automotive-seo/">E-E-A-T signals</a></li>
+      <li>Claim and verify Google Business Profiles with 100% NAP consistency.</li>
+      <li>Reference official Wikidata and Wikipedia entity URIs within schema <code>sameAs</code> fields.</li>
+      <li>Maintain synchronized listings across tier-1 automotive authority portals (Edmunds, DealerRater, CarGurus, Cars.com, Kelley Blue Book).</li>
+      <li>Publish expert-authored technical content showcasing certified automotive engineering credentials.</li>
     </ul>
   </div>
-  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Related Pages</h2><InternalLinkCard links={relatedLinks} columns={3} /></div>
+
+  <FaqSection items={faqs} title="Frequently Asked Questions on Automotive Semantic SEO" />
+
+  <div class="mt-12">
+    <h2 class="text-xl font-bold mb-6" style="color: var(--color-text-primary);">Related Knowledge Hub Pages</h2>
+    <InternalLinkCard links={relatedLinks} columns={3} />
+  </div>
+
+  <div class="mt-12">
+    <AuthorCard 
+      name="Automotive Search Engineering Team" 
+      role="Semantic Search & Knowledge Graph Architects" 
+      bio="Specializing in Schema.org structured data engineering, vehicle entity graphs, and Knowledge Graph validation for automotive enterprises." 
+      expertise={['Schema.org Vehicle Vocabularies', 'Knowledge Graph Architecture', 'ACES/PIES Fitment SEO', 'Entity-Based Content Strategy']} 
+    />
+  </div>
 </BaseLayout>

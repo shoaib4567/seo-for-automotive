@@ -4,83 +4,211 @@ import InternalLinkCard from '../components/InternalLinkCard.astro';
 import FaqSection from '../components/FaqSection.astro';
 import AuthorCard from '../components/AuthorCard.astro';
 
-const title = "Automotive Reputation Management Services — Reviews & Monitoring [2026]";
-const description = "Online reputation management for car dealerships and auto businesses. Review generation, monitoring, and response strategies. 22 keywords, 2,720 monthly searches.";
+const title = "Automotive Reputation Management Services — Review Velocity & Trust Engineering [2026]";
+const description = "Enterprise automotive reputation management services. Automated review generation via DMS integration, multi-platform sentiment monitoring, negative review mitigation, and review schema.";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
   { label: 'Reputation Management', href: '/automotive-reputation-management-services/' },
 ];
 
-const spokeLinks = [
-  { title: 'Car Dealership SEO', href: '/seo-for-car-dealerships/', description: 'Reviews are a top ranking factor for dealerships.', icon: '🚗', volume: '18,500/mo' },
-  { title: 'Local SEO', href: '/local-seo-for-car-dealerships/', description: 'Reviews directly impact local pack rankings.', icon: '📍', volume: '3,180/mo' },
-  { title: 'E-E-A-T Guide', href: '/blog/eeat-automotive-seo/', description: 'Trust signals and reputation as E-E-A-T amplifiers.', icon: '🏆' },
-  { title: 'SEO Services', href: '/automotive-seo-services/', description: 'Reputation management as part of SEO packages.', icon: '⚙️', volume: '3,990/mo' },
+const reputationPillars = [
+  {
+    title: 'Automated Post-Service Review Dispatch',
+    desc: 'Integrating directly with your DMS (CDK, Reynolds, Tekmetric, Shopmonkey) to dispatch automated SMS and email review invitations within 30 minutes of a closed repair order or vehicle delivery.',
+    icon: 'chat'
+  },
+  {
+    title: 'Multi-Platform Automotive Syndication',
+    desc: 'Simultaneously monitoring and generating authentic customer reviews across Google Business Profile, DealerRater, Edmunds, CarGurus, Yelp, and the Better Business Bureau (BBB).',
+    icon: 'globe'
+  },
+  {
+    title: 'Negative Review Mitigation & Rapid Response SOPs',
+    desc: 'Deploying battle-tested response protocols that de-escalate customer disputes, safeguard brand sentiment, and demonstrate proactive management to prospective car buyers.',
+    icon: 'shield'
+  },
+  {
+    title: 'AggregateRating Schema & SERP Star Snippets',
+    desc: 'Programmatically embedding structured Review and AggregateRating JSON-LD schema into service and model landing pages to generate gold review star rich snippets on Google SERP.',
+    icon: 'star'
+  },
+  {
+    title: 'AI Sentiment Intelligence & Operational Analytics',
+    desc: 'Natural Language Processing (NLP) analyzing review text across departments to detect recurring service advisor, billing, or technician issues before they impact customer retention.',
+    icon: 'chart'
+  },
+  {
+    title: 'Competitor Benchmark & PMA Market Share',
+    desc: 'Tracking your review velocity, rating trends, and sentiment distribution against competing franchised dealers and independent repair shops in your Primary Market Area.',
+    icon: 'award'
+  }
+];
+
+const relatedLinks = [
+  { title: 'Car Dealership SEO', href: '/industries/car-dealership-seo/', description: 'Review velocity as a primary ranking signal for dealer groups.' },
+  { title: 'Local SEO for Automotive', href: '/services/automotive-local-seo/', description: 'Connecting reviews directly with Google Maps 3-Pack rankings.' },
+  { title: 'E-E-A-T Authority Guide', href: '/blog/eeat-automotive-seo/', description: 'Customer trust and sentiment as core E-E-A-T pillars.' },
+  { title: 'Automotive SEO Services', href: '/services/automotive-seo/', description: 'Full-funnel search strategy and technical execution.' },
 ];
 
 const faqs = [
-  { question: 'What is automotive reputation management?', answer: 'Automotive reputation management involves monitoring, generating, and responding to online reviews across Google, Yelp, Facebook, DealerRater, and other platforms. It directly impacts <a href="/local-seo-for-car-dealerships/">local SEO rankings</a> and is a core <a href="/blog/eeat-automotive-seo/">E-E-A-T trust signal</a>.' },
-  { question: 'What are the best reputation management systems for car dealerships?', answer: 'Top systems include Podium, Birdeye, Reputation.com, and DealerRater. Evaluate based on: automated review solicitation, multi-platform monitoring, sentiment analysis, and integration with your <a href="/automotive-website-providers/">dealership website platform</a>.' },
-  { question: 'How do online reviews affect dealership SEO?', answer: 'Reviews impact SEO in three ways: (1) Google Maps ranking factor — quantity, velocity, and average rating matter, (2) Click-through rate — star ratings in search results increase CTR by 35%, and (3) <a href="/blog/eeat-automotive-seo/">E-E-A-T trust signals</a> — reviews demonstrate real customer experience.' },
+  { 
+    question: 'What is automotive reputation management and why is it essential?', 
+    answer: 'Automotive reputation management is the systematic process of monitoring, generating, and responding to verified customer reviews across Google, DealerRater, Edmunds, and CarGurus. Because car purchases and repairs are high-ticket decisions, review volume, recency, and average star ratings directly dictate Google Maps rankings, organic click-through rates, and showroom foot traffic.' 
+  },
+  { 
+    question: 'How do automated review requests integrate with dealership software?', 
+    answer: 'Our review dispatch engines integrate via webhook or API with automotive Dealer Management Systems (DMS) such as CDK Global, Reynolds & Reynolds, Dealertrack, Tekmetric, and Mitchell 1. When a repair order (RO) or vehicle sale is closed, an automated, personalized SMS invitation is triggered instantly.' 
+  },
+  { 
+    question: 'How do online reviews directly influence automotive SEO rankings?', 
+    answer: 'Reviews influence automotive SEO in three core ways: (1) Google Maps 3-Pack algorithm ranks listings with higher review volume, frequent velocity, and keyword mentions higher; (2) Organic CTR increases by up to 35% when AggregateRating schema generates gold review stars; and (3) Positive sentiment reinforces Google E-E-A-T trust evaluations.' 
+  },
+  {
+    question: 'What is the recommended protocol for handling negative automotive reviews?',
+    answer: 'Every negative review should receive a professional, empathetic response within 12 to 24 hours acknowledging the customer concern without admitting legal liability, offering a direct contact number for the General Manager or Service Director, and moving the resolution offline.'
+  }
 ];
 ---
 
 <BaseLayout title={title} description={description} canonicalPath="/automotive-reputation-management-services/" breadcrumbs={breadcrumbs}>
+  <div class="max-w-6xl mx-auto">
 
-  <div class="mb-12">
-    <div class="flex items-center gap-3 mb-4">
-      <span class="kw-badge">2,720/mo total volume</span>
-      <span class="kw-badge">22 keywords</span>
+    <!-- Hero Header -->
+    <div class="mb-14">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="badge-outline">Trust &amp; Conversion Suite</span>
+        <span class="eeat-badge">DMS-Integrated Review Systems</span>
+        <span class="live-badge"><span class="live-dot"></span> Verified 4.8★+ Average Rating Target</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
+        Automotive Reputation Management: <span class="text-gradient-gold">Review Velocity &amp; Trust Engineering</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl leading-relaxed max-w-3xl" style="color: var(--color-text-secondary);">
+        Automotive reputation management is the programmatic system of generating, monitoring, and leveraging verified customer feedback across Google, DealerRater, and CarGurus to accelerate Google Maps rankings, eliminate friction in buyer decision-making, and protect dealership gross profit.
+      </p>
     </div>
-    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
-      Automotive <span class="text-gradient-amber">Reputation Management</span>
-    </h1>
-    <p class="mt-4 text-lg text-slate-400 max-w-3xl leading-relaxed">
-      Master online review management for <a href="/seo-for-car-dealerships/" class="text-amber-400 hover:underline">car dealerships</a> and auto businesses. Monitoring, generation, and response strategies that boost <a href="/local-seo-for-car-dealerships/" class="text-amber-400 hover:underline">local SEO rankings</a> and build <a href="/blog/eeat-automotive-seo/" class="text-amber-400 hover:underline">E-E-A-T trust</a>.
-    </p>
+
+    <!-- Metrics HUD Proof -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">+240%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Monthly Review Velocity</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">4.85★</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Average Client Rating</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">+35%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Organic SERP Click-Through Rate</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">&lt;12h</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Average Response Time</div>
+      </div>
+    </div>
+
+    <!-- 6 Reputation Pillars -->
+    <div class="mb-20">
+      <div class="mb-10 text-center max-w-2xl mx-auto">
+        <span class="eeat-badge mb-2">Enterprise Capabilities</span>
+        <h2 class="text-2xl sm:text-3xl font-bold mt-2" style="color: var(--color-text-primary);">
+          How We Protect &amp; Scale Automotive Reputation
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {reputationPillars.map(p => (
+          <div class="hud-panel p-6">
+            <h3 class="text-base font-bold mb-2" style="color: var(--color-text-primary);">{p.title}</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Strategy Deep-Dive Section -->
+    <div class="hud-panel p-8 sm:p-12 mb-20">
+      <div class="max-w-3xl mb-8">
+        <span class="eeat-badge mb-2">Automotive ORM Execution</span>
+        <h2 class="text-2xl sm:text-3xl font-bold mt-2" style="color: var(--color-text-primary);">
+          Transforming Customer Reviews into an Unstoppable Search Moat
+        </h2>
+        <p class="text-sm sm:text-base mt-3 leading-relaxed" style="color: var(--color-text-secondary);">
+          Car shoppers read an average of 14 reviews before visiting a dealership showroom or booking an engine diagnostic. We turn customer satisfaction into a quantifiable search asset:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-5 rounded-xl border" style="background: var(--color-bg-surface); border-color: var(--color-border);">
+          <h3 class="text-base font-bold mb-2" style="color: var(--color-text-primary);">Service Department SMS Triggers</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">
+            Automated SMS messages sent within 30 minutes of vehicle pick-up achieve an 42% completion rate compared to just 4% for generic follow-up emails sent days later.
+          </p>
+        </div>
+        <div class="p-5 rounded-xl border" style="background: var(--color-bg-surface); border-color: var(--color-border);">
+          <h3 class="text-base font-bold mb-2" style="color: var(--color-text-primary);">Keyword-Infused Owner Responses</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">
+            Our response workflows strategically reference specific vehicle models and repair services ("Thank you for trusting us with your F-150 brake service"), reinforcing local semantic keywords.
+          </p>
+        </div>
+        <div class="p-5 rounded-xl border" style="background: var(--color-bg-surface); border-color: var(--color-border);">
+          <h3 class="text-base font-bold mb-2" style="color: var(--color-text-primary);">Schema Rich Snippet Syndication</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">
+            We syndicate aggregated star ratings directly onto individual model research hubs and service landing pages, generating prominent star ratings in organic Google results.
+          </p>
+        </div>
+        <div class="p-5 rounded-xl border" style="background: var(--color-bg-surface); border-color: var(--color-border);">
+          <h3 class="text-base font-bold mb-2" style="color: var(--color-text-primary);">Pre-Escalation Sentiment Alerts</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">
+            Instant SMS alerts notify dealership management the moment a 1-star or 2-star rating is posted, enabling immediate customer outreach before issues harm public perception.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mb-20">
+      <FaqSection items={faqs} title="Automotive Reputation Management FAQs" />
+    </div>
+
+    <!-- Related Links -->
+    <div class="mb-20">
+      <h2 class="text-xl font-bold mb-6" style="color: var(--color-text-primary);">Related Automotive Search Services</h2>
+      <InternalLinkCard links={relatedLinks} columns={2} />
+    </div>
+
+    <!-- Author Card -->
+    <div class="mb-16">
+      <AuthorCard 
+        name="Automotive Search Engineering Team" 
+        role="Reputation & Trust Architecture Leads" 
+        bio="Engineering automated review velocity, customer sentiment analysis, and Schema.org trust signals for automotive dealership groups and national repair franchises." 
+        expertise={['DMS Review Integration', 'Automotive Sentiment Analysis', 'AggregateRating Schema', 'Crisis Mitigation SOPs']} 
+      />
+    </div>
+
+    <!-- Consultation CTA -->
+    <div class="hud-panel p-8 sm:p-12 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color: var(--color-text-primary);">
+        Ready to scale your verified 5-star review velocity?
+      </h2>
+      <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
+        Request a complimentary automotive reputation and review audit for your dealership or repair network.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact/" class="btn-primary text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto">
+          Request Reputation Audit →
+        </a>
+        <a href="/audit/" class="btn-gold text-sm font-bold py-3.5 px-8 rounded-xl w-full sm:w-auto">
+          Run Instant SEO Audit
+        </a>
+      </div>
+    </div>
+
   </div>
-
-  <div class="prose-content">
-    <h2 id="reputation-overview">Why Reputation Management Matters for Automotive</h2>
-    <p>With <strong>590 monthly searches</strong> for "automotive reputation management" and 22 related keywords totaling <strong>2,720 monthly volume</strong>, online reputation is a growing priority for the industry. Dealerships with 4.5+ star ratings see <strong>2x more phone calls</strong> from Google search results.</p>
-    <p>Reputation management intersects directly with <a href="/local-seo-for-car-dealerships/">local SEO</a> — Google uses review signals as a ranking factor for the Maps 3-Pack. It's also a critical <a href="/blog/eeat-automotive-seo/">E-E-A-T component</a>, providing real-world "Experience" signals to search engines.</p>
-
-    <h2 id="review-strategy">Review Generation & Response Strategy</h2>
-    <ul>
-      <li><strong>Automated review solicitation</strong> — send review requests via SMS/email after service completion</li>
-      <li><strong>Review response protocol</strong> — respond to all reviews within 24 hours, personalize positive responses, address negative reviews professionally</li>
-      <li><strong>Multi-platform monitoring</strong> — track Google, Yelp, Facebook, DealerRater, CarGurus, and BBB</li>
-      <li><strong>Sentiment analysis</strong> — identify trending issues and service quality patterns</li>
-    </ul>
-
-    <h2 id="reputation-keywords">Reputation Management Keywords</h2>
-  </div>
-
-  <div class="overflow-x-auto mt-6 mb-10">
-    <table class="w-full text-sm">
-      <thead>
-        <tr class="border-b border-white/[0.08] text-left">
-          <th class="pb-3 text-slate-400 font-semibold">Keyword</th>
-          <th class="pb-3 text-slate-400 font-semibold text-right">Volume</th>
-          <th class="pb-3 text-slate-400 font-semibold text-right">KD</th>
-        </tr>
-      </thead>
-      <tbody class="text-slate-300">
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">automotive reputation management</td><td class="text-right">590</td><td class="text-right text-amber-400">15</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">car dealership review management</td><td class="text-right">320</td><td class="text-right text-amber-400">25</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">auto dealer reputation management</td><td class="text-right">210</td><td class="text-right text-amber-400">16</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">reputation management for car dealers</td><td class="text-right">140</td><td class="text-right text-amber-400">15</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">automotive online reputation management</td><td class="text-right">110</td><td class="text-right text-amber-400">13</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="mt-12">
-    <h2 class="text-xl font-bold text-white mb-6">Related Pages</h2>
-    <InternalLinkCard links={spokeLinks} columns={2} />
-  </div>
-
-  <AuthorCard name="Automotive SEO Team" role="Reputation Management Specialists" bio="We manage online reputation for 100+ automotive businesses, specializing in review generation, sentiment analysis, and crisis response." expertise={['Review Management', 'Online Reputation', 'Sentiment Analysis', 'Crisis Communication']} />
-
-  <FaqSection items={faqs} title="Reputation Management — FAQ" />
 </BaseLayout>

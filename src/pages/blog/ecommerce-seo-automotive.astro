@@ -1,42 +1,83 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import InternalLinkCard from '../../components/InternalLinkCard.astro';
-const title = "E-Commerce SEO for Automotive — Product & Category Optimization [2026]";
-const description = "E-commerce SEO for auto parts stores, accessories shops, and automotive retailers. Product schema, faceted navigation, category optimization, and inventory SEO.";
-const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Knowledge Hub', href: '/blog/automotive-seo-strategy/' }, { label: 'E-Commerce SEO', href: '/blog/ecommerce-seo-automotive/' }];
+import FaqSection from '../../components/FaqSection.astro';
+import AuthorCard from '../../components/AuthorCard.astro';
+
+const title = "Automotive eCommerce SEO: Auto Parts, Accessories & Catalog Scale [2026]";
+const description = "Comprehensive automotive eCommerce SEO guide. Master Year/Make/Model vehicle fitment taxonomy, faceted crawl control, and Google Shopping optimization.";
+const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Knowledge Hub', href: '/blog/automotive-seo-strategy/' }, { label: 'eCommerce SEO', href: '/blog/ecommerce-seo-automotive/' }];
 const relatedLinks = [
-  { title: 'Auto Parts SEO', href: '/auto-parts-seo-services/', description: 'E-commerce SEO service page.', icon: '🔩', volume: '1,300/mo' },
-  { title: 'Semantic SEO & Entities', href: '/blog/semantic-seo-entities/', description: 'Product schema markup.', icon: '🧬' },
-  { title: 'Content SEO Playbook', href: '/blog/content-seo-automotive/', description: 'Content for e-commerce.', icon: '📝' },
-  { title: 'Website Providers', href: '/automotive-website-providers/', description: 'E-commerce platforms.', icon: '🌐' },
+  { title: 'Auto Parts eCommerce SEO Services', href: '/services/automotive-ecommerce-seo/', description: 'Our specialized automotive eCommerce search service package.' },
+  { title: 'Semantic SEO & Entities', href: '/blog/semantic-seo-entities/', description: 'Product and part number Schema.org markup.' },
+  { title: 'Content SEO Playbook', href: '/blog/content-seo-automotive/', description: 'Installation tutorials and buying guides that drive sales.' },
+  { title: 'B2B Auto Parts SEO Services', href: '/services/automotive-b2b-seo/', description: 'Wholesale distributor and manufacturer search funnels.' },
+  { title: 'Automotive SEO Strategy', href: '/blog/automotive-seo-strategy/', description: 'Comprehensive search framework for automotive brands.' },
+  { title: 'Technical SEO Services', href: '/services/automotive-technical-seo/', description: 'Faceted navigation and crawl budget management.' },
+];
+
+const faqs = [
+  { question: 'What makes automotive eCommerce SEO different from standard retail SEO?', answer: 'Automotive eCommerce SEO requires specialized Year/Make/Model (YMM) fitment databases, ACES and PIES industry data compliance, OEM part number cross-referencing, and complex faceted crawl budget management across hundreds of thousands of SKU variations.' },
+  { question: 'How do you prevent duplicate content on auto parts websites with multiple fitments?', answer: 'We implement dynamic self-referential canonical tags, selective parameter indexing via robots.txt, structured parent-child SKU architectures, and programmatic Schema.org Product markup that specifies compatible vehicle entities without creating indexable duplicate pages.' },
 ];
 ---
 <BaseLayout title={title} description={description} canonicalPath="/blog/ecommerce-seo-automotive/" breadcrumbs={breadcrumbs}>
   <div class="mb-12">
-    <div class="flex items-center gap-3 mb-4"><span class="px-2.5 py-0.5 text-[10px] font-bold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 rounded-full uppercase">Knowledge Hub</span></div>
-    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">E-Commerce SEO for <span class="text-gradient-amber">Automotive</span></h1>
-    <p class="mt-4 text-lg text-slate-400 max-w-3xl">Product page optimization, faceted navigation handling, and category SEO for <a href="/auto-parts-seo-services/" class="text-amber-400 hover:underline">auto parts stores</a> and automotive retailers.</p>
+    <div class="flex items-center gap-3 mb-4">
+      <span class="px-2.5 py-0.5 text-[10px] font-bold text-cyan-500 dark:text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 rounded-full uppercase">Knowledge Hub</span>
+      <span class="px-2.5 py-0.5 text-[10px] font-bold text-emerald-500 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full uppercase">eCommerce Architecture</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-black leading-tight" style="color: var(--color-text-primary);">Automotive eCommerce SEO: <span class="text-gradient-gold">Fitment &amp; Catalog Scale</span></h1>
+    <p class="mt-4 text-lg max-w-3xl" style="color: var(--color-text-secondary);">
+      Automotive eCommerce SEO is the specialized technical optimization of online auto parts, accessories, and tire catalogs, utilizing Year/Make/Model (YMM) fitment filtering, OEM part number cross-referencing, and structured product data to drive qualified organic transactions and Google Shopping visibility.
+    </p>
   </div>
+
   <div class="prose-content">
-    <h2>Automotive E-Commerce SEO Challenges</h2>
-    <p>Auto parts e-commerce presents unique SEO challenges: massive SKU counts, year/make/model fitment data, duplicate product descriptions from manufacturers, and complex faceted navigation. This guide addresses each challenge with actionable strategies.</p>
-    <h3>Product Page Optimization</h3>
+    <h2>The Unique Complexity of Automotive Parts Catalogs</h2>
+    <p>
+      Standard eCommerce platforms are engineered for simple product variants (such as size and color). In automotive parts and accessories, a single brake rotor or alternator may be compatible with hundreds of distinct vehicle trim and engine combinations across different model years.
+    </p>
+    <p>
+      Without strict architectural crawl control, Year/Make/Model fitment selectors generate millions of URL parameter combinations that exhaust search engine crawl budgets and dilute organic ranking equity.
+    </p>
+
+    <h2>Key Technical Strategies for Automotive eCommerce</h2>
+
+    <h3>1. Year/Make/Model (YMM) Fitment Architecture</h3>
+    <p>
+      Structure vehicle lookup selectors to generate clean, crawlable landing pages for high-volume vehicle hubs (e.g., <code>/parts/ford/f-150/2023/brakes/</code>) while keeping multi-parameter filter permutations (brand, material, price range) blocked from indexing.
+    </p>
+
+    <h3>2. OEM &amp; Interchange Part Number Indexation</h3>
+    <p>
+      Automotive buyers frequently search by exact Manufacturer Part Numbers (MPN) or OEM replacement codes. Ensure all product detail pages feature:
+    </p>
     <ul>
-      <li>Unique product descriptions (not manufacturer copy-paste)</li>
-      <li><a href="/blog/semantic-seo-entities/">Product schema markup</a> with fitment data, pricing, availability</li>
-      <li>Year/make/model compatibility tables</li>
-      <li>High-quality product images with descriptive alt text</li>
-      <li>Customer Q&A sections and reviews as <a href="/blog/eeat-automotive-seo/">E-E-A-T signals</a></li>
+      <li>Exact MPN and supersession part numbers within page titles, H1 tags, and product descriptions.</li>
+      <li>Comprehensive interchange fitment tables detailing verified compatible makes and models.</li>
+      <li>Schema.org <code>Product</code> JSON-LD specifying <code>mpn</code>, <code>sku</code>, <code>gtin13</code>, and <code>itemCondition</code>.</li>
     </ul>
-    <h3>Category & Faceted Navigation</h3>
-    <ul>
-      <li>SEO-friendly category URLs (/brake-pads/ not /category?id=123)</li>
-      <li>Canonical tags for filtered pages to prevent duplicate content</li>
-      <li>Optimized category page content with buying guides</li>
-      <li>Internal linking between related categories</li>
-    </ul>
-    <h3>Content Marketing for Auto Parts</h3>
-    <p>Create <a href="/blog/content-seo-automotive/">installation guides, compatibility articles, and DIY tutorials</a> that target informational queries and funnel users to product pages. Target <a href="/blog/aeo-answer-engine-optimization/">featured snippets</a> for "how to replace [part]" queries.</p>
+
+    <h3>3. Google Merchant Center &amp; Free Listings Optimization</h3>
+    <p>
+      Maintain automated, synchronized product feeds with Google Merchant Center, ensuring accurate vehicle compatibility attributes, real-time pricing, stock availability, and high-resolution product photography to capture prominent Google Shopping carousel placements.
+    </p>
   </div>
-  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Related Pages</h2><InternalLinkCard links={relatedLinks} columns={2} /></div>
+
+  <FaqSection items={faqs} title="Frequently Asked Questions on Automotive eCommerce SEO" />
+
+  <div class="mt-12">
+    <h2 class="text-xl font-bold mb-6" style="color: var(--color-text-primary);">Related Knowledge Hub Pages</h2>
+    <InternalLinkCard links={relatedLinks} columns={3} />
+  </div>
+
+  <div class="mt-12">
+    <AuthorCard 
+      name="Automotive Search Engineering Team" 
+      role="Automotive eCommerce Search Specialists" 
+      bio="Engineering enterprise-scale search architectures for automotive aftermarket manufacturers, parts distributors, and accessories eCommerce retailers." 
+      expertise={['YMM Fitment Architecture', 'Faceted Crawl Optimization', 'OEM Part Number SEO', 'Google Merchant Feed Engineering']} 
+    />
+  </div>
 </BaseLayout>

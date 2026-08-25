@@ -123,13 +123,23 @@ if (schemaData) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    <!-- Theme initialization (prevent FOUC) -->
+    <!-- Theme initialization (prevent FOUC) + auto system theme listener -->
     <script is:inline>
       (function() {
-        const stored = localStorage.getItem('theme');
-        if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.classList.add('dark');
+        var stored = localStorage.getItem('theme');
+        var mq = window.matchMedia('(prefers-color-scheme: dark)');
+        function applyTheme() {
+          var s = localStorage.getItem('theme');
+          if (s === 'dark' || (!s && mq.matches)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
         }
+        applyTheme();
+        mq.addEventListener('change', function() {
+          if (!localStorage.getItem('theme')) applyTheme();
+        });
       })();
     </script>
 

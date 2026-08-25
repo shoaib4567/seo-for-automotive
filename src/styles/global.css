@@ -66,13 +66,13 @@
     --header-bg: rgba(255, 255, 255, 0.95);
     --header-border: rgba(15, 23, 42, 0.08);
 
-    /* Footer */
-    --footer-bg: #090d16;
-    --footer-text: #94a3b8;
-    --footer-heading: #f8fafc;
+    /* Footer (Crisp Light Studio Surface) */
+    --footer-bg: #f8fafc;
+    --footer-text: #475569;
+    --footer-heading: #090d16;
     --footer-link: #64748b;
-    --footer-link-hover: #d4a853;
-    --footer-border: rgba(255, 255, 255, 0.08);
+    --footer-link-hover: #b45309;
+    --footer-border: rgba(15, 23, 42, 0.08);
 
     /* Spacing */
     --section-gap: 5rem;
@@ -130,11 +130,12 @@
     --header-bg: rgba(7, 9, 14, 0.95);
     --header-border: rgba(255, 255, 255, 0.08);
 
+    /* Footer (Obsidian Deep Luxury) */
     --footer-bg: #04060a;
-    --footer-text: #64748b;
-    --footer-heading: #cbd5e1;
-    --footer-link: #475569;
-    --footer-link-hover: #f59e0b;
+    --footer-text: #94a3b8;
+    --footer-heading: #f8fafc;
+    --footer-link: #64748b;
+    --footer-link-hover: #fbbf24;
     --footer-border: rgba(255, 255, 255, 0.06);
   }
 

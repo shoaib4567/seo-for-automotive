@@ -1,44 +1,94 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import InternalLinkCard from '../../components/InternalLinkCard.astro';
-const title = "Local SEO for Automotive — Complete Methodology Guide [2026]";
-const description = "Deep-dive local SEO methodology for automotive businesses. GBP optimization, citation building, review strategies, and Maps 3-Pack domination.";
+import FaqSection from '../../components/FaqSection.astro';
+import AuthorCard from '../../components/AuthorCard.astro';
+
+const title = "Local SEO for Automotive: Google Maps 3-Pack & Proximity Engineering [2026]";
+const description = "Comprehensive guide to local automotive SEO. Master multi-department Google Business Profiles, geo-grid proximity optimization, and local review acceleration.";
 const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Knowledge Hub', href: '/blog/automotive-seo-strategy/' }, { label: 'Local SEO Guide', href: '/blog/local-seo-for-automotive/' }];
 const relatedLinks = [
-  { title: 'Local SEO Service Hub', href: '/local-seo-for-car-dealerships/', description: 'Our local SEO service page.', icon: '📍', volume: '3,180/mo' },
-  { title: 'Reputation Management', href: '/automotive-reputation-management-services/', description: 'Reviews drive local rankings.', icon: '⭐', volume: '2,720/mo' },
-  { title: 'E-E-A-T Guide', href: '/blog/eeat-automotive-seo/', description: 'Trust signals for local search.', icon: '🏆' },
-  { title: 'Car Dealership SEO', href: '/seo-for-car-dealerships/', description: 'Local SEO for dealers.', icon: '🚗', volume: '18,500/mo' },
+  { title: 'Automotive Local SEO Services', href: '/services/automotive-local-seo/', description: 'Our full-funnel local search engineering service suite.' },
+  { title: 'Reputation Management Services', href: '/automotive-reputation-management-services/', description: 'Review generation systems that multiply local rankings.' },
+  { title: 'E-E-A-T Guide for Automotive', href: '/blog/eeat-automotive-seo/', description: 'Local trust signals and business verification.' },
+  { title: 'Dealership SEO Services', href: '/industries/car-dealership-seo/', description: 'Multi-department local search for car dealerships.' },
+  { title: 'Auto Repair SEO Services', href: '/industries/auto-repair-seo/', description: 'Local Google Maps dominance for auto repair shops.' },
+  { title: 'Semantic SEO & Entities', href: '/blog/semantic-seo-entities/', description: 'LocalBusiness and AutoRepair Schema.org markup.' },
+];
+
+const faqs = [
+  { question: 'What is the most critical ranking factor for local automotive SEO?', answer: 'The most critical ranking factors for automotive local SEO are Google Business Profile category relevance, physical proximity to the searcher, verified review count and sentiment velocity, and localized on-page website signals with accurate NAP consistency.' },
+  { question: 'Why should automotive dealerships create separate Google Business Profiles?', answer: 'Dealerships should maintain separate GBP listings for Sales, Service, Parts, and Collision because search queries for vehicle purchases, emergency brake repairs, and OEM parts have completely different search intents. Multi-department setup prevents internal cannibalization and triples total Google Maps visibility.' },
 ];
 ---
 <BaseLayout title={title} description={description} canonicalPath="/blog/local-seo-for-automotive/" breadcrumbs={breadcrumbs}>
   <div class="mb-12">
-    <div class="flex items-center gap-3 mb-4"><span class="px-2.5 py-0.5 text-[10px] font-bold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 rounded-full uppercase">Knowledge Hub</span></div>
-    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">Local SEO for <span class="text-gradient-amber">Automotive</span> — Deep Dive</h1>
-    <p class="mt-4 text-lg text-slate-400 max-w-3xl">Advanced local SEO methodology beyond the basics. For our service-focused guide, see <a href="/local-seo-for-car-dealerships/" class="text-amber-400 hover:underline">Local SEO for Car Dealerships</a>.</p>
+    <div class="flex items-center gap-3 mb-4">
+      <span class="px-2.5 py-0.5 text-[10px] font-bold text-cyan-500 dark:text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 rounded-full uppercase">Knowledge Hub</span>
+      <span class="px-2.5 py-0.5 text-[10px] font-bold text-emerald-500 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 rounded-full uppercase">Local Search</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-black leading-tight" style="color: var(--color-text-primary);">Local SEO for Automotive: <span class="text-gradient-gold">Google Maps &amp; Proximity Dominance</span></h1>
+    <p class="mt-4 text-lg max-w-3xl" style="color: var(--color-text-secondary);">
+      Local SEO for automotive is the process of optimizing a dealership or repair facility's online presence, Google Business Profile hierarchy, and localized website landing pages to rank at the top of the Google Maps 3-Pack and capture high-intent vehicle buyers and service customers within their immediate market.
+    </p>
   </div>
+
   <div class="prose-content">
-    <h2>Local SEO Framework for Automotive</h2>
-    <p>This guide extends our <a href="/local-seo-for-car-dealerships/">local SEO service hub</a> with advanced methodology. Local SEO for automotive businesses involves three core pillars: <strong>proximity</strong>, <strong>relevance</strong>, and <strong>prominence</strong>.</p>
-    <h3>Google Business Profile Advanced Optimization</h3>
+    <h2>Why Local Search Drives Automotive Revenue</h2>
+    <p>
+      Over 76% of consumers who search for an automotive service or dealership on their smartphone visit a physical location within 24 hours. The Google Maps 3-Pack captures between 40% and 60% of all high-intent commercial clicks for queries like "brake replacement near me", "used truck dealership", and "certified oil change".
+    </p>
+    <p>
+      Winning local automotive search requires far more than basic citation building; it requires geo-grid proximity engineering, review velocity workflows, and rigorous on-page website local optimization.
+    </p>
+
+    <h2>Core Pillars of Local Automotive Search Engineering</h2>
+
+    <h3>1. Multi-Department Google Business Profile Structure</h3>
+    <p>
+      Automotive dealerships qualify under Google guidelines for multi-department nesting. Establishing distinct listings maximizes reach:
+    </p>
     <ul>
-      <li>Category stacking — primary + secondary categories for maximum visibility</li>
-      <li>Service and product catalogs within GBP</li>
-      <li>GBP posts strategy — weekly updates, offers, events</li>
-      <li>Q&A seeding — proactively answer common questions</li>
-      <li>Photo optimization — geo-tagged, high-quality, regular uploads</li>
+      <li><strong>Main Dealership Profile:</strong> Primary category <code>Used Car Dealer</code> or brand-specific <code>Ford Dealer</code>.</li>
+      <li><strong>Service Department Profile:</strong> Primary category <code>Auto Repair Shop</code> or <code>Car Repair and Maintenance</code> with dedicated phone number and service bay hours.</li>
+      <li><strong>Parts Counter Profile:</strong> Primary category <code>Auto Parts Store</code>.</li>
+      <li><strong>Collision Center Profile:</strong> Primary category <code>Auto Body Shop</code>.</li>
     </ul>
-    <h3>Citation Ecosystem</h3>
-    <p>Build citations on 50+ platforms including automotive-specific directories (DealerRater, CarGurus, RepairPal, AutoMD), general directories (Yelp, BBB, YP), and data aggregators (Neustar, Foursquare, Data Axle). NAP consistency across all is critical.</p>
-    <h3>Local Link Building</h3>
+
+    <h3>2. Geo-Grid Proximity &amp; Service Area Pages (SAPs)</h3>
+    <p>
+      Google's local algorithm naturally favors physical proximity. To expand ranking radius into neighboring townships and suburbs:
+    </p>
     <ul>
-      <li>Sponsor local events, charities, and sports teams</li>
-      <li>Join Chamber of Commerce and local business associations</li>
-      <li>Partner with complementary businesses (insurance agents, car rental companies)</li>
-      <li>Create location-specific <a href="/blog/content-seo-automotive/">content</a> ("Best driving routes in [city]")</li>
+      <li>Build dedicated Service Area Pages (SAPs) for each primary municipality in your Primary Market Area (PMA).</li>
+      <li>Embed verified geographic landmarks, local driving directions, and localized service offerings.</li>
+      <li>Inject Schema.org <code>AutoRepair</code> or <code>AutoDealer</code> with precise <code>areaServed</code> and geo-coordinates.</li>
     </ul>
-    <h3>Geo-Modified Content Strategy</h3>
-    <p>Create city and state-specific landing pages per our <a href="/locations/california/">geo pages template</a>. Each page should have unique content about the local market, not just city-name substitutions.</p>
+
+    <h3>3. Review Velocity and Sentiment SOPs</h3>
+    <p>
+      Review recency, frequency, and keyword-rich customer responses heavily dictate Map Pack positions. Deploy automated post-service SMS and email workflows integrated directly with your Dealership Management System (DMS) or shop management software.
+    </p>
+
+    <h3>4. Tier-1 Automotive Citation Hygiene</h3>
+    <p>
+      Ensure 100% Name, Address, and Phone Number (NAP) synchronization across essential automotive directories including Edmunds, DealerRater, CarGurus, Yelp, Apple Maps, Bing Places, and the Better Business Bureau.
+    </p>
   </div>
-  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Related Pages</h2><InternalLinkCard links={relatedLinks} columns={2} /></div>
+
+  <FaqSection items={faqs} title="Frequently Asked Questions on Local Automotive SEO" />
+
+  <div class="mt-12">
+    <h2 class="text-xl font-bold mb-6" style="color: var(--color-text-primary);">Related Knowledge Hub Pages</h2>
+    <InternalLinkCard links={relatedLinks} columns={3} />
+  </div>
+
+  <div class="mt-12">
+    <AuthorCard 
+      name="Automotive Search Engineering Team" 
+      role="Local Automotive Search Specialists" 
+      bio="Specializing in multi-location Google Business Profile management, geo-grid proximity expansion, and automated review acquisition for automotive brands." 
+      expertise={['Google Maps 3-Pack', 'Multi-Department GBP Architecture', 'Geo-Grid Tracking', 'Local Citation Hygiene']} 
+    />
+  </div>
 </BaseLayout>

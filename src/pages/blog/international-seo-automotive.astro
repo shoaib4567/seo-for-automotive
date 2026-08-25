@@ -1,40 +1,78 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import InternalLinkCard from '../../components/InternalLinkCard.astro';
-const title = "International SEO for Automotive — Multi-Market & OEM Strategies [2026]";
-const description = "International SEO for automotive OEMs, global dealer networks, and multi-market automotive businesses. Hreflang, geo-targeting, and localization strategies.";
+import FaqSection from '../../components/FaqSection.astro';
+import AuthorCard from '../../components/AuthorCard.astro';
+
+const title = "International Automotive SEO: Multi-Region & Cross-Border Search [2026]";
+const description = "Complete guide to international automotive SEO. Master hreflang tagging, regional catalog taxonomies, currency localization, and global automotive search.";
 const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Knowledge Hub', href: '/blog/automotive-seo-strategy/' }, { label: 'International SEO', href: '/blog/international-seo-automotive/' }];
 const relatedLinks = [
-  { title: 'SEO Strategy', href: '/blog/automotive-seo-strategy/', description: 'International in overall strategy.', icon: '📋' },
-  { title: 'Local SEO Guide', href: '/blog/local-seo-for-automotive/', description: 'Local vs international SEO.', icon: '📍' },
-  { title: 'Content SEO', href: '/blog/content-seo-automotive/', description: 'Multi-language content strategy.', icon: '📝' },
-  { title: 'Semantic SEO', href: '/blog/semantic-seo-entities/', description: 'Entity markup for multi-market.', icon: '🧬' },
+  { title: 'Automotive SEO Strategy', href: '/blog/automotive-seo-strategy/', description: 'Full-spectrum search strategy for automotive brands.' },
+  { title: 'eCommerce SEO for Automotive', href: '/blog/ecommerce-seo-automotive/', description: 'International parts catalog and fitment optimization.' },
+  { title: 'Content SEO Playbook', href: '/blog/content-seo-automotive/', description: 'Multi-lingual content clusters and localization.' },
+  { title: 'Semantic SEO & Entities', href: '/blog/semantic-seo-entities/', description: 'Global vehicle entity and Schema.org markup.' },
+  { title: 'Automotive B2B SEO Services', href: '/services/automotive-b2b-seo/', description: 'Global dealer and distributor acquisition funnels.' },
+  { title: 'Technical SEO Services', href: '/services/automotive-technical-seo/', description: 'Hreflang implementation and multi-region CDN architecture.' },
+];
+
+const faqs = [
+  { question: 'How do automotive brands structure international websites?', answer: 'Automotive brands typically use ccTLDs (e.g., .co.uk, .de) for distinct national dealer operations or subdirectories (e.g., /en-gb/, /de-de/) on a global domain with bidirectional hreflang tags, localized currency, and region-specific vehicle trim availability.' },
+  { question: 'How does vehicle terminology vary across international automotive search?', answer: 'Automotive terminology varies significantly by region (e.g., "windshield" vs "windscreen", "hood" vs "bonnet", "sedan" vs "saloon", "gasoline" vs "petrol"). Content must be localized rather than simply translated to capture native search volume.' },
 ];
 ---
 <BaseLayout title={title} description={description} canonicalPath="/blog/international-seo-automotive/" breadcrumbs={breadcrumbs}>
   <div class="mb-12">
-    <div class="flex items-center gap-3 mb-4"><span class="px-2.5 py-0.5 text-[10px] font-bold text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 rounded-full uppercase">Knowledge Hub</span></div>
-    <h1 class="text-3xl sm:text-4xl font-black text-white leading-tight">International SEO for <span class="text-gradient-amber">Automotive</span></h1>
-    <p class="mt-4 text-lg text-slate-400 max-w-3xl">Multi-market SEO strategies for automotive OEMs, global dealer networks, and international auto businesses. Targets "automotive seo report 2025 uk" (70/mo).</p>
+    <div class="flex items-center gap-3 mb-4">
+      <span class="px-2.5 py-0.5 text-[10px] font-bold text-cyan-500 dark:text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 rounded-full uppercase">Knowledge Hub</span>
+      <span class="px-2.5 py-0.5 text-[10px] font-bold text-blue-500 dark:text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-full uppercase">Global Search</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-black leading-tight" style="color: var(--color-text-primary);">International Automotive SEO: <span class="text-gradient-gold">Multi-Region Search</span></h1>
+    <p class="mt-4 text-lg max-w-3xl" style="color: var(--color-text-secondary);">
+      International automotive SEO is the technical and localization practice of structuring automotive websites, parts catalogs, and dealer distributor networks across multiple countries and languages to capture regional search demand while preventing geo-targeting conflicts.
+    </p>
   </div>
+
   <div class="prose-content">
-    <h2>International Automotive SEO Framework</h2>
-    <p>Global automotive brands need SEO strategies that work across markets. Key challenges include hreflang implementation, multi-language content, and market-specific search behavior differences.</p>
-    <h3>Hreflang Implementation</h3>
-    <ul>
-      <li>Proper hreflang tags for language/region targeting (en-US, en-GB, de-DE, etc.)</li>
-      <li>Self-referencing hreflang on every page</li>
-      <li>X-default fallback for unmatched languages</li>
-      <li>Consistent URL structure: subdirectories (/en/, /de/) vs subdomains</li>
-    </ul>
-    <h3>Market-Specific Content</h3>
-    <ul>
-      <li><strong>UK market</strong> — targets "automotive seo report 2025 uk" (70/mo), different terminology (boot vs trunk, bonnet vs hood)</li>
-      <li><strong>European markets</strong> — diesel-focused, EV regulations, different OEM landscapes</li>
-      <li><strong>Regional search engines</strong> — Yandex (Russia), Baidu (China) for global OEMs</li>
-    </ul>
-    <h3>OEM Multi-Dealer SEO</h3>
-    <p>Automotive OEMs face unique challenges: coordinating SEO across dealer networks, managing co-op marketing programs, and maintaining brand consistency while allowing <a href="/local-seo-for-car-dealerships/">local optimization</a>. See our <a href="/automotive-seo-marketing/">SEO marketing guide</a> for OEM digital campaign strategies.</p>
+    <h2>Navigating Global Automotive Search Variations</h2>
+    <p>
+      Global automotive manufacturers, film producers (like our global client TW), and aftermarket parts exporters face unique multi-regional search challenges: regional vehicle safety compliance standards, distinct model trim naming conventions, and localized search query vocabulary.
+    </p>
+    <p>
+      Merely translating text into foreign languages fails because automotive consumers search with distinct regional idioms and technical phrases.
+    </p>
+
+    <h2>Key Technical Foundations for Global Automotive Search</h2>
+
+    <h3>1. Hreflang Implementation and Canonical Mapping</h3>
+    <p>
+      Deploy bidirectional <code>hreflang</code> annotations in XML sitemaps or HTML headers to specify the language and geographic targeting of each regional URL variant, paired with self-referential canonical tags.
+    </p>
+
+    <h3>2. Regional Vehicle Compatibility &amp; Fitment Matrices</h3>
+    <p>
+      Automotive parts specifications vary globally. An international catalog must adjust fitment data to account for Left-Hand Drive (LHD) vs. Right-Hand Drive (RHD) configurations and regional engine displacements.
+    </p>
+
+    <h3>3. Multi-Currency and Local Merchant Feeds</h3>
+    <p>
+      Implement localized pricing, duties, and shipping calculations supported by regional Google Merchant Center feeds to qualify for Google Shopping and organic product carousels worldwide.
+    </p>
   </div>
-  <div class="mt-12"><h2 class="text-xl font-bold text-white mb-6">Related Pages</h2><InternalLinkCard links={relatedLinks} columns={2} /></div>
+
+  <FaqSection items={faqs} title="Frequently Asked Questions on International Automotive SEO" />
+
+  <div class="mt-12">
+    <h2 class="text-xl font-bold mb-6" style="color: var(--color-text-primary);">Related Knowledge Hub Pages</h2>
+    <InternalLinkCard links={relatedLinks} columns={3} />
+  </div>
+
+  <div class="mt-12">
+    <AuthorCard 
+      name="Automotive Search Engineering Team" 
+      role="International Automotive Search Leads" 
+      bio="Engineering multi-region search infrastructure, hreflang frameworks, and global distributor funnels for automotive brands operating across North America, Europe, and Asia-Pacific." 
+      expertise={['Hreflang & Multi-Region SEO', 'Global Automotive Taxonomy', 'Cross-Border B2B Search', 'International Schema Architecture']} 
+    />
+  </div>
 </BaseLayout>
