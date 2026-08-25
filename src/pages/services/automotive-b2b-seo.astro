@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "B2B SEO for Automotive — Manufacturers, Suppliers & Distributors";
+const description = "Specialist B2B SEO for automotive manufacturers, parts suppliers, and distributors. Commercial keyword targeting, technical resources, and wholesale lead generation from organic search.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'B2B SEO', href: '/services/automotive-b2b-seo/' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/services/automotive-b2b-seo/" breadcrumbs={breadcrumbs}>
+  <div class="max-w-3xl">
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
+      B2B SEO for <span class="text-gradient-gold">Automotive</span>
+    </h1>
+    <div class="prose-content">
+      <p class="text-lg" style="color: var(--color-text-secondary);">B2B automotive SEO targets the people who make purchasing decisions for businesses — fleet managers, repair shop owners, dealer parts departments, and wholesale distributors. The search behavior, keyword intent, and conversion paths are fundamentally different from B2C.</p>
+
+      <h2>What we do</h2>
+      <ul>
+        <li><strong>Commercial intent targeting</strong> — "wholesale [part] supplier," "bulk [product] pricing," "[product] distributor" keywords</li>
+        <li><strong>Technical resource creation</strong> — specifications, compatibility databases, torque specs, and technical bulletins that attract B2B researchers</li>
+        <li><strong>OEM cross-reference content</strong> — part number lookup pages targeting B2B research queries</li>
+        <li><strong>B2B lead generation forms</strong> — wholesale inquiry forms, quote request CTAs, and account application funnels</li>
+        <li><strong>Industry authority content</strong> — fleet maintenance guides, inventory management resources, and buying guides for business buyers</li>
+        <li><strong>Organization schema</strong> — B2B-focused structured data for manufacturer and supplier entities</li>
+      </ul>
+
+      <p>See our <a href="/case-studies/sejautoparts/">SEJ Auto Parts case study</a> — 350% more B2B leads and $1.8M pipeline value through B2B automotive SEO.</p>
+    </div>
+  </div>
+</BaseLayout>

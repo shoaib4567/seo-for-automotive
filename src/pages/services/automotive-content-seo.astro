@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Content SEO for Automotive — Topical Authority & Content Strategy";
+const description = "Specialist content SEO for automotive businesses. Topical authority building, content clusters, buying guides, comparison content, and information-gain strategies for automotive search.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'Content SEO', href: '/services/automotive-content-seo/' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/services/automotive-content-seo/" breadcrumbs={breadcrumbs}>
+  <div class="max-w-3xl">
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
+      Content SEO for <span class="text-gradient-gold">Automotive</span>
+    </h1>
+    <div class="prose-content">
+      <p class="text-lg" style="color: var(--color-text-secondary);">Content is the foundation of topical authority. For automotive businesses, this means creating the content ecosystem that signals expertise to search engines — from service descriptions and buying guides to comparison content and technical resources.</p>
+
+      <h2>Our content approach</h2>
+      <ul>
+        <li><strong>Topical authority mapping</strong> — identifying all topics and sub-topics within your automotive niche and creating comprehensive coverage</li>
+        <li><strong>Content cluster architecture</strong> — pillar pages connected to supporting content through strategic internal linking</li>
+        <li><strong>Buying guides</strong> — "Best [product] for [vehicle]" content targeting high-intent informational queries</li>
+        <li><strong>Comparison content</strong> — honest, detailed product and service comparisons that build trust and capture competitive queries</li>
+        <li><strong>Service descriptions</strong> — unique, detailed content for every service your business offers</li>
+        <li><strong>Technical resources</strong> — specifications, compatibility data, and installation guides that establish expertise</li>
+        <li><strong>E-E-A-T signals</strong> — author attribution, expertise demonstration, and trust-building content elements</li>
+      </ul>
+
+      <p>Learn more about <a href="/blog/content-seo-automotive/">content SEO strategy for automotive</a> and <a href="/blog/semantic-seo-entities/">semantic SEO with entities</a>.</p>
+    </div>
+  </div>
+</BaseLayout>

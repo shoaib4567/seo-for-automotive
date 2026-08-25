@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqSection from '../../components/FaqSection.astro';
+
+const title = "Local SEO for Automotive — Google Maps, GBP & Local Visibility";
+const description = "Specialist local SEO for automotive businesses. Google Business Profile optimization, Maps 3-Pack rankings, citation building, review management, and service-area targeting.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'Local SEO', href: '/services/automotive-local-seo/' },
+];
+
+const faqs = [
+  { question: 'What is automotive local SEO?', answer: 'Automotive local SEO focuses on getting your business visible in Google Maps, the Local 3-Pack, and location-based organic results. This includes Google Business Profile optimization, local citation building, review management, and service-area content creation.' },
+  { question: 'How important is Google Business Profile for automotive?', answer: 'Critical. For repair shops, dealerships, and service businesses, Google Business Profile is often the single highest-ROI SEO activity. The Maps 3-Pack receives 40-60% of clicks for local automotive searches.' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/services/automotive-local-seo/" breadcrumbs={breadcrumbs}>
+  <div class="max-w-3xl">
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
+      Local SEO for <span class="text-gradient-gold">Automotive</span>
+    </h1>
+    <div class="prose-content">
+      <p class="text-lg" style="color: var(--color-text-secondary);">Local SEO is the most impactful search investment for location-dependent automotive businesses. When customers search "auto repair near me" or "car dealership in [city]," your Maps visibility determines whether they find you or your competitor.</p>
+
+      <h2>What we do</h2>
+      <h3>Google Business Profile Optimization</h3>
+      <p>Complete GBP overhaul: primary and secondary category selection, service descriptions, business attributes, Google Posts scheduling, Q&A management, photo optimization, and messaging setup. We optimize every signal that influences Maps rankings.</p>
+
+      <h3>Maps 3-Pack Strategy</h3>
+      <p>We analyze your local competitive landscape and build a targeted strategy to break into and maintain the Google Maps 3-Pack for your highest-value keywords — "auto repair near me," "[service] [city]," and emergency-intent queries.</p>
+
+      <h3>Citation Building & NAP Consistency</h3>
+      <p>We audit, correct, and build citations across 60+ directories, aggregators, and industry-specific platforms. Consistent Name, Address, and Phone (NAP) data is foundational for local search trust.</p>
+
+      <h3>Review Management</h3>
+      <p>Automated review request systems, response SOPs, and reputation monitoring. Review velocity and rating directly impact Maps rankings and conversion rates.</p>
+
+      <h3>Service-Area Content</h3>
+      <p>Location-specific landing pages for surrounding cities and neighborhoods, each with unique content, LocalBusiness schema, and internal linking to service pages.</p>
+
+      <p>See our <a href="/case-studies/auto-repair-local-seo/">auto repair case study</a> — 520% increase in calls from search through local SEO.</p>
+    </div>
+    <FaqSection items={faqs} title="Local SEO — FAQ" />
+  </div>
+</BaseLayout>

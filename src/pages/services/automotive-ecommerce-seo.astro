@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "eCommerce SEO for Automotive — Product & Catalog Optimization";
+const description = "Specialist eCommerce SEO for auto parts stores, accessories, and automotive product catalogs. Product page optimization, category architecture, part number SEO, and Google Shopping.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'eCommerce SEO', href: '/services/automotive-ecommerce-seo/' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/services/automotive-ecommerce-seo/" breadcrumbs={breadcrumbs}>
+  <div class="max-w-3xl">
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
+      eCommerce SEO for <span class="text-gradient-gold">Automotive</span>
+    </h1>
+    <div class="prose-content">
+      <p class="text-lg" style="color: var(--color-text-secondary);">Auto parts eCommerce and automotive accessories stores face unique challenges — massive SKU catalogs, part number-based search behavior, vehicle compatibility requirements, and intense competition from Amazon and marketplace sellers.</p>
+
+      <h2>What we optimize</h2>
+      <ul>
+        <li><strong>Product page enrichment</strong> — unique descriptions, fitment data, installation guides, and customer review integration</li>
+        <li><strong>Category architecture</strong> — Vehicle → Part Type → Brand taxonomy matching how customers search</li>
+        <li><strong>Part number SEO</strong> — OEM numbers, cross-references, and aftermarket equivalents in content and schema</li>
+        <li><strong>Faceted navigation management</strong> — crawl budget control for filter combinations</li>
+        <li><strong>Product schema</strong> — Product, Offer, AggregateRating markup for rich search results</li>
+        <li><strong>Google Merchant Center</strong> — product feed optimization for free Google Shopping listings</li>
+        <li><strong>Buying guides & comparison content</strong> — informational content driving top-of-funnel traffic to product pages</li>
+      </ul>
+
+      <p>See our <a href="/case-studies/bigacover/">BigACover case study</a> — 460% organic revenue growth for an automotive eCommerce brand.</p>
+    </div>
+  </div>
+</BaseLayout>

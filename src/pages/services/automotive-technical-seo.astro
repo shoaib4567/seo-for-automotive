@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqSection from '../../components/FaqSection.astro';
+
+const title = "Technical SEO for Automotive — Site Architecture, Indexation & Performance";
+const description = "Specialist technical SEO for automotive websites. Crawlability optimization, inventory indexation, Core Web Vitals, structured data, faceted navigation, and large catalog management.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'Technical SEO', href: '/services/automotive-technical-seo/' },
+];
+
+const faqs = [
+  { question: 'Why do automotive websites have unique technical SEO challenges?', answer: 'Automotive sites often have dynamic inventory creating thousands of pages, faceted navigation generating millions of URL combinations, JavaScript-rendered content, and complex internal linking requirements across makes, models, years, and parts.' },
+  { question: 'What structured data should automotive sites use?', answer: 'AutoDealer, AutoRepair, Vehicle, Product, LocalBusiness, FAQPage, HowTo, and AggregateRating are the most impactful schema types for automotive businesses.' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/services/automotive-technical-seo/" breadcrumbs={breadcrumbs}>
+  <div class="max-w-3xl">
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
+      Technical SEO for <span class="text-gradient-gold">Automotive</span>
+    </h1>
+    <div class="prose-content">
+      <p class="text-lg" style="color: var(--color-text-secondary);">Automotive websites face technical challenges that general SEO can't address — dynamic inventory pages, massive faceted navigation, JavaScript-heavy dealer platforms, and complex make/model/year hierarchies that create crawlability and indexation problems.</p>
+
+      <h2>What we optimize</h2>
+      <ul>
+        <li><strong>Crawl budget management</strong> — ensuring Googlebot spends time on your highest-value pages, not filter combinations</li>
+        <li><strong>Indexation control</strong> — strategic canonical, noindex, and robots.txt rules for large automotive catalogs</li>
+        <li><strong>Core Web Vitals</strong> — LCP, CLS, INP optimization for image-heavy automotive pages</li>
+        <li><strong>Structured data</strong> — Vehicle, AutoDealer, AutoRepair, Product, LocalBusiness, FAQPage schema implementation</li>
+        <li><strong>JavaScript rendering</strong> — ensuring dynamic inventory content is crawlable by search engines</li>
+        <li><strong>Site architecture</strong> — logical URL hierarchy matching vehicle/part taxonomies</li>
+        <li><strong>Internal linking</strong> — automated cross-linking between related vehicles, services, and content</li>
+        <li><strong>XML sitemap strategy</strong> — priority-based sitemaps separating high-value from low-value pages</li>
+      </ul>
+
+      <p>See our <a href="/case-studies/sejautoparts/">SEJ Auto Parts case study</a> — technical SEO deduplication that freed crawl budget and drove 350% more B2B leads.</p>
+    </div>
+    <FaqSection items={faqs} title="Technical SEO — FAQ" />
+  </div>
+</BaseLayout>

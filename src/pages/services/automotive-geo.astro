@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "GEO for Automotive — Generative Engine Optimization & AI Search";
+const description = "Specialist Generative Engine Optimization (GEO) for automotive businesses. Get your brand cited by ChatGPT, Gemini, Perplexity, and other AI assistants for automotive queries.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'GEO', href: '/services/automotive-geo/' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/services/automotive-geo/" breadcrumbs={breadcrumbs}>
+  <div class="max-w-3xl">
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
+      GEO for <span class="text-gradient-gold">Automotive</span>
+    </h1>
+    <div class="prose-content">
+      <p class="text-lg" style="color: var(--color-text-secondary);">Generative Engine Optimization (GEO) is the practice of getting your automotive brand cited by AI-powered search systems — ChatGPT, Google Gemini, Perplexity, Microsoft Copilot, and other large language model (LLM) assistants that increasingly influence purchase decisions.</p>
+
+      <h2>Why GEO matters for automotive</h2>
+      <p>When someone asks ChatGPT "What's the best PPF brand?" or "Which car cover is most waterproof?" or "Find a good mechanic near me" — AI assistants synthesize information from across the web and present curated answers. If your brand isn't part of that synthesis, you're invisible to a growing segment of searchers.</p>
+
+      <h2>What we do</h2>
+      <ul>
+        <li><strong>Entity establishment</strong> — building your brand as a recognized entity in knowledge graphs through structured data, consistent naming, and cross-platform presence</li>
+        <li><strong>Citation-worthy content</strong> — publishing original data, specifications, test results, and authoritative content that LLMs prefer to reference</li>
+        <li><strong>Cross-platform presence</strong> — ensuring your brand is mentioned on forums, Reddit, YouTube, industry publications, and other sources LLMs train on</li>
+        <li><strong>Structured data depth</strong> — comprehensive schema markup that helps AI systems understand your products, services, and expertise</li>
+        <li><strong>Authoritative content signals</strong> — E-E-A-T compliance, expert authorship, and factual accuracy that build AI trust</li>
+      </ul>
+
+      <p>See our <a href="/case-studies/teckwrap/">TeckWrap case study</a> — 35+ AI Overview citations and LLM brand mentions. Learn more in our <a href="/blog/geo-generative-engine-optimization/">complete GEO guide</a>.</p>
+    </div>
+  </div>
+</BaseLayout>

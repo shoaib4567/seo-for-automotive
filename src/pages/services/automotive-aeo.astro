@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "AEO for Automotive — Answer Engine Optimization & AI Overviews";
+const description = "Specialist Answer Engine Optimization (AEO) for automotive businesses. Featured snippets, People Also Ask, AI Overviews, FAQ schema, and answer-formatted content strategies.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'AEO', href: '/services/automotive-aeo/' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/services/automotive-aeo/" breadcrumbs={breadcrumbs}>
+  <div class="max-w-3xl">
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
+      AEO for <span class="text-gradient-gold">Automotive</span>
+    </h1>
+    <div class="prose-content">
+      <p class="text-lg" style="color: var(--color-text-secondary);">Answer Engine Optimization (AEO) focuses on getting your automotive content featured in Google's answer boxes, People Also Ask results, and AI Overviews — the zero-click results that increasingly dominate search results pages.</p>
+
+      <h2>What we optimize for</h2>
+      <ul>
+        <li><strong>Featured snippets</strong> — paragraph, list, and table snippets for automotive comparison and how-to queries</li>
+        <li><strong>People Also Ask (PAA)</strong> — capturing the expandable question boxes for automotive topics</li>
+        <li><strong>AI Overviews</strong> — getting your content cited in Google's AI-generated summary answers</li>
+        <li><strong>FAQ schema</strong> — FAQPage structured data on service and product pages</li>
+        <li><strong>HowTo schema</strong> — step-by-step markup for installation, maintenance, and repair guides</li>
+        <li><strong>Answer-formatted content</strong> — leading with direct, factual answers to maximize snippet extraction</li>
+        <li><strong>Question-intent content</strong> — comprehensive coverage of questions customers ask before purchasing or visiting</li>
+      </ul>
+
+      <p>See our <a href="/case-studies/vinylfrog/">VinylFrog case study</a> — 45+ AI Overview citations and 60+ featured snippets through AEO strategy.</p>
+      <p>Learn more in our <a href="/blog/aeo-answer-engine-optimization/">complete AEO guide</a>.</p>
+    </div>
+  </div>
+</BaseLayout>

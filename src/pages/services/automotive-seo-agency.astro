@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Automotive SEO Agency — Your Specialist Search Partner";
+const description = "We are a specialist automotive SEO agency focused exclusively on helping automotive businesses dominate organic search, local search, and AI-powered search engines.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'SEO Agency', href: '/services/automotive-seo-agency/' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/services/automotive-seo-agency/" breadcrumbs={breadcrumbs}>
+  <div class="max-w-3xl">
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
+      Your Specialist <span class="text-gradient-gold">Automotive SEO Agency</span>
+    </h1>
+    <div class="prose-content">
+      <p class="text-lg" style="color: var(--color-text-secondary);">We focus exclusively on automotive search. While general agencies spread their attention across industries, we invest all of our expertise into understanding the search patterns, technical challenges, and competitive dynamics unique to the automotive space.</p>
+
+      <h2>Why choose a specialist agency?</h2>
+      <ul>
+        <li><strong>Deep automotive knowledge</strong> — we understand VDP architecture, make/model/year hierarchies, part number search, and multi-location dealer group management</li>
+        <li><strong>Proven results</strong> — see our case studies with <a href="/case-studies/vinylfrog/">VinylFrog</a>, <a href="/case-studies/teckwrap/">TeckWrap</a>, <a href="/case-studies/sejautoparts/">SEJ Auto Parts</a>, and <a href="/case-studies/bigacover/">BigACover</a></li>
+        <li><strong>Full-spectrum services</strong> — <a href="/services/automotive-local-seo/">Local SEO</a>, <a href="/services/automotive-technical-seo/">Technical</a>, <a href="/services/automotive-content-seo/">Content</a>, <a href="/services/automotive-ecommerce-seo/">eCommerce</a>, <a href="/services/automotive-aeo/">AEO</a>, <a href="/services/automotive-geo/">GEO</a>, and <a href="/automotive-reputation-management-services/">Reputation Management</a></li>
+        <li><strong>Transparent reporting</strong> — we report with GSC, GA4, SEMrush, and Ahrefs data — not vanity metrics</li>
+      </ul>
+
+      <h2>How we work</h2>
+      <ol>
+        <li><strong>Audit & Strategy</strong> — comprehensive SEO audit and competitive analysis to identify your biggest opportunities</li>
+        <li><strong>Implementation</strong> — technical fixes, content creation, schema deployment, and local SEO optimization</li>
+        <li><strong>Ongoing Optimization</strong> — monthly strategy execution, content publishing, link building, and performance monitoring</li>
+        <li><strong>Reporting & Refinement</strong> — monthly reporting with actionable insights and strategy adjustments</li>
+      </ol>
+
+      <p><a href="/contact/">Start a conversation</a> about your automotive SEO goals, or <a href="/audit/">get a free instant audit</a>.</p>
+    </div>
+  </div>
+</BaseLayout>

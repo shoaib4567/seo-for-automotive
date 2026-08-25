@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqSection from '../../components/FaqSection.astro';
+
+const title = "Automotive SEO Services — Strategic Search for Automotive Businesses";
+const description = "Comprehensive automotive SEO services covering local SEO, technical optimization, content strategy, eCommerce, AEO, GEO, and reputation management for dealerships, repair shops, parts stores, and automotive brands.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'Automotive SEO', href: '/services/automotive-seo/' },
+];
+
+const faqs = [
+  { question: 'What makes automotive SEO different from general SEO?', answer: 'Automotive businesses face unique challenges: dynamic vehicle inventory, make/model/year entity hierarchies, multi-location dealer groups, part number search, and automotive-specific schema types. Our <a href="/services/automotive-technical-seo/">technical SEO</a> addresses these structural differences.' },
+  { question: 'How long does automotive SEO take to show results?', answer: '<a href="/services/automotive-local-seo/">Local SEO</a> improvements often appear within 2-4 months. Organic ranking improvements for competitive keywords typically take 4-8 months. Full competitive dominance usually takes 8-14 months of consistent work.' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/services/automotive-seo/" breadcrumbs={breadcrumbs}>
+  <div class="max-w-3xl">
+    <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-6" style="color: var(--color-text-primary);">
+      Automotive <span class="text-gradient-gold">SEO Services</span>
+    </h1>
+
+    <div class="prose-content">
+      <p class="text-lg" style="color: var(--color-text-secondary);">We provide specialist SEO services exclusively for the automotive industry. From single-location repair shops to multi-location dealer groups, from auto parts eCommerce to PPF and vinyl wrap brands — we understand the unique search challenges automotive businesses face.</p>
+
+      <h2>Our automotive SEO services</h2>
+
+      <h3><a href="/services/automotive-local-seo/">Local SEO</a></h3>
+      <p>Google Business Profile optimization, Maps 3-Pack strategy, citation building, review management, and service-area targeting. The highest-ROI activity for location-dependent automotive businesses.</p>
+
+      <h3><a href="/services/automotive-technical-seo/">Technical SEO</a></h3>
+      <p>Crawlability, indexation control, Core Web Vitals optimization, structured data implementation, faceted navigation management, and site architecture for large automotive catalogs.</p>
+
+      <h3><a href="/services/automotive-ecommerce-seo/">eCommerce SEO</a></h3>
+      <p>Product page optimization, category architecture, part number SEO, compatibility-based search, Product schema, and Google Merchant Center integration for auto parts stores.</p>
+
+      <h3><a href="/services/automotive-content-seo/">Content SEO</a></h3>
+      <p>Topical authority building, content clusters, buying guides, comparison content, and information-gain strategies that build the contextual relevance search engines reward.</p>
+
+      <h3><a href="/services/automotive-b2b-seo/">B2B SEO</a></h3>
+      <p>Commercial-intent keyword targeting, technical resource creation, wholesale lead generation, and distributor visibility for automotive manufacturers and suppliers.</p>
+
+      <h3><a href="/services/automotive-aeo/">AEO — Answer Engine Optimization</a></h3>
+      <p>Featured snippet capture, People Also Ask optimization, AI Overview citations, FAQ schema, and answer-formatted content strategies. See our <a href="/case-studies/vinylfrog/">VinylFrog case study</a> — 45+ AI Overview citations.</p>
+
+      <h3><a href="/services/automotive-geo/">GEO — Generative Engine Optimization</a></h3>
+      <p>Getting your automotive brand cited by ChatGPT, Gemini, Perplexity, and other AI assistants. Entity establishment, cross-platform presence, and citation-worthy content creation.</p>
+
+      <h3><a href="/automotive-reputation-management-services/">Reputation Management</a></h3>
+      <p>Review acquisition systems, response SOPs, sentiment monitoring, and AggregateRating schema. Online reputation directly impacts both search rankings and conversion rates.</p>
+    </div>
+
+    <FaqSection items={faqs} title="Automotive SEO — FAQ" />
+  </div>
+</BaseLayout>

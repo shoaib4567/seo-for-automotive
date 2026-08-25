@@ -12,6 +12,7 @@ interface Props {
   breadcrumbs?: { label: string; href: string }[];
   schemaData?: object | object[];
   noContainer?: boolean;
+  noIndex?: boolean;
   pageType?: 'website' | 'article' | 'service' | 'about' | 'contact';
 }
 
@@ -23,6 +24,7 @@ const {
   breadcrumbs = [],
   schemaData,
   noContainer = false,
+  noIndex = false,
   pageType = 'website',
 } = Astro.props;
 
@@ -99,7 +101,7 @@ if (schemaData) {
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <link rel="canonical" href={fullCanonical} />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
