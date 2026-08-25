@@ -281,17 +281,30 @@ const currentPath = Astro.url.pathname;
   .nav-link {
     padding: 0.5rem 0.875rem;
     border-radius: 0.625rem;
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
     transition: all 0.15s ease;
     cursor: pointer;
   }
   .nav-link:hover {
-    color: var(--color-text-primary);
+    color: var(--color-gold);
     background-color: var(--color-bg-surface);
   }
   .nav-link.active {
     color: var(--color-gold);
     background-color: var(--color-gold-muted);
+  }
+
+  /* Pure CSS Dropdown Hover */
+  .dropdown-menu-panel {
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+    transform: translateY(4px);
+  }
+  .nav-dropdown-item:hover .dropdown-menu-panel {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0);
   }
 
   .dropdown-card {
@@ -316,26 +329,36 @@ const currentPath = Astro.url.pathname;
   }
 </style>
 
-<script>
-  // Theme toggle script
-  const toggle = document.getElementById('theme-toggle');
-  toggle?.addEventListener('click', () => {
-    const isDark = document.documentElement.classList.toggle('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  });
-
-  // Mobile menu drawer toggle
-  const btn = document.getElementById('mobile-menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  btn?.addEventListener('click', () => {
-    if (!menu) return;
-    const isHidden = menu.classList.contains('hidden');
-    if (isHidden) {
-      menu.classList.remove('hidden');
-      btn.setAttribute('aria-expanded', 'true');
-    } else {
-      menu.classList.add('hidden');
-      btn.setAttribute('aria-expanded', 'false');
+<script is:inline>
+  (function() {
+    // Theme toggle script
+    var toggle = document.getElementById('theme-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        var isDark = document.documentElement.classList.toggle('dark');
+        try {
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        } catch(err) {}
+      });
     }
-  });
+
+    // Mobile menu drawer toggle
+    var btn = document.getElementById('mobile-menu-btn');
+    var menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var isHidden = menu.classList.contains('hidden');
+        if (isHidden) {
+          menu.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+        } else {
+          menu.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  })();
 </script>
+
