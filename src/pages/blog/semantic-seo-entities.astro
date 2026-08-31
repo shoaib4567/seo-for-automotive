@@ -3,6 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import InternalLinkCard from '../../components/InternalLinkCard.astro';
 import FaqSection from '../../components/FaqSection.astro';
 import AuthorCard from '../../components/AuthorCard.astro';
+import AutomotiveArchitectureDiagram from '../../components/visuals/AutomotiveArchitectureDiagram.astro';
+import ComparisonMatrix from '../../components/visuals/ComparisonMatrix.astro';
+import InteractiveSchemaSnippet from '../../components/interactive/InteractiveSchemaSnippet.jsx';
 
 const title = "Semantic SEO & Automotive Entities: Schema, Knowledge Graph & Architecture [2026]";
 const description = "Master semantic SEO for automotive websites. Implement Schema.org Vehicle and AutoDealer entities, Knowledge Graph mapping, and machine-readable data structures.";
@@ -21,6 +24,7 @@ const faqs = [
   { question: 'What Schema.org types are required for automotive websites?', answer: 'Automotive websites require nested Schema.org structures including Vehicle, AutoDealer, AutoRepair, AutoBodyShop, Product (with mpn, gtin13, sku), Service, Offer, FAQPage, and Review vocabularies.' },
 ];
 ---
+
 <BaseLayout title={title} description={description} canonicalPath="/blog/semantic-seo-entities/" breadcrumbs={breadcrumbs}>
   <div class="mb-12">
     <div class="flex items-center gap-3 mb-4">
@@ -31,6 +35,15 @@ const faqs = [
     <p class="mt-4 text-lg max-w-3xl" style="color: var(--color-text-secondary);">
       Semantic SEO is the optimization method that structures automotive web pages around distinct entities—such as vehicle makes, models, VIN identifiers, and dealership facilities—enabling Google's Knowledge Graph and generative AI engines to verify factual authority and rank pages above generic aggregators.
     </p>
+  </div>
+
+  <!-- Multi-Department Entity Diagram -->
+  <div class="my-12">
+    <AutomotiveArchitectureDiagram
+      type="dealership-entity"
+      title="Automotive Knowledge Graph &amp; Entity Hierarchy"
+      subtitle="How nested vehicle and dealership entities map directly into Google's Knowledge Graph."
+    />
   </div>
 
   <div class="prose-content">
@@ -72,17 +85,20 @@ const faqs = [
     <p>
       For automotive parts manufacturers and eCommerce catalogs, part number taxonomy is foundational. Schema.org <code>Product</code> must specify <code>mpn</code> (Manufacturer Part Number), <code>gtin13</code>, and cross-reference vehicle fitment compatibility matrices.
     </p>
+  </div>
 
-    <h2>Knowledge Graph Optimization Checklist</h2>
-    <p>
-      To establish your automotive brand as a verified entity in Google's Knowledge Graph:
-    </p>
-    <ul>
-      <li>Claim and verify Google Business Profiles with 100% NAP consistency.</li>
-      <li>Reference official Wikidata and Wikipedia entity URIs within schema <code>sameAs</code> fields.</li>
-      <li>Maintain synchronized listings across tier-1 automotive authority portals (Edmunds, DealerRater, CarGurus, Cars.com, Kelley Blue Book).</li>
-      <li>Publish expert-authored technical content showcasing certified automotive engineering credentials.</li>
-    </ul>
+  <!-- Interactive Schema Code Inspector -->
+  <div class="my-16">
+    <InteractiveSchemaSnippet client:visible />
+  </div>
+
+  <!-- CMS Platform Comparison Matrix -->
+  <div class="my-16">
+    <ComparisonMatrix
+      type="cms-platforms"
+      title="Platform Schema Capability Benchmark"
+      subtitle="How modern headless search architectures provide 100% granular schema control compared to legacy dealer CMSs."
+    />
   </div>
 
   <FaqSection items={faqs} title="Frequently Asked Questions on Automotive Semantic SEO" />
@@ -95,7 +111,7 @@ const faqs = [
   <div class="mt-12">
     <AuthorCard 
       name="Automotive Search Engineering Team" 
-      role="Semantic Search & Knowledge Graph Architects" 
+      role="Semantic Search &amp; Knowledge Graph Architects" 
       bio="Specializing in Schema.org structured data engineering, vehicle entity graphs, and Knowledge Graph validation for automotive enterprises." 
       expertise={['Schema.org Vehicle Vocabularies', 'Knowledge Graph Architecture', 'ACES/PIES Fitment SEO', 'Entity-Based Content Strategy']} 
     />

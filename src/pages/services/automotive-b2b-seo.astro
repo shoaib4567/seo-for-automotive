@@ -1,6 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FaqSection from '../../components/FaqSection.astro';
+import AutomotiveRoiCalculator from '../../components/interactive/AutomotiveRoiCalculator.jsx';
+import AutomotiveArchitectureDiagram from '../../components/visuals/AutomotiveArchitectureDiagram.astro';
+import ExecutionRoadmapTabs from '../../components/interactive/ExecutionRoadmapTabs.jsx';
+import InteractiveSchemaSnippet from '../../components/interactive/InteractiveSchemaSnippet.jsx';
 
 const title = "B2B Automotive SEO — Manufacturers, Suppliers & Distributors | SEO for Automotive";
 const description = "Specialist B2B SEO for automotive OEM manufacturers, parts distributors, wholesale suppliers, and commercial fleet companies. Generate high-ticket RFQs and distributor contracts.";
@@ -21,6 +25,10 @@ const faqs = [
   {
     question: 'How is B2B automotive SEO different from retail consumer SEO?',
     answer: 'B2B automotive buyers search by exact part numbers, bulk case quantities, material specifications (e.g. ceramic vs semi-metallic formulation), and ISO/TS certifications. The sales cycle is longer, deal sizes range from $10k to $500k+, and conversion funnels require wholesale RFQ forms rather than simple consumer checkouts.'
+  },
+  {
+    question: 'What results did SEJ Auto Parts achieve with your B2B SEO architecture?',
+    answer: 'In our verified <a href="/case-studies/sejautoparts/">SEJ Auto Parts Case Study</a>, we eliminated 120,000 duplicate faceted crawl loops, optimized OEM part numbers, and generated a verified $1.8M B2B wholesale RFQ pipeline with a 350% increase in qualified inquiries.'
   }
 ];
 ---
@@ -33,11 +41,11 @@ const faqs = [
       <div class="flex flex-wrap items-center gap-2 mb-4">
         <span class="badge-outline">B2B Search Architecture</span>
         <span class="eeat-badge">$1.8M Pipeline Generated</span>
-        <span class="live-badge"><span class="live-dot"></span> Wholesale & Distributor Focus</span>
+        <span class="live-badge"><span class="live-dot"></span> Wholesale &amp; Distributor Focus</span>
       </div>
       
       <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
-        B2B Automotive SEO: <span class="text-gradient-gold">Wholesale & Distributor Pipeline Scale</span>
+        B2B Automotive SEO: <span class="text-gradient-gold">Wholesale &amp; Distributor Pipeline Scale</span>
       </h1>
       
       <p class="text-lg sm:text-xl leading-relaxed max-w-3xl" style="color: var(--color-text-secondary);">
@@ -49,7 +57,7 @@ const faqs = [
     <div class="relative rounded-2xl overflow-hidden border shadow-2xl mb-16" style="border-color: var(--color-border); background: var(--color-bg-card);">
       <img
         src="/b2b-autoparts-tech.jpg"
-        alt="B2B Automotive Logistics & Automated Warehouse Telemetry"
+        alt="B2B Automotive Logistics &amp; Automated Warehouse Telemetry"
         class="w-full h-auto object-cover"
         loading="eager"
       />
@@ -81,6 +89,20 @@ const faqs = [
       </div>
     </div>
 
+    <!-- Interactive ROI Simulator -->
+    <div class="my-16">
+      <AutomotiveRoiCalculator client:load defaultType="ecommerce" />
+    </div>
+
+    <!-- YMM Fitment Architecture Diagram -->
+    <div class="my-14">
+      <AutomotiveArchitectureDiagram
+        type="ymm-fitment"
+        title="B2B Catalog &amp; Wholesale SKU Taxonomy Pipeline"
+        subtitle="Structuring dynamic wholesale compatibility that converts procurement officers into signed accounts."
+      />
+    </div>
+
     <!-- 4 Pillars -->
     <div class="mb-20">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -91,6 +113,16 @@ const faqs = [
           </div>
         ))}
       </div>
+    </div>
+
+    <!-- Schema Snippet -->
+    <div class="my-16">
+      <InteractiveSchemaSnippet client:visible />
+    </div>
+
+    <!-- Execution Roadmap Blueprint -->
+    <div class="my-16">
+      <ExecutionRoadmapTabs client:visible />
     </div>
 
     <!-- FAQ Section -->

@@ -3,9 +3,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import InternalLinkCard from '../components/InternalLinkCard.astro';
 import FaqSection from '../components/FaqSection.astro';
 import AuthorCard from '../components/AuthorCard.astro';
+import GeoGridSimulator from '../components/interactive/GeoGridSimulator.jsx';
+import AutomotiveRoiCalculator from '../components/interactive/AutomotiveRoiCalculator.jsx';
+import AutomotiveArchitectureDiagram from '../components/visuals/AutomotiveArchitectureDiagram.astro';
+import InteractiveSchemaSnippet from '../components/interactive/InteractiveSchemaSnippet.jsx';
 
-const title = "Local SEO for Car Dealerships & Auto Businesses — GBP, Maps & Citations [2026]";
-const description = "Master local SEO for automotive businesses. Google Business Profile optimization, Maps 3-Pack strategies, citation building, and NAP consistency. 3,180 monthly searches.";
+const title = "Local SEO for Car Dealerships & Auto Businesses — GBP & Maps 3-Pack Conquest [2026]";
+const description = "Master local automotive search. Dominate the Google Maps 3-Pack, multi-department GBP optimization, local citation hygiene, and geo-grid radius expansion.";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
   { label: 'Local SEO', href: '/local-seo-for-car-dealerships/' },
@@ -23,70 +27,93 @@ const spokeLinks = [
 const faqs = [
   { question: 'How do I optimize my dealership Google Business Profile?', answer: 'Key steps: complete every field (business name, category, hours, attributes), add 50+ high-quality photos, write a keyword-rich description, enable messaging, post weekly updates, and actively respond to all reviews. See our <a href="/automotive-reputation-management-services/">reputation management guide</a> for review strategy.' },
   { question: 'What are the best local citations for auto repair shops?', answer: 'Top citation sources include: Google Business Profile, Yelp, Facebook, BBB, AutoMD, RepairPal, Carfax Service, YP.com, Angi, and industry-specific directories. Consistency of NAP (Name, Address, Phone) across all citations is critical.' },
-  { question: 'How important is the Google Maps 3-Pack for dealerships?', answer: 'Extremely important — the Maps 3-Pack captures 42% of clicks on local search results. Ranking in the 3-Pack requires: proximity to searcher, GBP completeness, review quantity/quality, and local <a href="/blog/semantic-seo-entities/">entity optimization</a>.' },
+  { question: 'How important is the Google Maps 3-Pack for dealerships?', answer: 'Extremely important — the Maps 3-Pack captures over 42% of all clicks on local automotive search queries. Ranking in the 3-Pack requires: geographic proximity signals, GBP completeness, review velocity, and local entity optimization.' },
 ];
 ---
 
 <BaseLayout title={title} description={description} canonicalPath="/local-seo-for-car-dealerships/" breadcrumbs={breadcrumbs}>
 
-  <div class="mb-12">
+  <!-- Hero Header -->
+  <div class="mb-14">
     <div class="flex items-center gap-3 mb-4">
-      <span class="kw-badge">3,180/mo total volume</span>
-      <span class="kw-badge">19 keywords</span>
+      <span class="badge-outline">Local Search Engineering</span>
+      <span class="eeat-badge">Maps 3-Pack Authority</span>
+      <span class="live-badge"><span class="live-dot"></span> 3,180/mo Target Demand</span>
     </div>
-    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black  leading-tight" style="color: var(--color-text-primary);">
-      Local SEO for <span class="text-gradient-amber">Car Dealerships</span>
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight" style="color: var(--color-text-primary);">
+      Local SEO for <span class="text-gradient-amber">Car Dealerships & Auto Shops</span>
     </h1>
     <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
-      Dominate the Google Maps 3-Pack, optimize your Google Business Profile, and build citations that drive foot traffic. Essential for every <a href="/seo-for-car-dealerships/" class="text-amber-400 hover:underline">car dealership</a> and <a href="/auto-repair-seo-services/" class="text-amber-400 hover:underline">auto repair shop</a>.
+      Dominate the Google Maps 3-Pack, optimize multi-department Google Business Profiles, and expand your ranking radius across 15+ miles. Essential for dealerships, mechanics, collision centers, and detailing studios looking to capture immediate local foot traffic and direct phone calls.
     </p>
   </div>
 
-  <div class="prose-content">
-    <h2 id="local-seo-strategy">Automotive Local SEO Strategy</h2>
-    <p><strong>"Automotive local seo"</strong> (480/mo) and <strong>"local seo for car dealerships"</strong> (390/mo) represent the core of this cluster. Local SEO drives the highest-intent traffic for automotive businesses — searchers are ready to visit, call, or book an appointment.</p>
-
-    <h2 id="gbp-optimization">Google Business Profile Optimization</h2>
-    <p>Your GBP is the foundation of automotive local SEO. A fully optimized profile can increase discovery searches by 70%. Key optimization areas include:</p>
-    <ul>
-      <li><strong>Primary category selection</strong> — "Car Dealer" or "Auto Repair Shop" as primary, with relevant secondary categories</li>
-      <li><strong>Service area configuration</strong> — especially important for <a href="/auto-repair-seo-services/">mobile mechanics</a></li>
-      <li><strong>Q&A section seeding</strong> — pre-populate with common customer questions</li>
-      <li><strong>Photo optimization</strong> — geo-tagged, high-quality images of facility, team, and vehicles</li>
-      <li><strong>Post strategy</strong> — weekly updates with offers, events, and inventory highlights</li>
-    </ul>
-
-    <h2 id="citation-building">Citation Building & NAP Consistency</h2>
-    <p>The keyword <strong>"best local citations for auto repair shops"</strong> (40/mo) reflects demand for citation guidance. Consistent NAP (Name, Address, Phone) across 50+ directories is a core local ranking factor.</p>
-
-    <h2 id="local-keywords">Local SEO Keywords</h2>
+  <!-- Interactive GeoGrid Visualizer -->
+  <div class="my-14">
+    <GeoGridSimulator client:load />
   </div>
 
-  <div class="overflow-x-auto mt-6 mb-10">
+  <!-- Content -->
+  <div class="prose-content my-14">
+    <h2 id="local-seo-strategy">Automotive Local SEO Strategy</h2>
+    <p>Local SEO drives the highest-converting traffic in the automotive sector. When a driver's vehicle breaks down or when a local buyer searches for an SUV in stock, <strong>76% of mobile searchers visit a physical location within 24 hours</strong>.</p>
+
+    <h2 id="gbp-optimization">Multi-Department Google Business Profile Architecture</h2>
+    <p>Franchised dealerships and multi-service auto centers cannot rely on a single GBP listing. We build structured departmental nesting to triple your Maps 3-Pack presence:</p>
+  </div>
+
+  <!-- Multi-Department Entity Diagram -->
+  <div class="my-12">
+    <AutomotiveArchitectureDiagram
+      type="dealership-entity"
+      title="Multi-Department GBP & Entity Hierarchy"
+      subtitle="How nested Sales, Service, Parts, and Collision listings dominate distinct local query intents."
+    />
+  </div>
+
+  <!-- Interactive ROI Calculator -->
+  <div class="my-16">
+    <AutomotiveRoiCalculator client:visible defaultType="dealership" />
+  </div>
+
+  <!-- Schema Inspector -->
+  <div class="my-16">
+    <InteractiveSchemaSnippet client:visible />
+  </div>
+
+  <!-- Local Keyword Table -->
+  <div class="prose-content mt-14 mb-6">
+    <h2>High-Intent Local Automotive Keyword Targets</h2>
+  </div>
+
+  <div class="overflow-x-auto mb-14">
     <table class="w-full text-sm">
       <thead>
         <tr class="border-b border-white/[0.08] text-left">
           <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold">Keyword</th>
           <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">Volume</th>
-          <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">KD</th>
+          <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">Intent</th>
         </tr>
       </thead>
       <tbody class="text-slate-700 dark:text-slate-300">
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">automotive local seo</td><td class="text-right">480</td><td class="text-right text-amber-400">20</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">automotive local seo company</td><td class="text-right">390</td><td class="text-right text-emerald-400">10</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">local seo for auto repair shops</td><td class="text-right">390</td><td class="text-right text-amber-400">11</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">local seo for car dealerships</td><td class="text-right">390</td><td class="text-right text-amber-400">13</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">local automotive seo strategies</td><td class="text-right">210</td><td class="text-right text-amber-400">12</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">automotive local seo</td><td class="text-right">480/mo</td><td class="text-right text-emerald-400">Commercial</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">local seo for car dealerships</td><td class="text-right">390/mo</td><td class="text-right text-emerald-400">High Intent</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">local seo for auto repair shops</td><td class="text-right">390/mo</td><td class="text-right text-emerald-400">Local Direct</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">automotive local seo company</td><td class="text-right">390/mo</td><td class="text-right text-emerald-400">Agency Search</td></tr>
       </tbody>
     </table>
   </div>
 
-  <div class="mt-12">
-    <h2 class="text-xl font-bold  mb-6" style="color: var(--color-text-primary);">Related Pages</h2>
+  <!-- Related Hub Links -->
+  <div class="mt-12 mb-16">
+    <h2 class="text-xl font-bold mb-6" style="color: var(--color-text-primary);">Related Local Search Hubs</h2>
     <InternalLinkCard links={spokeLinks} columns={3} />
   </div>
 
-  <AuthorCard name="Automotive SEO Team" role="Local Search Optimization Specialists" bio="Specialists in Google Business Profile optimization and local citation management for automotive businesses across 500+ cities." expertise={['Google Business Profile', 'Local Citations', 'Maps 3-Pack', 'NAP Consistency', 'Review Management']} />
+  <!-- Author E-E-A-T -->
+  <AuthorCard name="Automotive SEO Team" role="Local Search Optimization Specialists" bio="Specialists in Google Business Profile optimization, geo-grid proximity expansion, and local citation management for automotive businesses across North America." expertise={['Google Business Profile', 'Local Citations', 'Maps 3-Pack', 'NAP Consistency', 'Review Management']} />
 
+  <!-- FAQ -->
   <FaqSection items={faqs} title="Local SEO for Automotive — FAQ" />
+
 </BaseLayout>

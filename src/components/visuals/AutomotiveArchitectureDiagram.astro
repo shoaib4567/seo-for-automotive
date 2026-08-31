@@ -1,0 +1,171 @@
+---
+interface Props {
+  type?: 'dealership-entity' | 'ymm-fitment' | 'aeo-citation' | 'emergency-funnel';
+  title?: string;
+  subtitle?: string;
+}
+
+const {
+  type = 'dealership-entity',
+  title = "Automotive Search Engineering Architecture",
+  subtitle = "How our specialized technical pipeline captures and routes high-intent vehicle buyers."
+} = Astro.props;
+---
+
+<div class="hud-panel p-6 sm:p-8 rounded-2xl border relative overflow-hidden shadow-2xl my-10" style="border-color: var(--color-gold-border); background: var(--color-bg-card);">
+  
+  <!-- Header -->
+  <div class="mb-8 text-center max-w-2xl mx-auto">
+    <div class="inline-flex items-center gap-2 mb-2">
+      <span class="live-dot"></span>
+      <span class="text-xs font-mono font-bold uppercase tracking-wider text-gradient-gold">
+        Technical Architecture Schematic
+      </span>
+    </div>
+    <h3 class="text-2xl sm:text-3xl font-black" style="color: var(--color-text-primary);">
+      {title}
+    </h3>
+    <p class="text-sm mt-1" style="color: var(--color-text-secondary);">
+      {subtitle}
+    </p>
+  </div>
+
+  {type === 'dealership-entity' && (
+    <div class="space-y-6">
+      <!-- Dealership Entity Tree -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+        
+        <!-- Root Entity -->
+        <div class="md:col-span-4 p-4 rounded-xl border bg-slate-900 text-white text-center shadow-lg relative border-amber-500/50">
+          <div class="text-[10px] font-mono text-amber-400 font-bold uppercase tracking-wider">Parent Root Entity</div>
+          <div class="text-lg font-black mt-1">Car Dealership Parent Brand (`AutoDealer`)</div>
+          <div class="text-xs text-slate-400 mt-1">Main GBP • Franchise Authority • Schema Knowledge Graph Node</div>
+        </div>
+
+        <!-- 4 Sub-Departments -->
+        <div class="p-4 rounded-xl border bg-slate-50 dark:bg-slate-900/60 text-center" style="border-color: var(--color-border);">
+          <div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-500 flex items-center justify-center mx-auto mb-2 text-sm font-bold">🚗</div>
+          <h4 class="text-xs font-bold" style="color: var(--color-text-primary);">New & Used Sales</h4>
+          <p class="text-[11px] mt-1" style="color: var(--color-text-muted);">Dynamic VDP / SRP Indexation & Vehicle schema</p>
+        </div>
+
+        <div class="p-4 rounded-xl border bg-slate-50 dark:bg-slate-900/60 text-center" style="border-color: var(--color-border);">
+          <div class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center mx-auto mb-2 text-sm font-bold">🔧</div>
+          <h4 class="text-xs font-bold" style="color: var(--color-text-primary);">Certified Service Dept</h4>
+          <p class="text-[11px] mt-1" style="color: var(--color-text-muted);">Dedicated Service GBP & Maintenance queries</p>
+        </div>
+
+        <div class="p-4 rounded-xl border bg-slate-50 dark:bg-slate-900/60 text-center" style="border-color: var(--color-border);">
+          <div class="w-8 h-8 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center mx-auto mb-2 text-sm font-bold">⚙️</div>
+          <h4 class="text-xs font-bold" style="color: var(--color-text-primary);">OEM Parts & Tires</h4>
+          <p class="text-[11px] mt-1" style="color: var(--color-text-muted);">Part number schemas & Wholesale B2B</p>
+        </div>
+
+        <div class="p-4 rounded-xl border bg-slate-50 dark:bg-slate-900/60 text-center" style="border-color: var(--color-border);">
+          <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-2 text-sm font-bold">🛡️</div>
+          <h4 class="text-xs font-bold" style="color: var(--color-text-primary);">Collision & Body</h4>
+          <p class="text-[11px] mt-1" style="color: var(--color-text-muted);">Insurance claim intent & Estimate funnels</p>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl border bg-amber-500/5 dark:bg-amber-400/5 text-xs text-center font-mono" style="border-color: var(--color-gold-border); color: var(--color-text-secondary);">
+        ⚡ RESULT: Eliminates department keyword cannibalization and secures 4x more Google Maps 3-Pack real estate.
+      </div>
+    </div>
+  )}
+
+  {type === 'ymm-fitment' && (
+    <div class="space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-5 rounded-xl border bg-slate-50 dark:bg-slate-900/60" style="border-color: var(--color-border);">
+          <span class="text-[10px] font-mono font-bold text-amber-500 uppercase block mb-1">Step 1: Fitment Database</span>
+          <h4 class="text-sm font-bold" style="color: var(--color-text-primary);">ACES & PIES Standards</h4>
+          <p class="text-xs mt-2" style="color: var(--color-text-secondary);">
+            Year / Make / Model / Submodel / Engine attributes normalized into crawlable semantic categories.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl border bg-slate-50 dark:bg-slate-900/60" style="border-color: var(--color-border);">
+          <span class="text-[10px] font-mono font-bold text-cyan-500 uppercase block mb-1">Step 2: Crawl Budget Control</span>
+          <h4 class="text-sm font-bold" style="color: var(--color-text-primary);">Smart Canonicalization</h4>
+          <p class="text-xs mt-2" style="color: var(--color-text-secondary);">
+            Multi-attribute faceted filters (bolt pattern, offset, finish) indexed without generating duplicate thin content.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl border bg-slate-50 dark:bg-slate-900/60" style="border-color: var(--color-border);">
+          <span class="text-[10px] font-mono font-bold text-emerald-500 uppercase block mb-1">Step 3: SERP & Merchant Feed</span>
+          <h4 class="text-sm font-bold" style="color: var(--color-text-primary);">Google Shopping Dominance</h4>
+          <p class="text-xs mt-2" style="color: var(--color-text-secondary);">
+            Free listings and organic Product cards enriched with MPN, GTIN, and dynamic vehicle compatibility tags.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl border bg-slate-950 text-amber-300 font-mono text-xs text-center border-amber-500/30">
+        [User Query: "2024 Ford F-150 cold air intake"] ➔ [Dynamic YMM Landing Page] ➔ [Verified Compatible SKU] ➔ 4.8★ Cart Checkout
+      </div>
+    </div>
+  )}
+
+  {type === 'aeo-citation' && (
+    <div class="space-y-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="p-4 rounded-xl border bg-slate-900 text-white" style="border-color: var(--color-border);">
+          <div class="text-xs font-mono text-cyan-400 font-bold">1. SEMANTIC ENTITY</div>
+          <h5 class="text-sm font-bold mt-1">Knowledge Graph Node</h5>
+          <p class="text-xs text-slate-400 mt-2">Verified automotive entity with structured JSON-LD fact triples.</p>
+        </div>
+
+        <div class="p-4 rounded-xl border bg-slate-900 text-white" style="border-color: var(--color-border);">
+          <div class="text-xs font-mono text-purple-400 font-bold">2. LLM TRAINING DATA</div>
+          <h5 class="text-sm font-bold mt-1">Vector Embeddings</h5>
+          <p class="text-xs text-slate-400 mt-2">Authoritative technician credentials and technical consensus facts.</p>
+        </div>
+
+        <div class="p-4 rounded-xl border bg-slate-900 text-white" style="border-color: var(--color-border);">
+          <div class="text-xs font-mono text-amber-400 font-bold">3. LIVE RAG RETRIEVAL</div>
+          <h5 class="text-sm font-bold mt-1">Direct Answer Modules</h5>
+          <p class="text-xs text-slate-400 mt-2">Concise 40-word definitive answers formatted for AI extraction.</p>
+        </div>
+
+        <div class="p-4 rounded-xl border bg-slate-900 text-white border-emerald-500/50">
+          <div class="text-xs font-mono text-emerald-400 font-bold">4. AI OVERVIEW #1</div>
+          <h5 class="text-sm font-bold mt-1">Top Citation Card</h5>
+          <p class="text-xs text-slate-400 mt-2">Brand cited as primary recommendation in Google AI, Perplexity & ChatGPT.</p>
+        </div>
+      </div>
+    </div>
+  )}
+
+  {type === 'emergency-funnel' && (
+    <div class="space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-5 rounded-xl border bg-slate-50 dark:bg-slate-900/60" style="border-color: var(--color-border);">
+          <div class="text-2xl mb-2">🚨</div>
+          <h4 class="text-sm font-bold" style="color: var(--color-text-primary);">Emergency Intent ("Near Me")</h4>
+          <p class="text-xs mt-1" style="color: var(--color-text-secondary);">
+            Driver on highway with smoking radiator or dashboard warning searches on mobile.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl border bg-slate-50 dark:bg-slate-900/60" style="border-color: var(--color-border);">
+          <div class="text-2xl mb-2">📍</div>
+          <h4 class="text-sm font-bold" style="color: var(--color-text-primary);">Instant Maps 3-Pack #1 Pin</h4>
+          <p class="text-xs mt-1" style="color: var(--color-text-secondary);">
+            High star rating (4.9★), "Open Now" status, and primary service badges drive instant click.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl border bg-slate-50 dark:bg-slate-900/60" style="border-color: var(--color-border);">
+          <div class="text-2xl mb-2">📞</div>
+          <h4 class="text-sm font-bold" style="color: var(--color-text-primary);">1-Tap Call & Bay Booking</h4>
+          <p class="text-xs mt-1" style="color: var(--color-text-secondary);">
+            Friction-free tap-to-call connects directly to service writer, securing $1,200+ repair ticket.
+          </p>
+        </div>
+      </div>
+    </div>
+  )}
+
+</div>

@@ -1,6 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FaqSection from '../../components/FaqSection.astro';
+import AutomotiveRoiCalculator from '../../components/interactive/AutomotiveRoiCalculator.jsx';
+import AutomotiveArchitectureDiagram from '../../components/visuals/AutomotiveArchitectureDiagram.astro';
+import ExecutionRoadmapTabs from '../../components/interactive/ExecutionRoadmapTabs.jsx';
+import InteractiveSchemaSnippet from '../../components/interactive/InteractiveSchemaSnippet.jsx';
 
 const title = "Auto Parts & Accessories eCommerce SEO — Fitment & Catalog Architecture | SEO for Automotive";
 const description = "Specialist eCommerce SEO for automotive parts stores, aftermarket accessories, wheels, tires, and performance brands. Dominate part number search, year/make/model fitment queries, and Google Shopping.";
@@ -25,6 +29,10 @@ const faqs = [
   {
     question: 'How does your eCommerce SEO help outrank Amazon and eBay Motors for auto parts?',
     answer: 'Marketplaces rely on generic, scraped seller descriptions. We win by providing complete technical fitment schematics, installation torque specs, dynamic review ratings, and comprehensive OEM interchange data that Google\'s quality evaluators prioritize as superior information gain.'
+  },
+  {
+    question: 'How does faceted navigation impact crawl budget on large auto parts catalogs?',
+    answer: 'Without proper rules, multi-attribute filter combinations (year, make, model, submodel, engine, finish, diameter) generate millions of duplicate URLs that consume Googlebot crawl budget. We engineer smart robots.txt directives, canonical tag hierarchies, and AJAX facet filtering to preserve 100% crawl efficiency.'
   }
 ];
 ---
@@ -37,11 +45,11 @@ const faqs = [
       <div class="flex flex-wrap items-center gap-2 mb-4">
         <span class="badge-outline">eCommerce Search Engineering</span>
         <span class="eeat-badge">+460% Organic Revenue</span>
-        <span class="live-badge"><span class="live-dot"></span> YMM Fitment & Part Numbers</span>
+        <span class="live-badge"><span class="live-dot"></span> YMM Fitment &amp; Part Numbers</span>
       </div>
       
       <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
-        Auto Parts eCommerce SEO: <span class="text-gradient-gold">Fitment & Catalog Dominance</span>
+        Auto Parts eCommerce SEO: <span class="text-gradient-gold">Fitment &amp; Catalog Dominance</span>
       </h1>
       
       <p class="text-lg sm:text-xl leading-relaxed max-w-3xl" style="color: var(--color-text-secondary);">
@@ -59,7 +67,7 @@ const faqs = [
       />
       <div class="p-4 border-t flex flex-wrap items-center justify-between gap-3 text-xs" style="border-color: var(--color-border); background: var(--color-bg-surface);">
         <span class="font-bold flex items-center gap-2" style="color: var(--color-text-primary);">
-          <span class="live-dot"></span> Proven Scale: Custom Car Covers (BAC) +460% Revenue & SEJ Parts $1.8M Wholesale Pipeline
+          <span class="live-dot"></span> Proven Scale: Custom Car Covers (BAC) +460% Revenue &amp; SEJ Parts $1.8M Wholesale Pipeline
         </span>
         <a href="/case-studies/bigacover/" class="text-[11px] font-bold text-gradient-gold hover:underline">Read eCommerce Case Study →</a>
       </div>
@@ -85,6 +93,20 @@ const faqs = [
       </div>
     </div>
 
+    <!-- Interactive ROI Simulator -->
+    <div class="my-16">
+      <AutomotiveRoiCalculator client:load defaultType="ecommerce" />
+    </div>
+
+    <!-- YMM Fitment Architecture Diagram -->
+    <div class="my-14">
+      <AutomotiveArchitectureDiagram
+        type="ymm-fitment"
+        title="Automotive Catalog &amp; YMM Fitment Indexing Pipeline"
+        subtitle="How our structured data taxonomy converts complex multi-fitment databases into indexed, revenue-generating landing pages."
+      />
+    </div>
+
     <!-- 4 Pillars -->
     <div class="mb-20">
       <div class="mb-10 text-center max-w-2xl mx-auto">
@@ -102,6 +124,16 @@ const faqs = [
           </div>
         ))}
       </div>
+    </div>
+
+    <!-- Schema Snippet -->
+    <div class="my-16">
+      <InteractiveSchemaSnippet client:visible />
+    </div>
+
+    <!-- Execution Roadmap Blueprint -->
+    <div class="my-16">
+      <ExecutionRoadmapTabs client:visible />
     </div>
 
     <!-- FAQ Section -->

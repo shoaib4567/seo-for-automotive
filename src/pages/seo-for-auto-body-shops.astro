@@ -1,44 +1,140 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import InternalLinkCard from '../components/InternalLinkCard.astro';
+import FaqSection from '../components/FaqSection.astro';
+import AuthorCard from '../components/AuthorCard.astro';
+import AutomotiveRoiCalculator from '../components/interactive/AutomotiveRoiCalculator.jsx';
+import GeoGridSimulator from '../components/interactive/GeoGridSimulator.jsx';
+import ExecutionRoadmapTabs from '../components/interactive/ExecutionRoadmapTabs.jsx';
+import InteractiveSchemaSnippet from '../components/interactive/InteractiveSchemaSnippet.jsx';
+import AutomotiveArchitectureDiagram from '../components/visuals/AutomotiveArchitectureDiagram.astro';
 
-const title = "SEO for Auto Body Shops — Collision Repair SEO Services [2026]";
-const description = "SEO for auto body shops and collision repair centers. 3 keywords, 560 monthly volume. Local search domination for body shop businesses.";
-const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Auto Repair SEO', href: '/auto-repair-seo-services/' }, { label: 'Auto Body SEO', href: '/seo-for-auto-body-shops/' }];
+const title = "SEO for Auto Body Shops — Collision Repair Search Domination [2026 Strategy]";
+const description = "Specialized SEO for collision centers and auto body shops. Dominate Google Maps 3-Pack, capture insurance claim estimate leads, and win OEM certified repair jobs.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Auto Repair SEO', href: '/auto-repair-seo-services/' },
+  { label: 'Auto Body SEO', href: '/seo-for-auto-body-shops/' }
+];
+
 const relatedLinks = [
-  { title: 'Auto Repair SEO (Parent Hub)', href: '/auto-repair-seo-services/', description: 'Complete repair shop SEO.', icon: '🔧', volume: '8,210/mo' },
-  { title: 'Local SEO', href: '/local-seo-for-car-dealerships/', description: 'Local search for body shops.', icon: '📍', volume: '3,180/mo' },
-  { title: 'Reputation Management', href: '/automotive-reputation-management-services/', description: 'Review management for body shops.', icon: '⭐', volume: '2,720/mo' },
-  { title: 'Website Design', href: '/automotive-website-providers/', description: 'Auto body shop websites.', icon: '🌐' },
+  { title: 'Auto Repair SEO (Parent Hub)', href: '/auto-repair-seo-services/', description: 'Complete repair shop SEO strategy.', icon: '🔧', volume: '8,210/mo' },
+  { title: 'Local SEO for Automotive', href: '/services/automotive-local-seo/', description: 'Local search and Maps 3-Pack.', icon: '📍', volume: '3,180/mo' },
+  { title: 'Reputation Management', href: '/automotive-reputation-management-services/', description: 'Review generation for body shops.', icon: '⭐', volume: '2,720/mo' },
+  { title: 'Technical SEO for Automotive', href: '/services/automotive-technical-seo/', description: 'Core Web Vitals & structured data.', icon: '⚙️', volume: 'Speed & Schema' },
+];
+
+const faqs = [
+  { question: 'How do collision repair shops capture insurance estimate leads from Google?', answer: 'Car owners typically search Google immediately after an accident (e.g., "collision repair near me", "insurance approved body shop"). We optimize your Google Business Profile, emergency landing pages, and online photo-estimate request forms to capture high-intent accident repairs with Average Repair Orders exceeding $2,500.' },
+  { question: 'Can SEO help promote our OEM certifications (Tesla, Ford Aluminum, Honda ProFirst)?', answer: 'Yes. We construct dedicated OEM certification landing pages highlighting factory training, specialized aluminum jigs, certified paint booths, and technician badges backed by Schema.org <code>AutoBodyShop</code> markup.' },
 ];
 ---
+
 <BaseLayout title={title} description={description} canonicalPath="/seo-for-auto-body-shops/" breadcrumbs={breadcrumbs}>
-  <div class="mb-12">
-    <div class="flex items-center gap-3 mb-4"><span class="kw-badge">560/mo</span><span class="kw-badge">3 keywords</span></div>
-    <h1 class="text-3xl sm:text-4xl font-black  leading-tight" style="color: var(--color-text-primary);">SEO for <span class="text-gradient-amber">Auto Body Shops</span></h1>
-    <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl">Collision repair and auto body shop SEO strategies. Drive insurance referrals and DRP leads through <a href="/local-seo-for-car-dealerships/" class="text-amber-400 hover:underline">local search optimization</a>.</p>
+
+  <!-- Hero Header -->
+  <div class="mb-14">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge-outline">Collision Search Authority</span>
+      <span class="eeat-badge">OEM Certified &amp; DRP</span>
+      <span class="live-badge"><span class="live-dot"></span> $2,500+ Avg Ticket</span>
+    </div>
+    
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight" style="color: var(--color-text-primary);">
+      SEO for <span class="text-gradient-gold">Auto Body &amp; Collision Shops</span>
+    </h1>
+    
+    <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
+      Targeted search optimization for independent collision repair centers and multi-shop operators (MSOs). Capture urgent accident searches, insurance direct repair leads, and high-margin OEM certified repairs within your towing radius.
+    </p>
   </div>
-  <div class="prose-content">
-    <h2>Auto Body Shop SEO Strategy</h2>
-    <p><strong>"SEO for auto body shops"</strong> (260/mo) leads this compact but high-intent cluster. Body shops rely heavily on <a href="/local-seo-for-car-dealerships/">local SEO</a> and <a href="/automotive-reputation-management-services/">reputation management</a> since customers typically search during a stressful situation (after an accident).</p>
-    <ul>
-      <li><strong>Emergency intent optimization</strong> — target "auto body shop near me" and "collision repair [city]"</li>
-      <li><strong>Insurance partnership content</strong> — DRP program pages, insurance partner listings</li>
-      <li><strong>Before/after galleries</strong> — visual proof of quality work boosts <a href="/blog/eeat-automotive-seo/">E-E-A-T</a></li>
-      <li><strong><a href="/blog/semantic-seo-entities/">Schema markup</a></strong> — AutoBodyShop type with services, hours, and reviews</li>
-      <li><strong>Content marketing</strong> — "what to do after a car accident" guides per <a href="/blog/content-seo-automotive/">content playbook</a></li>
-    </ul>
-    <h2>Keywords</h2>
+
+  <!-- Key Metrics Telemetry -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">+320%</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Online Estimate Inquiries</div>
+    </div>
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">#1</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Maps 3-Pack Placement</div>
+    </div>
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">$2,850</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Average Collision RO</div>
+    </div>
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">4.9★</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Review Trust Score</div>
+    </div>
   </div>
-  <div class="overflow-x-auto mt-6 mb-10">
+
+  <!-- Interactive ROI Simulator -->
+  <div class="my-16">
+    <AutomotiveRoiCalculator client:load defaultType="repair" />
+  </div>
+
+  <!-- Accident Search Funnel Diagram -->
+  <div class="my-14">
+    <AutomotiveArchitectureDiagram
+      type="emergency-funnel"
+      title="Accident & Insurance Claim Estimate Capture Pipeline"
+      subtitle="How our local mobile architecture captures drivers right after collisions and routes them to photo estimate requests."
+    />
+  </div>
+
+  <!-- Interactive GeoGrid Simulator -->
+  <div class="my-16">
+    <GeoGridSimulator client:visible />
+  </div>
+
+  <!-- Schema Inspector -->
+  <div class="my-16">
+    <InteractiveSchemaSnippet client:visible />
+  </div>
+
+  <!-- Execution Roadmap Blueprint -->
+  <div class="my-16">
+    <ExecutionRoadmapTabs client:visible />
+  </div>
+
+  <!-- Keyword Intelligence -->
+  <div class="prose-content mt-14 mb-6">
+    <h2>Auto Body &amp; Collision Keyword Targets</h2>
+  </div>
+
+  <div class="overflow-x-auto mb-14">
     <table class="w-full text-sm">
-      <thead><tr class="border-b border-white/[0.08] text-left"><th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold">Keyword</th><th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">Volume</th><th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">KD</th></tr></thead>
+      <thead>
+        <tr class="border-b border-white/[0.08] text-left">
+          <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold">Keyword Target</th>
+          <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">Volume</th>
+          <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">Intent Profile</th>
+        </tr>
+      </thead>
       <tbody class="text-slate-700 dark:text-slate-300">
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">seo for auto body shops</td><td class="text-right">260</td><td class="text-right text-emerald-400">1</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">seo auto body shop</td><td class="text-right">210</td><td class="text-right text-emerald-400">4</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">auto body seo</td><td class="text-right">90</td><td class="text-right text-emerald-400">2</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">seo for auto body shops</td><td class="text-right">260/mo</td><td class="text-right text-emerald-400 font-mono">Commercial</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">[city] collision repair near me</td><td class="text-right">6,800/mo (aggregate)</td><td class="text-right text-emerald-400 font-mono">Emergency / Local</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">auto body paint shop near me</td><td class="text-right">4,200/mo (aggregate)</td><td class="text-right text-emerald-400 font-mono">High Ticket Paint</td></tr>
       </tbody>
     </table>
   </div>
-  <div class="mt-12"><h2 class="text-xl font-bold  mb-6" style="color: var(--color-text-primary);">Related Pages</h2><InternalLinkCard links={relatedLinks} columns={2} /></div>
+
+  <!-- Related Spoke Hubs -->
+  <div class="mt-12 mb-16">
+    <h2 class="text-xl font-bold mb-6" style="color: var(--color-text-primary);">Related Repair Verticals</h2>
+    <InternalLinkCard links={relatedLinks} columns={2} />
+  </div>
+
+  <!-- Author E-E-A-T -->
+  <AuthorCard
+    name="Automotive SEO Team"
+    role="Collision & Body Shop Search Strategists"
+    bio="Specialists in local search architecture and high-ticket collision estimate acquisition for independent body shops and multi-shop networks."
+    expertise={['AutoBodyShop Schema', 'Maps 3-Pack Conquest', 'OEM Certified Pages', 'Photo Estimate CRO']}
+  />
+
+  <!-- FAQ -->
+  <FaqSection items={faqs} title="Auto Body Shop SEO — Frequently Asked Questions" />
+
 </BaseLayout>

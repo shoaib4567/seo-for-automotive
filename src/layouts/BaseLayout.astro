@@ -2,6 +2,7 @@
 import MegaNav from '../components/MegaNav.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import BreadcrumbNav from '../components/BreadcrumbNav.astro';
+import FloatingRadarScanBar from '../components/interactive/FloatingRadarScanBar.jsx';
 import '../styles/global.css';
 
 interface Props {
@@ -167,5 +168,7 @@ if (schemaData) {
     )}
 
     <SiteFooter />
+    <FloatingRadarScanBar client:idle />
   </body>
 </html>
+

@@ -2,6 +2,10 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FaqSection from '../../components/FaqSection.astro';
 import AuthorCard from '../../components/AuthorCard.astro';
+import AutomotiveRoiCalculator from '../../components/interactive/AutomotiveRoiCalculator.jsx';
+import GeoGridSimulator from '../../components/interactive/GeoGridSimulator.jsx';
+import ExecutionRoadmapTabs from '../../components/interactive/ExecutionRoadmapTabs.jsx';
+import InteractiveSchemaSnippet from '../../components/interactive/InteractiveSchemaSnippet.jsx';
 
 const washServices = [
   { title: 'Multi-Location Franchise Maps 3-Pack', desc: 'Scalable location-specific GBP optimization for express tunnel and full-service car wash networks.' },
@@ -30,6 +34,7 @@ const schemaData = {
 
 const faqs = [
   { question: 'How does SEO help car wash businesses drive recurring revenue?', answer: 'We build landing pages and promotional schema specifically targeting "unlimited car wash membership" and "monthly wash club" searches, turning one-time drive-thru visitors into recurring monthly subscribers.' },
+  { question: 'How does Google Maps 3-Pack capture drive-by wash traffic?', answer: 'When drivers are commuting or running errands, mobile searches like "car wash near me" trigger instant Map cards. Having the highest review count and "Open Now" status captures immediate drive-thru traffic.' }
 ];
 ---
 
@@ -73,6 +78,16 @@ const faqs = [
       </div>
     </div>
 
+    <!-- Interactive ROI Simulator -->
+    <div class="my-16">
+      <AutomotiveRoiCalculator client:load defaultType="detailing" />
+    </div>
+
+    <!-- Interactive GeoGrid Simulator -->
+    <div class="my-16">
+      <GeoGridSimulator client:visible />
+    </div>
+
     <!-- 4 Pillars -->
     <div class="mb-20">
       <div class="mb-10 text-center max-w-2xl mx-auto">
@@ -92,13 +107,23 @@ const faqs = [
       </div>
     </div>
 
+    <!-- Schema Snippet -->
+    <div class="my-16">
+      <InteractiveSchemaSnippet client:visible />
+    </div>
+
+    <!-- Execution Roadmap Tabs -->
+    <div class="my-16">
+      <ExecutionRoadmapTabs client:visible />
+    </div>
+
     <!-- Author & E-E-A-T -->
     <div class="mb-16">
       <AuthorCard
         name="Automotive Search Engineering Team"
         role="Specialist Automotive SEO Leads"
         bio="Specializing in local search networks for automotive franchises, our engineers optimize multi-location car wash brands for regional search dominance."
-        expertise={['AutoWash Schema.org', 'Multi-Location GBP Networks', 'Unlimited Club CRO', 'Local Geo-Grid SEO']}
+        expertise={['Multi-Location GBP', 'Local Maps 3-Pack', 'Unlimited Club CRO', 'Local Citation Networks']}
       />
     </div>
 
@@ -110,14 +135,14 @@ const faqs = [
     <!-- Consultation CTA -->
     <div class="hud-panel p-8 sm:p-12 text-center">
       <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color: var(--color-text-primary);">
-        Scale drive-thru traffic and monthly wash memberships
+        Scale your car wash locations and monthly club memberships
       </h2>
       <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
-        Get a location-by-location Google Business Profile audit for your car wash tunnels.
+        Schedule a strategic review of your car wash locations and Google Business Profile performance.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="/contact/" class="btn-primary text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto">
-          Schedule Car Wash SEO Call →
+          Schedule Car Wash SEO Consultation →
         </a>
         <a href="/audit/" class="btn-gold text-sm font-bold py-3.5 px-8 rounded-xl w-full sm:w-auto">
           Run Free Location Audit

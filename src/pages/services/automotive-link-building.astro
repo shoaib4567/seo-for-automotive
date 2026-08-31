@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import AuthorCard from '../../components/AuthorCard.astro';
+import AutomotiveArchitectureDiagram from '../../components/visuals/AutomotiveArchitectureDiagram.astro';
+import AutomotiveDeliverablesMatrix from '../../components/visuals/AutomotiveDeliverablesMatrix.astro';
+import ComparisonMatrix from '../../components/visuals/ComparisonMatrix.astro';
+import ExecutionRoadmapTabs from '../../components/interactive/ExecutionRoadmapTabs.jsx';
+import InteractiveSchemaSnippet from '../../components/interactive/InteractiveSchemaSnippet.jsx';
+
+const title = "Automotive Link Building Services — High-Authority Automotive Digital PR & Backlinks | SEO for Automotive";
+const description = "Specialist automotive link building and digital PR services. Acquire high-authority editorial backlinks from automotive news, SEMA/AAPEX portals, OEM manufacturer directories, and tier-1 trade media.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'Link Building', href: '/services/automotive-link-building/' },
+];
+
+const pillars = [
+  { title: 'Automotive Editorial Digital PR', desc: 'Publishing proprietary automotive data studies, dyno comparison tests, and vehicle depreciation indices that earn natural editorial links from Automotive News, MotorTrend, and national media.' },
+  { title: 'OEM & Manufacturer Tier-1 Placements', desc: 'Securing certified dealer, installer, and authorized distributor directory links from major automotive parts manufacturers and OEM brand portals.' },
+  { title: 'Automotive Enthusiast & Forum Authority', desc: 'Building high-engagement brand authority across verified automotive enthusiast forums, Reddit auto communities, and technical car club platforms.' },
+  { title: 'Localized Community & B2B Sponsorships', desc: 'Acquiring high-relevance local chamber, charity rally, high school automotive program, and local car show backlinks to strengthen geographic authority.' },
+];
+
+const faqs = [
+  {
+    question: 'Why do generic guest posting and PBN links fail for automotive businesses?',
+    answer: 'Google\'s algorithms apply strict automotive entity and topical relevance filters. Backlinks from non-automotive blogs or generic link networks provide zero topical authority and risk algorithmic penalties. We only acquire authentic, contextual backlinks from legitimate automotive publications, industry associations, and verified local community partners.'
+  },
+  {
+    question: 'How do automotive backlinks impact local Google Maps 3-Pack rankings?',
+    answer: 'High-authority local backlinks from civic organizations, local news stations, and automotive event sponsorships reinforce your dealership or repair shop\'s geographic entity prominence, which is one of the top 3 ranking factors for Google Maps geo-grid conquest.'
+  },
+  {
+    question: 'What is your backlink acquisition methodology and reporting protocol?',
+    answer: 'Every link is manually vetted for real organic traffic (>1,000/mo organic visits in Ahrefs/SEMrush), topical automotive relevance, clean anchor text ratios, and dofollow editorial status. We provide live transparent dashboard tracking with zero PBNs or paid link schemes.'
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/services/automotive-link-building/" breadcrumbs={breadcrumbs}>
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Hero Header -->
+    <div class="mb-14">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="badge-outline">Authority Engineering</span>
+        <span class="eeat-badge">Tier-1 Digital PR</span>
+        <span class="live-badge"><span class="live-dot"></span> 100% Automotive-Specific Links</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
+        Automotive <span class="text-gradient-gold">Link Building Services</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl leading-relaxed max-w-3xl" style="color: var(--color-text-secondary);">
+        High-authority automotive link building and digital PR engineered specifically for dealerships, aftermarket parts brands, and auto repair networks. We build white-hat, topically relevant backlink profiles that drive domain authority, trust flow, and #1 search rankings.
+      </p>
+    </div>
+
+    <!-- The Direct Answer Callout Box -->
+    <div class="hud-panel p-6 sm:p-8 rounded-2xl border-l-4 mb-14" style="border-left-color: var(--color-gold); background: var(--color-bg-surface);">
+      <p class="text-base sm:text-lg leading-relaxed font-medium" style="color: var(--color-text-primary);">
+        Automotive link building establishes domain authority by acquiring editorial mentions on legitimate automotive news outlets, manufacturer partner hubs, and local civic organizations. It bypasses generic link schemes by publishing proprietary automotive research, fitment guides, and diagnostic data that journalists and webmasters naturally cite.
+      </p>
+    </div>
+
+    <!-- Visual Dashboard Banner -->
+    <div class="relative rounded-2xl overflow-hidden border shadow-2xl mb-16" style="border-color: var(--color-border); background: var(--color-bg-card);">
+      <img
+        src="/aeo-knowledge-graph.jpg"
+        alt="Automotive Backlink Architecture & Entity Authority Graph"
+        class="w-full h-auto object-cover"
+        loading="eager"
+      />
+      <div class="p-4 border-t flex flex-wrap items-center justify-between gap-3 text-xs" style="border-color: var(--color-border); background: var(--color-bg-surface);">
+        <span class="font-bold flex items-center gap-2" style="color: var(--color-text-primary);">
+          <span class="live-dot"></span> Real-Time Automotive Backlink Quality &amp; Trust Flow Monitoring
+        </span>
+        <span class="text-[11px] font-semibold" style="color: var(--color-gold);">SEMA · AAPEX · Automotive News · MotorTrend</span>
+      </div>
+    </div>
+
+    <!-- Key Telemetry Metrics -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">100%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Automotive Niche Relevance</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">DR 45–85+</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Average Placement DR</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">0%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">PBNs / Spam Networks</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">+380%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Avg. Client Traffic Lift</div>
+      </div>
+    </div>
+
+    <!-- Concrete Deliverables Matrix -->
+    <div class="my-16">
+      <AutomotiveDeliverablesMatrix
+        title="Concrete Link Building Deliverables"
+        subtitle="Transparent live backlink spreadsheets, Digital PR outreach reports, and manufacturer verification links."
+      />
+    </div>
+
+    <!-- 4 Pillars -->
+    <div class="mb-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {pillars.map(p => (
+          <div class="hud-panel p-6">
+            <h3 class="text-lg font-bold mb-2" style="color: var(--color-text-primary);">{p.title}</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Comparison Matrix -->
+    <div class="my-16">
+      <ComparisonMatrix
+        type="agency"
+        title="Automotive Specialist Link Building vs Generic Link Brokers"
+        subtitle="Why general link agencies fail in automotive search, and how our deep industry relationships secure permanent authority."
+      />
+    </div>
+
+    <!-- Execution Roadmap Blueprint -->
+    <div class="my-16">
+      <ExecutionRoadmapTabs client:visible />
+    </div>
+
+    <!-- Structured Data Engine -->
+    <div class="my-16">
+      <InteractiveSchemaSnippet client:visible />
+    </div>
+
+    <!-- Author E-E-A-T -->
+    <div class="my-16">
+      <AuthorCard
+        name="Automotive Digital PR &amp; Link Engineering Team"
+        role="Senior Outreach &amp; Authority Strategists"
+        bio="Our outreach team specializes exclusively in the automotive vertical, maintaining active editorial relationships with hundreds of automotive journalists, trade publications, and manufacturer marketing managers."
+        expertise={['Automotive Digital PR', 'Editorial Outreach', 'OEM Directory Placement', 'Local Citation Hygiene', 'Anchor Text Distribution']}
+      />
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mb-20">
+      <FaqSection items={faqs} title="Automotive Link Building — Frequently Asked Questions" />
+    </div>
+
+    <!-- Consultation CTA -->
+    <div class="hud-panel p-8 sm:p-12 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color: var(--color-text-primary);">
+        Build permanent authority in your automotive niche
+      </h2>
+      <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
+        Schedule a link building strategy consultation to analyze your current backlink gap and discover high-impact outreach opportunities.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact/" class="btn-primary text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto">
+          Request Backlink Audit &amp; Proposal →
+        </a>
+        <a href="/audit/" class="btn-gold text-sm font-bold py-3.5 px-8 rounded-xl w-full sm:w-auto">
+          Run Free Domain Authority Scan
+        </a>
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>

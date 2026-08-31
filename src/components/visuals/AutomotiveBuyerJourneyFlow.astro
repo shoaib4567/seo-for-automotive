@@ -1,0 +1,104 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+}
+
+const {
+  title = "How Automotive Customers Actually Search in 2026",
+  subtitle = "Before booking a test drive or service bay, vehicle owners search across 6 interconnected search surfaces."
+} = Astro.props;
+
+const stages = [
+  {
+    stage: "01 · Discovery",
+    platform: "TikTok & Reels",
+    accent: "#22C1DC",
+    query: "2024 mustang dark horse exhaust tone",
+    note: "Browsing for aesthetics & sound. Never heard of your dealership yet."
+  },
+  {
+    stage: "02 · Inspiration",
+    platform: "Instagram & Pinterest",
+    accent: "#FF5C8A",
+    query: "matte black wrap & bronze wheel setup",
+    note: "Saving visual builds and exterior styling ideas."
+  },
+  {
+    stage: "03 · Learning",
+    platform: "YouTube Search",
+    accent: "#FF6B6B",
+    query: "how to fix f-150 hard shifting 10-speed",
+    note: "Now they want expert mechanical diagnosis from real technicians."
+  },
+  {
+    stage: "04 · Comparison",
+    platform: "Google AI Overview",
+    accent: "#6C5CE7",
+    query: "f-150 powerboost vs ecoboost towing capacity",
+    note: "Google synthesizes specs and cites your dealership's buying guide."
+  },
+  {
+    stage: "05 · Shortlist",
+    platform: "ChatGPT & Perplexity",
+    accent: "#8B7CFF",
+    query: "certified ford master technician shop in austin",
+    note: "AI assistant shortlists your service center for verified trust."
+  },
+  {
+    stage: "06 · Transaction",
+    platform: "Google Maps 3-Pack",
+    accent: "#EAB308",
+    query: "ford service department open saturday near me",
+    note: "One-touch dialer call and online appointment scheduled."
+  }
+];
+---
+
+<div class="hud-panel p-6 sm:p-10 rounded-2xl border shadow-2xl my-12" style="border-color: var(--color-border); background: var(--color-bg-card);">
+  
+  <div class="text-center max-w-2xl mx-auto mb-10">
+    <span class="eeat-badge mb-2">Omnichannel Search Arc</span>
+    <h3 class="text-2xl sm:text-3xl font-black mt-2" style="color: var(--color-text-primary);">{title}</h3>
+    <p class="text-sm mt-2" style="color: var(--color-text-secondary);">{subtitle}</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    {stages.map((stg) => (
+      <div class="hud-panel p-5 flex flex-col justify-between border transition-all hover:scale-[1.02]" style={`border-color: ${stg.accent}33; background: var(--color-bg-surface);`}>
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-mono text-[11px] font-bold uppercase tracking-wider" style={`color: ${stg.accent};`}>
+              {stg.stage}
+            </span>
+            <span class="w-2.5 h-2.5 rounded-full" style={`background: ${stg.accent};`}></span>
+          </div>
+
+          <h4 class="text-base font-bold text-white mb-2">{stg.platform}</h4>
+          
+          <div class="p-2 rounded bg-black/40 border border-white/[0.06] flex items-center gap-2 mb-3">
+            <svg class="w-3.5 h-3.5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="7" /><path d="m16.2 16.2 4.3 4.3" />
+            </svg>
+            <span class="font-mono text-[11px] text-slate-300 truncate">"{stg.query}"</span>
+          </div>
+        </div>
+
+        <p class="text-xs text-slate-400 italic">
+          {stg.note}
+        </p>
+      </div>
+    ))}
+  </div>
+
+  <div class="mt-8 pt-6 border-t flex flex-wrap items-center justify-between gap-4 text-xs" style="border-color: var(--color-border); color: var(--color-text-muted);">
+    <span class="flex items-center gap-2">
+      <span class="live-dot"></span>
+      We engineer content structured for all 6 surfaces simultaneously.
+    </span>
+    <a href="/services/automotive-aeo/" class="font-bold text-gradient-gold hover:underline">
+      Explore Cross-Surface Search Strategy →
+    </a>
+  </div>
+
+</div>

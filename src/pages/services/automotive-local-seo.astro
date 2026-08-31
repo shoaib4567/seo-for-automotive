@@ -1,6 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FaqSection from '../../components/FaqSection.astro';
+import GeoGridSimulator from '../../components/interactive/GeoGridSimulator.jsx';
+import AutomotiveRoiCalculator from '../../components/interactive/AutomotiveRoiCalculator.jsx';
+import ExecutionRoadmapTabs from '../../components/interactive/ExecutionRoadmapTabs.jsx';
+import InteractiveSchemaSnippet from '../../components/interactive/InteractiveSchemaSnippet.jsx';
+import AutomotiveArchitectureDiagram from '../../components/visuals/AutomotiveArchitectureDiagram.astro';
 
 const title = "Local SEO for Automotive: Google Maps 3-Pack & Local Website SEO | SEO for Automotive";
 const description = "Specialist automotive local search engineering. Dominate the Google Maps 3-Pack and rank localized website landing pages for car dealerships, auto repair shops, and aftermarket facilities.";
@@ -138,6 +143,25 @@ const faqs = [
       </div>
     </div>
 
+    <!-- Interactive GeoGrid Simulator -->
+    <div class="my-16">
+      <GeoGridSimulator client:load />
+    </div>
+
+    <!-- Interactive ROI Simulator -->
+    <div class="my-16">
+      <AutomotiveRoiCalculator client:visible defaultType="repair" />
+    </div>
+
+    <!-- Multi-Department Architecture Diagram -->
+    <div class="my-14">
+      <AutomotiveArchitectureDiagram
+        type="dealership-entity"
+        title="Local Multi-Department GBP Knowledge Architecture"
+        subtitle="Departmental GBP segmentation that captures both $45,000 vehicle buyers and $1,200 service RO tickets."
+      />
+    </div>
+
     <!-- Deep Dive: Local Website SEO Section -->
     <div class="hud-panel p-8 sm:p-12 mb-20">
       <div class="max-w-3xl mb-8">
@@ -177,6 +201,16 @@ const faqs = [
           </div>
         ))}
       </div>
+    </div>
+
+    <!-- Interactive Schema Code Inspector -->
+    <div class="my-16">
+      <InteractiveSchemaSnippet client:visible />
+    </div>
+
+    <!-- Execution Roadmap Blueprint -->
+    <div class="my-16">
+      <ExecutionRoadmapTabs client:visible />
     </div>
 
     <!-- FAQ Section -->

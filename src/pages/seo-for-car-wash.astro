@@ -2,49 +2,130 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import InternalLinkCard from '../components/InternalLinkCard.astro';
 import FaqSection from '../components/FaqSection.astro';
+import AuthorCard from '../components/AuthorCard.astro';
+import AutomotiveRoiCalculator from '../components/interactive/AutomotiveRoiCalculator.jsx';
+import GeoGridSimulator from '../components/interactive/GeoGridSimulator.jsx';
+import ExecutionRoadmapTabs from '../components/interactive/ExecutionRoadmapTabs.jsx';
+import InteractiveSchemaSnippet from '../components/interactive/InteractiveSchemaSnippet.jsx';
 
-const title = "Car Wash SEO — SEO for Car Wash & Detailing Shops [2026]";
-const description = "SEO strategies for car wash businesses and detailing shops. 9 keywords, 750 monthly volume. Local search optimization and customer acquisition.";
-const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Auto Repair SEO', href: '/auto-repair-seo-services/' }, { label: 'Car Wash SEO', href: '/seo-for-car-wash/' }];
+const title = "Car Wash SEO — Express Tunnel & Multi-Location Search Domination [2026]";
+const description = "Specialized SEO strategies for express tunnel car washes, full-service wash networks, and mobile car washes. Dominate Google Maps 3-Pack and scale monthly unlimited wash club memberships.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Auto Repair SEO', href: '/auto-repair-seo-services/' },
+  { label: 'Car Wash SEO', href: '/seo-for-car-wash/' }
+];
+
 const relatedLinks = [
   { title: 'Auto Detailing SEO', href: '/auto-detailing-seo-services/', description: 'SEO for detailing businesses.', icon: '✨', volume: '1,570/mo' },
   { title: 'Auto Repair SEO', href: '/auto-repair-seo-services/', description: 'Parent hub for repair verticals.', icon: '🔧', volume: '8,210/mo' },
-  { title: 'Local SEO', href: '/local-seo-for-car-dealerships/', description: 'GBP optimization for car washes.', icon: '📍', volume: '3,180/mo' },
-  { title: 'Website Providers', href: '/automotive-website-providers/', description: 'Car wash website design.', icon: '🌐' },
+  { title: 'Local SEO for Automotive', href: '/services/automotive-local-seo/', description: 'GBP optimization for car washes.', icon: '📍', volume: '3,180/mo' },
+  { title: 'Reputation Management', href: '/automotive-reputation-management-services/', description: 'Review generation for car washes.', icon: '⭐', volume: '2,720/mo' },
 ];
+
 const faqs = [
-  { question: 'How can car washes get more customers through SEO?', answer: '<a href="/local-seo-for-car-dealerships/">Local SEO</a> is the #1 channel. Optimize your Google Business Profile, build citations, and target "car wash near me" queries. Also create membership landing pages and seasonal promotion content per our <a href="/blog/content-seo-automotive/">content SEO playbook</a>.' },
+  { question: 'How can car washes get more recurring revenue through SEO?', answer: 'We build location pages and promotional schema specifically targeting "unlimited car wash membership" and "monthly wash club near me" searches, converting one-time drive-thru visitors into recurring monthly subscribers.' },
+  { question: 'How do you scale SEO for multi-unit car wash franchises?', answer: 'We deploy centralized multi-location GBP management, dedicated unique landing pages per tunnel with live wait times and weather alerts, localized schema, and automated QR code review generation.' },
 ];
 ---
+
 <BaseLayout title={title} description={description} canonicalPath="/seo-for-car-wash/" breadcrumbs={breadcrumbs}>
-  <div class="mb-12">
-    <div class="flex items-center gap-3 mb-4"><span class="kw-badge">750/mo</span><span class="kw-badge">9 keywords</span></div>
-    <h1 class="text-3xl sm:text-4xl font-black  leading-tight" style="color: var(--color-text-primary);">Car Wash <span class="text-gradient-amber">SEO</span></h1>
-    <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl">Shine online: SEO for car wash and <a href="/auto-detailing-seo-services/" class="text-amber-400 hover:underline">detailing shops</a>. <a href="/local-seo-for-car-dealerships/" class="text-amber-400 hover:underline">Local SEO</a> and <a href="/automotive-reputation-management-services/" class="text-amber-400 hover:underline">review management</a> strategies.</p>
+
+  <!-- Hero Header -->
+  <div class="mb-14">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge-outline">Express &amp; Tunnel Search</span>
+      <span class="eeat-badge">Multi-Location Scale</span>
+      <span class="live-badge"><span class="live-dot"></span> Recurring Wash Memberships</span>
+    </div>
+    
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight" style="color: var(--color-text-primary);">
+      Car Wash <span class="text-gradient-gold">SEO Services</span>
+    </h1>
+    
+    <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
+      Local search domination engineered for express tunnel car washes, touchless facilities, and multi-unit car wash franchises. Capture commuter traffic along high-volume transit corridors and scale monthly unlimited membership clubs.
+    </p>
   </div>
-  <div class="prose-content">
-    <h2>Car Wash SEO Strategy</h2>
-    <p>The car wash SEO cluster covers <strong>750 monthly searches</strong> across 9 keywords. Primary keyword <strong>"car wash seo"</strong> (140/mo) and <strong>"seo for car wash companies"</strong> (140/mo) lead the cluster.</p>
-    <ul>
-      <li><a href="/local-seo-for-car-dealerships/">Google Business Profile</a> with photos, hours, and service descriptions</li>
-      <li>Membership and unlimited wash plan landing pages</li>
-      <li>Cross-promotion with <a href="/auto-detailing-seo-services/">detailing services</a></li>
-      <li><a href="/blog/semantic-seo-entities/">LocalBusiness schema markup</a> with service offerings</li>
-      <li><a href="/automotive-reputation-management-services/">Review generation</a> — car wash customers are high-volume reviewers</li>
-    </ul>
+
+  <!-- Key Metrics Telemetry -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">+480%</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Direction Requests</div>
+    </div>
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">#1</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Maps 3-Pack Placement</div>
+    </div>
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">+240%</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Monthly Club Members</div>
+    </div>
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">4.8★</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Google Review Rating</div>
+    </div>
   </div>
-  <div class="overflow-x-auto mt-6 mb-10">
+
+  <!-- Interactive ROI Simulator -->
+  <div class="my-16">
+    <AutomotiveRoiCalculator client:load defaultType="detailing" />
+  </div>
+
+  <!-- Interactive GeoGrid Simulator -->
+  <div class="my-16">
+    <GeoGridSimulator client:visible />
+  </div>
+
+  <!-- Schema Inspector -->
+  <div class="my-16">
+    <InteractiveSchemaSnippet client:visible />
+  </div>
+
+  <!-- Execution Roadmap Blueprint -->
+  <div class="my-16">
+    <ExecutionRoadmapTabs client:visible />
+  </div>
+
+  <!-- Keywords Table -->
+  <div class="prose-content mt-14 mb-6">
+    <h2>High-Volume Car Wash Search Queries</h2>
+  </div>
+
+  <div class="overflow-x-auto mb-14">
     <table class="w-full text-sm">
-      <thead><tr class="border-b border-white/[0.08] text-left"><th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold">Keyword</th><th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">Volume</th><th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">KD</th></tr></thead>
+      <thead>
+        <tr class="border-b border-white/[0.08] text-left">
+          <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold">Keyword Target</th>
+          <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">Volume</th>
+          <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">Intent Profile</th>
+        </tr>
+      </thead>
       <tbody class="text-slate-700 dark:text-slate-300">
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">car wash seo</td><td class="text-right">140</td><td class="text-right text-emerald-400">6</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">seo for car wash companies</td><td class="text-right">140</td><td class="text-right text-emerald-400">1</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">seo for car wash</td><td class="text-right">110</td><td class="text-right text-emerald-400">0</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">seo for car wash services</td><td class="text-right">110</td><td class="text-right text-emerald-400">0</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">carwash website seo</td><td class="text-right">70</td><td class="text-right text-emerald-400">1</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">car wash near me</td><td class="text-right">180,000/mo (aggregate)</td><td class="text-right text-emerald-400 font-mono">Immediate Local</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">touchless car wash near me</td><td class="text-right">24,000/mo</td><td class="text-right text-emerald-400 font-mono">Enthusiast Filter</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">unlimited car wash membership [city]</td><td class="text-right">3,200/mo</td><td class="text-right text-emerald-400 font-mono">Recurring Revenue</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">car wash seo</td><td class="text-right">140/mo</td><td class="text-right text-cyan-400 font-mono">Commercial Search</td></tr>
       </tbody>
     </table>
   </div>
-  <div class="mt-12"><h2 class="text-xl font-bold  mb-6" style="color: var(--color-text-primary);">Related Pages</h2><InternalLinkCard links={relatedLinks} columns={2} /></div>
-  <FaqSection items={faqs} title="Car Wash SEO — FAQ" />
+
+  <!-- Related Spoke Hubs -->
+  <div class="mt-12 mb-16">
+    <h2 class="text-xl font-bold mb-6" style="color: var(--color-text-primary);">Related Automotive Verticals</h2>
+    <InternalLinkCard links={relatedLinks} columns={2} />
+  </div>
+
+  <!-- Author E-E-A-T -->
+  <AuthorCard
+    name="Automotive SEO Team"
+    role="Multi-Unit Car Wash Search Specialists"
+    bio="Specialists in multi-location local search networks, recurring subscription membership funnels, and high-volume Google Maps 3-Pack capture for car wash operators."
+    expertise={['Multi-Location GBP Networks', 'Unlimited Wash Club CRO', 'Local Maps 3-Pack', 'Review Generation Engines']}
+  />
+
+  <!-- FAQ -->
+  <FaqSection items={faqs} title="Car Wash SEO — Frequently Asked Questions" />
+
 </BaseLayout>

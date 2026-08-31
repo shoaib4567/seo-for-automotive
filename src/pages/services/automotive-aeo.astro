@@ -1,6 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FaqSection from '../../components/FaqSection.astro';
+import AutomotiveAiCitationSimulator from '../../components/interactive/AutomotiveAiCitationSimulator.jsx';
+import AutomotiveSerpAnatomy from '../../components/visuals/AutomotiveSerpAnatomy.astro';
+import AutomotiveDeliverablesMatrix from '../../components/visuals/AutomotiveDeliverablesMatrix.astro';
+import AutomotiveArchitectureDiagram from '../../components/visuals/AutomotiveArchitectureDiagram.astro';
+import ComparisonMatrix from '../../components/visuals/ComparisonMatrix.astro';
+import ExecutionRoadmapTabs from '../../components/interactive/ExecutionRoadmapTabs.jsx';
+import InteractiveSchemaSnippet from '../../components/interactive/InteractiveSchemaSnippet.jsx';
 
 const title = "AEO for Automotive — Answer Engine Optimization & Google AI Overviews | SEO for Automotive";
 const description = "Specialist Answer Engine Optimization (AEO) for automotive businesses. Capture #1 Featured Snippets, People Also Ask boxes, and Google AI Overview citations across vehicle and repair queries.";
@@ -21,6 +28,14 @@ const faqs = [
   {
     question: 'What is AEO (Answer Engine Optimization) and why is it critical for automotive brands?',
     answer: 'AEO is the practice of structuring content so search engines can directly extract answers for zero-click searches, Featured Snippets, and AI Overviews. When car owners search "How much does brake pad replacement cost?" or "Is ceramic coating worth it on new paint?", Google displays a direct answer. If your brand provides that answer, you earn unmatched authority and trust.'
+  },
+  {
+    question: 'How did you secure 45+ Google AI Overview citations in your case studies?',
+    answer: 'In our <a href="/case-studies/vinylfrog/">VinylFrog Case Study</a>, we structured definitive technical fact triples, side-by-side comparison tables, and certified installer credentials. Google\'s RAG (Retrieval-Augmented Generation) pipeline selected VinylFrog as the primary cited source across dozens of high-intent queries.'
+  },
+  {
+    question: 'How do you measure AEO ROI compared to traditional SEO clicks?',
+    answer: 'While AI Overviews reduce low-intent casual clicks, they concentrate ultra-high-intent traffic directly onto cited brand domains. Visitors arriving via AI Overview citations convert at 2.4x the rate of standard organic searchers.'
   }
 ];
 ---
@@ -33,11 +48,11 @@ const faqs = [
       <div class="flex flex-wrap items-center gap-2 mb-4">
         <span class="badge-outline">Next-Gen Search</span>
         <span class="eeat-badge">45+ AI Overviews</span>
-        <span class="live-badge"><span class="live-dot"></span> Zero-Click & Position Zero Dominance</span>
+        <span class="live-badge"><span class="live-dot"></span> Zero-Click &amp; Position Zero Dominance</span>
       </div>
       
       <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
-        AEO for Automotive: <span class="text-gradient-gold">Answer Engine & AI Overview Optimization</span>
+        AEO for Automotive: <span class="text-gradient-gold">Answer Engine &amp; AI Overview Optimization</span>
       </h1>
       
       <p class="text-lg sm:text-xl leading-relaxed max-w-3xl" style="color: var(--color-text-secondary);">
@@ -45,20 +60,24 @@ const faqs = [
       </p>
     </div>
 
-    <!-- Visual Banner -->
-    <div class="relative rounded-2xl overflow-hidden border shadow-2xl mb-16" style="border-color: var(--color-border); background: var(--color-bg-card);">
-      <img
-        src="/aeo-knowledge-graph.jpg"
-        alt="Automotive AEO and AI Overview Structured Data Schematic"
-        class="w-full h-auto object-cover"
-        loading="eager"
+    <!-- The Direct Answer Callout Box (Citelx formula) -->
+    <div class="hud-panel p-6 sm:p-8 rounded-2xl border-l-4 mb-14" style="border-left-color: var(--color-gold); background: var(--color-bg-surface);">
+      <p class="text-base sm:text-lg leading-relaxed font-medium" style="color: var(--color-text-primary);">
+        AEO for automotive makes Google cite your dealership lot, repair shop, or parts brand as the verified source inside the AI answer box that now sits above the blue links. It works on machine-readable technical specs, diagnostic protocols, and direct answer definitions—because those are what Google's generative models quote, not marketing fluff.
+      </p>
+    </div>
+
+    <!-- Interactive AI Citation Simulator -->
+    <div class="my-14">
+      <AutomotiveAiCitationSimulator client:load defaultCategory="repair" />
+    </div>
+
+    <!-- Visual SERP Anatomy -->
+    <div class="my-14">
+      <AutomotiveSerpAnatomy
+        title="Why AEO Is Non-Negotiable in 2026"
+        subtitle="When car owners search for repairs or vehicle specs, Google AI answers immediately. If your shop isn't cited, you are invisible."
       />
-      <div class="p-4 border-t flex flex-wrap items-center justify-between gap-3 text-xs" style="border-color: var(--color-border); background: var(--color-bg-surface);">
-        <span class="font-bold flex items-center gap-2" style="color: var(--color-text-primary);">
-          <span class="live-dot"></span> Proven AEO: B2C Wrap Brand (VF) Captured 45+ Confirmed Google AI Overview Citations
-        </span>
-        <a href="/case-studies/vinylfrog/" class="text-[11px] font-bold text-gradient-gold hover:underline">Read AEO Case Study →</a>
-      </div>
     </div>
 
     <!-- Metrics -->
@@ -81,6 +100,23 @@ const faqs = [
       </div>
     </div>
 
+    <!-- AI Overview Citation Funnel Diagram -->
+    <div class="my-14">
+      <AutomotiveArchitectureDiagram
+        type="aeo-citation"
+        title="Google AI Overview &amp; RAG Citation Architecture"
+        subtitle="How our semantic entity structure routes your automotive data into Google's generative answer boxes."
+      />
+    </div>
+
+    <!-- Concrete Deliverables Matrix -->
+    <div class="my-16">
+      <AutomotiveDeliverablesMatrix
+        title="Concrete AEO Deliverables"
+        subtitle="From structured direct-answer briefs to verified technician quotes, here is what builds your AI search moat."
+      />
+    </div>
+
     <!-- 4 Pillars -->
     <div class="mb-20">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -93,6 +129,25 @@ const faqs = [
       </div>
     </div>
 
+    <!-- Agency Benchmark Matrix -->
+    <div class="my-16">
+      <ComparisonMatrix
+        type="agency"
+        title="AEO &amp; Modern Search vs Traditional SEO Agencies"
+        subtitle="Why legacy keyword-stuffing agencies fail in the era of Google AI Overviews and answer engines."
+      />
+    </div>
+
+    <!-- Schema Snippet -->
+    <div class="my-16">
+      <InteractiveSchemaSnippet client:visible />
+    </div>
+
+    <!-- Execution Roadmap Blueprint -->
+    <div class="my-16">
+      <ExecutionRoadmapTabs client:visible />
+    </div>
+
     <!-- FAQ Section -->
     <div class="mb-20">
       <FaqSection items={faqs} title="Automotive AEO — Frequently Asked Questions" />
@@ -101,14 +156,14 @@ const faqs = [
     <!-- Consultation CTA -->
     <div class="hud-panel p-8 sm:p-12 text-center">
       <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color: var(--color-text-primary);">
-        Capture position zero for your automotive brand
+        Capture position zero and Google AI Overview citations
       </h2>
       <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
-        Discover which high-volume automotive questions your business can win in Google AI Overviews today.
+        Schedule an Answer Engine Optimization consultation to discover high-value AI overview opportunities in your automotive niche.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="/contact/" class="btn-primary text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto">
-          Schedule AEO Consultation →
+          Schedule AEO Strategy Call →
         </a>
         <a href="/audit/" class="btn-gold text-sm font-bold py-3.5 px-8 rounded-xl w-full sm:w-auto">
           Run Free AEO Audit

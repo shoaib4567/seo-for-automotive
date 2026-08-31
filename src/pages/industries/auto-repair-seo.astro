@@ -2,6 +2,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FaqSection from '../../components/FaqSection.astro';
 import AuthorCard from '../../components/AuthorCard.astro';
+import AutomotiveRoiCalculator from '../../components/interactive/AutomotiveRoiCalculator.jsx';
+import GeoGridSimulator from '../../components/interactive/GeoGridSimulator.jsx';
+import ExecutionRoadmapTabs from '../../components/interactive/ExecutionRoadmapTabs.jsx';
+import InteractiveSchemaSnippet from '../../components/interactive/InteractiveSchemaSnippet.jsx';
+import AutomotiveArchitectureDiagram from '../../components/visuals/AutomotiveArchitectureDiagram.astro';
 
 const repairServices = [
   { title: 'Emergency & Routine Repair Hubs', desc: 'Dedicated landing pages for brake repair, transmission diagnostics, engine replacement, check engine light OBD-II codes, and A/C service.' },
@@ -29,8 +34,9 @@ const schemaData = {
 };
 
 const faqs = [
-  { question: 'What is the most profitable SEO strategy for auto repair shops?', answer: 'Dominating the Google Maps 3-Pack for specific high-ticket repair services (e.g., transmission rebuilds, timing belt replacements, European auto repair) rather than generic "mechanic near me" terms. High-ticket repair searches convert at over 25% into paid repair orders.' },
+  { question: 'What is the most profitable SEO strategy for auto repair shops?', answer: 'Dominating the Google Maps 3-Pack for specific high-ticket repair services (e.g., transmission rebuilds, timing belt replacements, European auto repair) rather than generic "mechanic near me" terms. High-ticket repair searches convert at over 25% into paid repair orders with an ARO of $650–$1,800.' },
   { question: 'How do you target specific vehicle makes for specialized repair shops?', answer: 'We build dedicated Make/Model specialization pages (e.g., Mercedes-Benz Certified Repair, Audi Diagnostic Services) with OEM technical data, factory scanner tooling mentions, and certified technician Schema.org markup.' },
+  { question: 'How quickly does Google Maps 3-Pack optimization generate phone calls?', answer: 'Most repair facilities experience a 40-70% surge in inbound phone calls and estimate bookings within 45 to 60 days once primary category nesting, review velocity, and geo-grid citations are deployed.' },
 ];
 ---
 
@@ -90,6 +96,25 @@ const faqs = [
       </div>
     </div>
 
+    <!-- Interactive ROI Simulator -->
+    <div class="my-16">
+      <AutomotiveRoiCalculator client:load defaultType="repair" />
+    </div>
+
+    <!-- Emergency Funnel Diagram -->
+    <div class="my-14">
+      <AutomotiveArchitectureDiagram
+        type="emergency-funnel"
+        title="Service Bay Emergency & Scheduled Diagnostic Funnel"
+        subtitle="How our proximity optimization connects emergency breakdown drivers directly to your service writers."
+      />
+    </div>
+
+    <!-- Interactive GeoGrid Simulator -->
+    <div class="my-16">
+      <GeoGridSimulator client:visible />
+    </div>
+
     <!-- 4 Pillars -->
     <div class="mb-20">
       <div class="mb-10 text-center max-w-2xl mx-auto">
@@ -107,6 +132,16 @@ const faqs = [
           </div>
         ))}
       </div>
+    </div>
+
+    <!-- Schema Snippet Tool -->
+    <div class="my-16">
+      <InteractiveSchemaSnippet client:visible />
+    </div>
+
+    <!-- Execution Roadmap Tabs -->
+    <div class="my-16">
+      <ExecutionRoadmapTabs client:visible />
     </div>
 
     <!-- Author & E-E-A-T -->

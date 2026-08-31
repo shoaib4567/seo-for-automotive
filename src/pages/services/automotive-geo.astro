@@ -1,6 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FaqSection from '../../components/FaqSection.astro';
+import AutomotiveAiCitationSimulator from '../../components/interactive/AutomotiveAiCitationSimulator.jsx';
+import AutomotiveBuyerJourneyFlow from '../../components/visuals/AutomotiveBuyerJourneyFlow.astro';
+import AutomotiveDeliverablesMatrix from '../../components/visuals/AutomotiveDeliverablesMatrix.astro';
+import AutomotiveArchitectureDiagram from '../../components/visuals/AutomotiveArchitectureDiagram.astro';
+import ComparisonMatrix from '../../components/visuals/ComparisonMatrix.astro';
+import ExecutionRoadmapTabs from '../../components/interactive/ExecutionRoadmapTabs.jsx';
+import InteractiveSchemaSnippet from '../../components/interactive/InteractiveSchemaSnippet.jsx';
 
 const title = "GEO for Automotive — Generative Engine Optimization & LLM Visibility | SEO for Automotive";
 const description = "Specialist Generative Engine Optimization (GEO) for automotive businesses. Get your automotive brand recommended and cited by ChatGPT, Google Gemini, Perplexity, and Apple Intelligence.";
@@ -21,6 +28,10 @@ const faqs = [
   {
     question: 'How is GEO (Generative Engine Optimization) different from traditional SEO?',
     answer: 'Traditional SEO targets keyword rankings on search engine result pages. GEO targets citation frequency and recommendation probability within Large Language Models (LLMs) like ChatGPT, Gemini, Perplexity, and Copilot. When a prospective buyer prompts "What\'s the most reliable brake pad brand for heavy towing?" or "Find the top-rated PPF installer near me", GEO ensures your brand is the synthesized answer.'
+  },
+  {
+    question: 'How do LLMs decide which automotive businesses to recommend?',
+    answer: 'LLMs rely on vector proximity across training data and real-time RAG (Retrieval-Augmented Generation). They evaluate entity consensus across trusted web directories, verified Schema.org structured data, consistent customer review sentiment, and citations from authoritative third-party automotive media.'
   }
 ];
 ---
@@ -33,16 +44,36 @@ const faqs = [
       <div class="flex flex-wrap items-center gap-2 mb-4">
         <span class="badge-outline">Generative Search Intelligence</span>
         <span class="eeat-badge">LLM Vectorization</span>
-        <span class="live-badge"><span class="live-dot"></span> ChatGPT, Gemini & Perplexity</span>
+        <span class="live-badge"><span class="live-dot"></span> ChatGPT, Gemini &amp; Perplexity</span>
       </div>
       
       <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
-        GEO for Automotive: <span class="text-gradient-gold">Generative Engine Optimization & AI Citations</span>
+        GEO for Automotive: <span class="text-gradient-gold">Generative Engine Optimization &amp; AI Citations</span>
       </h1>
       
       <p class="text-lg sm:text-xl leading-relaxed max-w-3xl" style="color: var(--color-text-secondary);">
         Automotive Generative Engine Optimization (GEO) is the systematic process of structuring your automotive brand's entity data, technical specifications, and cross-platform verification signals so AI search engines like ChatGPT, Google Gemini, and Perplexity actively recommend and cite your business.
       </p>
+    </div>
+
+    <!-- The Direct Answer Callout Box (Citelx formula) -->
+    <div class="hud-panel p-6 sm:p-8 rounded-2xl border-l-4 mb-14" style="border-left-color: var(--color-gold); background: var(--color-bg-surface);">
+      <p class="text-base sm:text-lg leading-relaxed font-medium" style="color: var(--color-text-primary);">
+        The automotive brand AI recommends is the one it can verify. GEO establishes your dealership, repair shop, or parts brand across vector embeddings, public automotive knowledge graphs, and trusted review feeds so when buyers ask ChatGPT or Gemini for recommendations, your business is the synthesized answer.
+      </p>
+    </div>
+
+    <!-- Interactive AI Citation Simulator -->
+    <div class="my-14">
+      <AutomotiveAiCitationSimulator client:load defaultCategory="dealership" />
+    </div>
+
+    <!-- 6-Stage Buyer Journey Flow -->
+    <div class="my-14">
+      <AutomotiveBuyerJourneyFlow
+        title="Where GEO Influences the Automotive Buyer Arc"
+        subtitle="From initial discovery on social search to final shortlisting inside conversational LLMs."
+      />
     </div>
 
     <!-- Metrics -->
@@ -65,6 +96,23 @@ const faqs = [
       </div>
     </div>
 
+    <!-- AI Overview & Citation Pipeline Diagram -->
+    <div class="my-14">
+      <AutomotiveArchitectureDiagram
+        type="aeo-citation"
+        title="Generative AI (ChatGPT, Gemini, Perplexity) Recommendation Pipeline"
+        subtitle="How our entity vectorization ensures your automotive brand is synthesized as the #1 recommended solution."
+      />
+    </div>
+
+    <!-- Concrete Deliverables Matrix -->
+    <div class="my-16">
+      <AutomotiveDeliverablesMatrix
+        title="Concrete GEO Deliverables"
+        subtitle="Machine-readable entity datasets and verified proprietary briefs that establish LLM citation dominance."
+      />
+    </div>
+
     <!-- 4 Pillars -->
     <div class="mb-20">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -75,6 +123,25 @@ const faqs = [
           </div>
         ))}
       </div>
+    </div>
+
+    <!-- Agency Benchmark Matrix -->
+    <div class="my-16">
+      <ComparisonMatrix
+        type="agency"
+        title="Generative AI Search Readiness: Specialist vs Legacy Agencies"
+        subtitle="Compare how proactive entity engineering outperforms traditional keyword tactics in AI engines."
+      />
+    </div>
+
+    <!-- Schema Snippet -->
+    <div class="my-16">
+      <InteractiveSchemaSnippet client:visible />
+    </div>
+
+    <!-- Execution Roadmap Blueprint -->
+    <div class="my-16">
+      <ExecutionRoadmapTabs client:visible />
     </div>
 
     <!-- FAQ Section -->
@@ -88,7 +155,7 @@ const faqs = [
         Get your automotive brand cited in ChatGPT and Gemini
       </h2>
       <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
-        Schedule a GEO visibility audit to see how AI assistants currently represent your brand versus competitors.
+        Schedule a Generative Engine Optimization consultation to establish permanent AI search visibility for your automotive business.
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="/contact/" class="btn-primary text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto">

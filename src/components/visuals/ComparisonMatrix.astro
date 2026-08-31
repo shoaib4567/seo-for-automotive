@@ -1,0 +1,126 @@
+---
+interface Props {
+  type?: 'agency' | 'cms-platforms' | 'service-tiers';
+  title?: string;
+  subtitle?: string;
+}
+
+const {
+  type = 'agency',
+  title = "How We Compare to Traditional Agency & Vendor Models",
+  subtitle = "Specialized automotive search engineering vs generic cookie-cutter marketing packages."
+} = Astro.props;
+---
+
+<div class="hud-panel p-6 sm:p-8 rounded-2xl border relative overflow-hidden shadow-2xl my-10" style="border-color: var(--color-gold-border); background: var(--color-bg-card);">
+  
+  <!-- Header -->
+  <div class="mb-8 text-center max-w-2xl mx-auto">
+    <div class="inline-flex items-center gap-2 mb-2">
+      <span class="live-dot"></span>
+      <span class="text-xs font-mono font-bold uppercase tracking-wider text-gradient-gold">
+        Automotive Market Benchmark
+      </span>
+    </div>
+    <h3 class="text-2xl sm:text-3xl font-black" style="color: var(--color-text-primary);">
+      {title}
+    </h3>
+    <p class="text-sm mt-1" style="color: var(--color-text-secondary);">
+      {subtitle}
+    </p>
+  </div>
+
+  {type === 'agency' && (
+    <div class="overflow-x-auto">
+      <table class="w-full text-left text-xs sm:text-sm border-collapse">
+        <thead>
+          <tr class="border-b" style="border-color: var(--color-border);">
+            <th class="py-3 px-4 font-bold" style="color: var(--color-text-primary);">Strategic Capability</th>
+            <th class="py-3 px-4 font-black text-amber-500 bg-amber-500/10 rounded-t-xl">✨ SEO for Automotive</th>
+            <th class="py-3 px-4 font-semibold text-slate-500">Generic SEO Agency</th>
+            <th class="py-3 px-4 font-semibold text-slate-500">OEM Tier-3 Bundled Vendor</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y" style="border-color: var(--color-border);">
+          <tr>
+            <td class="py-3 px-4 font-semibold" style="color: var(--color-text-primary);">VDP / SRP Inventory Crawl Optimization</td>
+            <td class="py-3 px-4 font-bold text-emerald-500 bg-amber-500/5">✓ Automated XML & Dynamic Indexing</td>
+            <td class="py-3 px-4 text-slate-500">✗ Ignores inventory turn dynamics</td>
+            <td class="py-3 px-4 text-slate-500">⚠ Generic iframe widgets</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 font-semibold" style="color: var(--color-text-primary);">Year/Make/Model (YMM) Fitment Architecture</td>
+            <td class="py-3 px-4 font-bold text-emerald-500 bg-amber-500/5">✓ ACES/PIES Structured Taxonomy</td>
+            <td class="py-3 px-4 text-slate-500">✗ No automotive catalog capability</td>
+            <td class="py-3 px-4 text-slate-500">✗ Not applicable</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 font-semibold" style="color: var(--color-text-primary);">Google AI Overview & AEO Citations</td>
+            <td class="py-3 px-4 font-bold text-emerald-500 bg-amber-500/5">✓ Entity Knowledge Graph Engineering</td>
+            <td class="py-3 px-4 text-slate-500">✗ Basic keyword stuffing</td>
+            <td class="py-3 px-4 text-slate-500">✗ Outdated static templates</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 font-semibold" style="color: var(--color-text-primary);">Multi-Department GBP Nesting (Sales/Service)</td>
+            <td class="py-3 px-4 font-bold text-emerald-500 bg-amber-500/5">✓ Independent 3-Pack Rankings for each</td>
+            <td class="py-3 px-4 text-slate-500">⚠ Mixes departments together</td>
+            <td class="py-3 px-4 text-slate-500">⚠ Automated sync only</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 font-semibold" style="color: var(--color-text-primary);">Direct Revenue & RO Lead Attribution</td>
+            <td class="py-3 px-4 font-bold text-emerald-500 bg-amber-500/5">✓ GA4 Car Sales & Parts Revenue ROI</td>
+            <td class="py-3 px-4 text-slate-500">⚠ Vanity rankings & impressions</td>
+            <td class="py-3 px-4 text-slate-500">⚠ Generic portal click stats</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  )}
+
+  {type === 'cms-platforms' && (
+    <div class="overflow-x-auto">
+      <table class="w-full text-left text-xs sm:text-sm border-collapse">
+        <thead>
+          <tr class="border-b" style="border-color: var(--color-border);">
+            <th class="py-3 px-4 font-bold" style="color: var(--color-text-primary);">Performance Metric</th>
+            <th class="py-3 px-4 font-black text-amber-500 bg-amber-500/10 rounded-t-xl">⚡ Modern Headless / Astro</th>
+            <th class="py-3 px-4 font-semibold text-slate-500">DealerOn</th>
+            <th class="py-3 px-4 font-semibold text-slate-500">Dealer.com (Cox)</th>
+            <th class="py-3 px-4 font-semibold text-slate-500">CDK Global</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y" style="border-color: var(--color-border);">
+          <tr>
+            <td class="py-3 px-4 font-semibold" style="color: var(--color-text-primary);">Mobile PageSpeed (Lighthouse)</td>
+            <td class="py-3 px-4 font-bold text-emerald-500 bg-amber-500/5">95 – 100 / 100</td>
+            <td class="py-3 px-4 text-amber-500">55 – 70 / 100</td>
+            <td class="py-3 px-4 text-red-500">30 – 50 / 100</td>
+            <td class="py-3 px-4 text-red-500">25 – 45 / 100</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 font-semibold" style="color: var(--color-text-primary);">Mobile Largest Contentful Paint (LCP)</td>
+            <td class="py-3 px-4 font-bold text-emerald-500 bg-amber-500/5">&lt; 1.2s (Instant)</td>
+            <td class="py-3 px-4 text-slate-500">2.8s – 3.5s</td>
+            <td class="py-3 px-4 text-red-500">4.5s – 7.0s</td>
+            <td class="py-3 px-4 text-red-500">5.0s – 8.5s</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 font-semibold" style="color: var(--color-text-primary);">Schema.org Customizability</td>
+            <td class="py-3 px-4 font-bold text-emerald-500 bg-amber-500/5">100% Granular Control</td>
+            <td class="py-3 px-4 text-amber-500">Moderate standard schema</td>
+            <td class="py-3 px-4 text-red-500">Locked proprietary setup</td>
+            <td class="py-3 px-4 text-red-500">Rigid legacy templates</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 font-semibold" style="color: var(--color-text-primary);">Google AI Overview Inclusion Rate</td>
+            <td class="py-3 px-4 font-bold text-emerald-500 bg-amber-500/5">High (Direct Semantic Triples)</td>
+            <td class="py-3 px-4 text-slate-500">Moderate</td>
+            <td class="py-3 px-4 text-red-500">Low (Script Bloat)</td>
+            <td class="py-3 px-4 text-red-500">Low (Heavy JS Rerender)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  )}
+
+</div>

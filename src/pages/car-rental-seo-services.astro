@@ -1,0 +1,194 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import InternalLinkCard from '../components/InternalLinkCard.astro';
+import FaqSection from '../components/FaqSection.astro';
+import AuthorCard from '../components/AuthorCard.astro';
+import AutomotiveAiCitationSimulator from '../components/interactive/AutomotiveAiCitationSimulator.jsx';
+import AutomotiveSerpAnatomy from '../components/visuals/AutomotiveSerpAnatomy.astro';
+import AutomotiveBuyerJourneyFlow from '../components/visuals/AutomotiveBuyerJourneyFlow.astro';
+import AutomotiveDeliverablesMatrix from '../components/visuals/AutomotiveDeliverablesMatrix.astro';
+import AutomotiveRoiCalculator from '../components/interactive/AutomotiveRoiCalculator.jsx';
+import GeoGridSimulator from '../components/interactive/GeoGridSimulator.jsx';
+import InteractiveSchemaSnippet from '../components/interactive/InteractiveSchemaSnippet.jsx';
+import AutomotiveArchitectureDiagram from '../components/visuals/AutomotiveArchitectureDiagram.astro';
+import ComparisonMatrix from '../components/visuals/ComparisonMatrix.astro';
+
+const title = "Car Rental SEO Services — Complete Rental Fleet & Luxury Hire Search Engineering [2026]";
+const description = "The specialist search strategy for car rental companies, exotic hire agencies, and airport rental fleets. Dominate local Maps 3-Pack, airport conquest, and Google AI Overviews.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Car Rental SEO', href: '/car-rental-seo-services/' },
+];
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Car Rental SEO Services",
+  "description": description,
+  "provider": { "@type": "Organization", "name": "SEO for Automotive", "url": "https://seoforautomotive.com" },
+  "areaServed": "United States",
+  "serviceType": "Search Engine Optimization for Car Rental Companies"
+};
+
+const spokeLinks = [
+  { title: 'Local SEO for Car Rentals', href: '/services/automotive-local-seo/', description: 'Airport geofencing & Google Maps 3-Pack rankings for rental fleets.', icon: '📍', volume: '14,200/mo' },
+  { title: 'Reputation Management', href: '/automotive-reputation-management-services/', description: 'Review velocity and deposit trust signals for car hire brands.', icon: '⭐', volume: '2,720/mo' },
+  { title: 'Rental Technical SEO', href: '/services/automotive-technical-seo/', description: 'Booking engine crawlability, fleet calendar speed & mobile CRO.', icon: '⚙️', volume: '99.8% Index' },
+  { title: 'Car Dealership SEO', href: '/seo-for-car-dealerships/', description: 'Sales & rental fleet hybrid optimization strategies.', icon: '🚗', volume: '18,500/mo' },
+  { title: 'AEO & AI Overview SEO', href: '/services/automotive-aeo/', description: 'Capture ChatGPT and Google AI Overview citations for vehicle hire.', icon: '✨', volume: 'Next-Gen Search' },
+  { title: 'Automotive Link Building', href: '/services/automotive-link-building/', description: 'Travel portal & automotive authority backlink acquisition.', icon: '🔗', volume: 'High Authority' },
+];
+
+const faqs = [
+  { question: 'How do car rental businesses outrank Enterprise, Hertz, and Kayak?', answer: 'National aggregators win on high-level generic head terms, but local and independent rental brands win on hyper-local airport terminal geofencing, specific exotic/luxury vehicle models (e.g., "Corvette Z06 rental Miami", "Sprinter passenger van hire Denver"), transparent zero-deposit terms, and Google Maps 3-Pack dominance within a 10-mile pickup radius.' },
+  { question: 'What structured data schema is essential for car rental websites?', answer: 'We implement nested <code>AutoRental</code>, <code>RentalCarReservation</code>, and <code>Car</code> schema including vehicle specs, pickup/dropoff location coordinates, deposit policies, and live pricing rates to trigger rich booking snippets on Google.' },
+  { question: 'How do you target high-value airport car rental searches?', answer: 'We build dedicated airport pickup and terminal landing pages optimized for traveler intent (e.g., "off-airport car rental with free shuttle", "curbside exotic car delivery LAX"), combined with geofenced Google Business Profile categories and citation sync across travel directories.' },
+  { question: 'What is the ROI timeline for car rental SEO campaigns?', answer: 'Local airport map rankings and high-intent vehicle model queries typically begin generating direct bookings within 45 to 90 days, bypassing expensive 20-30% OTA commission fees from platforms like Turo, Expedia, and Kayak.' },
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/car-rental-seo-services/" breadcrumbs={breadcrumbs} schemaData={schemaData}>
+
+  <!-- Hero Header -->
+  <div class="mb-14">
+    <div class="flex flex-wrap items-center gap-2 mb-4">
+      <span class="badge-outline">Fleet &amp; Rental Specialization</span>
+      <span class="eeat-badge">Independent &amp; Exotic Fleets</span>
+      <span class="live-badge"><span class="live-dot"></span> Direct Booking Conquest</span>
+    </div>
+    
+    <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
+      Car Rental <span class="text-gradient-gold">SEO Services</span>
+    </h1>
+    
+    <p class="text-lg sm:text-xl leading-relaxed max-w-3xl" style="color: var(--color-text-secondary);">
+      The specialized search engineering framework for car rental companies, exotic vehicle hire studios, and airport fleets. We eliminate dependency on high-commission aggregators, capture local Google Maps 3-Pack pickups, and drive profitable direct online reservations.
+    </p>
+  </div>
+
+  <!-- The Direct Answer Callout Box -->
+  <div class="hud-panel p-6 sm:p-8 rounded-2xl border-l-4 mb-14" style="border-left-color: var(--color-gold); background: var(--color-bg-surface);">
+    <p class="text-base sm:text-lg leading-relaxed font-medium" style="color: var(--color-text-primary);">
+      Car rental search engine optimization makes search engines and AI assistants recommend your rental fleet directly over third-party broker platforms like Kayak, Expedia, and Turo. It works on hyper-local airport landing pages, dynamic vehicle class schema (<code>AutoRental</code>), and transparent deposit/mileage structured data so travelers book on your site directly.
+    </p>
+  </div>
+
+  <!-- Visual Dashboard Banner -->
+  <div class="relative rounded-2xl overflow-hidden border shadow-2xl mb-16" style="border-color: var(--color-border); background: var(--color-bg-card);">
+    <img
+      src="/cro-analytics-dashboard.jpg"
+      alt="Car Rental Fleet Booking & Organic Revenue Dashboard"
+      class="w-full h-auto object-cover"
+      loading="eager"
+    />
+    <div class="p-4 border-t flex flex-wrap items-center justify-between gap-3 text-xs" style="border-color: var(--color-border); background: var(--color-bg-surface);">
+      <span class="font-bold flex items-center gap-2" style="color: var(--color-text-primary);">
+        <span class="live-dot"></span> Direct Reservation Attribution &amp; Fleet Utilization Engine
+      </span>
+      <span class="text-[11px] font-semibold" style="color: var(--color-gold);">Navotar · HQ Rental · RentCentric · Custom API</span>
+    </div>
+  </div>
+
+  <!-- Key Metrics Telemetry -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">+320%</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Direct Bookings</div>
+    </div>
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">-28%</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">OTA Commission Reliance</div>
+    </div>
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">#1 Rank</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Airport Terminal Proximity</div>
+    </div>
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">100%</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">AutoRental Schema</div>
+    </div>
+  </div>
+
+  <!-- Interactive AI Citation Simulator -->
+  <div class="my-16">
+    <AutomotiveAiCitationSimulator client:load defaultCategory="dealership" />
+  </div>
+
+  <!-- 2026 Car Rental SERP Anatomy -->
+  <div class="my-16">
+    <AutomotiveSerpAnatomy
+      title="How Travelers &amp; Business Renters Search in 2026"
+      subtitle="From AI Overviews and Airport Maps 3-Pack to fleet walkarounds, see how travelers bypass middleman aggregator sites."
+    />
+  </div>
+
+  <!-- 6-Stage Buyer Journey Flow -->
+  <div class="my-16">
+    <AutomotiveBuyerJourneyFlow
+      title="The 6-Stage Car Rental Booking Journey"
+      subtitle="How we capture prospective renters from destination planning and vehicle choice to airport shuttle pickup."
+    />
+  </div>
+
+  <!-- Interactive ROI Calculator Widget -->
+  <div class="my-16">
+    <AutomotiveRoiCalculator client:load defaultType="dealership" />
+  </div>
+
+  <!-- Concrete Deliverables Matrix -->
+  <div class="my-16">
+    <AutomotiveDeliverablesMatrix
+      title="Concrete Car Rental Deliverables"
+      subtitle="Airport terminal geofence maps, fleet taxonomy databases, and machine-readable rental reservation schema."
+    />
+  </div>
+
+  <!-- Content Strategy Section -->
+  <div class="prose-content my-16">
+    <h2>The Structural Blueprint for Car Rental Search Domination</h2>
+    <p>Car rental search requires specialized architectural engineering across dynamic fleet availability calendars, airport terminal delivery zones, multi-tiered vehicle categories (Economy, Luxury SUV, Exotic Sports, Passenger Vans), and hyper-local airport search intent.</p>
+
+    <h3>1. Airport Terminal &amp; Curbside Delivery SEO</h3>
+    <p>We build dedicated landing pages for major international airports, private FBO terminals, and suburban pickup zones, capturing high-urgency travelers seeking direct terminal pickup and avoiding long rental counter queues.</p>
+
+    <h3>2. Exotic &amp; Luxury Vehicle Model Landing Pages</h3>
+    <p>High-ticket luxury renters don't search for generic categories; they search for exact vehicles: <em>"Lamborghini Huracan rental Miami"</em>, <em>"Cadillac Escalade ESV hire Vegas"</em>. We engineer dedicated high-aesthetic vehicle pages with 360-degree photography and transparent deposit specs.</p>
+  </div>
+
+  <!-- Interactive GeoGrid Simulator -->
+  <div class="my-16">
+    <GeoGridSimulator client:visible />
+  </div>
+
+  <!-- CMS Comparison Matrix -->
+  <div class="my-16">
+    <ComparisonMatrix
+      type="cms-platforms"
+      title="Car Rental Software &amp; Platform Benchmark"
+      subtitle="How modern custom search-optimized rental architectures compare against legacy booking plugins."
+    />
+  </div>
+
+  <!-- Structured Data Engine -->
+  <div class="my-16">
+    <InteractiveSchemaSnippet client:visible />
+  </div>
+
+  <!-- Related Hub Links -->
+  <div class="mt-12 mb-16">
+    <h2 class="text-xl font-bold mb-6" style="color: var(--color-text-primary);">Related Rental &amp; Automotive Capabilities</h2>
+    <InternalLinkCard links={spokeLinks} columns={3} />
+  </div>
+
+  <!-- Author E-E-A-T -->
+  <AuthorCard
+    name="Automotive Search Engineering Team"
+    role="Certified Rental Fleet &amp; Dealership Search Specialists"
+    bio="Our team specializes in technical search optimization for independent car rental fleets, exotic hire companies, and multi-location automotive franchises across North America."
+    expertise={['Car Rental SEO', 'Airport Geofence Targeting', 'AutoRental Structured Data', 'Direct Booking CRO', 'Google Maps 3-Pack']}
+  />
+
+  <!-- FAQ -->
+  <FaqSection items={faqs} title="Car Rental SEO — Frequently Asked Questions" />
+
+</BaseLayout>

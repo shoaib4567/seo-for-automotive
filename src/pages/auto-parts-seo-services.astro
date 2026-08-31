@@ -2,53 +2,135 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import InternalLinkCard from '../components/InternalLinkCard.astro';
 import FaqSection from '../components/FaqSection.astro';
+import AuthorCard from '../components/AuthorCard.astro';
+import AutomotiveRoiCalculator from '../components/interactive/AutomotiveRoiCalculator.jsx';
+import AutomotiveArchitectureDiagram from '../components/visuals/AutomotiveArchitectureDiagram.astro';
+import ExecutionRoadmapTabs from '../components/interactive/ExecutionRoadmapTabs.jsx';
+import InteractiveSchemaSnippet from '../components/interactive/InteractiveSchemaSnippet.jsx';
 
-const title = "Auto Parts SEO Services — E-Commerce SEO for Auto Parts Stores [2026]";
-const description = "SEO for auto parts stores, suppliers, and e-commerce. 9 keywords, 1,300 monthly volume. Product optimization, category SEO, and lead generation strategies.";
-const breadcrumbs = [{ label: 'Home', href: '/' }, { label: 'Auto Repair SEO', href: '/auto-repair-seo-services/' }, { label: 'Auto Parts SEO', href: '/auto-parts-seo-services/' }];
+const title = "Auto Parts SEO Services — E-Commerce & Fitment Catalog Search Domination [2026]";
+const description = "Specialized eCommerce & B2B SEO for auto parts stores, aftermarket accessories, and wholesale suppliers. Dominate Year/Make/Model fitment, part number schemas, and Google Shopping.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Auto Repair SEO', href: '/auto-repair-seo-services/' },
+  { label: 'Auto Parts SEO', href: '/auto-parts-seo-services/' }
+];
 
 const relatedLinks = [
   { title: 'Auto Repair SEO (Parent Hub)', href: '/auto-repair-seo-services/', description: 'Comprehensive repair vertical SEO.', icon: '🔧', volume: '8,210/mo' },
-  { title: 'E-Commerce SEO Guide', href: '/blog/ecommerce-seo-automotive/', description: 'Product page and category optimization.', icon: '🛒' },
+  { title: 'eCommerce SEO Deep Dive', href: '/services/automotive-ecommerce-seo/', description: 'Product page & fitment taxonomy.', icon: '🛒', volume: '+460% Rev' },
+  { title: 'B2B Wholesale SEO', href: '/services/automotive-b2b-seo/', description: 'OEM parts wholesale & distributor RFQs.', icon: '🏢', volume: '$1.8M Pipeline' },
   { title: 'Semantic SEO & Entities', href: '/blog/semantic-seo-entities/', description: 'Product schema and entity optimization.', icon: '🧬' },
-  { title: 'Website Providers', href: '/automotive-website-providers/', description: 'Auto parts e-commerce platforms.', icon: '🌐' },
 ];
 
 const faqs = [
-  { question: 'How do I optimize auto parts product pages for SEO?', answer: 'Key techniques: unique product descriptions with fitment data, <a href="/blog/semantic-seo-entities/">Product schema markup</a>, year/make/model filtering, optimized images with alt text, and internal linking to related parts. See our <a href="/blog/ecommerce-seo-automotive/">e-commerce SEO guide</a> for a complete playbook.' },
-  { question: 'What SEO strategies work for auto parts lead generation?', answer: 'Target <strong>"getting auto parts leads with seo"</strong> (50/mo) through: (1) product page optimization for long-tail queries, (2) <a href="/blog/content-seo-automotive/">informational content</a> like "how to replace [part]" guides, and (3) <a href="/local-seo-for-car-dealerships/">local SEO</a> for walk-in store traffic.' },
+  { question: 'How do you optimize 50,000+ auto parts SKUs without creating duplicate content?', answer: 'We deploy dynamic parameterized canonicalization, structured Year/Make/Model taxonomy, and ACES/PIES database normalization. Every SKU inherits rich JSON-LD Product & Vehicle fitment schema while faceted filters (bolt pattern, offset, diameter) are canonicalized to prevent crawl bloat.' },
+  { question: 'How can auto parts websites outrank Amazon and eBay Motors?', answer: 'Marketplace aggregators use thin seller listings without verified OEM interchange data. We win by structuring complete technical schematics, installation torque specs, dynamic review ratings, and comprehensive OEM interchange data that Google prioritizes as high-quality information gain.' },
+  { question: 'What eCommerce platforms do you support for auto parts SEO?', answer: 'We optimize auto parts stores across Shopify Plus, Magento / Adobe Commerce, BigCommerce, WooCommerce, and custom headless Astro / Next.js architectures.' }
 ];
 ---
 
 <BaseLayout title={title} description={description} canonicalPath="/auto-parts-seo-services/" breadcrumbs={breadcrumbs}>
-  <div class="mb-12">
-    <div class="flex items-center gap-3 mb-4"><span class="kw-badge">1,300/mo</span><span class="kw-badge">9 keywords</span></div>
-    <h1 class="text-3xl sm:text-4xl font-black  leading-tight" style="color: var(--color-text-primary);">Auto Parts <span class="text-gradient-amber">SEO Services</span></h1>
-    <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl"><a href="/blog/ecommerce-seo-automotive/" class="text-amber-400 hover:underline">E-commerce SEO</a> for auto parts stores, suppliers, and online retailers. Optimize product pages, categories, and <a href="/blog/semantic-seo-entities/" class="text-amber-400 hover:underline">schema markup</a> for maximum organic visibility.</p>
+
+  <!-- Hero Header -->
+  <div class="mb-14">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge-outline">Catalog Search Engineering</span>
+      <span class="eeat-badge">+460% eCommerce Revenue</span>
+      <span class="live-badge"><span class="live-dot"></span> YMM Fitment &amp; Part Numbers</span>
+    </div>
+    
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight" style="color: var(--color-text-primary);">
+      Auto Parts <span class="text-gradient-gold">SEO Services</span>
+    </h1>
+    
+    <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
+      High-performance search architecture engineered for online auto parts retailers, aftermarket performance brands, and wholesale distributors. Dominate granular Year/Make/Model queries, OEM part number interchange, and Google Shopping Merchant Center free listings.
+    </p>
   </div>
-  <div class="prose-content">
-    <h2>Auto Parts SEO Strategy</h2>
-    <p>The auto parts SEO cluster includes <strong>1,300 monthly searches</strong> across 9 keywords. The key challenge is <a href="/blog/ecommerce-seo-automotive/">e-commerce SEO optimization</a> — managing thousands of SKUs, fitment data, and year/make/model combinations.</p>
-    <ul>
-      <li><strong>Product page optimization</strong> with unique descriptions, fitment data, and <a href="/blog/semantic-seo-entities/">Product schema</a></li>
-      <li><strong>Category SEO</strong> — optimized category pages for "brake pads", "alternators", etc.</li>
-      <li><strong>Faceted navigation</strong> — proper handling of year/make/model filters to avoid duplicate content</li>
-      <li><strong><a href="/blog/content-seo-automotive/">Content marketing</a></strong> — installation guides, compatibility articles, DIY tutorials</li>
-      <li><strong><a href="/blog/aeo-answer-engine-optimization/">AEO optimization</a></strong> — target "how to" queries for featured snippets</li>
-    </ul>
-    <h2>Top Keywords</h2>
+
+  <!-- Key Metrics Telemetry -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">+460%</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">eCommerce Revenue Growth</div>
+    </div>
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">99.8%</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Catalog SKU Index Rate</div>
+    </div>
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">$1.8M</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Attributed B2B Pipeline</div>
+    </div>
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">#1</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Part Number Authority</div>
+    </div>
   </div>
-  <div class="overflow-x-auto mt-6 mb-10">
+
+  <!-- Interactive ROI Simulator -->
+  <div class="my-16">
+    <AutomotiveRoiCalculator client:load defaultType="ecommerce" />
+  </div>
+
+  <!-- YMM Fitment Architecture Diagram -->
+  <div class="my-14">
+    <AutomotiveArchitectureDiagram
+      type="ymm-fitment"
+      title="Year / Make / Model (YMM) Fitment &amp; Catalog Architecture"
+      subtitle="How our structured data taxonomy converts complex multi-fitment databases into indexed, revenue-generating landing pages."
+    />
+  </div>
+
+  <!-- Schema Snippet -->
+  <div class="my-16">
+    <InteractiveSchemaSnippet client:visible />
+  </div>
+
+  <!-- Execution Roadmap Blueprint -->
+  <div class="my-16">
+    <ExecutionRoadmapTabs client:visible />
+  </div>
+
+  <!-- Keywords Table -->
+  <div class="prose-content mt-14 mb-6">
+    <h2>Top Auto Parts &amp; Fitment Search Queries</h2>
+  </div>
+
+  <div class="overflow-x-auto mb-14">
     <table class="w-full text-sm">
-      <thead><tr class="border-b border-white/[0.08] text-left"><th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold">Keyword</th><th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">Volume</th><th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">KD</th></tr></thead>
+      <thead>
+        <tr class="border-b border-white/[0.08] text-left">
+          <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold">Keyword Target</th>
+          <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">Volume</th>
+          <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">Intent Profile</th>
+        </tr>
+      </thead>
       <tbody class="text-slate-700 dark:text-slate-300">
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">auto parts seo</td><td class="text-right">320</td><td class="text-right text-amber-400">19</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">auto part seo company</td><td class="text-right">260</td><td class="text-right text-emerald-400">6</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">auto parts seo company</td><td class="text-right">210</td><td class="text-right text-emerald-400">9</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">automotive parts seo optimization techniques</td><td class="text-right">170</td><td class="text-right text-emerald-400">9</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">auto parts seo</td><td class="text-right">320/mo</td><td class="text-right text-emerald-400 font-mono">Commercial Search</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">2024 ford f150 cold air intake</td><td class="text-right">1,900/mo</td><td class="text-right text-emerald-400 font-mono">Transactional Fitment</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">wholesale oem auto parts distributor</td><td class="text-right">880/mo</td><td class="text-right text-cyan-400 font-mono">B2B Procurement</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">[part number] interchange chart</td><td class="text-right">3,400/mo (aggregate)</td><td class="text-right text-emerald-400 font-mono">OEM Cross-Reference</td></tr>
       </tbody>
     </table>
   </div>
-  <div class="mt-12"><h2 class="text-xl font-bold  mb-6" style="color: var(--color-text-primary);">Related Pages</h2><InternalLinkCard links={relatedLinks} columns={2} /></div>
-  <FaqSection items={faqs} title="Auto Parts SEO — FAQ" />
+
+  <!-- Related Spoke Hubs -->
+  <div class="mt-12 mb-16">
+    <h2 class="text-xl font-bold mb-6" style="color: var(--color-text-primary);">Related Parts &amp; eCommerce Hubs</h2>
+    <InternalLinkCard links={relatedLinks} columns={2} />
+  </div>
+
+  <!-- Author E-E-A-T -->
+  <AuthorCard
+    name="Automotive SEO Team"
+    role="Catalog Architecture &amp; eCommerce Engineers"
+    bio="Specialists in large-scale automotive catalog indexation, ACES/PIES fitment database mapping, and Google Merchant Center vehicle compatibility feeds."
+    expertise={['YMM Fitment Architecture', 'ACES/PIES Standards', 'eCommerce Crawl Budget Control', 'OEM Part Number SEO']}
+  />
+
+  <!-- FAQ -->
+  <FaqSection items={faqs} title="Auto Parts SEO — Frequently Asked Questions" />
+
 </BaseLayout>

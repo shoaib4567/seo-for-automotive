@@ -2,7 +2,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FaqSection from '../../components/FaqSection.astro';
 import AuthorCard from '../../components/AuthorCard.astro';
-import ServiceGrid from '../../components/ServiceGrid.astro';
+import AutomotiveRoiCalculator from '../../components/interactive/AutomotiveRoiCalculator.jsx';
+import GeoGridSimulator from '../../components/interactive/GeoGridSimulator.jsx';
+import ExecutionRoadmapTabs from '../../components/interactive/ExecutionRoadmapTabs.jsx';
+import InteractiveSchemaSnippet from '../../components/interactive/InteractiveSchemaSnippet.jsx';
+import AutomotiveArchitectureDiagram from '../../components/visuals/AutomotiveArchitectureDiagram.astro';
+import ComparisonMatrix from '../../components/visuals/ComparisonMatrix.astro';
 
 const dealerServices = [
   { title: 'Local SEO & Maps 3-Pack', href: '/services/automotive-local-seo/', desc: 'Multi-department GBP hierarchy (Sales, Service, Parts, Collision) & geo-grid proximity dominance.' },
@@ -35,6 +40,7 @@ const faqs = [
   { question: 'How much does SEO cost for a car dealership?', answer: 'Car dealership SEO typically ranges from $2,500–$8,000/month for single-point dealerships, and $6,000–$25,000/month for multi-rooftop dealer groups. Pricing reflects inventory scale, market competitiveness, and multi-department service requirements.' },
   { question: 'Why aren\'t our dynamic vehicle detail pages (VDPs) indexing in Google?', answer: 'Dealership platforms frequently suffer from client-side JavaScript rendering issues, parameter filter crawl traps, 404 dead links upon vehicle sale, and missing Schema.org <code>Vehicle</code> markup. We engineer real-time DMS feed synchronization and canonical hygiene to guarantee 99.8% VDP indexation.' },
   { question: 'How do you structure Google Business Profiles for a franchised dealership?', answer: 'We build nested, distinct Google Business Profiles for your Sales Showroom, Service Department, Parts Counter, and Collision Center. This triples your Maps 3-Pack footprint and prevents service keywords from competing against new vehicle sales.' },
+  { question: 'How long until our dealership sees qualified test-drive leads from SEO?', answer: 'Technical fixes (VDP indexation and schema) produce measurable crawl gains in 14-30 days. Local Google Maps 3-Pack ranking expansions and organic test-drive leads typically compound significantly between months 2 and 4.' },
 ];
 ---
 
@@ -94,8 +100,13 @@ const faqs = [
       </div>
     </div>
 
+    <!-- Interactive ROI Simulator -->
+    <div class="my-16">
+      <AutomotiveRoiCalculator client:load defaultType="dealership" />
+    </div>
+
     <!-- Core Strategies for Dealerships -->
-    <div class="prose-content mb-16">
+    <div class="prose-content mb-12">
       <h2>The Structural Pillars of Dealership Search Dominance</h2>
 
       <h3>1. Dynamic VDP / SRP Inventory Crawl Optimization</h3>
@@ -106,6 +117,39 @@ const faqs = [
 
       <h3>3. Multi-Department Google Business Profile Scaling</h3>
       <p>We establish verified, dedicated GBP listings for your Sales Showroom, Service Department, Parts Desk, and Collision Center, dominating the Maps 3-Pack across routine maintenance, brake repairs, and vehicle sales queries simultaneously.</p>
+    </div>
+
+    <!-- Multi-Department Architecture Diagram -->
+    <div class="my-12">
+      <AutomotiveArchitectureDiagram
+        type="dealership-entity"
+        title="Dealership Multi-Department Knowledge Architecture"
+        subtitle="Departmental GBP segmentation that captures both $45,000 vehicle buyers and $1,200 service RO tickets."
+      />
+    </div>
+
+    <!-- Interactive Geo-Grid Simulator -->
+    <div class="my-16">
+      <GeoGridSimulator client:visible />
+    </div>
+
+    <!-- Platform Comparison Matrix -->
+    <div class="my-16">
+      <ComparisonMatrix
+        type="cms-platforms"
+        title="Dealership CMS Architecture Comparison"
+        subtitle="Compare how your current DMS website provider stacks up against high-speed headless frameworks."
+      />
+    </div>
+
+    <!-- Interactive Schema Code Inspector -->
+    <div class="my-16">
+      <InteractiveSchemaSnippet client:visible />
+    </div>
+
+    <!-- Execution Roadmap Blueprint -->
+    <div class="my-16">
+      <ExecutionRoadmapTabs client:visible />
     </div>
 
     <!-- Related Services Grid -->

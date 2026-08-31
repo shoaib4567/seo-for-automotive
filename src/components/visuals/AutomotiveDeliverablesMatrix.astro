@@ -1,0 +1,131 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+}
+
+const {
+  title = "Real Deliverables, Not Vague Reports",
+  subtitle = "Our engineering deliverables are concrete, machine-readable assets designed to build permanent search equity."
+} = Astro.props;
+---
+
+<div class="hud-panel p-6 sm:p-10 rounded-2xl border shadow-2xl my-12" style="border-color: var(--color-border); background: var(--color-bg-card);">
+  
+  <div class="text-center max-w-2xl mx-auto mb-10">
+    <span class="eeat-badge mb-2">Concrete Deliverables</span>
+    <h3 class="text-2xl sm:text-3xl font-black mt-2" style="color: var(--color-text-primary);">{title}</h3>
+    <p class="text-sm mt-2" style="color: var(--color-text-secondary);">{subtitle}</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+    <!-- 1. Inventory & Taxonomy Tree Map -->
+    <div class="hud-panel p-6 flex flex-col justify-between" style="background: var(--color-bg-surface);">
+      <div>
+        <div class="p-3 rounded-xl border border-white/[0.08] bg-black/40 mb-4 font-mono text-xs space-y-1.5">
+          <div class="text-amber-400 font-bold flex items-center justify-between pb-1 border-b border-white/10">
+            <span>DMS Inventory Tree</span>
+            <span class="text-[10px] text-slate-400">100% Crawled</span>
+          </div>
+          <div class="flex items-center justify-between text-slate-200">
+            <span>📁 Ford F-150 Trucks</span>
+            <span class="text-amber-300 font-bold">42 SKUs</span>
+          </div>
+          <div class="flex items-center justify-between pl-3 text-slate-400 text-[11px]">
+            <span>├─ Lariat 3.5 EcoBoost</span>
+            <span class="text-slate-300">14 units</span>
+          </div>
+          <div class="flex items-center justify-between pl-3 text-slate-400 text-[11px]">
+            <span>├─ PowerBoost Hybrid</span>
+            <span class="text-slate-300">9 units</span>
+          </div>
+          <div class="flex items-center justify-between pl-3 text-slate-400 text-[11px]">
+            <span>└─ F-150 Raptor 37</span>
+            <span class="text-slate-300">3 units</span>
+          </div>
+        </div>
+
+        <h4 class="text-base font-bold text-white mb-1">A Machine-Readable Inventory Map</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Mapped directly from your live DMS or catalog feed. Zero crawl loops, zero 404 orphans on sold units, and 99.8% indexation efficiency.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2. Surface-Specific Keyword Bank -->
+    <div class="hud-panel p-6 flex flex-col justify-between" style="background: var(--color-bg-surface);">
+      <div>
+        <div class="p-3 rounded-xl border border-white/[0.08] bg-black/40 mb-4 font-mono text-xs space-y-2">
+          <div class="text-cyan-400 font-bold flex items-center justify-between pb-1 border-b border-white/10">
+            <span>Surface Keyword Bank</span>
+            <span class="text-[10px] text-slate-400">Demand Index</span>
+          </div>
+          
+          <div>
+            <div class="flex justify-between text-[11px] text-slate-300 mb-0.5">
+              <span>f150 brake squeak fix</span>
+              <span class="text-cyan-300 font-bold">74k/mo</span>
+            </div>
+            <div class="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
+              <div class="h-full bg-cyan-400 rounded-full" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-[11px] text-slate-300 mb-0.5">
+              <span>ceramic coating vs ppf</span>
+              <span class="text-cyan-300 font-bold">33k/mo</span>
+            </div>
+            <div class="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
+              <div class="h-full bg-cyan-400 rounded-full" style="width: 62%;"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-[11px] text-slate-300 mb-0.5">
+              <span>certified ford mechanic near me</span>
+              <span class="text-cyan-300 font-bold">18k/mo</span>
+            </div>
+            <div class="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
+              <div class="h-full bg-cyan-400 rounded-full" style="width: 45%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="text-base font-bold text-white mb-1">Keywords Per Surface &amp; Engine</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Mapped by what vehicle owners ask across Google AI, YouTube, and ChatGPT, prioritizing commercial queries that drive service appointments.
+        </p>
+      </div>
+    </div>
+
+    <!-- 3. Information Gain Content Brief -->
+    <div class="hud-panel p-6 flex flex-col justify-between" style="background: var(--color-bg-surface);">
+      <div>
+        <div class="p-3 rounded-xl border border-white/[0.08] bg-black/40 mb-4 font-mono text-xs space-y-1.5">
+          <div class="text-purple-400 font-bold flex items-center justify-between pb-1 border-b border-white/10">
+            <span>Information Gain Brief</span>
+            <span class="text-[10px] text-emerald-400">E-E-A-T Verified</span>
+          </div>
+          <div class="text-[11px] text-slate-200">
+            <span class="text-amber-400">✦ Opening Direct Answer:</span> 48-word fact paragraph formatted for Google AI snippet extraction.
+          </div>
+          <div class="p-1.5 rounded bg-white/[0.04] text-[10px] text-emerald-300 border-l-2 border-emerald-400">
+            <strong>Master Tech Quote:</strong> "OBD-II Code P0420 requires upstream O2 sensor delta verification before catalyst replacement."
+          </div>
+          <div class="text-[10px] text-slate-400">
+            Includes exact OEM torque specs &amp; 3D fitment tolerances.
+          </div>
+        </div>
+
+        <h4 class="text-base font-bold text-white mb-1">Briefs That Earn AI Citations</h4>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Featuring first-hand technician insights and proprietary measurement tables that Google's Information Gain algorithm prioritizes over AI-spun filler.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</div>

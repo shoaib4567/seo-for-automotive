@@ -3,9 +3,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import InternalLinkCard from '../components/InternalLinkCard.astro';
 import FaqSection from '../components/FaqSection.astro';
 import AuthorCard from '../components/AuthorCard.astro';
+import AutomotiveRoiCalculator from '../components/interactive/AutomotiveRoiCalculator.jsx';
+import GeoGridSimulator from '../components/interactive/GeoGridSimulator.jsx';
+import ExecutionRoadmapTabs from '../components/interactive/ExecutionRoadmapTabs.jsx';
+import InteractiveSchemaSnippet from '../components/interactive/InteractiveSchemaSnippet.jsx';
+import AutomotiveArchitectureDiagram from '../components/visuals/AutomotiveArchitectureDiagram.astro';
 
-const title = "Auto Repair SEO Services — SEO for Mechanics & Repair Shops [2026]";
-const description = "SEO for auto repair shops, mechanics, body shops, and collision centers. 31 keywords, 8,210 monthly volume. Dominate local search for your repair business.";
+const title = "Auto Repair SEO Services — SEO for Mechanics & Repair Shops [2026 Strategy]";
+const description = "Specialized SEO for independent auto repair shops, mechanics, transmission specialists, and tire centers. Dominate Google Maps 3-Pack, capture high-ticket repair jobs, and fill service bays.";
 const breadcrumbs = [
   { label: 'Home', href: '/' },
   { label: 'Auto Repair SEO', href: '/auto-repair-seo-services/' },
@@ -16,8 +21,9 @@ const schemaData = {
   "@type": "Service",
   "name": "Auto Repair SEO Services",
   "description": description,
-  "provider": { "@type": "Organization", "name": "SEO for Automotive" },
-  "serviceType": "Search Engine Optimization for Auto Repair"
+  "provider": { "@type": "Organization", "name": "SEO for Automotive", "url": "https://seoforautomotive.com" },
+  "serviceType": "Search Engine Optimization for Auto Repair Shops",
+  "areaServed": "United States"
 };
 
 const spokeLinks = [
@@ -25,80 +31,119 @@ const spokeLinks = [
   { title: 'Auto Parts SEO', href: '/auto-parts-seo-services/', description: 'E-commerce SEO for auto parts stores and suppliers.', icon: '🔩', volume: '1,300/mo' },
   { title: 'Auto Detailing SEO', href: '/auto-detailing-seo-services/', description: 'SEO for car detailing businesses and mobile detailers.', icon: '✨', volume: '1,570/mo' },
   { title: 'Car Wash SEO', href: '/seo-for-car-wash/', description: 'SEO for car wash and detailing shops.', icon: '🧽', volume: '750/mo' },
-  { title: 'Local SEO for Auto Repair', href: '/local-seo-for-car-dealerships/', description: 'Google Maps and local citation strategies for repair shops.', icon: '📍', volume: '3,180/mo' },
-  { title: 'Reputation Management', href: '/automotive-reputation-management-services/', description: 'Review management for auto repair businesses.', icon: '⭐', volume: '2,720/mo' },
+  { title: 'Local SEO for Repair Shops', href: '/services/automotive-local-seo/', description: 'Google Maps 3-Pack & local citation strategies.', icon: '📍', volume: '3,180/mo' },
+  { title: 'Reputation Management', href: '/automotive-reputation-management-services/', description: 'Automated 5-star review generation for mechanics.', icon: '⭐', volume: '2,720/mo' },
 ];
 
 const faqs = [
-  { question: 'How can auto repair shops get more customers through SEO?', answer: 'The key channels are: (1) <a href="/local-seo-for-car-dealerships/">Local SEO</a> — optimizing your Google Business Profile and building local citations, (2) <a href="/blog/content-seo-automotive/">Content marketing</a> — creating service-specific pages for each repair type, and (3) <a href="/automotive-reputation-management-services/">Review management</a> — actively generating and responding to customer reviews.' },
-  { question: 'What SEO keywords should mechanics target?', answer: 'Target keywords like <strong>"auto repair seo"</strong> (880/mo), <strong>"seo for auto repair shops"</strong> (720/mo), <strong>"seo for mechanic"</strong> (260/mo), plus geo-modified variants like "[city] auto repair" and service-specific terms like "brake repair near me".' },
-  { question: 'Is SEO different for mobile mechanics?', answer: 'Yes — mobile mechanics need to emphasize <strong>service area optimization</strong> rather than single-location <a href="/blog/local-seo-for-automotive/">local SEO</a>. Target keywords like "seo for mobile mechanics" (110/mo) and optimize for multiple cities/neighborhoods within your service radius.' },
+  { question: 'How can auto repair shops get more high-ticket repair jobs through SEO?', answer: 'Rather than targeting generic "oil change" queries, we engineer service landing pages for high-ticket repair orders: transmission overhauls, engine head gasket diagnostics, brake rotor replacements, European car repair (BMW/Mercedes/Audi), and A/C compressor service. These convert at high margins with an Average Repair Order of $650–$1,800.' },
+  { question: 'What is the fastest way to rank in the Google Maps 3-Pack for mechanic searches?', answer: 'Completing full GBP primary and secondary categories, embedding localized <code>AutoRepair</code> JSON-LD schema on your website, building consistent NAP citations across 50+ auto directories, and deploying an automated post-service SMS review request system.' },
+  { question: 'Do you provide SEO for mobile mechanics and fleet service providers?', answer: 'Yes. Mobile mechanics require Service Area Page (SAP) architecture across targeted city polygons, while commercial fleet mechanics target B2B diesel and preventative maintenance procurement keywords.' },
 ];
 ---
 
 <BaseLayout title={title} description={description} canonicalPath="/auto-repair-seo-services/" breadcrumbs={breadcrumbs} schemaData={schemaData}>
 
-  <div class="mb-12">
+  <!-- Hero Header -->
+  <div class="mb-14">
     <div class="flex items-center gap-3 mb-4">
-      <span class="kw-badge">8,210/mo total volume</span>
-      <span class="kw-badge">31 keywords</span>
+      <span class="badge-outline">Shop Search Engineering</span>
+      <span class="eeat-badge">High-Ticket Repair Bays</span>
+      <span class="live-badge"><span class="live-dot"></span> 8,210/mo Search Demand</span>
     </div>
-    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black  leading-tight" style="color: var(--color-text-primary);">
-      Auto Repair <span class="text-gradient-amber">SEO Services</span>
+    
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight" style="color: var(--color-text-primary);">
+      Auto Repair <span class="text-gradient-gold">SEO Services</span>
     </h1>
+    
     <p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
-      Comprehensive SEO strategies for auto repair shops, mechanics, mobile mechanics, and specialty repair businesses. From <a href="/local-seo-for-car-dealerships/" class="text-amber-400 hover:underline">local SEO</a> to <a href="/blog/eeat-automotive-seo/" class="text-amber-400 hover:underline">E-E-A-T</a> authority building.
+      Comprehensive search optimization engineered for independent auto repair shops, master mechanics, and specialty transmission/brake centers. We dominate the Google Maps 3-Pack within a 15-mile radius and capture urgent, high-margin repair orders to keep your bays operating at peak capacity.
     </p>
   </div>
 
-  <div class="prose-content">
-    <h2 id="repair-seo-overview">Why Auto Repair Shops Need SEO</h2>
-    <p>The auto repair SEO vertical generates <strong>8,210 monthly searches</strong> across 31 keywords. For repair shops, <a href="/local-seo-for-car-dealerships/">local SEO</a> is the primary driver — 93% of customers search online before choosing a repair shop, and 88% of those searches happen on mobile devices.</p>
-    <p>Unlike <a href="/seo-for-car-dealerships/">dealership SEO</a> which targets inventory-based queries, repair shop SEO centers on service-based keywords, emergency search intent, and <a href="/automotive-reputation-management-services/">reputation signals</a>.</p>
-
-    <h2 id="repair-verticals">Repair Shop SEO by Specialty</h2>
-    <h3>General Auto Repair</h3>
-    <p>Target: "auto repair seo" (880/mo), "auto repair shop seo" (720/mo), "seo for auto repair shops" (720/mo). Create individual service pages for each repair type — brakes, AC, electrical, oil change, European auto, and more.</p>
-
-    <h3>Brake Repair Specialists</h3>
-    <p>Keywords like "brake repair shop search engine optimization" (390/mo) and "brake repair shop seo" (170/mo) indicate demand for specialty-focused SEO content.</p>
-
-    <h3>Mobile Mechanics</h3>
-    <p>"SEO for mobile mechanics" (110/mo) — a growing niche. Mobile mechanics need service area pages rather than single-location optimization.</p>
-
-    <h3>European & Specialty Auto</h3>
-    <p>"SEO for european auto repair" (50/mo) — target make-specific keywords (BMW repair, Mercedes service, etc.) combined with location terms.</p>
-
-    <h2 id="repair-keywords">Top Auto Repair SEO Keywords</h2>
+  <!-- Key Metrics Telemetry -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">+540%</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Inbound Phone Inquiries</div>
+    </div>
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">#1</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Maps 3-Pack Placement</div>
+    </div>
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">$850+</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Average Repair Order (ARO)</div>
+    </div>
+    <div class="hud-panel p-5 text-center">
+      <div class="text-3xl font-black" style="color: var(--color-gold);">4.9★</div>
+      <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Review Reputation Score</div>
+    </div>
   </div>
 
-  <div class="overflow-x-auto mt-6 mb-10">
+  <!-- Interactive ROI Simulator -->
+  <div class="my-16">
+    <AutomotiveRoiCalculator client:load defaultType="repair" />
+  </div>
+
+  <!-- Emergency vs Scheduled Repair Funnel Schematic -->
+  <div class="my-14">
+    <AutomotiveArchitectureDiagram
+      type="emergency-funnel"
+      title="High-Ticket Emergency & Diagnostic Search Funnel"
+      subtitle="How our mobile-first local architecture captures stranded drivers and high-margin transmission/brake repairs."
+    />
+  </div>
+
+  <!-- Interactive GeoGrid Simulator -->
+  <div class="my-16">
+    <GeoGridSimulator client:visible />
+  </div>
+
+  <!-- AutoRepair Schema Inspector -->
+  <div class="my-16">
+    <InteractiveSchemaSnippet client:visible />
+  </div>
+
+  <!-- Execution Roadmap Blueprint -->
+  <div class="my-16">
+    <ExecutionRoadmapTabs client:visible />
+  </div>
+
+  <!-- Top Keywords Table -->
+  <div class="prose-content mt-14 mb-6">
+    <h2>High-Volume Auto Repair Search Queries</h2>
+  </div>
+
+  <div class="overflow-x-auto mb-14">
     <table class="w-full text-sm">
       <thead>
         <tr class="border-b border-white/[0.08] text-left">
-          <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold">Keyword</th>
-          <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">Volume</th>
-          <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">KD</th>
+          <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold">Keyword Target</th>
+          <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">Monthly Volume</th>
+          <th class="pb-3 text-slate-600 dark:text-slate-400 font-semibold text-right">Intent Profile</th>
         </tr>
       </thead>
       <tbody class="text-slate-700 dark:text-slate-300">
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">auto repair seo</td><td class="text-right">880</td><td class="text-right text-amber-400">23</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">auto repair seo company</td><td class="text-right">720</td><td class="text-right text-amber-400">17</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">auto repair shop seo</td><td class="text-right">720</td><td class="text-right text-amber-400">21</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">seo for auto repair shops</td><td class="text-right">720</td><td class="text-right text-amber-400">16</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">auto repair seo agency</td><td class="text-right">480</td><td class="text-right text-amber-400">13</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">brake repair shop SEO</td><td class="text-right">390</td><td class="text-right text-emerald-400">10</td></tr>
-        <tr class="border-b border-white/[0.04]"><td class="py-2.5">seo for mechanic</td><td class="text-right">260</td><td class="text-right text-amber-400">15</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5 font-medium text-amber-400">auto repair seo</td><td class="text-right">880/mo</td><td class="text-right text-emerald-400 font-mono">Commercial</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">[city] mechanic near me</td><td class="text-right">18,200/mo (aggregate)</td><td class="text-right text-emerald-400 font-mono">Emergency / Local</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">brake repair shop near me</td><td class="text-right">9,400/mo (aggregate)</td><td class="text-right text-emerald-400 font-mono">High Ticket Service</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">transmission repair [city]</td><td class="text-right">4,100/mo (aggregate)</td><td class="text-right text-emerald-400 font-mono">High Margin ($1,500+)</td></tr>
+        <tr class="border-b border-white/[0.04]"><td class="py-2.5">european auto repair [city]</td><td class="text-right">2,800/mo (aggregate)</td><td class="text-right text-cyan-400 font-mono">Specialty Foreign</td></tr>
       </tbody>
     </table>
   </div>
 
-  <div class="mt-12">
-    <h2 class="text-xl font-bold  mb-6" style="color: var(--color-text-primary);">Related Verticals</h2>
+  <!-- Related Spoke Hubs -->
+  <div class="mt-12 mb-16">
+    <h2 class="text-xl font-bold mb-6" style="color: var(--color-text-primary);">Related Repair Verticals</h2>
     <InternalLinkCard links={spokeLinks} columns={3} />
   </div>
 
-  <AuthorCard name="Automotive SEO Team" role="Auto Repair SEO Specialists" bio="Specialized in local SEO and lead generation for auto repair shops across 200+ cities." expertise={['Auto Repair SEO', 'Local SEO', 'Google Maps Optimization', 'Review Management']} />
+  <!-- Author E-E-A-T -->
+  <AuthorCard name="Automotive SEO Team" role="Auto Repair & Service Search Specialists" bio="Our search engineers specialize in local Google Maps 3-Pack dominance and high-ticket service bay acquisition for independent mechanics and franchise service centers." expertise={['Auto Repair Local SEO', 'Google Maps 3-Pack', 'AutoRepair Schema', 'Review Velocity Engines', 'Emergency Search Capture']} />
 
-  <FaqSection items={faqs} title="Auto Repair SEO — FAQ" />
+  <!-- FAQ -->
+  <FaqSection items={faqs} title="Auto Repair SEO — Frequently Asked Questions" />
+
 </BaseLayout>

@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import AuthorCard from '../../components/AuthorCard.astro';
+import AutomotiveArchitectureDiagram from '../../components/visuals/AutomotiveArchitectureDiagram.astro';
+import AutomotiveDeliverablesMatrix from '../../components/visuals/AutomotiveDeliverablesMatrix.astro';
+import ComparisonMatrix from '../../components/visuals/ComparisonMatrix.astro';
+import ExecutionRoadmapTabs from '../../components/interactive/ExecutionRoadmapTabs.jsx';
+import InteractiveSchemaSnippet from '../../components/interactive/InteractiveSchemaSnippet.jsx';
+
+const title = "Technical SEO for Car Dealers — VDP Indexation, CMS Speed & Inventory Crawl Engineering | SEO for Automotive";
+const description = "Specialist technical SEO for automotive dealerships. Solve JavaScript rendering issues, eliminate 404 crawl budget waste on sold units, and guarantee 99.8% VDP indexation across CDK, Dealer.com, and DealerOn.";
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'Technical SEO for Car Dealers', href: '/services/technical-seo-for-car-dealers/' },
+];
+
+const pillars = [
+  { title: 'Dynamic VDP & SRP Inventory Crawl Optimization', desc: 'Eliminating duplicate parameter crawl traps (price, color, mileage filters) and deploying automated 301 redirect logic for sold vehicles to protect crawl budget.' },
+  { title: 'JavaScript Rendering & Server-Side Hydration', desc: 'Fixing heavy client-side JS rendering bottlenecks common in legacy dealer CMS platforms (Dealer.com, CDK, DealerInspire) to ensure Googlebot instantly sees inventory data.' },
+  { title: 'Vehicle & AutoDealer Schema Architecture', desc: 'Deploying deep nested JSON-LD structured data covering VIN, vehicleModelDate, mileage, drivetrain, trim, and live dealer offer pricing.' },
+  { title: 'Core Web Vitals & Mobile Speed Engineering', desc: 'Optimizing high-resolution vehicle photo galleries, third-party chat widgets, and finance calculator scripts for sub-1.2s mobile loading speeds.' },
+];
+
+const faqs = [
+  {
+    question: 'Why do dealership platforms like Dealer.com and CDK struggle with VDP indexation?',
+    answer: 'Standard dealership platforms rely heavily on client-side JavaScript frameworks, dynamically injected inventory widgets, and complex faceted filter parameters. When Googlebot crawls the site, it frequently times out before executing the JavaScript, leaving valuable vehicle inventory unindexed.'
+  },
+  {
+    question: 'How do you handle sold inventory to prevent 404 errors and rank loss?',
+    answer: 'Instead of serving a hard 404 error when a vehicle sells, our automated inventory protocol performs a smart 301 redirect to the nearest equivalent Model Search Results Page (e.g., redirecting a sold 2023 F-150 Lariat to the active Used Ford F-150 inventory hub), preserving link equity and user intent.'
+  },
+  {
+    question: 'Can you work on proprietary franchised dealer CMS platforms?',
+    answer: 'Yes. We have deep engineering experience across CDK Global, Dealer.com, DealerOn, DealerInspire, Fox Dealer, FusionZone, and custom headless WordPress/Next.js dealership architectures.'
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/services/technical-seo-for-car-dealers/" breadcrumbs={breadcrumbs}>
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Hero Header -->
+    <div class="mb-14">
+      <div class="flex flex-wrap items-center gap-2 mb-4">
+        <span class="badge-outline">Technical Dealership Specialization</span>
+        <span class="eeat-badge">DMS Feed Engineering</span>
+        <span class="live-badge"><span class="live-dot"></span> 99.8% VDP Index Rate</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
+        Technical SEO for <span class="text-gradient-gold">Car Dealers</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl leading-relaxed max-w-3xl" style="color: var(--color-text-secondary);">
+        The specialized technical search engineering framework for franchised and independent automotive dealer groups. We resolve complex DMS feed bottlenecks, eliminate JavaScript rendering crawl lag, and ensure your entire live lot is indexed and ranking.
+      </p>
+    </div>
+
+    <!-- The Direct Answer Callout Box -->
+    <div class="hud-panel p-6 sm:p-8 rounded-2xl border-l-4 mb-14" style="border-left-color: var(--color-gold); background: var(--color-bg-surface);">
+      <p class="text-base sm:text-lg leading-relaxed font-medium" style="color: var(--color-text-primary);">
+        Technical SEO for car dealerships eliminates the invisible crawl barriers that prevent vehicle detail pages (VDPs) from indexing in Google. It works on real-time DMS XML sitemap syndication, faceted filter canonicalization, and Schema.org <code>Vehicle</code> markup so every car on your lot is searchable the moment it is traded in.
+      </p>
+    </div>
+
+    <!-- Visual Banner -->
+    <div class="relative rounded-2xl overflow-hidden border shadow-2xl mb-16" style="border-color: var(--color-border); background: var(--color-bg-card);">
+      <img
+        src="/cro-analytics-dashboard.jpg"
+        alt="Car Dealership Technical SEO & VDP Crawl Control Center"
+        class="w-full h-auto object-cover"
+        loading="eager"
+      />
+      <div class="p-4 border-t flex flex-wrap items-center justify-between gap-3 text-xs" style="border-color: var(--color-border); background: var(--color-bg-surface);">
+        <span class="font-bold flex items-center gap-2" style="color: var(--color-text-primary);">
+          <span class="live-dot"></span> Real-Time DMS Inventory Feed &amp; XML Sitemap Synchronization
+        </span>
+        <span class="text-[11px] font-semibold" style="color: var(--color-gold);">CDK · Dealer.com · DealerOn · DealerInspire</span>
+      </div>
+    </div>
+
+    <!-- Key Metrics Telemetry -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">99.8%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">VDP Indexation Rate</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">&lt; 1.2s</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Mobile VDP Page Speed</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">0</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Sold Unit 404 Leaks</div>
+      </div>
+      <div class="hud-panel p-5 text-center">
+        <div class="text-3xl font-black" style="color: var(--color-gold);">100%</div>
+        <div class="text-xs font-semibold mt-1" style="color: var(--color-text-muted);">Schema.org Vehicle Validation</div>
+      </div>
+    </div>
+
+    <!-- Dealership Entity Diagram -->
+    <div class="my-14">
+      <AutomotiveArchitectureDiagram
+        type="dealership-entity"
+        title="Multi-Department Dealership Entity &amp; VDP Crawl Architecture"
+        subtitle="How our structured data taxonomy isolates Sales, Service, and Collision into distinct knowledge graph nodes."
+      />
+    </div>
+
+    <!-- Concrete Deliverables Matrix -->
+    <div class="my-16">
+      <AutomotiveDeliverablesMatrix
+        title="Concrete Technical Deliverables"
+        subtitle="Automated 301 redirect mapping, XML inventory sitemaps, and Core Web Vitals optimization briefs."
+      />
+    </div>
+
+    <!-- 4 Pillars -->
+    <div class="mb-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {pillars.map(p => (
+          <div class="hud-panel p-6">
+            <h3 class="text-lg font-bold mb-2" style="color: var(--color-text-primary);">{p.title}</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--color-text-secondary);">{p.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- CMS Comparison Matrix -->
+    <div class="my-16">
+      <ComparisonMatrix
+        type="cms-platforms"
+        title="Dealership CMS Platform Benchmark"
+        subtitle="Compare technical indexation capabilities across Dealer.com, CDK, DealerOn, and Headless architectures."
+      />
+    </div>
+
+    <!-- Schema Snippet Inspector -->
+    <div class="my-16">
+      <InteractiveSchemaSnippet client:visible />
+    </div>
+
+    <!-- Execution Roadmap Blueprint -->
+    <div class="my-16">
+      <ExecutionRoadmapTabs client:visible />
+    </div>
+
+    <!-- Author E-E-A-T -->
+    <div class="my-16">
+      <AuthorCard
+        name="Automotive Technical Search Engineering Team"
+        role="Certified Automotive Crawl &amp; DMS Specialists"
+        bio="Our technical team specializes exclusively in automotive dealership architectures, with deep expertise resolving JavaScript rendering bottlenecks and inventory feed synchronization across 100+ dealership groups."
+        expertise={['Dealership Technical SEO', 'VDP Inventory Crawl Optimization', 'JavaScript Hydration Fixing', 'DMS Feed Architecture', 'Vehicle Schema.org']}
+      />
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mb-20">
+      <FaqSection items={faqs} title="Technical SEO for Car Dealers — Frequently Asked Questions" />
+    </div>
+
+    <!-- Consultation CTA -->
+    <div class="hud-panel p-8 sm:p-12 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-3" style="color: var(--color-text-primary);">
+        Guarantee 99.8% VDP indexation for your dealership
+      </h2>
+      <p class="text-sm sm:text-base max-w-xl mx-auto mb-8" style="color: var(--color-text-secondary);">
+        Schedule a technical crawl audit with our dealership search engineers to diagnose rendering bottlenecks and crawl budget leaks.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact/" class="btn-primary text-sm font-bold py-3.5 px-8 rounded-xl shadow-xl w-full sm:w-auto">
+          Schedule Technical Dealership Audit →
+        </a>
+        <a href="/audit/" class="btn-gold text-sm font-bold py-3.5 px-8 rounded-xl w-full sm:w-auto">
+          Run Live VDP Speed Test
+        </a>
+      </div>
+    </div>
+
+  </div>
+</BaseLayout>

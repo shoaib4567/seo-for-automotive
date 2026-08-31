@@ -2,6 +2,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FaqSection from '../../components/FaqSection.astro';
 import AuthorCard from '../../components/AuthorCard.astro';
+import AutomotiveRoiCalculator from '../../components/interactive/AutomotiveRoiCalculator.jsx';
+import GeoGridSimulator from '../../components/interactive/GeoGridSimulator.jsx';
+import ExecutionRoadmapTabs from '../../components/interactive/ExecutionRoadmapTabs.jsx';
+import InteractiveSchemaSnippet from '../../components/interactive/InteractiveSchemaSnippet.jsx';
+import AutomotiveArchitectureDiagram from '../../components/visuals/AutomotiveArchitectureDiagram.astro';
 
 const bodyShopServices = [
   { title: 'Collision & Insurance Claim Search Hubs', desc: 'Targeting high-intent accident searches (e.g. "approved collision repair shop near me", "State Farm direct repair facility").' },
@@ -30,6 +35,7 @@ const schemaData = {
 
 const faqs = [
   { question: 'How do you target high-margin luxury and OEM-certified collision repairs?', answer: 'We build dedicated OEM Certification landing pages (e.g. "Tesla Approved Collision Center", "Porsche Aluminum Body Repair") with specialized schema, factory tooling photos, and technician credentials.' },
+  { question: 'What is the typical ROI for auto body shop SEO?', answer: 'Because the average collision repair claim ranges from $2,500 to $6,000, acquiring just 3 to 5 additional insurance repairs per month produces a 400%+ return on your monthly SEO investment.' },
 ];
 ---
 
@@ -73,6 +79,25 @@ const faqs = [
       </div>
     </div>
 
+    <!-- Interactive ROI Simulator -->
+    <div class="my-16">
+      <AutomotiveRoiCalculator client:load defaultType="repair" />
+    </div>
+
+    <!-- Accident Funnel Diagram -->
+    <div class="my-14">
+      <AutomotiveArchitectureDiagram
+        type="emergency-funnel"
+        title="Accident Search & Direct Repair Pipeline"
+        subtitle="Capturing stranded drivers immediately following accidents and converting them into confirmed photo estimates."
+      />
+    </div>
+
+    <!-- Interactive GeoGrid Simulator -->
+    <div class="my-16">
+      <GeoGridSimulator client:visible />
+    </div>
+
     <!-- 4 Pillars -->
     <div class="mb-20">
       <div class="mb-10 text-center max-w-2xl mx-auto">
@@ -90,6 +115,16 @@ const faqs = [
           </div>
         ))}
       </div>
+    </div>
+
+    <!-- Schema Snippet -->
+    <div class="my-16">
+      <InteractiveSchemaSnippet client:visible />
+    </div>
+
+    <!-- Execution Roadmap Tabs -->
+    <div class="my-16">
+      <ExecutionRoadmapTabs client:visible />
     </div>
 
     <!-- Author & E-E-A-T -->

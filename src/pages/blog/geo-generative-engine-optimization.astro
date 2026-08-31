@@ -3,6 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import InternalLinkCard from '../../components/InternalLinkCard.astro';
 import FaqSection from '../../components/FaqSection.astro';
 import AuthorCard from '../../components/AuthorCard.astro';
+import AutomotiveArchitectureDiagram from '../../components/visuals/AutomotiveArchitectureDiagram.astro';
+import ComparisonMatrix from '../../components/visuals/ComparisonMatrix.astro';
+import InteractiveSchemaSnippet from '../../components/interactive/InteractiveSchemaSnippet.jsx';
 
 const title = "GEO — Generative Engine Optimization for Automotive Brands [2026]";
 const description = "Complete Generative Engine Optimization (GEO) guide for automotive companies. Get cited and recommended by ChatGPT, Google Gemini, Perplexity, and Apple Intelligence.";
@@ -21,6 +24,7 @@ const faqs = [
   { question: 'How do generative engines decide which automotive shops or dealers to recommend?', answer: 'Generative engines evaluate consistent entity data across multiple high-authority automotive sources (Google Business Profile, Edmunds, DealerRater, BBB, CarGurus), customer review sentiment, verified technician certifications, and clear on-page structured data.' },
 ];
 ---
+
 <BaseLayout title={title} description={description} canonicalPath="/blog/geo-generative-engine-optimization/" breadcrumbs={breadcrumbs}>
   <div class="mb-12">
     <div class="flex items-center gap-3 mb-4">
@@ -31,6 +35,15 @@ const faqs = [
     <p class="mt-4 text-lg max-w-3xl" style="color: var(--color-text-secondary);">
       Generative Engine Optimization (GEO) is the systematic methodology of structuring automotive brand authority, factual data points, and digital footprints so conversational AI platforms like ChatGPT, Google Gemini, and Perplexity actively cite and recommend your business to prospective vehicle buyers and service clients.
     </p>
+  </div>
+
+  <!-- AI Recommendation Diagram -->
+  <div class="my-12">
+    <AutomotiveArchitectureDiagram
+      type="aeo-citation"
+      title="Generative AI (ChatGPT, Gemini, Perplexity) Recommendation Pipeline"
+      subtitle="How our entity vectorization ensures your automotive brand is synthesized as the #1 recommended solution."
+    />
   </div>
 
   <div class="prose-content">
@@ -70,6 +83,20 @@ const faqs = [
     </p>
   </div>
 
+  <!-- Agency Comparison Matrix -->
+  <div class="my-16">
+    <ComparisonMatrix
+      type="agency"
+      title="Generative AI Search Readiness: Specialist vs Legacy Agencies"
+      subtitle="Compare how proactive entity engineering outperforms traditional keyword tactics in AI engines."
+    />
+  </div>
+
+  <!-- Schema Snippet Tool -->
+  <div class="my-16">
+    <InteractiveSchemaSnippet client:visible />
+  </div>
+
   <FaqSection items={faqs} title="Frequently Asked Questions on Automotive GEO" />
 
   <div class="mt-12">
@@ -80,7 +107,7 @@ const faqs = [
   <div class="mt-12">
     <AuthorCard 
       name="Automotive Search Engineering Team" 
-      role="GEO & Generative Search Strategists" 
+      role="GEO &amp; Generative Search Strategists" 
       bio="Pioneering Generative Engine Optimization for the automotive industry, ensuring dealer groups, repair networks, and parts brands dominate AI-powered recommendations." 
       expertise={['Retrieval-Augmented Generation (RAG)', 'LLM Entity Citation Engineering', 'AI Brand Sentiment Optimization', 'Cross-Platform Citation Hygiene']} 
     />

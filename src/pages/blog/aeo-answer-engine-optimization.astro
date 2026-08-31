@@ -3,6 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import InternalLinkCard from '../../components/InternalLinkCard.astro';
 import FaqSection from '../../components/FaqSection.astro';
 import AuthorCard from '../../components/AuthorCard.astro';
+import AutomotiveArchitectureDiagram from '../../components/visuals/AutomotiveArchitectureDiagram.astro';
+import ComparisonMatrix from '../../components/visuals/ComparisonMatrix.astro';
+import InteractiveSchemaSnippet from '../../components/interactive/InteractiveSchemaSnippet.jsx';
 
 const title = "AEO — Answer Engine Optimization for Automotive Websites [2026 Guide]";
 const description = "Master Answer Engine Optimization (AEO) for automotive brands. Capture Google AI Overviews, Featured Snippets, People Also Ask boxes, and voice search answers.";
@@ -21,6 +24,7 @@ const faqs = [
   { question: 'How do automotive websites win Google AI Overview citations?', answer: 'Automotive websites win AI Overview citations by providing 40-60 word definitive answer paragraphs immediately beneath question headers, utilizing comparison tables, publishing verified technical specifications, and backing statements with structured Schema.org markup.' },
 ];
 ---
+
 <BaseLayout title={title} description={description} canonicalPath="/blog/aeo-answer-engine-optimization/" breadcrumbs={breadcrumbs}>
   <div class="mb-12">
     <div class="flex items-center gap-3 mb-4">
@@ -31,6 +35,15 @@ const faqs = [
     <p class="mt-4 text-lg max-w-3xl" style="color: var(--color-text-secondary);">
       Answer Engine Optimization (AEO) is the strategic practice of formatting and encoding automotive data so search engines and AI models can instantly extract direct, factual answers for Google AI Overviews, Featured Snippets, and voice-assisted queries without requiring a traditional click.
     </p>
+  </div>
+
+  <!-- Visual AI Overview Pipeline Diagram -->
+  <div class="my-12">
+    <AutomotiveArchitectureDiagram
+      type="aeo-citation"
+      title="Google AI Overview &amp; RAG Citation Architecture"
+      subtitle="How our semantic entity structure routes your automotive data into Google's generative answer boxes."
+    />
   </div>
 
   <div class="prose-content">
@@ -65,6 +78,20 @@ const faqs = [
     </p>
   </div>
 
+  <!-- Agency Comparison Matrix -->
+  <div class="my-16">
+    <ComparisonMatrix
+      type="agency"
+      title="AEO Search Engineering vs Legacy SEO Approaches"
+      subtitle="How modern semantic citation engineering outranks old keyword-stuffing agencies in AI search engines."
+    />
+  </div>
+
+  <!-- Interactive Schema Inspector -->
+  <div class="my-16">
+    <InteractiveSchemaSnippet client:visible />
+  </div>
+
   <FaqSection items={faqs} title="Frequently Asked Questions on Automotive AEO" />
 
   <div class="mt-12">
@@ -75,7 +102,7 @@ const faqs = [
   <div class="mt-12">
     <AuthorCard 
       name="Automotive Search Engineering Team" 
-      role="AEO & AI Overview Optimization Specialists" 
+      role="AEO &amp; AI Overview Optimization Specialists" 
       bio="Engineering structured data and answer-first content architectures that capture top-tier AI Overview citations and featured snippets across automotive search verticals." 
       expertise={['Featured Snippet Engineering', 'Google AI Overview Capture', 'Voice Search SEO', 'FAQPage Schema Automation']} 
     />

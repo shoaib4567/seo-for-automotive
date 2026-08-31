@@ -1,8 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import InternalLinkCard from '../components/InternalLinkCard.astro';
 import FaqSection from '../components/FaqSection.astro';
 import AuthorCard from '../components/AuthorCard.astro';
+import AutomotiveRoiCalculator from '../components/interactive/AutomotiveRoiCalculator.jsx';
+import GeoGridSimulator from '../components/interactive/GeoGridSimulator.jsx';
+import ExecutionRoadmapTabs from '../components/interactive/ExecutionRoadmapTabs.jsx';
+import InteractiveSchemaSnippet from '../components/interactive/InteractiveSchemaSnippet.jsx';
+import AutomotiveArchitectureDiagram from '../components/visuals/AutomotiveArchitectureDiagram.astro';
 
 const title = "Commercial Trucking & Fleet SEO Services — Transport & Heavy Duty Logistics | SEO for Automotive";
 const description = "Specialist SEO for commercial trucking companies, heavy-duty diesel repair shops, freight logistics, and commercial fleet services. Dedicated automotive and transport search authority.";
@@ -31,17 +35,17 @@ const faqs = [
     <!-- Hero Header -->
     <div class="mb-14">
       <div class="flex flex-wrap items-center gap-2 mb-4">
-        <span class="badge-outline">Commercial Fleet & Freight</span>
-        <span class="eeat-badge">Heavy-Duty & Logistics</span>
-        <span class="live-badge"><span class="live-dot"></span> B2B Contracts & Fleet Care</span>
+        <span class="badge-outline">Commercial Fleet &amp; Freight</span>
+        <span class="eeat-badge">Heavy-Duty &amp; Logistics</span>
+        <span class="live-badge"><span class="live-dot"></span> B2B Contracts &amp; Fleet Care</span>
       </div>
       
       <h1 class="text-3xl sm:text-5xl font-black leading-tight mb-6" style="color: var(--color-text-primary);">
-        SEO for <span class="text-gradient-gold">Commercial Trucking & Fleet Services</span>
+        SEO for <span class="text-gradient-gold">Commercial Trucking &amp; Fleet Services</span>
       </h1>
       
       <p class="text-lg sm:text-xl leading-relaxed" style="color: var(--color-text-secondary);">
-        Commercial freight, heavy-duty diesel maintenance, and transport logistics require specialized B2B search architecture. We build high-performing search funnels that capture shippers, fleet managers, and long-haul contracts.
+        Commercial freight, heavy-duty diesel maintenance, and transport logistics require specialized B2B search architecture. We build high-performing search funnels that capture shippers, fleet managers, and long-haul contracts along major interstate corridors.
       </p>
     </div>
 
@@ -65,12 +69,31 @@ const faqs = [
       </div>
     </div>
 
+    <!-- Interactive ROI Simulator -->
+    <div class="my-16">
+      <AutomotiveRoiCalculator client:load defaultType="repair" />
+    </div>
+
+    <!-- Emergency vs Contract Funnel Diagram -->
+    <div class="my-14">
+      <AutomotiveArchitectureDiagram
+        type="emergency-funnel"
+        title="Interstate Commercial Roadside & Fleet Maintenance Funnel"
+        subtitle="How our transit-corridor search optimization connects commercial freight drivers to emergency repair dispatchers."
+      />
+    </div>
+
+    <!-- Interactive GeoGrid Simulator -->
+    <div class="my-16">
+      <GeoGridSimulator client:visible />
+    </div>
+
     <!-- 4 Pillars -->
     <div class="mb-20">
       <div class="mb-10 text-center max-w-2xl mx-auto">
         <span class="eeat-badge mb-2">Transport SEO Strategy</span>
         <h2 class="text-2xl sm:text-3xl font-bold mt-2" style="color: var(--color-text-primary);">
-          Core Pillars of Fleet & Transport Search
+          Core Pillars of Fleet &amp; Transport Search
         </h2>
       </div>
 
@@ -82,6 +105,16 @@ const faqs = [
           </div>
         ))}
       </div>
+    </div>
+
+    <!-- Schema Snippet -->
+    <div class="my-16">
+      <InteractiveSchemaSnippet client:visible />
+    </div>
+
+    <!-- Execution Roadmap Tabs -->
+    <div class="my-16">
+      <ExecutionRoadmapTabs client:visible />
     </div>
 
     <!-- Author & E-E-A-T -->
@@ -96,7 +129,7 @@ const faqs = [
 
     <!-- FAQs -->
     <div class="mb-16">
-      <FaqSection items={faqs} title="Trucking & Transport SEO — Frequently Asked Questions" />
+      <FaqSection items={faqs} title="Trucking &amp; Transport SEO — Frequently Asked Questions" />
     </div>
 
     <!-- Consultation CTA -->
